@@ -1,11 +1,646 @@
 <!doctype html>
-<html lang="en">
+<html lang="ro">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Comuna Coseiu</title>
+    <meta
+      name="description"
+      content="Site oficial al Comunei Coșeiu, județul Sălaj."
+    />
+    <title>Comuna Coșeiu - Site Oficial</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="assets/images/logo.png" type="image/png" />
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
+
   <body>
-    <h1>Comuna Coseiu</h1>
+    <!-- HEADER ORIGINAL -->
+    <header>
+      <img
+        src="assets/images/logo1.png"
+        alt="Comuna Coșeiu Logo"
+        class="logo"
+      />
+      <form class="search-form">
+        <input type="text" placeholder="Caută..." />
+        <button type="submit">Caută</button>
+      </form>
+      <!-- NAVBAR  -->
+      <button class="menu-toggle">☰</button>
+      <nav>
+        <ul>
+          <li class="dropdown comunitate">
+            <a href="#comunitate">COMUNITATE</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#cetateni">Cetățeni</a>
+                <ul class="dropdown-submenu">
+                  <li><a href="#dezbateri-publice">Dezbateri publice</a></li>
+                  <li><a href="#newsletter">Newsletter</a></li>
+                  <li><a href="#cetateni-onoare">Cetățeni de onoare</a></li>
+                  <li>
+                    <a href="#sugestii-reclamatii">Sugestii și reclamații</a>
+                  </li>
+                  <li><a href="#bugetare">Bugetare participativă</a></li>
+                  <li><a href="#proceduri">Proceduri online</a></li>
+                  <li><a href="#live">Live webcam</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#educatie">Educație</a>
+                <ul class="dropdown-submenu">
+                  <li><a href="#transport">Transport</a></li>
+                  <li><a href="#autobuze">Autobuze școlare</a></li>
+                  <li><a href="#legislatie-educatie">Legislație locală</a></li>
+                  <li><a href="#crese">Creșe</a></li>
+                  <li><a href="#gradinite">Grădinițe</a></li>
+                </ul>
+              </li>
+
+              <li><a href="#tineret">Tineret</a></li>
+              <li>
+                <a href="#cultura">Cultură</a>
+                <ul class="dropdown-submenu">
+                  <li><a href="#biblioteci">Biblioteci</a></li>
+                  <li>
+                    <a href="#finantari-cultura">Finanțări nerambursabile</a>
+                  </li>
+                  <li><a href="#personalitati">Harta personalităților</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#sport">Sport</a>
+                <ul class="dropdown-submenu">
+                  <li><a href="#structuri">Structuri sportive</a></li>
+                  <li>
+                    <a href="#finantari-sport">Finanțări nerambursabile</a>
+                  </li>
+                  <li><a href="#baze">Baze sportive</a></li>
+                  <li><a href="#sala">Sala de sport</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#sanatate">Sănătate</a>
+                <ul class="dropdown-submenu">
+                  <li><a href="#unitati">Unități medicale</a></li>
+                  <li>
+                    <a href="#finantari-sanatate">Finanțări nerambursabile</a>
+                  </li>
+                  <li><a href="#urgenta">Urgențe medicale</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#social">Social</a>
+                <ul class="dropdown-submenu">
+                  <li>
+                    <a href="#varstnice">Persoane vârstnice | dizabilități</a>
+                  </li>
+                  <li>
+                    <a href="#adapost"
+                      >Persoane fără adăpost | situații de risc</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#ajutor-social"
+                      >Ajutor social | încălzire | chirie</a
+                    >
+                  </li>
+                  <li><a href="#tichete">Tichete sociale</a></li>
+                  <li><a href="#stomatologie">Servicii stomatologice</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#animale">Programe câini | pisici</a>
+                <ul class="dropdown-submenu">
+                  <li><a href="#sterilizare">Sterilizare gratuită</a></li>
+                  <li><a href="#adopții">Adopții</a></li>
+                  <li><a href="#boluri">Boluri de apă</a></li>
+                  <li><a href="#adaposturi">Adăposturi</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#turism">Turism</a>
+                <ul class="dropdown-submenu">
+                  <li><a href="#centru">Centrul de informare</a></li>
+                  <li><a href="#harta">Harta</a></li>
+                  <li><a href="#visit">Visit Coseiu</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#evenimente">Evenimente</a>
+                <ul class="dropdown-submenu">
+                  <li><a href="#zilele">Zilele Coșeiului</a></li>
+                  <li><a href="#craciun">Targul de Crăciun</a></li>
+                  <li><a href="#piata">Piata</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li class="dropdown locuire">
+            <a href="#locuire">LOCUIRE</a>
+            <ul class="dropdown-menu">
+              <li><a href="#strategii-urbane">Strategii urbane</a></li>
+              <li><a href="#urbanism">Urbanism</a></li>
+              <li><a href="#autorizatii">Autorizații construcții</a></li>
+              <li><a href="#strazi">Străzi</a></li>
+              <li><a href="#locuinte">Locuințe</a></li>
+              <li><a href="#gis">GIS</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown administratie">
+            <a href="#administratie">ADMINISTRAȚIE</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#primarie">Primărie</a>
+                <ul class="dropdown-submenu">
+                  <li><a href="#primar">Primar</a></li>
+                  <li><a href="#viceprimar">Viceprimar</a></li>
+                  <li><a href="#organigrama">Organigrama</a></li>
+                  <li><a href="#regulament-primarie">Regulament</a></li>
+                  <li><a href="#sediu">Sediul primăriei</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#consiliu-local">Consiliul Local</a>
+                <ul class="dropdown-submenu">
+                  <li><a href="#conselieri">Consilieri</a></li>
+                  <li><a href="#comisii">Comisiile de specialitate</a></li>
+                  <li><a href="#regulament-consiliu">Regulament</a></li>
+                  <li><a href="#sedinte">Ședințe de consiliu</a></li>
+                  <li><a href="#hotarari">Hotărâri</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#evidenta-persoanelor">Evidența persoanelor</a>
+                <ul class="dropdown-submenu">
+                  <li><a href="#nasteri">Nașteri</a></li>
+                  <li><a href="#identitate">Acte de identitate</a></li>
+                  <li><a href="#casatorii">Căsătorii</a></li>
+                  <li><a href="#divorturi">Divorțuri</a></li>
+                  <li><a href="#aur">Nunta de aur</a></li>
+                  <li><a href="#decese">Decese</a></li>
+                  <li><a href="#transcrieri">Transcrieri</a></li>
+                  <li><a href="#schimbari">Schimbări de nume</a></li>
+                  <li><a href="#pasapoarte">Pașapoarte</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#politia-locala">Poliția locală</a>
+                <ul class="dropdown-submenu">
+                  <li><a href="#informatii">Informații</a></li>
+                  <li><a href="#atributii">Atribuții</a></li>
+                  <li><a href="#obiective">Obiective</a></li>
+                  <li><a href="#rapoarte">Rapoarte</a></li>
+                  <li><a href="#comunicate">Comunicate</a></li>
+                  <li><a href="#amenzi">Plata amenzilor</a></li>
+                  <li><a href="#ridicari">Ridicări auto</a></li>
+                  <li><a href="#refacutadizari">Refațadizări clădiri</a></li>
+                  <li><a href="#legislatie">Legislație</a></li>
+                  <li><a href="#legislatie-locala">Legislație locală</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#informatii-publice">Informații publice</a>
+                <ul class="dropdown-submenu">
+                  <li>
+                    <a href="#informatii-frecvente">Întrebări frecvente</a>
+                  </li>
+                  <li><a href="#anunturi">Anunțuri</a></li>
+                  <li>
+                    <a href="#obiective">Vânzări terenuri din extravilan</a>
+                  </li>
+                  <li><a href="#comunicate">Comunicate</a></li>
+                  <li><a href="#concursuri">Concursuri</a></li>
+                  <li><a href="#transferuri">Transferuri</a></li>
+                  <li><a href="#regulamente">Regulamente locale</a></li>
+                  <li><a href="#audiențe">Audiențe</a></li>
+                  <li><a href="#cereri">Cereri tip</a></li>
+                  <li>
+                    <a href="#exproprieri">Exproprieri Legea nr. 255/2010</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#transparenta">Transparență</a>
+                <ul class="dropdown-submenu">
+                  <li><a href="#contracte">Contracte</a></li>
+                  <li><a href="#plati">Plăți</a></li>
+                  <li>
+                    <a href="#depasite">Lista contracte termene depășite</a>
+                  </li>
+                  <li><a href="#avere">Declarații de avere</a></li>
+                  <li><a href="#rapoarte">Rapoarte</a></li>
+                  <li><a href="#documente">Documente</a></li>
+                  <li><a href="#licitatii">Licitații</a></li>
+                  <li><a href="#sugestii">Sugestii și reclamații</a></li>
+                  <li><a href="#jurnal">Jurnalul comunei</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#transformare-digitala"
+                  >Strategia de transformare digitală</a
+                >
+              </li>
+              <li><a href="#servicii-online">Servicii online</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown mediu">
+            <a href="#mediu">MEDIU</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#salubritate">Salubritate</a>
+                <ul class="dropdown-submenu">
+                  <li><a href="#colectare">Colectare selectivă</a></li>
+                  <li>
+                    <a href="#salubritate-menajera">Salubritate menajeră</a>
+                  </li>
+                  <li>
+                    <a href="#salubritate-stradala">Salubritate stradală</a>
+                  </li>
+                  <li><a href="#dezapezire">Dezăpezire</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#curatenie">Curățenie</a>
+                <ul class="dropdown-submenu">
+                  <li>
+                    <a href="#cereri-specifice"
+                      >Cereri specifice mentenenței stradale</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#curatenie-primavara">Curățenie de primăvară</a>
+                  </li>
+                  <li>
+                    <a href="#deratizare-dezinsectie"
+                      >Deratizare și dezinsecție</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#spatii-verzi">Spații verzi</a>
+                <ul class="dropdown-submenu">
+                  <li><a href="#adopta">Adoptă un spațiu verde</a></li>
+                  <li><a href="#ambrozie">Combaterea ambroziei</a></li>
+                  <li><a href="#">Cișmele</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#eficienta-energetica">Eficiență energetică</a>
+                <ul class="dropdown-submenu">
+                  <li><a href="#panouri">Panouri fotovoltaice</a></li>
+                  <li><a href="#finantare">Surse de finanțare</a></li>
+                  <li><a href="#anunturi">Anunțuri</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#institutii-de-mediu">Instituții de mediu</a>
+                <ul class="dropdown-submenu">
+                  <li>
+                    <a href="#agencie-protecția-mediului"
+                      >Agenția pentru protecția mediului</a
+                    >
+                  </li>
+                  <li><a href="#compania-de-apa">Compania de apă</a></li>
+                  <li><a href="#garda-de-mediu">Garda de mediu</a></li>
+                </ul>
+              </li>
+
+              <li><a href="#harta-zgomot">Harta de zgomot</a></li>
+              <li><a href="#calitatea-aerului">Calitatea aerului</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown mobilitate">
+            <a href="#mobilitate">MOBILITATE</a>
+            <ul class="dropdown-menu">
+              <li><a href="#plan-mobilitate">Planul de mobilitate</a></li>
+              <li><a href="#parcari">Parcări</a></li>
+              <li><a href="#transport-public">Transport public</a></li>
+              <li><a href="#biciclete">Biciclete</a></li>
+              <li><a href="#taximetrie">Taximetrie</a></li>
+              <li><a href="#harta-mobilitate">Harta</a></li>
+              <li>
+                <a href="#siguranta-circulatiei">Siguranța circulației</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="dropdown economie">
+            <a href="#economie">ECONOMIE</a>
+            <ul class="dropdown-menu">
+              <li><a href="#taxe-impozite">Taxe și impozite locale</a></li>
+              <li><a href="#plati-online">Plăți online</a></li>
+              <li><a href="#buget">Buget</a></li>
+              <li><a href="#achizitii-publice">Achiziții publice</a></li>
+              <li><a href="#proiecte-europene">Proiecte europene</a></li>
+              <li>
+                <a href="#finantari-nerambursabile">Finanțări nerambursabile</a>
+              </li>
+              <li><a href="#investitori">Investitori</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown monitor-oficial">
+            <a href="#monitor-oficial">MONITORUL OFICIAL LOCAL</a>
+            <ul class="dropdown-menu">
+              <li><a href="#statut">Statutul</a></li>
+              <li>
+                <a href="#regulamente"
+                  >Regulamentele procedurilor administrative</a
+                >
+              </li>
+              <li>
+                <a href="#hotarari">Hotărârile autorității deliberative</a>
+              </li>
+              <li>
+                <a href="#dispozitii">Dispozițiile autorității executive</a>
+              </li>
+              <li>
+                <a href="#documente-financiare"
+                  >Documente și informații financiare</a
+                >
+              </li>
+              <li><a href="#alte-documente">Alte documente</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- HOME -->
+    <section id="home">
+      <h1>Bine ați venit în Comuna Coșeiu</h1>
+      <img src="assets/images/comuna.png" alt="comuna" />
+    </section>
+
+    <!-- COMUNITATE -->
+    <section id="comunitate">
+      <h2>Comunitate</h2>
+
+      <h3 id="cetateni">Cetățeni</h3>
+      <h4>Componența etnică</h4>
+      <ul>
+        <li>Maghiari (50,63%)</li>
+        <li>Români (40,09%)</li>
+        <li>Romi (4,59%)</li>
+        <li>Necunoscută (4,68%)</li>
+      </ul>
+
+      <h4>Componența confesională</h4>
+      <ul>
+        <li>Ortodocși (36,31%)</li>
+        <li>Reformați (34,14%)</li>
+        <li>Baptiști (16,76%)</li>
+        <li>Greco-catolici (5,5%)</li>
+        <li>Alte religii (1,89%)</li>
+        <li>Necunoscută (5,41%)</li>
+      </ul>
+
+      <h3 id="educatie">Educație și Cultură</h3>
+      <p>Comuna Coșeiu dispune de școli primare și gimnaziale și grădinițe.</p>
+
+      <h4>Școli</h4>
+      <ul>
+        <li>Școala Gimnazială nr. 1 Coșeiu - Strada Principală nr. 224</li>
+        <li>Școala Gimnazială Archid - Strada Principală nr. 115</li>
+      </ul>
+
+      <h4>Grădinițe</h4>
+      <p>Grădinița Coșeiu și Archid</p>
+
+      <h3 id="tineret">Tineret</h3>
+      <p>În curând.</p>
+
+      <h3 id="cultura">Cultură și Tradiții</h3>
+      <p>Obiceiuri locale: Paște, colinde, Ziua Coșeiului.</p>
+
+      <h3 id="sport">Sport</h3>
+      <p>Terenul de sport din satul Coșeiu.</p>
+
+      <h3 id="sanatate">Sănătate</h3>
+      <p>În curând.</p>
+
+      <h3 id="social">Social</h3>
+      <p>Parcuri...</p>
+
+      <h3 id="animale">Programe animale</h3>
+      <p>În curând.</p>
+
+      <h3 id="turism">Turism</h3>
+      <ul>
+        <li>Biserica Reformată din Coșeiu</li>
+        <li>Biserica Greco-Catolică</li>
+        <li>Clopotnița de Lemn</li>
+        <li>Pădurea Hegyes</li>
+        <li>Tunelul Înfundat</li>
+      </ul>
+
+      <h3 id="evenimente">Evenimente</h3>
+      <p>Festivaluri și sărbători locale.</p>
+    </section>
+
+    <!-- LOCUIRE -->
+    <section id="locuire">
+      <h2>Locuire</h2>
+      <p>Strategii urbane, urbanism și locuințe (în curs de actualizare).</p>
+    </section>
+
+    <!-- ADMINISTRATIE -->
+    <section id="administratie">
+      <h2>Administrație</h2>
+
+      <h3 id="primarie">Primăria și Consiliul Local</h3>
+      <p>
+        Primăria Comunei Coșeiu este responsabilă pentru administrarea locală.
+        Adresa: Strada Principală, Coșeiu, Județul Sălaj, Cod poștal 457080.
+        Pentru informații detaliate, contactați primăria.
+      </p>
+
+      <h3 id="geografie">Geografie</h3>
+      <p>
+        Comuna Coșeiu este situată la 18 km de orașul Zalău, la o altitudine de
+        289 m. Coordonatele GPS: 47°19'8″N 22°59'34″E.
+      </p>
+
+      <h3 id="istorie">Istorie</h3>
+      <p>
+        Prima atestare documentară a localității datează din 1299, când este
+        menționată ca târg local sub numele de Kusal. În secolul al XV-lea,
+        familia nobiliară Jakcs de Coșeiu a întemeiat o mănăstire franciscană
+        minorită, care astăzi este biserica reformată în stil gotic. Mănăstirea
+        a fost fondată sub patronajul episcopului Dionisius de Oradea și a
+        încetat să funcționeze odată cu răspândirea Reformei în jurul anului
+        1550.
+      </p>
+
+      <h3 id="demografie">Demografie</h3>
+      <p>
+        Conform recensământului din 2021, populația comunei Coșeiu se ridică la
+        1.110 locuitori, în scădere față de 2011 când erau 1.198 de locuitori.
+      </p>
+
+      <h3 id="monumente">Monumente istorice</h3>
+      <p>Biserica Reformată și clopotnița de lemn.</p>
+
+      <h3 id="informatii-publice">Știri</h3>
+      <article>
+        <h4>Paștele în Coșeiu</h4>
+        <small>1 aprilie 2026</small>
+        <h4>Festivalul Tradițiilor - Mai 2026</h4>
+        <small>1 mai 2026</small>
+      </article>
+
+      <h3 id="transparenta">Transparență</h3>
+      <p>
+        Ședință publică a Consiliului Local pe data de 15 aprilie, la ora 18:00,
+        la Primărie.
+      </p>
+
+      <h3 id="servicii-online">Proceduri online</h3>
+      <p>Plăți, cereri și programări.</p>
+    </section>
+
+    <!-- MEDIU -->
+    <section id="mediu">
+      <h2>Mediu</h2>
+      <p>Salubritate, curățenie și spații verzi.</p>
+    </section>
+
+    <!-- MOBILITATE -->
+    <section id="mobilitate">
+      <h2>Mobilitate</h2>
+      <p>Transport public limitat.</p>
+      <img src="assets/images/transportCZ.png" alt="transport" />
+      <img src="assets/images/transportZC.png" alt="transport" />
+    </section>
+
+    <!-- ECONOMIE -->
+    <section id="economie">
+      <h2>Economie</h2>
+      <ul>
+        <li>TERMO PAL JAN SRL</li>
+        <li>ZOOFARM SRL</li>
+        <li>TIBO PROD COM SRL</li>
+        <li>VETERN SRL</li>
+        <li>LIVMATCOM IULIA SRL</li>
+        <li>SAFETY CONSULT JRO SRL</li>
+        <li>NEV TRANS SRL</li>
+        <li>CHISIU IOAN CONSTRUCT SRL</li>
+        <li>FERERN IMPEX SRL</li>
+        <li>BIAIRISREM SRL</li>
+        <li>PLUS HOME CLEANING SRL</li>
+        <li>EDINA & MEDEEA SRL</li>
+        <li>ASTUCES CONCEPT SRL</li>
+        <li>LANLAC AGPT SRL</li>
+        <li>KING BAKERY SRL</li>
+      </ul>
+    </section>
+
+    <!-- MONITOR -->
+    <section id="monitor-oficial">
+      <h2>Monitor Oficial Local</h2>
+      <p>Documente administrative (în curs).</p>
+    </section>
+
+    <!-- SERVICII -->
+    <section id="servicii">
+      <h2>Servicii</h2>
+      <p>Apă, iluminat, salubritate.</p>
+    </section>
+
+    <!-- GALERIE -->
+    <section id="gallery">
+      <h2>Galerie</h2>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/4/48/RO_SJ_Coseiu_%281%29.jpg"
+        alt="Intrarea în localitate"
+      />
+      <img
+        src="https://scontent-bcn1-1.xx.fbcdn.net/v/t39.30808-6/292539156_162998962935779_56881578253331917_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=VXLalJQIO-MQ7kNvwHvcD09&_nc_oc=AdqqZgYzQLsF3zHyoY7TMHoTjJmxRzfUdr89LSluWwo9tcgq6G9i4TFQfGdHU98o_ho&_nc_zt=23&_nc_ht=scontent-bcn1-1.xx&_nc_gid=3Xl8aE9VE3IZPfLWBoRS7w&_nc_ss=7a3a8&oh=00_Afx978pXWv6J_1JOcbctYmV9XoyruRYxs5ZS9v2PYbOnaw&oe=69D1E33F"
+        alt="Primăria Coșeiu"
+      />
+
+      <!-- <img
+          src="https://upload.wikimedia.org/wikipedia/commons/4/48/RO_SJ_Coseiu_%284%29.jpg"
+          alt="Primăria comunei Coșeiu"
+        /> -->
+      <!-- <img
+          src="https://upload.wikimedia.org/wikipedia/commons/4/48/RO_SJ_Coseiu_%289%29.jpg"
+          alt="Clopotnița de lemn a bisericii reformate"
+        /> -->
+      <!-- <img
+          src="https://upload.wikimedia.org/wikipedia/commons/4/48/RO_SJ_Coseiu_%285%29.jpg"
+          alt="Biserica reformată din Coșeiu"
+        /> -->
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/RO_SJ_Biserica_reformata_din_Coseiu_%282%29.jpg/960px-RO_SJ_Biserica_reformata_din_Coseiu_%282%29.jpg"
+        alt="Biserica reformată din Coșeiu - imagine suplimentară"
+      />
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/RO_SJ_Biserica_reformata_din_Coseiu_%2831%29.jpg/500px-RO_SJ_Biserica_reformata_din_Coseiu_%2831%29.jpg"
+        alt="Biserica reformată din Coșeiu - portal gotic"
+      />
+      <!-- <img
+          src="https://upload.wikimedia.org/wikipedia/commons/4/48/RO_SJ_Coseiu_(2).jpg"
+          alt="Vedere generală a comunei Coșeiu"
+        /> -->
+    </section>
+
+    <!-- VIDEO -->
+    <section id="videos">
+      <h2>Video</h2>
+      <iframe src="https://www.youtube.com/embed/YeE9TTFc9uQ"></iframe>
+    </section>
+
+    <!-- HARTA -->
+    <section id="map">
+      <h2>Hartă</h2>
+      <iframe src="https://www.openstreetmap.org/export/embed.html"></iframe>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Primăria Comunei Coșeiu</p>
+      <p>
+        Adresă: Strada Principală, Coșeiu, Județul Sălaj, România, Cod poștal
+        457080
+      </p>
+      <p>Email: primariacoseiu@yahoo.com</p>
+      <p>Program de lucru: Luni - Vineri, 8:00 - 16:00</p>
+    </section>
+
+    <footer>
+      <p>© 2026 Comuna Coșeiu</p>
+      |
+      <p>
+        by <a href="https://truscaivoichita.github.io" target="_blank">kit@</a>
+      </p>
+    </footer>
+    <script src="/assets/js/main.js"></script>
   </body>
 </html>
