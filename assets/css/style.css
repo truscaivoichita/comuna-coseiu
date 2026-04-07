@@ -89,7 +89,8 @@ nav a:hover {
   border-radius: 8px;
   display: none;
   flex-direction: column;
-  min-width: 200px;
+  min-width: 250px;
+  max-width: 80%;
   /* padding-left: 15px; */
   z-index: 999;
   text-align: left;
@@ -291,7 +292,42 @@ footer {
   margin-top: 40px;
 }
 @media (max-width: 768px) {
-  nav ul {
+  nav {
+    display: none;
+    width: 100%;
+  }
+
+  nav.active {
     display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin: 10px auto;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+
+  .dropdown:hover > .dropdown-menu {
+    display: none;
+  }
+
+  .dropdown.active > .dropdown-menu {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .submenu-active > .dropdown-submenu {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
   }
 }
