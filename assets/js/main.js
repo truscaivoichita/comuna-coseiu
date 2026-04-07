@@ -3,6 +3,51 @@ console.log("Menu working ✅");
 const nav = document.querySelector("nav");
 const toggle = document.querySelector(".menu-toggle");
 
+const items = document.querySelectorAll(".menu-left li");
+const contents = document.querySelectorAll(".menu-content");
+// Mobile Split Menu Navigation
+document.querySelectorAll(".menu-left li").forEach((item) => {
+  item.addEventListener("click", () => {
+    const targetId = item.getAttribute("data-target");
+    const menu = item.closest(".split-menu");
+    const rightSide = menu.querySelector(".menu-right");
+
+    // Hide all menu-content
+    rightSide
+      .querySelectorAll(".menu-content")
+      .forEach((content) => content.classList.remove("active"));
+
+    // Show selected content
+    const activeContent = rightSide.querySelector(`#${targetId}`);
+    if (activeContent) activeContent.classList.add("active");
+
+    // Show right side (slide in)
+    rightSide.classList.add("active");
+
+    // Show back button
+    let backBtn = rightSide.querySelector(".back-button");
+    if (!backBtn) {
+      backBtn = document.createElement("div");
+      backBtn.className = "back-button";
+      backBtn.innerText = "← Înapoi";
+      rightSide.prepend(backBtn);
+      backBtn.addEventListener("click", () => {
+        rightSide.classList.remove("active");
+      });
+    }
+  });
+});
+
+items.forEach((item) => {
+  item.addEventListener("mouseenter", () => {
+    items.forEach((i) => i.classList.remove("active"));
+    contents.forEach((c) => c.classList.remove("active"));
+
+    item.classList.add("active");
+    document.getElementById(item.dataset.target).classList.add("active");
+  });
+});
+
 // TOGGLE MENIU
 
 document.addEventListener("DOMContentLoaded", () => {
