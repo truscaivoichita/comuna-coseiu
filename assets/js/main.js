@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (window.innerWidth > 768) return;
 
       e.preventDefault();
-
+      e.stopPropagation();
       const parent = this.parentElement;
 
       // închide toate
@@ -47,7 +47,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // SUBMENIU (nivel 2)
   document.querySelectorAll(".dropdown-menu > li > a").forEach((link) => {
     link.addEventListener("click", function (e) {
-      e.stopPropagation();
       if (window.innerWidth > 768) return;
 
       const parent = this.parentElement;
@@ -56,6 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!submenu) return;
 
       e.preventDefault();
+      e.stopPropagation();
 
       // închide altele
       parent.parentElement.querySelectorAll("li").forEach((li) => {
@@ -81,4 +81,10 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
   });
+});
+// RESIZE FIX
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 768) {
+    nav.classList.remove("active");
+  }
 });
