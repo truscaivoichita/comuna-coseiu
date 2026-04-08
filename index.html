@@ -7,6 +7,14 @@
       name="description"
       content="Site oficial al Comunei Coșeiu, județul Sălaj."
     />
+    <meta property="og:title" content="Comuna Coșeiu - Site Oficial" />
+    <meta
+      property="og:description"
+      content="Informații oficiale despre comuna Coșeiu"
+    />
+    <meta property="og:image" content="assets/images/comuna.png" />
+    <meta name="keywords" content="Coșeiu, Sălaj, primărie, comună, România" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Comuna Coșeiu - Site Oficial</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
@@ -20,17 +28,18 @@
     <!-- HEADER ORIGINAL -->
     <header>
       <img
-        src="assets/images/logo1.png"
+        src="assets/images/heart.png"
         alt="Comuna Coșeiu Logo"
         class="logo"
       />
       <form class="search-form">
-        <input type="text" placeholder="Caută..." />
+        <label for="search-input" class="visually-hidden">Caută</label>
+        <input type="text" id="search-input" placeholder="Caută..." />
         <button type="submit">Caută</button>
       </form>
       <!-- NAVBAR  -->
-      <button class="menu-toggle">☰</button>
-      <nav>
+      <button class="menu-toggle" aria-label="Deschide meniul">☰</button>
+      <nav aria-label="Main navigation">
         <ul>
           <!-- COMUNITATE -->
           <li class="dropdown comunitate">
@@ -38,19 +47,19 @@
             <div class="dropdown-menu split-menu">
               <div class="menu-left">
                 <ul>
-                  <li data-target="cetateni" class="active">Cetățeni</li>
-                  <li data-target="educatie">Educație</li>
-                  <li data-target="cultura">Cultură</li>
-                  <li data-target="sport">Sport</li>
-                  <li data-target="sanatate">Sănătate</li>
-                  <li data-target="social">Social</li>
-                  <li data-target="animale">Animale</li>
-                  <li data-target="turism">Turism</li>
-                  <li data-target="evenimente">Evenimente</li>
+                  <li data-target="menu-cetateni" class="active">Cetățeni</li>
+                  <li data-target="menu-educatie">Educație</li>
+                  <li data-target="menu-cultura">Cultură</li>
+                  <li data-target="menu-sport">Sport</li>
+                  <li data-target="menu-sanatate">Sănătate</li>
+                  <li data-target="menu-social">Social</li>
+                  <li data-target="menu-animale">Animale</li>
+                  <li data-target="menu-turism">Turism</li>
+                  <li data-target="menu-evenimente">Evenimente</li>
                 </ul>
               </div>
               <div class="menu-right">
-                <div class="menu-content active" id="cetateni">
+                <div class="menu-content active" id="menu-cetateni">
                   <a href="#dezbateri-publice">Dezbateri publice</a>
                   <a href="#newsletter">Newsletter</a>
                   <a href="#cetateni-onoare">Cetățeni de onoare</a>
@@ -59,48 +68,48 @@
                   <a href="#proceduri">Proceduri online</a>
                   <a href="#live">Live webcam</a>
                 </div>
-                <div class="menu-content" id="educatie">
+                <div class="menu-content" id="menu-educatie">
                   <a href="#transport">Transport</a>
                   <a href="#autobuze">Autobuze</a>
                   <a href="#legislatie-educatie">Legislație</a>
                   <a href="#crese">Creșe</a>
                   <a href="#gradinite">Grădinițe</a>
                 </div>
-                <div class="menu-content" id="cultura">
+                <div class="menu-content" id="menu-cultura">
                   <a href="#biblioteci">Biblioteci</a>
                   <a href="#finantari-cultura">Finanțări</a>
                   <a href="#personalitati">Personalități</a>
                 </div>
-                <div class="menu-content" id="sport">
+                <div class="menu-content" id="menu-sport">
                   <a href="#structuri">Structuri sportive</a>
                   <a href="#finantari-sport">Finanțări</a>
                   <a href="#baze">Baze sportive</a>
                   <a href="#sala">Sală sport</a>
                 </div>
-                <div class="menu-content" id="sanatate">
+                <div class="menu-content" id="menu-sanatate">
                   <a href="#unitati">Unități medicale</a>
                   <a href="#finantari-sanatate">Finanțări</a>
                   <a href="#urgenta">Urgențe</a>
                 </div>
-                <div class="menu-content" id="social">
+                <div class="menu-content" id="menu-social">
                   <a href="#varstnice">Vârstnici</a>
                   <a href="#adapost">Fără adăpost</a>
                   <a href="#ajutor-social">Ajutor social</a>
                   <a href="#tichete">Tichete</a>
                   <a href="#stomatologie">Stomatologie</a>
                 </div>
-                <div class="menu-content" id="animale">
+                <div class="menu-content" id="menu-animale">
                   <a href="#sterilizare">Sterilizare</a>
                   <a href="#adoptii">Adopții</a>
                   <a href="#boluri">Boluri apă</a>
                   <a href="#adaposturi">Adăposturi</a>
                 </div>
-                <div class="menu-content" id="turism">
+                <div class="menu-content" id="menu-turism">
                   <a href="#centru">Centru info</a>
                   <a href="#harta">Hartă</a>
                   <a href="#visit">Visit Coșeiu</a>
                 </div>
-                <div class="menu-content" id="evenimente">
+                <div class="menu-content" id="menu-evenimente">
                   <a href="#zilele">Zilele Coșeiului</a>
                   <a href="#craciun">Târg Crăciun</a>
                   <a href="#piata">Piața</a>
@@ -115,33 +124,35 @@
             <div class="dropdown-menu split-menu">
               <div class="menu-left">
                 <ul>
-                  <li data-target="strategii" class="active">
+                  <li data-target="menu-strategii" class="active">
                     Strategii urbane
                   </li>
-                  <li data-target="urbanism">Urbanism</li>
-                  <li data-target="autorizatii">Autorizații construcții</li>
-                  <li data-target="strazi">Străzi</li>
-                  <li data-target="locuinte">Locuințe</li>
-                  <li data-target="gis">GIS</li>
+                  <li data-target="menu-urbanism">Urbanism</li>
+                  <li data-target="menu-autorizatii">
+                    Autorizații construcții
+                  </li>
+                  <li data-target="menu-strazi">Străzi</li>
+                  <li data-target="menu-locuinte">Locuințe</li>
+                  <li data-target="menu-gis">GIS</li>
                 </ul>
               </div>
               <div class="menu-right">
-                <div class="menu-content active" id="strategii">
+                <div class="menu-content active" id="menu-strategii">
                   <a href="#strategii-urbane">Strategii urbane</a>
                 </div>
-                <div class="menu-content" id="urbanism">
+                <div class="menu-content" id="menu-urbanism">
                   <a href="#urbanism">Urbanism</a>
                 </div>
-                <div class="menu-content" id="autorizatii">
+                <div class="menu-content" id="menu-autorizatii">
                   <a href="#autorizatii">Autorizații construcții</a>
                 </div>
-                <div class="menu-content" id="strazi">
+                <div class="menu-content" id="menu-strazi">
                   <a href="#strazi">Străzi</a>
                 </div>
-                <div class="menu-content" id="locuinte">
+                <div class="menu-content" id="menu-locuinte">
                   <a href="#locuinte">Locuințe</a>
                 </div>
-                <div class="menu-content" id="gis">
+                <div class="menu-content" id="menu-gis">
                   <a href="#gis">GIS</a>
                 </div>
               </div>
@@ -154,29 +165,29 @@
             <div class="dropdown-menu split-menu">
               <div class="menu-left">
                 <ul>
-                  <li data-target="primarie" class="active">Primărie</li>
-                  <li data-target="consiliu">Consiliu Local</li>
-                  <li data-target="evidenta">Evidența persoanelor</li>
-                  <li data-target="politia">Poliția locală</li>
-                  <li data-target="informatii">Informații publice</li>
-                  <li data-target="altele">Altele</li>
+                  <li data-target="menu-primarie" class="active">Primărie</li>
+                  <li data-target="menu-consiliu">Consiliu Local</li>
+                  <li data-target="menu-evidenta">Evidența persoanelor</li>
+                  <li data-target="menu-politia">Poliția locală</li>
+                  <li data-target="menu-informatii">Informații publice</li>
+                  <li data-target="menu-altele">Altele</li>
                 </ul>
               </div>
               <div class="menu-right">
-                <div class="menu-content active" id="primarie">
+                <div class="menu-content active" id="menu-primarie">
                   <a href="#primar">Primar</a>
                   <a href="#viceprimar">Viceprimar</a>
                   <a href="#organigrama">Organigramă</a>
                   <a href="#regulament-primarie">Regulament</a>
                   <a href="#sediu">Sediu</a>
                 </div>
-                <div class="menu-content" id="consiliu">
+                <div class="menu-content" id="menu-consiliu">
                   <a href="#consilieri">Consilieri</a>
                   <a href="#comisii">Comisii</a>
                   <a href="#sedinte">Ședințe</a>
-                  <a href="#hotarari">Hotărâri</a>
+                  <a href="#hotarari-consiliu">Hotărâri consiliu</a>
                 </div>
-                <div class="menu-content" id="evidenta">
+                <div class="menu-content" id="menu-evidenta">
                   <a href="#nasteri">Nașteri</a>
                   <a href="#identitate">Acte identitate</a>
                   <a href="#casatorii">Căsătorii</a>
@@ -184,23 +195,23 @@
                   <a href="#decese">Decese</a>
                   <a href="#pasapoarte">Pașapoarte</a>
                 </div>
-                <div class="menu-content" id="politia">
-                  <a href="#informatii">Informații</a>
+                <div class="menu-content" id="menu-politia">
+                  <a href="#informatii-politie">Informații politie</a>
                   <a href="#atributii">Atribuții</a>
                   <a href="#amenzi">Plata amenzilor</a>
                   <a href="#ridicari">Ridicări auto</a>
                 </div>
-                <div class="menu-content" id="informatii">
+                <div class="menu-content" id="menu-informatii">
                   <a href="#anunturi">Anunțuri</a>
                   <a href="#concursuri">Concursuri</a>
                   <a href="#cereri">Cereri tip</a>
                   <a href="#audiente">Audiențe</a>
                   <a href="#contracte">Contracte</a>
-                  <a href="#plati">Plăți</a>
+                  <a href="#plati-online">Plăți</a>
                   <a href="#licitatii">Licitații</a>
                   <a href="#documente">Documente</a>
                 </div>
-                <div class="menu-content" id="altele">
+                <div class="menu-content" id="menu-altele">
                   <a href="#transformare-digitala">Transformare digitală</a>
                   <a href="#servicii-online">Servicii online</a>
                 </div>
@@ -214,34 +225,38 @@
             <div class="dropdown-menu split-menu">
               <div class="menu-left">
                 <ul>
-                  <li data-target="salubritate" class="active">Salubritate</li>
-                  <li data-target="curatenie">Curățenie</li>
-                  <li data-target="spatiiverzi">Spații verzi</li>
-                  <li data-target="energie">Energie</li>
-                  <li data-target="altele-mediu">Altele</li>
+                  <li data-target="menu-salubritate" class="active">
+                    Salubritate
+                  </li>
+                  <li data-target="menu-curatenie">Curățenie</li>
+                  <li data-target="menu-spatiiverzi">Spații verzi</li>
+                  <li data-target="menu-energie">Energie</li>
+                  <li data-target="menu-altele-mediu">Altele</li>
                 </ul>
               </div>
               <div class="menu-right">
-                <div class="menu-content active" id="salubritate">
+                <div class="menu-content active" id="menu-salubritate">
                   <a href="#colectare">Colectare selectivă</a>
                   <a href="#salubritate-menajera">Menajeră</a>
                   <a href="#salubritate-stradala">Stradală</a>
                   <a href="#dezapezire">Dezăpezire</a>
                 </div>
-                <div class="menu-content" id="curatenie">
-                  <a href="#cereri-specifice">Cereri</a>
+                <div class="menu-content" id="menu-curatenie">
+                  <a href="#cereri-specifice">Cereri specifice</a>
                   <a href="#curatenie-primavara">Curățenie primăvară</a>
-                  <a href="#deratizare-dezinsectie">Deratizare</a>
+                  <a href="#deratizare-dezinsectie"
+                    >Deratizare și dezinsectie</a
+                  >
                 </div>
-                <div class="menu-content" id="spatiiverzi">
+                <div class="menu-content" id="menu-spatiiverzi">
                   <a href="#adopta">Adoptă</a>
                   <a href="#ambrozie">Ambrozie</a>
                 </div>
-                <div class="menu-content" id="energie">
+                <div class="menu-content" id="menu-energie">
                   <a href="#panouri">Panouri fotovoltaice</a>
                   <a href="#finantare">Finanțare</a>
                 </div>
-                <div class="menu-content" id="altele-mediu">
+                <div class="menu-content" id="menu-altele-mediu">
                   <a href="#calitatea-aerului">Calitatea aerului</a>
                   <a href="#harta-zgomot">Harta zgomot</a>
                 </div>
@@ -255,30 +270,30 @@
             <div class="dropdown-menu split-menu">
               <div class="menu-left">
                 <ul>
-                  <li data-target="plan-mobilitate" class="active">
+                  <li data-target="menu-plan-mobilitate" class="active">
                     Plan mobilitate
                   </li>
-                  <li data-target="parcari">Parcări</li>
-                  <li data-target="transport-public">Transport public</li>
-                  <li data-target="biciclete">Biciclete</li>
-                  <li data-target="siguranta">Siguranță</li>
+                  <li data-target="menu-parcari">Parcări</li>
+                  <li data-target="menu-transport-public">Transport public</li>
+                  <li data-target="menu-biciclete">Biciclete</li>
+                  <li data-target="menu-siguranta">Siguranța circulației</li>
                 </ul>
               </div>
               <div class="menu-right">
-                <div class="menu-content active" id="plan-mobilitate">
+                <div class="menu-content active" id="menu-plan-mobilitate">
                   <a href="#plan-mobilitate">Plan mobilitate</a>
                 </div>
-                <div class="menu-content" id="parcari">
+                <div class="menu-content" id="menu-parcari">
                   <a href="#parcari">Parcări</a>
                 </div>
-                <div class="menu-content" id="transport-public">
+                <div class="menu-content" id="menu-transport-public">
                   <a href="#transport-public">Transport public</a>
                 </div>
-                <div class="menu-content" id="biciclete">
+                <div class="menu-content" id="menu-biciclete">
                   <a href="#biciclete">Biciclete</a>
                 </div>
-                <div class="menu-content" id="siguranta">
-                  <a href="#siguranta-circulatiei">Siguranță</a>
+                <div class="menu-content" id="menu-siguranta">
+                  <a href="#siguranta-circulatiei">Siguranța circulației</a>
                 </div>
               </div>
             </div>
@@ -290,31 +305,33 @@
             <div class="dropdown-menu split-menu">
               <div class="menu-left">
                 <ul>
-                  <li data-target="taxe" class="active">Taxe și impozite</li>
-                  <li data-target="plati">Plăți online</li>
-                  <li data-target="buget">Buget</li>
-                  <li data-target="achizitii">Achiziții</li>
-                  <li data-target="proiecte">Proiecte UE</li>
-                  <li data-target="investitori">Investitori</li>
+                  <li data-target="menu-taxe" class="active">
+                    Taxe și impozite
+                  </li>
+                  <li data-target="menu-plati-online">Plăți online</li>
+                  <li data-target="menu-buget">Buget</li>
+                  <li data-target="menu-achizitii">Achiziții publice</li>
+                  <li data-target="menu-proiecte">Proiecte UE</li>
+                  <li data-target="menu-investitori">Investitori</li>
                 </ul>
               </div>
               <div class="menu-right">
-                <div class="menu-content active" id="taxe">
+                <div class="menu-content active" id="menu-taxe">
                   <a href="#taxe-impozite">Taxe</a>
                 </div>
-                <div class="menu-content" id="plati">
+                <div class="menu-content" id="menu-plati-online">
                   <a href="#plati-online">Plăți online</a>
                 </div>
-                <div class="menu-content" id="buget">
+                <div class="menu-content" id="menu-buget">
                   <a href="#buget">Buget</a>
                 </div>
-                <div class="menu-content" id="achizitii">
-                  <a href="#achizitii-publice">Achiziții</a>
+                <div class="menu-content" id="menu-achizitii">
+                  <a href="#achizitii">Achiziții</a>
                 </div>
-                <div class="menu-content" id="proiecte">
-                  <a href="#proiecte-europene">Proiecte UE</a>
+                <div class="menu-content" id="menu-proiecte">
+                  <a href="#proiecte">Proiecte UE</a>
                 </div>
-                <div class="menu-content" id="investitori">
+                <div class="menu-content" id="menu-investitori">
                   <a href="#investitori">Investitori</a>
                 </div>
               </div>
@@ -327,31 +344,31 @@
             <div class="dropdown-menu split-menu">
               <div class="menu-left">
                 <ul>
-                  <li data-target="statut" class="active">Statut</li>
-                  <li data-target="regulamente">Regulamente</li>
-                  <li data-target="hotarari">Hotărâri</li>
-                  <li data-target="dispozitii">Dispoziții</li>
-                  <li data-target="financiare">Financiare</li>
-                  <li data-target="alte-documente">Alte documente</li>
+                  <li data-target="menu-statut" class="active">Statut</li>
+                  <li data-target="menu-regulamente">Regulamente</li>
+                  <li data-target="menu-hotarari">Hotărâri</li>
+                  <li data-target="menu-dispozitii">Dispoziții</li>
+                  <li data-target="menu-financiare">Financiare</li>
+                  <li data-target="menu-alte-documente">Alte documente</li>
                 </ul>
               </div>
               <div class="menu-right">
-                <div class="menu-content active" id="statut">
+                <div class="menu-content active" id="menu-statut">
                   <a href="#statut">Statut</a>
                 </div>
-                <div class="menu-content" id="regulamente">
+                <div class="menu-content" id="menu-regulamente">
                   <a href="#regulamente">Regulamente</a>
                 </div>
-                <div class="menu-content" id="hotarari">
+                <div class="menu-content" id="menu-hotarari">
                   <a href="#hotarari">Hotărâri</a>
                 </div>
-                <div class="menu-content" id="dispozitii">
+                <div class="menu-content" id="menu-dispozitii">
                   <a href="#dispozitii">Dispoziții</a>
                 </div>
-                <div class="menu-content" id="financiare">
-                  <a href="#documente-financiare">Financiare</a>
+                <div class="menu-content" id="menu-financiare">
+                  <a href="#financiare">Documente financiare</a>
                 </div>
-                <div class="menu-content" id="alte-documente">
+                <div class="menu-content" id="menu-alte-documente">
                   <a href="#alte-documente">Alte documente</a>
                 </div>
               </div>
@@ -364,99 +381,378 @@
     <!-- HOME -->
     <section id="home">
       <h1>Bine ați venit în Comuna Coșeiu</h1>
-      <img src="assets/images/comuna.png" alt="comuna" />
+      <img src="assets/images/comuna.png" loading="lazy" alt="comuna" />
     </section>
 
     <!-- COMUNITATE -->
     <section id="comunitate">
       <h2>Comunitate</h2>
 
-      <h3 id="cetateni">Cetățeni</h3>
-      <h4>Componența etnică</h4>
-      <ul>
-        <li>Maghiari (50,63%)</li>
-        <li>Români (40,09%)</li>
-        <li>Romi (4,59%)</li>
-        <li>Necunoscută (4,68%)</li>
-      </ul>
+      <section id="cetateni">
+        <h4>Cetățeni</h4>
+        <p>
+          Comuna Coșeiu are o populație de aproximativ 2.000 de locuitori,
+          majoritatea fiind de etnie maghiară, urmată de români și romi.
+        </p>
+        <h4>Componența etnică</h4>
+        <ul>
+          <li>Maghiari (50,63%)</li>
+          <li>Români (40,09%)</li>
+          <li>Romi (4,59%)</li>
+          <li>Necunoscută (4,68%)</li>
+        </ul>
 
-      <h4>Componența confesională</h4>
-      <ul>
-        <li>Ortodocși (36,31%)</li>
-        <li>Reformați (34,14%)</li>
-        <li>Baptiști (16,76%)</li>
-        <li>Greco-catolici (5,5%)</li>
-        <li>Alte religii (1,89%)</li>
-        <li>Necunoscută (5,41%)</li>
-      </ul>
+        <h4>Componența confesională</h4>
+        <ul>
+          <li>Ortodocși (36,31%)</li>
+          <li>Reformați (34,14%)</li>
+          <li>Baptiști (16,76%)</li>
+          <li>Greco-catolici (5,5%)</li>
+          <li>Alte religii (1,89%)</li>
+          <li>Necunoscută (5,41%)</li>
+        </ul>
 
-      <h3 id="educatie">Educație și Cultură</h3>
-      <p>Comuna Coșeiu dispune de școli primare și gimnaziale și grădinițe.</p>
+        <div id="dezbateri-publice"><h4>Dezbateri publice</h4></div>
+        <div id="newsletter"><h4>Newsletter</h4></div>
+        <div id="cetateni-onoare"><h4>Cetățeni onoare</h4></div>
+        <div id="sugestii-reclamatii"><h4>Sugestii și reclamații</h4></div>
+        <div id="bugetare"><h4>Bugetare</h4></div>
+        <div id="proceduri"><h4>Proceduri</h4></div>
+        <div id="live"><h4>Live webcam</h4></div>
+      </section>
 
-      <h4>Școli</h4>
-      <ul>
-        <li>Școala Gimnazială nr. 1 Coșeiu - Strada Principală nr. 224</li>
-        <li>Școala Gimnazială Archid - Strada Principală nr. 115</li>
-      </ul>
+      <!-- EDUCATIE -->
+      <section id="educatie">
+        <h3>Educație</h3>
+        <p>
+          Comuna Coșeiu dispune de școli primare și gimnaziale și grădinițe.
+        </p>
+        <div id="transport"><h4>Transport</h4></div>
+        <div id="autobuze"><h4>Autobuze</h4></div>
+        <div id="legislatie"><h4>Legislație</h4></div>
+        <div id="crese">
+          <h4>Creșe</h4>
+          <p>In curs de realizare</p>
+        </div>
+        <div id="gradinite">
+          <h4>Grădinițe</h4>
+          <p>Grădinița Coșeiu și Archid</p>
+        </div>
+        <div id="scoli">
+          <h4>Școli</h4>
+          <ul>
+            <li>Școala Gimnazială nr. 1 Coșeiu - Strada Principală nr. 224</li>
+            <li>Școala Gimnazială Archid - Strada Principală nr. 115</li>
+          </ul>
+        </div>
+      </section>
 
-      <h4>Grădinițe</h4>
-      <p>Grădinița Coșeiu și Archid</p>
+      <!-- CULTURA -->
+      <section id="cultura">
+        <h3>Cultură și Tradiții</h3>
+        <p>Obiceiuri locale: Paște, colinde, Ziua Coșeiului.</p>
+        <div id="biblioteci"><h4>Biblioteci</h4></div>
+        <div id="finantari-cultura"><h4>Finanțări cultură</h4></div>
+        <div id="personalitati"><h4>Personalități</h4></div>
+      </section>
 
-      <h3 id="tineret">Tineret</h3>
-      <p>În curând.</p>
+      <!-- SPORT -->
+      <section id="sport">
+        <h3>Sport</h3>
+        <p>Terenul de sport din satul Coșeiu.</p>
+        <div id="structuri">
+          <h4>Structuri sportive</h4>
+        </div>
+        <div id="finantari-sport">
+          <h4>Finanțări sportive</h4>
+        </div>
+        <div id="baze">
+          <h4>Baze sportive</h4>
+        </div>
+        <div id="sala">
+          <h4>Sală sport</h4>
+        </div>
+      </section>
 
-      <h3 id="cultura">Cultură și Tradiții</h3>
-      <p>Obiceiuri locale: Paște, colinde, Ziua Coșeiului.</p>
+      <!-- SANATATE -->
+      <section id="sanatate">
+        <h3>Sănătate</h3>
+        <div id="unitati">
+          <h4>Unități</h4>
+        </div>
+        <div id="finantari-sanatate">
+          <h4>Finanțări sănătate</h4>
+        </div>
+        <div id="urgenta">
+          <h4>Urgențe</h4>
+        </div>
+      </section>
 
-      <h3 id="sport">Sport</h3>
-      <p>Terenul de sport din satul Coșeiu.</p>
+      <!-- SOCIAL -->
+      <section id="social">
+        <h3>Social</h3>
+        <div id="varstnice"><h4>Vârstnice</h4></div>
+        <div id="adapost"><h4>Adăpost</h4></div>
+        <div id="ajutor-social"><h4>Ajutor social</h4></div>
+        <div id="tichete"><h4>Tichete</h4></div>
+        <div id="stomatologie"><h4>Stomatologie</h4></div>
+      </section>
 
-      <h3 id="sanatate">Sănătate</h3>
-      <p>În curând.</p>
+      <!-- ANIMALE -->
+      <section id="animale">
+        <h3>Programe animale</h3>
+        <div id="sterilizare"><h4>Sterilizare</h4></div>
+        <div id="adoptii"><h4>Adoptii</h4></div>
+        <div id="boluri"><h4>Boluri</h4></div>
+        <div id="adaposturi"><h4>Adaposturi</h4></div>
+      </section>
 
-      <h3 id="social">Social</h3>
-      <p>Parcuri...</p>
+      <!-- TURISM -->
+      <section id="turism">
+        <h3>Turism</h3>
+        <div id="centru"><h4>Centru de informare turistică</h4></div>
+        <div id="visit">
+          <h4>Visit Coșeiu</h4>
+          <p>
+            Comuna Coșeiu este situată la 18 km de orașul Zalău, la o altitudine
+            de 289 m. Coordonatele GPS: 47°19'8″N 22°59'34″E.
+          </p>
+          <div id="monumente">
+            <h3>Monumente istorice</h3>
+            <p>Biserica Reformată și clopotnița de lemn.</p>
+          </div>
+          <div id="informatii-publice">
+            <h3>Știri</h3>
+            <article>
+              <h4>Paștele în Coșeiu</h4>
+              <time datetime="2026-04-01">1 aprilie 2026</time>
+              <h4>Festivalul Tradițiilor - Mai 2026</h4>
+              <small>1 mai 2026</small>
+            </article>
+            <ul>
+              <li>Biserica Reformată din Coșeiu</li>
+              <li>Biserica Greco-Catolică</li>
+              <li>Clopotnița de Lemn</li>
+              <li>Pădurea Hegyes</li>
+              <li>Tunelul Înfundat</li>
+            </ul>
+          </div>
+        </div>
+        <div id="harta">
+          <section id="map">
+            <h2>Hartă</h2>
+            <iframe
+              src="https://www.openstreetmap.org/export/embed.html"
+            ></iframe>
+          </section>
+        </div>
+      </section>
 
-      <h3 id="animale">Programe animale</h3>
-      <p>În curând.</p>
-
-      <h3 id="turism">Turism</h3>
-      <ul>
-        <li>Biserica Reformată din Coșeiu</li>
-        <li>Biserica Greco-Catolică</li>
-        <li>Clopotnița de Lemn</li>
-        <li>Pădurea Hegyes</li>
-        <li>Tunelul Înfundat</li>
-      </ul>
-
-      <h3 id="evenimente">Evenimente</h3>
-      <p>Festivaluri și sărbători locale.</p>
+      <!-- EVENIMENTE -->
+      <section id="evenimente">
+        <h3>Evenimente</h3>
+        <div id="zilele"><h4>Zilele Coșeiului</h4></div>
+        <div id="craciun"><h4>Crăciunul în Coșeiu</h4></div>
+        <div id="piata"><h4>Piața Coșeiului</h4></div>
+      </section>
     </section>
 
     <!-- LOCUIRE -->
     <section id="locuire">
       <h2>Locuire</h2>
       <p>Strategii urbane, urbanism și locuințe (în curs de actualizare).</p>
+      <div id="strategii-urbane"><h4>Strategii urbane</h4></div>
+      <div id="urbanism"><h4>Urbanism</h4></div>
+      <div id="autorizatii"><h4>Autorizații</h4></div>
+      <div id="strazi"><h4>Străzi</h4></div>
+      <div id="locuinte"><h4>Locuințe</h4></div>
+      <div id="gis"><h4>GIS</h4></div>
     </section>
 
     <!-- ADMINISTRATIE -->
     <section id="administratie">
       <h2>Administrație</h2>
 
-      <h3 id="primarie">Primăria și Consiliul Local</h3>
-      <p>
-        Primăria Comunei Coșeiu este responsabilă pentru administrarea locală.
-        Adresa: Strada Principală, Coșeiu, Județul Sălaj, Cod poștal 457080.
-        Pentru informații detaliate, contactați primăria.
-      </p>
+      <section id="primar">
+        <h3>Primarie</h3>
+        <p>
+          Primăria Comunei Coșeiu este responsabilă pentru administrarea locală.
+          Adresa: Strada Principală, Coșeiu, Județul Sălaj, Cod poștal 457080.
+          Pentru informații detaliate, contactați primăria.
+        </p>
+        <div id="viceprimar"><h3>Viceprimar</h3></div>
+        <div id="organigrama"><h3>Organigramă</h3></div>
+        <div id="regulament-primarie"><h3>Regulament</h3></div>
+        <div id="sediu"><h3>Sediu</h3></div>
+      </section>
 
-      <h3 id="geografie">Geografie</h3>
-      <p>
-        Comuna Coșeiu este situată la 18 km de orașul Zalău, la o altitudine de
-        289 m. Coordonatele GPS: 47°19'8″N 22°59'34″E.
-      </p>
+      <section id="consiliu">
+        <h3>Consiliul local</h3>
+        <p>
+          Consiliul local este organul de conducere al comunei, compus din
+          consilieri aleși de către cetățenii din aceasta.
+        </p>
+        <div id="consilieri"><h3>Consilieri</h3></div>
+        <div id="comisii"><h3>Comisii</h3></div>
+        <div id="sedinte"><h3>Sedinte</h3></div>
+        <div id="hotarari-consiliu"><h3>Hotărâri Consiliu</h3></div>
+      </section>
 
-      <h3 id="istorie">Istorie</h3>
+      <section id="evidenta">
+        <h3>Evidența persoanelor</h3>
+        <div id="nasteri"><h3>Nașteri</h3></div>
+        <div id="identitate"><h3>Acte</h3></div>
+        <div id="casatorii"><h3>Casătorii</h3></div>
+        <div id="divorturi"><h3>Divorturi</h3></div>
+        <div id="decese"><h3>Decese</h3></div>
+        <div id="pasapoarte"><h3>Pașapoarte</h3></div>
+      </section>
+
+      <section id="politia-locala">
+        <h3>Poliția locală</h3>
+        <div id="informatii-politie"><h3>Informații Poliție</h3></div>
+        <div id="atributii"><h3>Atribuții poliție</h3></div>
+        <div id="amenzi"><h3>Plata amenzilor</h3></div>
+        <div id="ridicari"><h3>Ridicări auto</h3></div>
+      </section>
+
+      <section id="informatii-publice">
+        <h3>Informații publice</h3>
+        <div id="anunturi"><h3>Anunțuri</h3></div>
+        <div id="concursuri"><h3>Concursuri</h3></div>
+        <div id="cereri"><h3>Cereri tip</h3></div>
+        <div id="audiente"><h3>Audiențe</h3></div>
+        <div id="contracte"><h3>Contracte</h3></div>
+        <div id="plati"><h3>Plăți</h3></div>
+        <div id="licitatii"><h3>Licitații</h3></div>
+        <div id="documente"><h3>Documente</h3></div>
+      </section>
+
+      <section id="altele">
+        <h3>Altele</h3>
+        <div id="transformare-digitala"><h3>Transformare digitală</h3></div>
+        <div id="servicii-online"><h3>Servicii online</h3></div>
+      </section>
+
+      <div id="transparenta">
+        <h3>Transparență</h3>
+        <p>
+          Ședință publică a Consiliului Local pe data de 15 aprilie, la ora
+          18:00, la Primărie.
+        </p>
+      </div>
+    </section>
+
+    <!-- MEDIU -->
+    <section id="mediu">
+      <h2>Mediu</h2>
+      <div id="salubritate">
+        <h3>Salubritate</h3>
+        <div id="colectare"><h4>Colectare selectivă</h4></div>
+        <div id="salubritate-menajera"><h4>Salubritate menajeră</h4></div>
+        <div id="salubritate-stradala"><h4>Salubritate stradală</h4></div>
+        <div id="dezapezire"><h4>Dezăpezire</h4></div>
+      </div>
+
+      <div id="curatenie">
+        <h3>Curățenie</h3>
+        <div id="cereri-specifice"><h4>Cereri specifice</h4></div>
+        <div id="curatenie-primavara"><h4>Curățenie primăvară</h4></div>
+        <div id="deratizare-dezinsecție">
+          <h4>Deratizare și dezinsecție</h4>
+        </div>
+      </div>
+
+      <div id="spatii-verzi">
+        <h3>Spații verzi</h3>
+        <div id="adopta"><h4>Adoptă</h4></div>
+        <div id="ambrozie"><h4>Ambrozie</h4></div>
+      </div>
+
+      <div id="energie">
+        <h3>Energie</h3>
+        <div id="panouri"><h4>Panouri fotovoltaice</h4></div>
+        <div id="finantare"><h4>Finanțare</h4></div>
+      </div>
+
+      <div id="altele-mediu">
+        <h3>Altele mediu</h3>
+        <div id="calitatea-aerului"><h4>Calitatea aerului</h4></div>
+        <div id="harta-zgomot"><h4>Harta zgomot</h4></div>
+      </div>
+    </section>
+
+    <!-- MOBILITATE -->
+    <section id="mobilitate">
+      <h2>Mobilitate</h2>
+      <div id="plan-mobilitate">
+        <h3>Plan mobilitate</h3>
+      </div>
+      <div id="parcari">
+        <h3>Parcări</h3>
+      </div>
+      <div id="transport-public">
+        <h3>Transport public</h3>
+        <img src="assets/images/transportCZ.png" alt="transport" />
+        <img src="assets/images/transportZC.png" alt="transport" />
+      </div>
+      <div id="biciclete">
+        <h3>Biciclete</h3>
+      </div>
+      <div id="siguranta-circulatiei">
+        <h3>Siguranța circulației</h3>
+      </div>
+    </section>
+
+    <!-- ECONOMIE -->
+    <section id="economie">
+      <h2>Economie</h2>
+      <div id="taxe-impozite"><h3>Taxe și impozite</h3></div>
+      <div id="plati-online"><h3>Plăți online</h3></div>
+      <div id="buget"><h3>Buget</h3></div>
+      <div id="achizitii"><h3>Achiziții publice</h3></div>
+      <div id="proiecte"><h3>Proiecte UE</h3></div>
+      <div id="investitori">
+        <h3>Investitori</h3>
+        <ul>
+          <li>TERMO PAL JAN SRL</li>
+          <li>ZOOFARM SRL</li>
+          <li>TIBO PROD COM SRL</li>
+          <li>VETERN SRL</li>
+          <li>LIVMATCOM IULIA SRL</li>
+          <li>SAFETY CONSULT JRO SRL</li>
+          <li>NEV TRANS SRL</li>
+          <li>CHISIU IOAN CONSTRUCT SRL</li>
+          <li>FERERN IMPEX SRL</li>
+          <li>BIAIRISREM SRL</li>
+          <li>PLUS HOME CLEANING SRL</li>
+          <li>EDINA & MEDEEA SRL</li>
+          <li>ASTUCES CONCEPT SRL</li>
+          <li>LANLAC AGPT SRL</li>
+          <li>KING BAKERY SRL</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- MONITOR -->
+    <section id="monitor-oficial">
+      <h2>Monitor Oficial Local</h2>
+
+      <div id="statut"><h3>Statut</h3></div>
+      <div id="regulamente"><h3>Regulamente</h3></div>
+      <div id="hotarari"><h3>Hotărâri</h3></div>
+      <div id="dispozitii"><h3>Dispoziții</h3></div>
+      <div id="financiare"><h3>Documente financiare</h3></div>
+      <div id="alte-documente"><h3>Alte documente</h3></div>
+    </section>
+
+    <!-- SERVICII
+    <section id="servicii">
+      <h2>Servicii</h2>
+      <p>Apă, iluminat, salubritate.</p>
+    </section> -->
+
+    <!-- <h3 id="istorie">Istorie</h3>
       <p>
         Prima atestare documentară a localității datează din 1299, când este
         menționată ca târg local sub numele de Kusal. În secolul al XV-lea,
@@ -465,146 +761,71 @@
         a fost fondată sub patronajul episcopului Dionisius de Oradea și a
         încetat să funcționeze odată cu răspândirea Reformei în jurul anului
         1550.
-      </p>
+      </p> -->
 
-      <h3 id="demografie">Demografie</h3>
+    <!-- <h3 id="demografie">Demografie</h3>
       <p>
         Conform recensământului din 2021, populația comunei Coșeiu se ridică la
         1.110 locuitori, în scădere față de 2011 când erau 1.198 de locuitori.
-      </p>
-
-      <h3 id="monumente">Monumente istorice</h3>
-      <p>Biserica Reformată și clopotnița de lemn.</p>
-
-      <h3 id="informatii-publice">Știri</h3>
-      <article>
-        <h4>Paștele în Coșeiu</h4>
-        <small>1 aprilie 2026</small>
-        <h4>Festivalul Tradițiilor - Mai 2026</h4>
-        <small>1 mai 2026</small>
-      </article>
-
-      <h3 id="transparenta">Transparență</h3>
-      <p>
-        Ședință publică a Consiliului Local pe data de 15 aprilie, la ora 18:00,
-        la Primărie.
-      </p>
-
-      <h3 id="servicii-online">Proceduri online</h3>
-      <p>Plăți, cereri și programări.</p>
-    </section>
-
-    <!-- MEDIU -->
-    <section id="mediu">
-      <h2>Mediu</h2>
-      <p>Salubritate, curățenie și spații verzi.</p>
-    </section>
-
-    <!-- MOBILITATE -->
-    <section id="mobilitate">
-      <h2>Mobilitate</h2>
-      <p>Transport public limitat.</p>
-      <img src="assets/images/transportCZ.png" alt="transport" />
-      <img src="assets/images/transportZC.png" alt="transport" />
-    </section>
-
-    <!-- ECONOMIE -->
-    <section id="economie">
-      <h2>Economie</h2>
-      <ul>
-        <li>TERMO PAL JAN SRL</li>
-        <li>ZOOFARM SRL</li>
-        <li>TIBO PROD COM SRL</li>
-        <li>VETERN SRL</li>
-        <li>LIVMATCOM IULIA SRL</li>
-        <li>SAFETY CONSULT JRO SRL</li>
-        <li>NEV TRANS SRL</li>
-        <li>CHISIU IOAN CONSTRUCT SRL</li>
-        <li>FERERN IMPEX SRL</li>
-        <li>BIAIRISREM SRL</li>
-        <li>PLUS HOME CLEANING SRL</li>
-        <li>EDINA & MEDEEA SRL</li>
-        <li>ASTUCES CONCEPT SRL</li>
-        <li>LANLAC AGPT SRL</li>
-        <li>KING BAKERY SRL</li>
-      </ul>
-    </section>
-
-    <!-- MONITOR -->
-    <section id="monitor-oficial">
-      <h2>Monitor Oficial Local</h2>
-      <p>Documente administrative (în curs).</p>
-    </section>
-
-    <!-- SERVICII -->
-    <section id="servicii">
-      <h2>Servicii</h2>
-      <p>Apă, iluminat, salubritate.</p>
-    </section>
-
-    <!-- GALERIE -->
-    <section id="gallery">
-      <h2>Galerie</h2>
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/4/48/RO_SJ_Coseiu_%281%29.jpg"
-        alt="Intrarea în localitate"
-      />
-      <img
-        src="https://scontent-bcn1-1.xx.fbcdn.net/v/t39.30808-6/292539156_162998962935779_56881578253331917_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=VXLalJQIO-MQ7kNvwHvcD09&_nc_oc=AdqqZgYzQLsF3zHyoY7TMHoTjJmxRzfUdr89LSluWwo9tcgq6G9i4TFQfGdHU98o_ho&_nc_zt=23&_nc_ht=scontent-bcn1-1.xx&_nc_gid=3Xl8aE9VE3IZPfLWBoRS7w&_nc_ss=7a3a8&oh=00_Afx978pXWv6J_1JOcbctYmV9XoyruRYxs5ZS9v2PYbOnaw&oe=69D1E33F"
-        alt="Primăria Coșeiu"
-      />
-
-      <!-- <img
-          src="https://upload.wikimedia.org/wikipedia/commons/4/48/RO_SJ_Coseiu_%284%29.jpg"
-          alt="Primăria comunei Coșeiu"
-        /> -->
-      <!-- <img
-          src="https://upload.wikimedia.org/wikipedia/commons/4/48/RO_SJ_Coseiu_%289%29.jpg"
-          alt="Clopotnița de lemn a bisericii reformate"
-        /> -->
-      <!-- <img
-          src="https://upload.wikimedia.org/wikipedia/commons/4/48/RO_SJ_Coseiu_%285%29.jpg"
-          alt="Biserica reformată din Coșeiu"
-        /> -->
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/RO_SJ_Biserica_reformata_din_Coseiu_%282%29.jpg/960px-RO_SJ_Biserica_reformata_din_Coseiu_%282%29.jpg"
-        alt="Biserica reformată din Coșeiu - imagine suplimentară"
-      />
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/RO_SJ_Biserica_reformata_din_Coseiu_%2831%29.jpg/500px-RO_SJ_Biserica_reformata_din_Coseiu_%2831%29.jpg"
-        alt="Biserica reformată din Coșeiu - portal gotic"
-      />
-      <!-- <img
-          src="https://upload.wikimedia.org/wikipedia/commons/4/48/RO_SJ_Coseiu_(2).jpg"
-          alt="Vedere generală a comunei Coșeiu"
-        /> -->
-    </section>
-
-    <!-- VIDEO -->
-    <section id="videos">
-      <h2>Video</h2>
-      <iframe src="https://www.youtube.com/embed/YeE9TTFc9uQ"></iframe>
-    </section>
-
-    <!-- HARTA -->
-    <section id="map">
-      <h2>Hartă</h2>
-      <iframe src="https://www.openstreetmap.org/export/embed.html"></iframe>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Primăria Comunei Coșeiu</p>
-      <p>
-        Adresă: Strada Principală, Coșeiu, Județul Sălaj, România, Cod poștal
-        457080
-      </p>
-      <p>Email: primariacoseiu@yahoo.com</p>
-      <p>Program de lucru: Luni - Vineri, 8:00 - 16:00</p>
-    </section>
+      </p> -->
 
     <footer>
+      <!-- CONTACT -->
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>Primăria Comunei Coșeiu</p>
+        <p>
+          Adresă: Strada Principală, Coșeiu, Județul Sălaj, România, Cod poștal
+          457080
+        </p>
+        <p>Email: primariacoseiu@yahoo.com</p>
+        <p>Program de lucru: Luni - Vineri, 8:00 - 16:00</p>
+      </section>
+
+      <!-- GALERIE -- -->
+      <section id="gallery">
+        <h2>Galerie</h2>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/4/48/RO_SJ_Coseiu_%281%29.jpg"
+          alt="Intrarea în localitate"
+        />
+        <img
+          src="https://scontent-bcn1-1.xx.fbcdn.net/v/t39.30808-6/292539156_162998962935779_56881578253331917_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=VXLalJQIO-MQ7kNvwHvcD09&_nc_oc=AdqqZgYzQLsF3zHyoY7TMHoTjJmxRzfUdr89LSluWwo9tcgq6G9i4TFQfGdHU98o_ho&_nc_zt=23&_nc_ht=scontent-bcn1-1.xx&_nc_gid=3Xl8aE9VE3IZPfLWBoRS7w&_nc_ss=7a3a8&oh=00_Afx978pXWv6J_1JOcbctYmV9XoyruRYxs5ZS9v2PYbOnaw&oe=69D1E33F"
+          alt="Primăria Coșeiu"
+        />
+
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/4/48/RO_SJ_Coseiu_%284%29.jpg"
+          alt="Primăria comunei Coșeiu"
+        />
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/4/48/RO_SJ_Coseiu_%289%29.jpg"
+          alt="Clopotnița de lemn a bisericii reformate"
+        />
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/4/48/RO_SJ_Coseiu_%285%29.jpg"
+          alt="Biserica reformată din Coșeiu"
+        />
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/RO_SJ_Biserica_reformata_din_Coseiu_%282%29.jpg/960px-RO_SJ_Biserica_reformata_din_Coseiu_%282%29.jpg"
+          alt="Biserica reformată din Coșeiu - imagine suplimentară"
+        />
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/RO_SJ_Biserica_reformata_din_Coseiu_%2831%29.jpg/500px-RO_SJ_Biserica_reformata_din_Coseiu_%2831%29.jpg"
+          alt="Biserica reformată din Coșeiu - portal gotic"
+        />
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/4/48/RO_SJ_Coseiu_(2).jpg"
+          alt="Vedere generală a comunei Coșeiu"
+        />
+      </section>
+
+      <!-- VIDEO -->
+      <section id="videos">
+        <h2>Video</h2>
+        <iframe src="https://www.youtube.com/embed/YeE9TTFc9uQ"></iframe>
+      </section>
+
       <p>© 2026 Comuna Coșeiu</p>
       |
       <p>

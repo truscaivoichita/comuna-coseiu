@@ -55,8 +55,10 @@ header .logo {
 /* ===== NAVBAR ===== */
 nav {
   position: relative;
+  z-index: 1000;
 }
-nav > u\l {
+
+nav > ul {
   display: flex;
   gap: 15px;
   list-style: none;
@@ -76,10 +78,9 @@ nav a {
 
 nav a:hover {
   background-color: rgba(255, 255, 255, 0.15);
-  transition: 0.3s;
 }
 
-/* ===== NAV DROPDOWN FULL SCREEN & SPLIT ===== */
+/* ===== SPLIT MENU ===== */
 nav .dropdown-menu.split-menu {
   display: flex;
   width: 100vw;
@@ -87,96 +88,51 @@ nav .dropdown-menu.split-menu {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: inherit;
   padding: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  z-index: 999;
-}
-/* LEFT/RIGHT SPLIT */
-nav .split-menu .menu-left {
-  width: 25%;
-  border-right: 1px solid rgba(255, 255, 255, 0.2);
-  padding-right: 20px;
-}
-
-nav .split-menu .menu-right {
-  width: 75%;
-  padding-left: 20px;
-  text-align: left;
-}
-
-nav .split-menu .menu-left li {
-  cursor: pointer;
-  padding: 10px 0;
-}
-
-nav .split-menu .menu-left li.active {
-  font-weight: bold;
-}
-/* SHOW/HIDE CONTENT */
-nav .split-menu .menu-content {
-  display: none;
-}
-
-nav .split-menu .menu-content.active {
-  display: block;
-}
-
-/* ===== SPLIT-MENU DROPDOWN ===== */
-.split-menu {
-  display: flex;
-  width: 700px;
-  background: inherit;
-  border-radius: 8px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-  position: absolute;
-  top: 100%;
-  left: 0;
-  padding: 10px 0;
   z-index: 999;
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.2s ease;
+  border-radius: 0 0 12px 12px;
+  background-color: inherit;
 }
 
-/* Show dropdown on hover */
 .dropdown:hover .split-menu {
   visibility: visible;
   opacity: 1;
 }
 
-/* LEFT SIDE */
+/* ===== LEFT SIDE ===== */
 .menu-left {
-  width: 35%;
-  border-right: 1px solid #eee;
-  padding-left: 15px;
+  width: 25%;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  padding-right: 20px;
 }
 
 .menu-left ul {
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 .menu-left li {
-  padding: 8px 10px;
+  padding: 10px 0;
   cursor: pointer;
-  color: #333;
+  color: inherit;
   transition: 0.2s;
+  text-align: left;
 }
 
 .menu-left li.active,
 .menu-left li:hover {
-  color: inherit;
-  background-color: initial;
   font-weight: 900;
 }
 
-/* RIGHT SIDE */
+/* ===== RIGHT SIDE ===== */
 .menu-right {
-  width: 65%;
-  padding: 0 15px;
-  max-height: 400px;
+  width: 75%;
+  padding-left: 20px;
+  text-align: left;
+  max-height: 500px;
   overflow-y: auto;
 }
 
@@ -191,121 +147,108 @@ nav .split-menu .menu-content.active {
 
 .menu-right a {
   padding: 6px 0;
-  color: #333;
+  color: inherit;
   text-decoration: none;
-  border-bottom: 1px dashed #eee;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
   transition: 0.2s;
 }
 
 .menu-right a:hover {
-  background-color: white;
-  color: #0d0c75;
   padding-left: 5px;
   font-weight: 600;
 }
 
-/* Scrollbar styling */
+/* ===== SCROLLBAR ===== */
 .menu-right::-webkit-scrollbar {
   width: 6px;
 }
+
 .menu-right::-webkit-scrollbar-thumb {
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 3px;
 }
 
-/* ===== HOVER COLORS FOR EACH MENU ===== */
+/* ===== HOVER COLORS ===== */
 .dropdown.comunitate:hover .split-menu {
   background-color: rgb(0, 173, 236);
   color: white;
 }
-
 .dropdown.locuire:hover .split-menu {
   background-color: rgb(231, 72, 86);
   color: white;
 }
-
 .dropdown.administratie:hover .split-menu {
   background-color: rgb(248, 162, 63);
   color: white;
 }
-
 .dropdown.mediu:hover .split-menu {
   background-color: rgb(0, 204, 106);
   color: white;
 }
-
 .dropdown.mobilitate:hover .split-menu {
   background-color: rgb(194, 57, 179);
   color: white;
 }
-
 .dropdown.economie:hover .split-menu {
   background-color: rgb(0, 183, 195);
   color: white;
 }
-
 .dropdown.monitor-oficial:hover .split-menu {
   background-color: rgb(49, 121, 182);
   color: white;
-}
-
-/* Adjust text inside split-menu for white background menus */
-.split-menu a {
-  color: inherit;
-}
-.split-menu .menu-left li {
-  color: inherit;
 }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
   nav {
     width: 100vw;
-    position: relative;
   }
+
   nav > ul {
     flex-direction: column;
   }
-  /* Make dropdown take full screen height on mobile */
+
+  /* Full screen dropdown */
   nav .dropdown-menu.split-menu {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    flex-direction: column; /* keep left/right split */
-    background-color: #0d0c75; /* fallback color */
+    flex-direction: column;
     padding: 0;
     overflow: hidden;
-  }
-  /* left/right each half screen */
-  nav .split-menu .menu-left,
-  nav .split-menu .menu-right {
-    width: 100%;
-    height: 100%;
-    overflow-y: auto; /* scroll if content is tall */
-    padding: 20px;
-    transition: transform 0.3s ease;
+    background-color: #0d0c75;
+    border-radius: 0;
   }
 
-  /* clickable left items instead of hover */
+  /* Left/Right each full height, slide right content */
+  nav .menu-left,
+  nav .menu-right {
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+    overflow-y: auto;
+    transition: transform 0.3s ease;
+    /* background-color: #0d0c75; */
+    color: white;
+  }
+
   nav .menu-left li {
     padding: 15px 10px;
     font-size: 16px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
-  /* menu right scroll */
+
   nav .menu-right {
-    border-left: 1px solid rgba(255, 255, 255, 0.2);
-    background-color: #0d0c75;
-    color: white;
-    transform: translateX(100%); /* hidden by default */
     position: absolute;
     top: 0;
     left: 0;
+    transform: translateX(100%);
   }
+
   nav .menu-right.active {
-    transform: translateX(0); /* slide in */
+    transform: translateX(0);
   }
 
   .back-button {
@@ -317,22 +260,5 @@ nav .split-menu .menu-content.active {
     cursor: pointer;
     border-radius: 6px;
     font-weight: bold;
-  }
-  .split-menu {
-    width: 100vw;
-    flex-direction: row;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    padding: 10px 0;
-  }
-  .menu-left,
-  .menu-right {
-    width: 50%;
-    border: none;
-    padding: 0 10px;
-  }
-  .menu-right {
-    max-height: 300px;
   }
 }
