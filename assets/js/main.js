@@ -42,17 +42,18 @@ items.forEach((item) => {
 // ===== DESKTOP HOVER BEHAVIOR =====
 items.forEach((item) => {
   item.addEventListener("mouseenter", () => {
-    if (window.innerWidth <= 900) return; // disable on mobile
+    if (window.innerWidth <= 900) return;
 
-    // Remove active from all
+    const menu = item.closest(".split-menu");
+    const rightSide = menu.querySelector(".menu-right");
+    const targetId = item.dataset.target;
+
     items.forEach((i) => i.classList.remove("active"));
     contents.forEach((c) => c.classList.remove("active"));
 
-    // Set active
     item.classList.add("active");
-    // const targetContent = document.getElementById(item.dataset.target);
-    const targetContent = rightSide.querySelector(`#menu-${targetId}`);
 
+    const targetContent = rightSide.querySelector(`#${targetId}`);
     if (targetContent) targetContent.classList.add("active");
   });
 });
