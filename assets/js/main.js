@@ -64,8 +64,8 @@ function handleDesktopHover(item) {
 // ===== NAV TOGGLE =====
 function toggleNav() {
   nav.classList.toggle("active");
+  document.body.classList.toggle("nav-open");
 }
-
 // ===== DROPDOWN (MOBILE) =====
 function handleDropdownClick(e) {
   if (window.innerWidth > 900) return;
@@ -105,6 +105,7 @@ function handleSubmenuClick(e) {
 function handleOutsideClick(e) {
   if (!nav.contains(e.target) && (!toggle || !toggle.contains(e.target))) {
     nav.classList.remove("active");
+    document.body.classList.remove("nav-open");
 
     document
       .querySelectorAll(".dropdown")
@@ -117,6 +118,17 @@ function handleOutsideClick(e) {
     document
       .querySelectorAll(".menu-right")
       .forEach((r) => r.classList.remove("active"));
+  }
+}
+
+// =====  SCROLL BEHAVIOR (side-by-side feel) =====
+function handleScroll() {
+  const header = document.querySelector("header");
+
+  if (window.scrollY > 50) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
   }
 }
 
@@ -210,6 +222,23 @@ function initSearch() {
 function initGlobalEvents() {
   if (toggle) toggle.addEventListener("click", toggleNav);
 
+  document.querySelectorAll("nav a").forEach((link) => {
+    link.addEventListener("click", () => {
+      if (window.innerWidth <= 900) {
+        nav.classList.remove("active");
+
+        // also reset menus (important)
+        document
+          .querySelectorAll(".dropdown")
+          .forEach((d) => d.classList.remove("active"));
+
+        document
+          .querySelectorAll(".menu-right")
+          .forEach((r) => r.classList.remove("active"));
+      }
+    });
+  });
+  window.addEventListener("scroll", handleScroll);
   document.addEventListener("click", handleOutsideClick);
   window.addEventListener("resize", handleResize);
 }
