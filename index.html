@@ -413,14 +413,6 @@
           <li>Alte religii (1,89%)</li>
           <li>Necunoscută (5,41%)</li>
         </ul>
-
-        <div id="dezbateri-publice"><h4>Dezbateri publice</h4></div>
-        <div id="newsletter"><h4>Newsletter</h4></div>
-        <div id="cetateni-onoare"><h4>Cetățeni onoare</h4></div>
-        <div id="sugestii-reclamatii"><h4>Sugestii și reclamații</h4></div>
-        <div id="bugetare"><h4>Bugetare</h4></div>
-        <div id="proceduri"><h4>Proceduri</h4></div>
-        <div id="live"><h4>Live webcam</h4></div>
       </section>
 
       <!-- EDUCATIE -->
@@ -775,7 +767,12 @@
       </div>
       <div id="sugestii-reclamatii">
         <h4>Sugestii și reclamații</h4>
-        <form action=""></form>
+        <form>
+          <input type="text" placeholder="Nume" required />
+          <input type="email" placeholder="Email" required />
+          <textarea placeholder="Mesaj"></textarea>
+          <button type="submit">Trimite</button>
+        </form>
       </div>
       <div id="bugetare">
         <h4>Bugetare participativă</h4>
@@ -1332,9 +1329,24 @@
         <div id="comisii">
           <h3>Comisii</h3>
           <p>
-            Consiliul Local își desfășoară activitatea prin comisii de
-            specialitate, constituite în conformitate cu prevederile Codului
-            administrativ.
+            Comisiile de specialitate ale Consiliului Local Coșeiu analizează
+            proiectele de hotărâri și emit avize consultative înainte de
+            adoptarea acestora în plen.
+          </p>
+          <ul>
+            <li>
+              Comisia pentru buget, finanțe și administrarea domeniului public
+              și privat
+            </li>
+            <li>Comisia pentru agricultură, mediu și dezvoltare rurală</li>
+            <li>
+              Comisia pentru învățământ, sănătate, cultură și protecție socială
+            </li>
+          </ul>
+          <p>
+            Fiecare comisie este formată din consilieri locali și funcționează
+            conform regulamentului de organizare și funcționare al Consiliului
+            Local.
           </p>
         </div>
         <section id="sedinte">
@@ -1344,6 +1356,24 @@
             condițiile prevăzute de Codul administrativ, fiind aduse la
             cunoștința cetățenilor.
           </p>
+          <p>
+            Ședințele Consiliului Local Coșeiu sunt anunțate în prealabil și
+            sunt deschise publicului.
+          </p>
+
+          <h4>Următoarea ședință</h4>
+          <ul>
+            <li>Data: 15 aprilie 2026</li>
+            <li>Ora: 18:00</li>
+            <li>Locație: Sala de ședințe a Primăriei</li>
+          </ul>
+
+          <h4>Ordinea de zi</h4>
+          <ul>
+            <li>Aprobarea bugetului local</li>
+            <li>Proiecte de infrastructură</li>
+            <li>Diverse</li>
+          </ul>
         </section>
         <section id="hotarari-consiliu">
           <h3>Hotărâri Consiliu</h3>
@@ -1352,25 +1382,102 @@
             normativ sau individual și se publică pentru asigurarea
             transparenței decizionale.
           </p>
+          <ul>
+            <li><a href="#">HCL nr. 10 / 2026 - Buget local</a></li>
+            <li><a href="#">HCL nr. 11 / 2026 - Taxe și impozite</a></li>
+            <li><a href="#">HCL nr. 12 / 2026 - Investiții locale</a></li>
+          </ul>
         </section>
       </section>
 
       <section id="evidenta">
         <h3>Evidența persoanelor</h3>
-        <div id="nasteri"><h3>Nașteri</h3></div>
-        <div id="identitate"><h3>Acte</h3></div>
-        <div id="casatorii"><h3>Casătorii</h3></div>
-        <div id="divorturi"><h3>Divorturi</h3></div>
-        <div id="decese"><h3>Decese</h3></div>
-        <div id="pasapoarte"><h3>Pașapoarte</h3></div>
+        <p>
+          Serviciul de evidență a persoanelor asigură gestionarea actelor de
+          stare civilă și a documentelor de identitate pentru cetățenii comunei
+          Coșeiu.
+        </p>
+        <p>
+          Cetățenii se pot adresa primăriei pentru eliberarea documentelor,
+          înregistrarea evenimentelor de viață și obținerea informațiilor
+          necesare.
+        </p>
+        <div id="nasteri">
+          <h3>Nașteri</h3>
+          <p>
+            Înregistrarea nașterii se face în termenul prevăzut de lege, pe baza
+            documentelor medicale și a actelor de identitate ale părinților.
+          </p>
+        </div>
+        <div id="identitate">
+          <h3>Acte</h3>
+          <p>
+            Eliberarea cărților de identitate se realizează la cererea
+            cetățenilor, în baza documentelor justificative necesare.
+          </p>
+        </div>
+        <div id="casatorii">
+          <h3>Casătorii</h3>
+          <p>
+            Căsătoria civilă se încheie la sediul primăriei, în baza unei
+            programări prealabile și a depunerii actelor necesare.
+          </p>
+        </div>
+        <div id="divorturi">
+          <h3>Divorturi</h3>
+          <p>
+            Divorțul pe cale administrativă se poate realiza în anumite
+            condiții, conform legislației în vigoare, la cererea ambilor soți.
+          </p>
+        </div>
+        <div id="decese">
+          <h3>Decese</h3>
+          <p>
+            Înregistrarea decesului se face pe baza certificatului medical
+            constatator și a actelor persoanei decedate.
+          </p>
+        </div>
+        <div id="pasapoarte">
+          <h3>Pașapoarte</h3>
+          <p>
+            Pentru eliberarea pașapoartelor, cetățenii sunt îndrumați către
+            serviciile competente din cadrul Direcției de Pașapoarte.
+          </p>
+        </div>
       </section>
 
       <section id="politia-locala">
         <h3>Poliția locală</h3>
-        <div id="informatii-politie"><h3>Informații Poliție</h3></div>
-        <div id="atributii"><h3>Atribuții poliție</h3></div>
-        <div id="amenzi"><h3>Plata amenzilor</h3></div>
-        <div id="ridicari"><h3>Ridicări auto</h3></div>
+        <div id="informatii-politie">
+          <h3>Informații Poliție</h3>
+          <p>
+            Poliția Locală din Coșeiu asigură respectarea legii și menținerea
+            ordinii publice pe raza comunei.
+          </p>
+        </div>
+        <div id="atributii">
+          <h3>Atribuții poliție</h3>
+          <ul>
+            <li>Menținerea ordinii și liniștii publice</li>
+            <li>Controlul respectării normelor de conviețuire socială</li>
+            <li>Supravegherea circulației pe drumurile publice</li>
+            <li>Protejarea bunurilor publice și private</li>
+          </ul>
+        </div>
+        <div id="amenzi">
+          <h3>Plata amenzilor</h3>
+          <p>
+            Amenzile pot fi achitate la casieria primăriei sau prin metode
+            electronice, conform instrucțiunilor disponibile.
+          </p>
+        </div>
+        <div id="ridicari">
+          <h3>Ridicări auto</h3>
+          <p>
+            Ridicarea autovehiculelor parcate neregulamentar se realizează
+            conform legislației în vigoare.
+          </p>
+        </div>
       </section>
 
       <section id="informatii-publice">
@@ -1396,19 +1503,83 @@
             </li>
           </ul>
         </div>
-        <div id="concursuri"><h3>Concursuri</h3></div>
-        <div id="cereri"><h3>Cereri tip</h3></div>
-        <div id="audiente"><h3>Audiențe</h3></div>
-        <div id="contracte"><h3>Contracte</h3></div>
-        <div id="plati"><h3>Plăți</h3></div>
-        <div id="licitatii"><h3>Licitații</h3></div>
-        <div id="documente"><h3>Documente</h3></div>
+        <div id="concursuri">
+          <h3>Concursuri</h3>
+          <p>
+            Primăria organizează concursuri pentru ocuparea posturilor vacante,
+            în conformitate cu legislația în vigoare. Anunțurile sunt publicate
+            pe site și la sediul instituției.
+          </p>
+        </div>
+        <div id="cereri">
+          <h3>Cereri tip</h3>
+          <p>
+            Cetățenii au la dispoziție formulare standard pentru diverse
+            solicitări administrative, disponibile online sau la sediul
+            primăriei.
+          </p>
+        </div>
+        <div id="audiente">
+          <h3>Audiențe</h3>
+          <p>
+            Programările pentru audiențe se pot face telefonic sau la sediul
+            primăriei, în intervalul programului de lucru.
+          </p>
+        </div>
+        <div id="contracte">
+          <h3>Contracte</h3>
+          <p>
+            Contractele încheiate de primărie sunt publicate pentru asigurarea
+            transparenței și respectarea legislației în vigoare.
+          </p>
+        </div>
+        <div id="plati">
+          <h3>Plăți</h3>
+          <p>
+            Plățile către bugetul local pot fi efectuate numerar, prin transfer
+            bancar sau online.
+          </p>
+        </div>
+        <div id="licitatii">
+          <h3>Licitații</h3>
+          <p>
+            Procedurile de achiziții publice și licitațiile sunt organizate în
+            conformitate cu legislația în domeniu și sunt publicate pe
+            platformele oficiale.
+          </p>
+        </div>
+        <div id="documente">
+          <h3>Documente</h3>
+          <p>
+            Documentele publice pot fi consultate online sau la sediul
+            primăriei, în condițiile legii.
+          </p>
+        </div>
       </section>
 
       <section id="altele">
         <h3>Altele</h3>
-        <div id="transformare-digitala"><h3>Transformare digitală</h3></div>
-        <div id="servicii-online"><h3>Servicii online</h3></div>
+        <div id="transformare-digitala">
+          <h3>Transformare digitală</h3>
+          <p>
+            Primăria Coșeiu urmărește digitalizarea serviciilor publice pentru a
+            facilita accesul cetățenilor la informații și servicii
+            administrative.
+          </p>
+        </div>
+        <div id="servicii-online">
+          <h3>Servicii online</h3>
+          <p>
+            Cetățenii pot beneficia de servicii online precum depunerea
+            cererilor, plata taxelor și accesarea documentelor oficiale.
+          </p>
+          <ul>
+            <li>Depunere cereri online</li>
+            <li>Plată taxe și impozite</li>
+            <li>Programări audiențe</li>
+            <li>Solicitări informații publice</li>
+          </ul>
+        </div>
       </section>
 
       <div id="transparenta">
@@ -1569,6 +1740,15 @@
       </div>
       <div id="transport-public">
         <h3>Transport public</h3>
+        <p>
+          Transportul public asigură legătura între comuna Coșeiu și
+          localitățile din apropiere.
+        </p>
+
+        <ul>
+          <li>Rute zilnice către Zalău</li>
+          <li>Program adaptat pentru elevi și navetiști</li>
+        </ul>
         <img
           src="assets/images/transportCZ.png"
           alt="transport"
@@ -1589,6 +1769,15 @@
       </div>
       <div id="siguranta-circulatiei">
         <h3>Siguranța circulației</h3>
+        <p>
+          Siguranța circulației este o prioritate pentru administrația locală.
+        </p>
+
+        <ul>
+          <li>Semnalizare rutieră corespunzătoare</li>
+          <li>Limitarea vitezei în zonele rezidențiale</li>
+          <li>Siguranța pietonilor</li>
+        </ul>
       </div>
     </section>
 
@@ -1619,9 +1808,52 @@
           Local.
         </p>
       </div>
-      <div id="plati-online"><h3>Plăți online</h3></div>
-      <div id="buget"><h3>Buget</h3></div>
-      <div id="achizitii"><h3>Achiziții publice</h3></div>
+      <div id="plati-online">
+        <h3>Plăți online</h3>
+        <p>
+          Plata taxelor și impozitelor locale se poate realiza online prin
+          platforme securizate.
+        </p>
+        <ul>
+          <li>Impozite și taxe locale</li>
+          <li>Amenzi contravenționale</li>
+          <li>Alte taxe administrative</li>
+        </ul>
+        <p>Pentru plata online, accesați platforma națională:</p>
+        <a href="https://www.ghiseul.ro" target="_blank"> Ghișeul.ro </a>
+      </div>
+      <div id="buget">
+        <h3>Buget</h3>
+        <p>
+          Bugetul local reflectă veniturile și cheltuielile administrației
+          publice locale.
+        </p>
+        <ul>
+          <li>Venituri din taxe și impozite</li>
+          <li>Fonduri europene</li>
+          <li>Alocări de la bugetul de stat</li>
+        </ul>
+        <h4>Documente</h4>
+        <ul>
+          <li><a href="#">Buget 2026</a></li>
+          <li><a href="#">Execuție bugetară 2025</a></li>
+        </ul>
+      </div>
+      <div id="achizitii">
+        <h3>Achiziții publice</h3>
+        <p>
+          Achizițiile publice sunt realizate în mod transparent, conform
+          legislației în vigoare.
+        </p>
+
+        <ul>
+          <li>Lucrări de infrastructură</li>
+          <li>Servicii publice</li>
+          <li>Achiziții de bunuri</li>
+        </ul>
+
+        <p>Detalii pot fi consultate pe platforma SICAP.</p>
+      </div>
       <div id="proiecte">
         <h3>Proiecte UE</h3>
         <p>
@@ -1666,8 +1898,20 @@
     <section id="monitor-oficial">
       <h2>Monitor Oficial Local</h2>
 
-      <div id="statut"><h3>Statut</h3></div>
-      <div id="regulamente"><h3>Regulamente</h3></div>
+      <div id="statut">
+        <h3>Statut</h3>
+        <p>
+          Statutul comunei Coșeiu stabilește organizarea, funcționarea și
+          atribuțiile autorităților administrației publice locale.
+        </p>
+      </div>
+      <div id="regulamente">
+        <h3>Regulamente</h3>
+        <p>
+          Regulamentele locale stabilesc modul de organizare și funcționare a
+          serviciilor publice și a activităților din cadrul comunei.
+        </p>
+      </div>
       <div id="hotarari">
         <h3>Hotărâri</h3>
         <p>
@@ -1696,8 +1940,20 @@
           electronic.
         </p>
       </div>
-      <div id="financiare"><h3>Documente financiare</h3></div>
-      <div id="alte-documente"><h3>Alte documente</h3></div>
+      <div id="financiare">
+        <h3>Documente financiare</h3>
+        <p>
+          Documentele financiare includ bugetul local, execuția bugetară și alte
+          rapoarte privind utilizarea fondurilor publice.
+        </p>
+      </div>
+      <div id="alte-documente">
+        <h3>Alte documente</h3>
+        <p>
+          Această secțiune include diverse documente administrative de interes
+          public.
+        </p>
+      </div>
     </section>
 
     <!-- SERVICII
@@ -1739,6 +1995,7 @@
       <!-- GALERIE  -->
       <section id="gallery">
         <h2>Galerie</h2>
+        <p>Imagini reprezentative din comuna Coșeiu:</p>
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/4/48/RO_SJ_Coseiu_%281%29.jpg"
           alt="Intrarea în localitate"
