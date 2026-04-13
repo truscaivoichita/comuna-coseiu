@@ -297,6 +297,26 @@ section h3 {
   color: var(--primary);
   margin-bottom: 20px;
 }
+/* .profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  text-align: left;
+  padding: 20px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  /* max-width: 680px; */
+/* margin: auto; */
+/* } */
+.profile-card .profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
 .consilieri-row {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
