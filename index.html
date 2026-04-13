@@ -17,6 +17,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Comuna Coșeiu - Site Oficial</title>
     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
       rel="stylesheet"
     />
@@ -25,353 +29,394 @@
   </head>
 
   <body>
-    <!-- HEADER ORIGINAL -->
-    <header>
+    <!-- HEADER PREMIUM -->
+    <header class="main-header">
       <img
         src="assets/images/heart.png"
         alt="Comuna Coșeiu Logo"
         class="logo"
         loading="lazy"
       />
+
       <form class="search-form" id="search-form">
         <label for="search-input" class="visually-hidden">Caută</label>
-        <input type="text" id="search-input" placeholder="Caută..." />
+        <input type="text" id="search-input" placeholder="🔎 Caută..." />
         <button type="submit">🔍</button>
       </form>
-      <!-- NAVBAR  -->
+
       <button class="menu-toggle" aria-label="Deschide meniul">☰</button>
+
       <nav aria-label="Main navigation">
         <ul>
-          <!-- COMUNITATE -->
+          <!-- ================= COMUNITATE ================= -->
           <li class="dropdown comunitate">
-            <a href="#comunitate">COMUNITATE</a>
+            <a href="#comunitate">👥 COMUNITATE</a>
+
             <div class="dropdown-menu split-menu">
               <div class="menu-left">
                 <ul>
-                  <li data-target="menu-cetateni" class="active">Cetățeni</li>
-                  <li data-target="menu-educatie">Educație</li>
-                  <li data-target="menu-cultura">Cultură</li>
-                  <li data-target="menu-sport">Sport</li>
-                  <li data-target="menu-sanatate">Sănătate</li>
-                  <li data-target="menu-social">Social</li>
-                  <li data-target="menu-animale">Animale</li>
-                  <li data-target="menu-turism">Turism</li>
-                  <li data-target="menu-evenimente">Evenimente</li>
+                  <li data-target="menu-cetateni" class="active">
+                    👤 Cetățeni
+                  </li>
+                  <li data-target="menu-educatie">🎓 Educație</li>
+                  <li data-target="menu-cultura">🎭 Cultură</li>
+                  <li data-target="menu-sport">⚽ Sport</li>
+                  <li data-target="menu-sanatate">🏥 Sănătate</li>
+                  <li data-target="menu-social">🤝 Social</li>
+                  <li data-target="menu-animale">🐾 Animale</li>
+                  <li data-target="menu-turism">🧭 Turism</li>
+                  <li data-target="menu-evenimente">🎉 Evenimente</li>
                 </ul>
               </div>
+
               <div class="menu-right">
                 <div class="menu-content active" id="menu-cetateni">
-                  <a href="#dezbateri-publice">Dezbateri publice</a>
-                  <a href="#newsletter">Newsletter</a>
-                  <a href="#cetateni-onoare">Cetățeni de onoare</a>
-                  <a href="#sugestii-reclamatii">Sugestii</a>
-                  <a href="#bugetare">Bugetare participativă</a>
-                  <a href="#proceduri">Proceduri online</a>
-                  <a href="#live">Live webcam</a>
+                  <a href="#dezbateri-publice">💬 Dezbateri publice</a>
+                  <a href="#newsletter">📧 Newsletter</a>
+                  <a href="#cetateni-onoare">🏅 Cetățeni de onoare</a>
+                  <a href="#sugestii-reclamatii">📝 Sugestii & reclamații</a>
+                  <a href="#bugetare">💰 Bugetare participativă</a>
+                  <a href="#proceduri">🖥️ Proceduri online</a>
+                  <a href="#live">📡 Live webcam</a>
                 </div>
+
                 <div class="menu-content" id="menu-educatie">
-                  <a href="#transport">Transport</a>
-                  <a href="#autobuze">Autobuze</a>
-                  <a href="#legislatie-educatie">Legislație</a>
-                  <a href="#crese">Creșe</a>
-                  <a href="#gradinite">Grădinițe</a>
+                  <a href="#transport">🚌 Transport</a>
+                  <a href="#autobuze">🚍 Autobuze</a>
+                  <a href="#legislatie-educatie">📚 Legislație educație</a>
+                  <a href="#crese">🏫 Creșe</a>
+                  <a href="#gradinite">🎒 Grădinițe</a>
+                  <a href="#scoli">🏫 Școli</a>
                 </div>
+
                 <div class="menu-content" id="menu-cultura">
-                  <a href="#biblioteci">Biblioteci</a>
-                  <a href="#finantari-cultura">Finanțări</a>
-                  <a href="#personalitati">Personalități</a>
+                  <a href="#biblioteci">📖 Biblioteci</a>
+                  <a href="#muzee">🏛️ Muzee</a>
+                  <a href="#finantari-cultura">🎨 Finanțări cultură</a>
+                  <a href="#personalitati">⭐ Personalități</a>
+                  <a href="#evenimente-culturale">🎭 Evenimente culturale</a>
                 </div>
+
                 <div class="menu-content" id="menu-sport">
-                  <a href="#structuri">Structuri sportive</a>
-                  <a href="#finantari-sport">Finanțări</a>
-                  <a href="#baze">Baze sportive</a>
-                  <a href="#sala">Sală sport</a>
+                  <a href="#structuri">🏟️ Structuri sportive</a>
+                  <a href="#finantari-sport">💸 Finanțări sport</a>
+                  <a href="#baze">⚽ Baze sportive</a>
+                  <a href="#sala">🏋️ Sală sport</a>
+                  <a href="#cluburi">🏆 Cluburi sportive</a>
                 </div>
+
                 <div class="menu-content" id="menu-sanatate">
-                  <a href="#unitati">Unități medicale</a>
-                  <a href="#finantari-sanatate">Finanțări</a>
-                  <a href="#urgenta">Urgențe</a>
+                  <a href="#unitati">🏥 Unități medicale</a>
+                  <a href="#cabinete">🩺 Cabinete</a>
+                  <a href="#finantari-sanatate">💊 Finanțări sănătate</a>
+                  <a href="#urgenta">🚑 Urgențe</a>
+                  <a href="#farmacii">💊 Farmacii</a>
                 </div>
+
                 <div class="menu-content" id="menu-social">
-                  <a href="#varstnice">Vârstnici</a>
-                  <a href="#adapost">Fără adăpost</a>
-                  <a href="#ajutor-social">Ajutor social</a>
-                  <a href="#tichete">Tichete</a>
-                  <a href="#stomatologie">Stomatologie</a>
+                  <a href="#varstnice">👵 Vârstnici</a>
+                  <a href="#copii">👶 Copii</a>
+                  <a href="#adapost">🏠 Adăpost</a>
+                  <a href="#ajutor-social">🤲 Ajutor social</a>
+                  <a href="#tichete">🎟️ Tichete sociale</a>
+                  <a href="#stomatologie">🦷 Stomatologie</a>
                 </div>
+
                 <div class="menu-content" id="menu-animale">
-                  <a href="#sterilizare">Sterilizare</a>
-                  <a href="#adoptii">Adopții</a>
-                  <a href="#boluri">Boluri apă</a>
-                  <a href="#adaposturi">Adăposturi</a>
+                  <a href="#sterilizare">🐕 Sterilizare</a>
+                  <a href="#adoptii">❤️ Adopții</a>
+                  <a href="#adaposturi">🏡 Adăposturi</a>
+                  <a href="#registru">📋 Registru animale</a>
                 </div>
+
                 <div class="menu-content" id="menu-turism">
-                  <a href="#centru">Centru info</a>
-                  <a href="#harta">Hartă</a>
-                  <a href="#visit">Visit Coșeiu</a>
+                  <a href="#centru">ℹ️ Centru info</a>
+                  <a href="#harta">🗺️ Hartă</a>
+                  <a href="#cazare">🏨 Cazare</a>
+                  <a href="#atractii">📍 Atracții</a>
+                  <a href="#visit">📌 Visit Coșeiu</a>
                 </div>
+
                 <div class="menu-content" id="menu-evenimente">
-                  <a href="#zilele">Zilele Coșeiului</a>
-                  <a href="#craciun">Târg Crăciun</a>
-                  <a href="#piata">Piața</a>
+                  <a href="#zilele">🎊 Zilele Coșeiului</a>
+                  <a href="#craciun">🎄 Târg Crăciun</a>
+                  <a href="#piata">🛍️ Piața locală</a>
+                  <a href="#festivaluri">🎪 Festivaluri</a>
                 </div>
               </div>
             </div>
           </li>
 
-          <!-- LOCUIRE -->
+          <!-- ================= LOCUIRE ================= -->
           <li class="dropdown locuire">
-            <a href="#locuire">LOCUIRE</a>
+            <a href="#locuire">🏡 LOCUIRE</a>
+
             <div class="dropdown-menu split-menu">
               <div class="menu-left">
                 <ul>
                   <li data-target="menu-strategii" class="active">
-                    Strategii urbane
+                    📊 Strategii urbane
                   </li>
-                  <li data-target="menu-urbanism">Urbanism</li>
-                  <li data-target="menu-autorizatii">
-                    Autorizații construcții
-                  </li>
-                  <li data-target="menu-strazi">Străzi</li>
-                  <li data-target="menu-locuinte">Locuințe</li>
-                  <li data-target="menu-gis">GIS</li>
+                  <li data-target="menu-urbanism">🏗️ Urbanism</li>
+                  <li data-target="menu-autorizatii">📄 Autorizații</li>
+                  <li data-target="menu-strazi">🛣️ Străzi</li>
+                  <li data-target="menu-locuinte">🏘️ Locuințe</li>
+                  <li data-target="menu-gis">🛰️ GIS</li>
                 </ul>
               </div>
+
               <div class="menu-right">
                 <div class="menu-content active" id="menu-strategii">
-                  <a href="#strategii-urbane">Strategii urbane</a>
+                  <a href="#strategii-urbane">📊 Strategii urbane</a>
                 </div>
                 <div class="menu-content" id="menu-urbanism">
-                  <a href="#urbanism">Urbanism</a>
+                  <a href="#urbanism">🏗️ Urbanism</a>
                 </div>
                 <div class="menu-content" id="menu-autorizatii">
-                  <a href="#autorizatii">Autorizații construcții</a>
+                  <a href="#autorizatii">📄 Autorizații construcții</a>
                 </div>
                 <div class="menu-content" id="menu-strazi">
-                  <a href="#strazi">Străzi</a>
+                  <a href="#strazi">🛣️ Străzi</a>
                 </div>
                 <div class="menu-content" id="menu-locuinte">
-                  <a href="#locuinte">Locuințe</a>
+                  <a href="#locuinte">🏘️ Locuințe</a>
                 </div>
                 <div class="menu-content" id="menu-gis">
-                  <a href="#gis">GIS</a>
+                  <a href="#gis">🛰️ GIS</a>
                 </div>
               </div>
             </div>
           </li>
 
-          <!-- ADMINISTRAȚIE -->
+          <!-- ================= ADMINISTRAȚIE ================= -->
           <li class="dropdown administratie">
-            <a href="#administratie">ADMINISTRAȚIE</a>
+            <a href="#administratie">🏛️ ADMINISTRAȚIE</a>
+
             <div class="dropdown-menu split-menu">
               <div class="menu-left">
                 <ul>
-                  <li data-target="menu-primarie" class="active">Primărie</li>
-                  <li data-target="menu-consiliu">Consiliu Local</li>
-                  <li data-target="menu-evidenta">Evidența persoanelor</li>
-                  <li data-target="menu-politia">Poliția locală</li>
-                  <li data-target="menu-informatii">Informații publice</li>
-                  <li data-target="menu-altele">Altele</li>
+                  <li data-target="menu-primarie" class="active">
+                    🏢 Primărie
+                  </li>
+                  <li data-target="menu-consiliu">👥 Consiliu local</li>
+                  <li data-target="menu-evidenta">📑 Evidență persoane</li>
+                  <li data-target="menu-politia">🚓 Poliția locală</li>
+                  <li data-target="menu-informatii">📢 Informații publice</li>
+                  <li data-target="menu-altele">⚙️ Altele</li>
                 </ul>
               </div>
+
               <div class="menu-right">
                 <div class="menu-content active" id="menu-primarie">
-                  <a href="#primar">Primar</a>
-                  <a href="#viceprimar">Viceprimar</a>
-                  <a href="#secretar">Secretar</a>
-                  <a href="#organigrama">Organigramă</a>
-                  <a href="#regulament-primarie">Regulament</a>
-                  <a href="#sediu">Sediu</a>
+                  <a href="#primar">👤 Primar</a>
+                  <a href="#viceprimar">👤 Viceprimar</a>
+                  <a href="#secretar">📑 Secretar</a>
+                  <a href="#organigrama">🧭 Organigramă</a>
+                  <a href="#regulament-primarie">📜 Regulament</a>
+                  <a href="#sediu">📍 Sediu</a>
                 </div>
+
                 <div class="menu-content" id="menu-consiliu">
-                  <a href="#consilieri">Consilieri</a>
-                  <a href="#comisii">Comisii</a>
-                  <a href="#sedinte">Ședințe</a>
-                  <a href="#hotarari-consiliu">Hotărâri consiliu</a>
+                  <a href="#consilieri">👥 Consilieri</a>
+                  <a href="#comisii">📌 Comisii</a>
+                  <a href="#sedinte">🗓️ Ședințe</a>
+                  <a href="#hotarari-consiliu">📜 Hotărâri</a>
                 </div>
+
                 <div class="menu-content" id="menu-evidenta">
-                  <a href="#nasteri">Nașteri</a>
-                  <a href="#identitate">Acte identitate</a>
-                  <a href="#casatorii">Căsătorii</a>
-                  <a href="#divorturi">Divorțuri</a>
-                  <a href="#decese">Decese</a>
-                  <a href="#pasapoarte">Pașapoarte</a>
+                  <a href="#nasteri">👶 Nașteri</a>
+                  <a href="#identitate">🪪 Acte</a>
+                  <a href="#casatorii">💍 Căsătorii</a>
+                  <a href="#divorturi">⚖️ Divorțuri</a>
+                  <a href="#decese">⚰️ Decese</a>
+                  <a href="#pasapoarte">🌍 Pașapoarte</a>
                 </div>
+
                 <div class="menu-content" id="menu-politia">
-                  <a href="#informatii-politie">Informații politie</a>
-                  <a href="#atributii">Atribuții</a>
-                  <a href="#amenzi">Plata amenzilor</a>
-                  <a href="#ridicari">Ridicări auto</a>
+                  <a href="#informatii-politie">🚓 Informații</a>
+                  <a href="#atributii">📋 Atribuții</a>
+                  <a href="#amenzi">💰 Amenzi</a>
+                  <a href="#ridicari">🚗 Ridicări auto</a>
                 </div>
+
                 <div class="menu-content" id="menu-informatii">
-                  <a href="#anunturi">Anunțuri</a>
-                  <a href="#concursuri">Concursuri</a>
-                  <a href="#cereri">Cereri tip</a>
-                  <a href="#audiente">Audiențe</a>
-                  <a href="#contracte">Contracte</a>
-                  <a href="#plati-online">Plăți</a>
-                  <a href="#licitatii">Licitații</a>
-                  <a href="#documente">Documente</a>
+                  <a href="#anunturi">📢 Anunțuri</a>
+                  <a href="#concursuri">🏆 Concursuri</a>
+                  <a href="#cereri">📄 Cereri</a>
+                  <a href="#audiente">🗣️ Audiențe</a>
+                  <a href="#contracte">📑 Contracte</a>
+                  <a href="#plati-online">💳 Plăți</a>
+                  <a href="#licitatii">🏛️ Licitații</a>
+                  <a href="#documente">📁 Documente</a>
                 </div>
+
                 <div class="menu-content" id="menu-altele">
-                  <a href="#transformare-digitala">Transformare digitală</a>
-                  <a href="#servicii-online">Servicii online</a>
+                  <a href="#transformare-digitala">💻 Digitalizare</a>
+                  <a href="#servicii-online">🖥️ Servicii online</a>
                 </div>
               </div>
             </div>
           </li>
 
-          <!-- MEDIU -->
+          <!-- ================= MEDIU ================= -->
           <li class="dropdown mediu">
-            <a href="#mediu">MEDIU</a>
+            <a href="#mediu">🌱 MEDIU</a>
+
             <div class="dropdown-menu split-menu">
               <div class="menu-left">
                 <ul>
                   <li data-target="menu-salubritate" class="active">
-                    Salubritate
+                    🗑️ Salubritate
                   </li>
-                  <li data-target="menu-curatenie">Curățenie</li>
-                  <li data-target="menu-spatiiverzi">Spații verzi</li>
-                  <li data-target="menu-energie">Energie</li>
-                  <li data-target="menu-altele-mediu">Altele</li>
+                  <li data-target="menu-curatenie">🧹 Curățenie</li>
+                  <li data-target="menu-spatiiverzi">🌳 Spații verzi</li>
+                  <li data-target="menu-energie">⚡ Energie</li>
+                  <li data-target="menu-altele-mediu">🌍 Altele</li>
                 </ul>
               </div>
+
               <div class="menu-right">
                 <div class="menu-content active" id="menu-salubritate">
-                  <a href="#colectare">Colectare selectivă</a>
-                  <a href="#salubritate-menajera">Menajeră</a>
-                  <a href="#salubritate-stradala">Stradală</a>
-                  <a href="#dezapezire">Dezăpezire</a>
+                  <a href="#colectare">♻️ Colectare selectivă</a>
+                  <a href="#menajera">🗑️ Menajeră</a>
+                  <a href="#stradala">🧹 Stradală</a>
+                  <a href="#dezapezire">❄️ Dezăpezire</a>
                 </div>
+
                 <div class="menu-content" id="menu-curatenie">
-                  <a href="#cereri-specifice">Cereri specifice</a>
-                  <a href="#curatenie-primavara">Curățenie primăvară</a>
-                  <a href="#deratizare-dezinsectie"
-                    >Deratizare și dezinsectie</a
-                  >
+                  <a href="#cereri-specifice">📝 Cereri</a>
+                  <a href="#curatenie-primavara">🌸 Curățenie primăvară</a>
+                  <a href="#deratizare">🐀 Deratizare</a>
                 </div>
+
                 <div class="menu-content" id="menu-spatiiverzi">
-                  <a href="#adopta">Adoptă</a>
-                  <a href="#ambrozie">Ambrozie</a>
+                  <a href="#adopta">🌿 Adoptă spațiu verde</a>
+                  <a href="#ambrozie">🌾 Ambrozie</a>
                 </div>
+
                 <div class="menu-content" id="menu-energie">
-                  <a href="#panouri">Panouri fotovoltaice</a>
-                  <a href="#finantare">Finanțare</a>
+                  <a href="#panouri">☀️ Panouri fotovoltaice</a>
+                  <a href="#finantare">💰 Finanțare</a>
                 </div>
+
                 <div class="menu-content" id="menu-altele-mediu">
-                  <a href="#calitatea-aerului">Calitatea aerului</a>
-                  <a href="#harta-zgomot">Harta zgomot</a>
+                  <a href="#calitatea-aerului">🌫️ Calitatea aerului</a>
+                  <a href="#harta-zgomot">🔊 Harta zgomot</a>
                 </div>
               </div>
             </div>
           </li>
 
-          <!-- MOBILITATE -->
+          <!-- ================= MOBILITATE ================= -->
           <li class="dropdown mobilitate">
-            <a href="#mobilitate">MOBILITATE</a>
+            <a href="#mobilitate">🚗 MOBILITATE</a>
+
             <div class="dropdown-menu split-menu">
               <div class="menu-left">
                 <ul>
                   <li data-target="menu-plan-mobilitate" class="active">
-                    Plan mobilitate
+                    📍 Plan mobilitate
                   </li>
-                  <li data-target="menu-parcari">Parcări</li>
-                  <li data-target="menu-transport-public">Transport public</li>
-                  <li data-target="menu-biciclete">Biciclete</li>
-                  <li data-target="menu-siguranta">Siguranța circulației</li>
+                  <li data-target="menu-parcari">🅿️ Parcări</li>
+                  <li data-target="menu-transport-public">🚌 Transport</li>
+                  <li data-target="menu-biciclete">🚲 Biciclete</li>
+                  <li data-target="menu-siguranta">🚦 Siguranță</li>
                 </ul>
               </div>
+
               <div class="menu-right">
                 <div class="menu-content active" id="menu-plan-mobilitate">
-                  <a href="#plan-mobilitate">Plan mobilitate</a>
+                  <a href="#plan-mobilitate">📍 Plan mobilitate</a>
                 </div>
                 <div class="menu-content" id="menu-parcari">
-                  <a href="#parcari">Parcări</a>
+                  <a href="#parcari">🅿️ Parcări</a>
                 </div>
                 <div class="menu-content" id="menu-transport-public">
-                  <a href="#transport-public">Transport public</a>
+                  <a href="#transport-public">🚌 Transport public</a>
                 </div>
                 <div class="menu-content" id="menu-biciclete">
-                  <a href="#biciclete">Biciclete</a>
+                  <a href="#biciclete">🚲 Biciclete</a>
                 </div>
                 <div class="menu-content" id="menu-siguranta">
-                  <a href="#siguranta-circulatiei">Siguranța circulației</a>
+                  <a href="#siguranta-circulatiei">🚦 Siguranță circulației</a>
                 </div>
               </div>
             </div>
           </li>
 
-          <!-- ECONOMIE -->
+          <!-- ================= ECONOMIE ================= -->
           <li class="dropdown economie">
-            <a href="#economie">ECONOMIE</a>
+            <a href="#economie">💰 ECONOMIE</a>
+
             <div class="dropdown-menu split-menu">
               <div class="menu-left">
                 <ul>
-                  <li data-target="menu-taxe" class="active">
-                    Taxe și impozite
-                  </li>
-                  <li data-target="menu-plati-online">Plăți online</li>
-                  <li data-target="menu-buget">Buget</li>
-                  <li data-target="menu-achizitii">Achiziții publice</li>
-                  <li data-target="menu-proiecte">Proiecte UE</li>
-                  <li data-target="menu-investitori">Investitori</li>
+                  <li data-target="menu-taxe" class="active">📊 Taxe</li>
+                  <li data-target="menu-plati-online">💳 Plăți online</li>
+                  <li data-target="menu-buget">📒 Buget</li>
+                  <li data-target="menu-achizitii">🏛️ Achiziții</li>
+                  <li data-target="menu-proiecte">🇪🇺 Proiecte UE</li>
+                  <li data-target="menu-investitori">🏭 Investitori</li>
                 </ul>
               </div>
+
               <div class="menu-right">
                 <div class="menu-content active" id="menu-taxe">
-                  <a href="#taxe-impozite">Taxe</a>
+                  <a href="#taxe-impozite">📊 Taxe și impozite</a>
                 </div>
                 <div class="menu-content" id="menu-plati-online">
-                  <a href="#plati-online">Plăți online</a>
+                  <a href="#plati-online">💳 Plăți online</a>
                 </div>
                 <div class="menu-content" id="menu-buget">
-                  <a href="#buget">Buget</a>
+                  <a href="#buget">📒 Buget</a>
                 </div>
                 <div class="menu-content" id="menu-achizitii">
-                  <a href="#achizitii">Achiziții</a>
+                  <a href="#achizitii">🏛️ Achiziții</a>
                 </div>
                 <div class="menu-content" id="menu-proiecte">
-                  <a href="#proiecte">Proiecte UE</a>
+                  <a href="#proiecte">🇪🇺 Proiecte UE</a>
                 </div>
                 <div class="menu-content" id="menu-investitori">
-                  <a href="#investitori">Investitori</a>
+                  <a href="#investitori">🏭 Investitori</a>
                 </div>
               </div>
             </div>
           </li>
 
-          <!-- MONITOR LOCAL -->
+          <!-- ================= MONITOR ================= -->
           <li class="dropdown monitor-oficial">
-            <a href="#monitor-oficial">MONITOR</a>
+            <a href="#monitor-oficial">📄 MONITOR</a>
+
             <div class="dropdown-menu split-menu">
               <div class="menu-left">
                 <ul>
-                  <li data-target="menu-statut" class="active">Statut</li>
-                  <li data-target="menu-regulamente">Regulamente</li>
-                  <li data-target="menu-hotarari">Hotărâri</li>
-                  <li data-target="menu-dispozitii">Dispoziții</li>
-                  <li data-target="menu-financiare">Financiare</li>
-                  <li data-target="menu-alte-documente">Alte documente</li>
+                  <li data-target="menu-statut" class="active">📜 Statut</li>
+                  <li data-target="menu-regulamente">📘 Regulamente</li>
+                  <li data-target="menu-hotarari">📑 Hotărâri</li>
+                  <li data-target="menu-dispozitii">📋 Dispoziții</li>
+                  <li data-target="menu-financiare">💰 Financiare</li>
+                  <li data-target="menu-alte-documente">📁 Documente</li>
                 </ul>
               </div>
+
               <div class="menu-right">
                 <div class="menu-content active" id="menu-statut">
-                  <a href="#statut">Statut</a>
+                  <a href="#statut">📜 Statut</a>
                 </div>
                 <div class="menu-content" id="menu-regulamente">
-                  <a href="#regulamente">Regulamente</a>
+                  <a href="#regulamente">📘 Regulamente</a>
                 </div>
                 <div class="menu-content" id="menu-hotarari">
-                  <a href="#hotarari">Hotărâri</a>
+                  <a href="#hotarari">📑 Hotărâri</a>
                 </div>
                 <div class="menu-content" id="menu-dispozitii">
-                  <a href="#dispozitii">Dispoziții</a>
+                  <a href="#dispozitii">📋 Dispoziții</a>
                 </div>
                 <div class="menu-content" id="menu-financiare">
-                  <a href="#financiare">Documente financiare</a>
+                  <a href="#financiare">💰 Documente financiare</a>
                 </div>
                 <div class="menu-content" id="menu-alte-documente">
-                  <a href="#alte-documente">Alte documente</a>
+                  <a href="#alte-documente">📁 Alte documente</a>
                 </div>
               </div>
             </div>
@@ -760,28 +805,116 @@
     <!-- Dezbateri publice -->
     <section id="dezbateri-publice">
       <div id="newsletter">
-        <h4>Newsletter</h4>
+        <h4>📩 Newsletter</h4>
+        <p>
+          Abonați-vă la newsletter-ul Primăriei Coșeiu pentru a primi cele mai
+          recente informații despre proiecte, anunțuri publice și evenimente
+          locale.
+        </p>
+        <ul>
+          <li>📢 Anunțuri importante</li>
+          <li>🏗️ Proiecte în derulare</li>
+          <li>📅 Evenimente locale</li>
+        </ul>
+        <p>
+          Newsletter-ul este transmis periodic și respectă legislația privind
+          protecția datelor personale (GDPR).
+        </p>
+        <form>
+          <input type="email" placeholder="Adresa de email" required />
+          <button type="submit">Abonare</button>
+        </form>
       </div>
       <div id="cetateni-onoare">
-        <h4>Cetățeni de onoare</h4>
+        <h4>> 🏅 Cetățeni de onoare</h4>
+        <p>
+          Titlul de „Cetățean de onoare” este acordat persoanelor care au
+          contribuit în mod semnificativ la dezvoltarea comunei Coșeiu sau la
+          promovarea imaginii acesteia.
+        </p>
+        <ul>
+          <li>🏅 Personalități locale cu activitate remarcabilă</li>
+          <li>🏅 Contribuții în educație, cultură sau administrație</li>
+          <li>🏅 Sprijin pentru dezvoltarea comunității</li>
+        </ul>
+        <p>
+          Lista cetățenilor de onoare este actualizată periodic prin hotărâre a
+          Consiliului Local.
+        </p>
       </div>
       <div id="sugestii-reclamatii">
-        <h4>Sugestii și reclamații</h4>
+        <h4>🗣️ Sugestii și reclamații</h4>
+        <p>
+          Cetățenii pot transmite sugestii, sesizări sau reclamații privind
+          activitatea administrației publice locale.
+        </p>
         <form>
           <input type="text" placeholder="Nume" required />
           <input type="email" placeholder="Email" required />
-          <textarea placeholder="Mesaj"></textarea>
+          <textarea placeholder="Mesajul dvs." rows="5" required></textarea>
           <button type="submit">Trimite</button>
         </form>
+        <p>
+          Toate solicitările sunt analizate în conformitate cu legislația
+          privind transparența decizională și accesul la informații publice.
+        </p>
       </div>
       <div id="bugetare">
-        <h4>Bugetare participativă</h4>
+        <h4>💰 Bugetare participativă</h4>
+        <p>
+          Bugetarea participativă permite cetățenilor să propună și să voteze
+          proiecte pentru îmbunătățirea comunității.
+        </p>
+        <h4>Pași:</h4>
+        <ul>
+          <li>1. Depunerea propunerilor</li>
+          <li>2. Analiza proiectelor</li>
+          <li>3. Votul cetățenilor</li>
+          <li>4. Implementarea proiectelor câștigătoare</li>
+        </ul>
+        <p>
+          Această inițiativă sprijină implicarea directă a comunității în luarea
+          deciziilor locale.
+        </p>
       </div>
       <div id="proceduri">
-        <h4>Proceduri online</h4>
+        <h4>🧾 Proceduri online</h4>
+        <p>
+          Primăria Coșeiu oferă o serie de proceduri administrative care pot fi
+          realizate online pentru a reduce timpul de așteptare.
+        </p>
+        <ul>
+          <li>📄 Depunere cereri tip</li>
+          <li>💳 Plata taxelor și impozitelor</li>
+          <li>📅 Programări pentru audiențe</li>
+          <li>📬 Solicitări de informații publice</li>
+        </ul>
+        <p>
+          Digitalizarea serviciilor publice este o prioritate a administrației
+          locale.
+        </p>
       </div>
       <div id="live">
-        <h4>Live webcam</h4>
+        <h4>📷 Live Webcam</h4>
+        <p>
+          Camera web live oferă imagini în timp real din puncte centrale ale
+          comunei Coșeiu.
+        </p>
+
+        <div class="card">
+          <h4>📍 Imagine live</h4>
+          <p>
+            Transmisiune în timp real (dacă este disponibilă infrastructura
+            video).
+          </p>
+          <!-- Placeholder -->
+          <img
+            src="http://IP-UL-TAU:PORT/video.cgi"
+            alt="Live webcam Coșeiu"
+            style="width: 100%; border-radius: 12px"
+          />
+        </div>
+        <p>Transmisiune live din centrul localității (IP Camera).</p>
       </div>
     </section>
 
@@ -846,7 +979,7 @@
 
     <!-- ADMINISTRATIE -->
     <section id="administratie">
-      <h2>Administrație</h2>
+      <h2><i class="fa-solid fa-building"></i> Administrație</h2>
 
       <section>
         <section id="primar" class="card profile-card">
@@ -856,14 +989,26 @@
             class="profile-img"
             loading="lazy"
           />
-          <h3>👤 Primar</h3>
+          <h3><i class="fa-solid fa-user-tie"></i> Primar</h3>
 
           <div class="card">
             <h3>Informații de contact</h3>
-            <p><strong>Nume:</strong> Vulpe Lucian-Andrei</p>
-            <p><strong>Email:</strong> primariacoseiu@yahoo.com</p>
-            <p><strong>Telefon:</strong> +40 260 653 021</p>
-            <p><strong>Program audiențe:</strong></p>
+            <p>
+              <i class="fa-solid fa-user"></i> <strong>Nume:</strong> Vulpe
+              Lucian-Andrei
+            </p>
+            <p>
+              <i class="fa-solid fa-envelope"></i>
+              <strong>Email: </strong> primariacoseiu@yahoo.com
+            </p>
+            <p>
+              <i class="fa-solid fa-phone"></i>
+              <strong>Telefon:</strong> +40 260 653 021
+            </p>
+            <p>
+              <i class="fa-solid fa-clock"></i>
+              <strong>Program audiențe:</strong>
+            </p>
             <ul>
               <li>Luni: 10:00 - 12:00</li>
               <li>Joi: 10:00 - 12:00</li>
@@ -903,10 +1048,22 @@
           <h3>👤 Viceprimar</h3>
           <div class="card">
             <h3>Informații de contact</h3>
-            <p><strong>Nume:</strong> Somogyi Janos-Miklos</p>
-            <p><strong>Email:</strong> primariacoseiu@yahoo.com</p>
-            <p><strong>Telefon:</strong> +40 260 653 021</p>
-            <p><strong>Program audiențe:</strong></p>
+            <p>
+              <i class="fa-solid fa-user"></i> <strong>Nume:</strong> Somogyi
+              Janos-Miklos
+            </p>
+            <p>
+              <i class="fa-solid fa-envelope"></i><strong> Email:</strong>
+              somogyijanos-miklos@gmail.com
+            </p>
+            <p>
+              <i class="fa-solid fa-phone"></i><strong> Telefon:</strong> +40
+              260 653 021
+            </p>
+            <p>
+              <i class="fa-solid fa-clock"></i>
+              <strong>Program audiențe:</strong>
+            </p>
             <ul>
               <li>Miercuri: 10:00 - 12:00</li>
             </ul>
@@ -940,10 +1097,22 @@
           <h3>👤 Secretar</h3>
           <div class="card">
             <h3>Informații de contact</h3>
-            <p><strong>Nume:</strong> Pop Mădălina - Maria</p>
-            <p><strong>Email:</strong> popmadalinaaa@gmail.com</p>
-            <p><strong>Telefon:</strong> +40 260 653 021</p>
-            <p><strong>Program audiențe:</strong></p>
+            <p>
+              <i class="fa-solid fa-user"></i> <strong>Nume:</strong> Pop
+              Mădălina - Maria
+            </p>
+            <p>
+              <i class="fa-solid fa-envelope"></i><strong> Email:</strong>
+              popmadalinaaa@gmail.com
+            </p>
+            <p>
+              <i class="fa-solid fa-phone"></i><strong> Telefon:</strong> +40
+              260 653 021
+            </p>
+            <p>
+              <i class="fa-solid fa-clock"></i>
+              <strong>Program audiențe:</strong>
+            </p>
             <ul>
               <li>Marți: 10:00 - 12:00</li>
             </ul>
@@ -1054,23 +1223,29 @@
               <span>Adresa : Localitatea Coseiu, Nr.222, Jud.Salaj</span>
             </li>
             <li>
-              <span>E-mail : primariacoseiu@yahoo.com</span>
+              <span
+                ><i class="fa-solid fa-envelope"></i> E-mail :
+                primariacoseiu@yahoo.com</span
+              >
             </li>
             <li>
-              <span>Telefon : +40 260 653 021</span>
+              <span
+                ><i class="fa-solid fa-phone"></i> Telefon : +40 260 653
+                021</span
+              >
             </li>
           </ul>
         </section>
       </section>
 
       <section id="consiliu">
-        <h3>Consiliul local</h3>
+        <h3>🗳️ Consiliul local</h3>
         <p>
           Consiliul local este organul de conducere al comunei, compus din
           consilieri aleși de către cetățenii din aceasta.
         </p>
         <section id="consilieri">
-          <h3>Consilieri</h3>
+          <h3><i class="fa-solid fa-landmark"></i> Consilieri</h3>
 
           <div class="consilieri-row">
             <div class="consilier-card">
@@ -1083,11 +1258,16 @@
                     <h5>Date de contact:</h5>
                     <p class="card-tel">
                       <strong>Tel:</strong>
-                      <a href="tel:+40722123456">+40 722 123 456</a>
+                      <a href="tel:+40722123456">
+                        <i class="fa-solid fa-phone"></i> +40 722 123 456</a
+                      >
                     </p>
                     <p class="card-email">
                       <strong>Email:</strong>
-                      <a href="mailto:contact@email.com">contact@email.com</a>
+                      <a href="mailto:contact@email.com"
+                        ><i class="fa-solid fa-envelope"></i>
+                        contact@email.com</a
+                      >
                     </p>
                   </div>
                   <a
@@ -1095,7 +1275,7 @@
                     class="btn"
                     target="_blank"
                   >
-                    Declarație de avere
+                    📄 Declarație de avere
                   </a>
                 </div>
               </div>
@@ -1111,11 +1291,16 @@
                     <h5>Date de contact:</h5>
                     <p class="card-tel">
                       <strong>Tel:</strong>
-                      <a href="tel:+40722123456">+40 722 123 456</a>
+                      <a href="tel:+40722123456"
+                        ><i class="fa-solid fa-phone"></i> +40 722 123 456</a
+                      >
                     </p>
                     <p class="card-email">
                       <strong>Email:</strong>
-                      <a href="mailto:contact@email.com">contact@email.com</a>
+                      <a href="mailto:contact@email.com"
+                        ><i class="fa-solid fa-envelope"></i>
+                        contact@email.com</a
+                      >
                     </p>
                   </div>
                   <a
@@ -1123,7 +1308,7 @@
                     class="btn"
                     target="_blank"
                   >
-                    Declarație de avere
+                    📄 Declarație de avere
                   </a>
                 </div>
               </div>
@@ -1139,7 +1324,9 @@
                     <h5>Date de contact:</h5>
                     <p class="card-tel">
                       <strong>Tel:</strong>
-                      <a href="tel:+40722123456">+40 722 123 456</a>
+                      <a href="tel:+40722123456"
+                        ><i class="fa-solid fa-phone"></i> +40 722 123 456</a
+                      >
                     </p>
                     <p class="card-email">
                       <strong>Email:</strong>
@@ -1151,7 +1338,7 @@
                     class="btn"
                     target="_blank"
                   >
-                    Declarație de avere
+                    📄 Declarație de avere
                   </a>
                 </div>
               </div>
@@ -1167,11 +1354,16 @@
                     <h5>Date de contact:</h5>
                     <p class="card-tel">
                       <strong>Tel:</strong>
-                      <a href="tel:+40722123456">+40 722 123 456</a>
+                      <a href="tel:+40722123456"
+                        ><i class="fa-solid fa-phone"></i> +40 722 123 456</a
+                      >
                     </p>
                     <p class="card-email">
                       <strong>Email:</strong>
-                      <a href="mailto:contact@email.com">contact@email.com</a>
+                      <a href="mailto:contact@email.com"
+                        ><i class="fa-solid fa-envelope"></i>
+                        contact@email.com</a
+                      >
                     </p>
                   </div>
                   <a
@@ -1179,7 +1371,7 @@
                     class="btn"
                     target="_blank"
                   >
-                    Declarație de avere
+                    📄 Declarație de avere
                   </a>
                 </div>
               </div>
@@ -1195,11 +1387,16 @@
                     <h5>Date de contact:</h5>
                     <p class="card-tel">
                       <strong>Tel:</strong>
-                      <a href="tel:+40722123456">+40 722 123 456</a>
+                      <a href="tel:+40722123456"
+                        ><i class="fa-solid fa-phone"></i> +40 722 123 456</a
+                      >
                     </p>
                     <p class="card-email">
                       <strong>Email:</strong>
-                      <a href="mailto:contact@email.com">contact@email.com</a>
+                      <a href="mailto:contact@email.com"
+                        ><i class="fa-solid fa-envelope"></i>
+                        contact@email.com</a
+                      >
                     </p>
                   </div>
                   <a
@@ -1207,7 +1404,7 @@
                     class="btn"
                     target="_blank"
                   >
-                    Declarație de avere
+                    📄 Declarație de avere
                   </a>
                 </div>
               </div>
@@ -1223,11 +1420,16 @@
                     <h5>Date de contact:</h5>
                     <p class="card-tel">
                       <strong>Tel:</strong>
-                      <a href="tel:+40722123456">+40 722 123 456</a>
+                      <a href="tel:+40722123456"
+                        ><i class="fa-solid fa-phone"></i> +40 722 123 456</a
+                      >
                     </p>
                     <p class="card-email">
                       <strong>Email:</strong>
-                      <a href="mailto:contact@email.com">contact@email.com</a>
+                      <a href="mailto:contact@email.com"
+                        ><i class="fa-solid fa-envelope"></i>
+                        contact@email.com</a
+                      >
                     </p>
                   </div>
                   <a
@@ -1235,7 +1437,7 @@
                     class="btn"
                     target="_blank"
                   >
-                    Declarație de avere
+                    📄 Declarație de avere
                   </a>
                 </div>
               </div>
@@ -1251,11 +1453,16 @@
                     <h5>Date de contact:</h5>
                     <p class="card-tel">
                       <strong>Tel:</strong>
-                      <a href="tel:+40722123456">+40 722 123 456</a>
+                      <a href="tel:+40722123456"
+                        ><i class="fa-solid fa-phone"></i> +40 722 123 456</a
+                      >
                     </p>
                     <p class="card-email">
                       <strong>Email:</strong>
-                      <a href="mailto:contact@email.com">contact@email.com</a>
+                      <a href="mailto:contact@email.com"
+                        ><i class="fa-solid fa-envelope"></i>
+                        contact@email.com</a
+                      >
                     </p>
                   </div>
                   <a
@@ -1263,7 +1470,7 @@
                     class="btn"
                     target="_blank"
                   >
-                    Declarație de avere
+                    📄 Declarație de avere
                   </a>
                 </div>
               </div>
@@ -1279,7 +1486,9 @@
                     <h5>Date de contact:</h5>
                     <p class="card-tel">
                       <strong>Tel:</strong>
-                      <a href="tel:+40722123456">+40 722 123 456</a>
+                      <a href="tel:+40722123456"
+                        ><i class="fa-solid fa-phone"></i> +40 722 123 456</a
+                      >
                     </p>
                     <p class="card-email">
                       <strong>Email:</strong>
@@ -1291,7 +1500,7 @@
                     class="btn"
                     target="_blank"
                   >
-                    Declarație de avere
+                    📄 Declarație de avere
                   </a>
                 </div>
               </div>
@@ -1307,11 +1516,16 @@
                     <h5>Date de contact:</h5>
                     <p class="card-tel">
                       <strong>Tel:</strong>
-                      <a href="tel:+40722123456">+40 722 123 456</a>
+                      <a href="tel:+40722123456"
+                        ><i class="fa-solid fa-phone"></i> +40 722 123 456</a
+                      >
                     </p>
                     <p class="card-email">
                       <strong>Email:</strong>
-                      <a href="mailto:contact@email.com">contact@email.com</a>
+                      <a href="mailto:contact@email.com"
+                        ><i class="fa-solid fa-envelope"></i>
+                        contact@email.com</a
+                      >
                     </p>
                   </div>
                   <a
@@ -1319,7 +1533,7 @@
                     class="btn"
                     target="_blank"
                   >
-                    Declarație de avere
+                    📄 Declarație de avere
                   </a>
                 </div>
               </div>
@@ -1593,7 +1807,7 @@
 
     <!-- MEDIU -->
     <section id="mediu">
-      <h2>Mediu</h2>
+      <h2>🌿 Mediu</h2>
       <div id="salubritate">
         <h3>Salubritate</h3>
         <div id="colectare">
@@ -1823,15 +2037,15 @@
         <a href="https://www.ghiseul.ro" target="_blank"> Ghișeul.ro </a>
       </div>
       <div id="buget">
-        <h3>Buget</h3>
+        <h3><i class="fa-solid fa-coins"></i>Buget</h3>
         <p>
           Bugetul local reflectă veniturile și cheltuielile administrației
           publice locale.
         </p>
         <ul>
-          <li>Venituri din taxe și impozite</li>
-          <li>Fonduri europene</li>
-          <li>Alocări de la bugetul de stat</li>
+          <li>💰 Venituri din taxe și impozite</li>
+          <li>💰 Fonduri europene</li>
+          <li>💰 Alocări de la bugetul de stat</li>
         </ul>
         <h4>Documente</h4>
         <ul>
@@ -1840,7 +2054,7 @@
         </ul>
       </div>
       <div id="achizitii">
-        <h3>Achiziții publice</h3>
+        <h3><i class="fa-solid fa-shopping-cart"></i> Achiziții publice</h3>
         <p>
           Achizițiile publice sunt realizate în mod transparent, conform
           legislației în vigoare.
@@ -1855,7 +2069,7 @@
         <p>Detalii pot fi consultate pe platforma SICAP.</p>
       </div>
       <div id="proiecte">
-        <h3>Proiecte UE</h3>
+        <h3><i class="fa-solid fa-globe-europe"></i> Proiecte UE</h3>
         <p>
           Comuna Coșeiu implementează proiecte finanțate din fonduri europene și
           guvernamentale.
@@ -1873,7 +2087,7 @@
         </p>
       </div>
       <div id="investitori">
-        <h3>Investitori</h3>
+        <h3><i class="fa-solid fa-building"></i> Investitori</h3>
         <ul>
           <li>TERMO PAL JAN SRL</li>
           <li>ZOOFARM SRL</li>
@@ -1988,7 +2202,9 @@
           Adresă: Strada Principală, Coșeiu, Județul Sălaj, România, Cod poștal
           457080
         </p>
-        <p>Email: primariacoseiu@yahoo.com</p>
+        <p>
+          <i class="fa-solid fa-envelope"></i> Email: primariacoseiu@yahoo.com
+        </p>
         <p>Program de lucru: Luni - Vineri, 8:00 - 16:00</p>
       </section>
 
