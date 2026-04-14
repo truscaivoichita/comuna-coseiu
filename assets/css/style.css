@@ -3,7 +3,7 @@
   --primary: #0d0c75;
   --accent: #ff7a00;
   --accent-dark: #e66a00;
-  --bg: ##f5f7fb;
+  --bg: #f5f7fb;
   --text: #2c2c2c;
   --bg-color: #1e293b;
   --text-greyish: #444;
@@ -27,7 +27,9 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  outline: 1px solid red;
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -43,6 +45,11 @@ mark {
   color: var(--white);
   padding: 2px 4px;
   border-radius: 4px;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 /* .highlight {
   background: var(--accent);
@@ -169,8 +176,7 @@ a:hover {
 
 nav .dropdown-menu.split-menu {
   display: flex;
-  width: 100vw;
-  max-width: 100%;
+  width: 100%;
   position: absolute;
   top: 100%;
   left: 0;
