@@ -1,0 +1,74 @@
+[
+  {
+    "name": "BODA PAUL",
+    "partid": "UDMR",
+    "mandat": "2024-2028",
+    "tel": "+40722123456",
+    "email": "contact@email.com",
+    "declaratie": "declaratii/boda-paul.pdf"
+  },
+  {
+    "name": "CHIOREAN IOAN-ALEXANDRU",
+    "partid": "PNL",
+    "mandat": "2024-2028",
+    "tel": "+40722123456",
+    "email": "contact@email.com",
+    "declaratie": "declaratii/chiorean-ioan.pdf"
+  },
+  {
+    "name": "CSAKI GEZA",
+    "partid": "UDMR",
+    "mandat": "2024-2028",
+    "tel": "+40722123456",
+    "email": "contact@email.com",
+    "declaratie": "declaratii/csaki-geza.pdf"
+  },
+  {
+    "name": "DEBCREZENI DEZIDERIU",
+    "partid": "UDMR",
+    "mandat": "2024-2028",
+    "tel": "+40722123456",
+    "email": "contact@email.com",
+    "declaratie": "declaratii/debcrezeni-dezideriu.pdf"
+  },
+  {
+    "name": "MESEȘAN IOAN",
+    "partid": "PSD",
+    "mandat": "2024-2028",
+    "tel": "+40722123456",
+    "email": "contact@email.com",
+    "declaratie": "declaratii/mesesan-ioan.pdf"
+  },
+  {
+    "name": "PÜSÖK SÁNDOR-LEVENTE",
+    "partid": "PNL",
+    "mandat": "2024-2028",
+    "tel": "+40722123456",
+    "email": "contact@email.com",
+    "declaratie": "declaratii/pusok_sandor-levente.pdf"
+  },
+  {
+    "name": "SAS SORIN-DAVID",
+    "partid": "UDMR",
+    "mandat": "2024-2028",
+    "tel": "+40722123456",
+    "email": "contact@email.com",
+    "declaratie": "declaratii/sas_sorin-david.pdf"
+  },
+  {
+    "name": "SATMARI MARIN-VIOREL",
+    "partid": "AUR",
+    "mandat": "2024-2028",
+    "tel": "+40722123456",
+    "email": "contact@email.com",
+    "declaratie": "declaratii/satmari_marin-viorel.pdf"
+  },
+  {
+    "name": "SOMOGYI JANOS-MIKLOS",
+    "partid": "PNL",
+    "mandat": "2024-2028",
+    "tel": "+40722123456",
+    "email": "contact@email.com",
+    "declaratie": "declaratii/somogyi_janos-miklos.pdf"
+  }
+]

@@ -194,6 +194,60 @@ function removeHighlights(element) {
   });
 }
 
+function createConsilierCard(c) {
+  return `
+    <div class="consilier-card">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">${c.name}</h5>
+          <p class="card-text"><strong>Partid:</strong> ${c.partid}</p>
+          <p class="card-text"><strong>Mandat:</strong> ${c.mandat}</p>
+
+          <div class="card-contact-info">
+            <h5>Date de contact:</h5>
+
+            <p class="card-tel">
+              <strong>Tel:</strong>
+              <a href="tel:${c.tel}">
+                <i class="fa-solid fa-phone"></i> ${c.tel}
+              </a>
+            </p>
+
+            <p class="card-email">
+              <strong>Email:</strong>
+              <a href="mailto:${c.email}">
+                <i class="fa-solid fa-envelope"></i> ${c.email}
+              </a>
+            </p>
+          </div>
+
+          <a href="${c.declaratie}" class="btn" target="_blank">
+            📄 Declarație de avere
+          </a>
+        </div>
+      </div>
+    </div>
+  `;
+}
+async function loadConsilieri() {
+  const container = document.getElementById("consilieri-container");
+
+  if (!container) {
+    console.error("Container #consilieri-container not found");
+    return;
+  }
+
+  try {
+    const response = await fetch("assets/data/consilieri.json");
+    const data = await response.json();
+
+    container.innerHTML = data.map((c) => createConsilierCard(c)).join("");
+  } catch (error) {
+    console.error("Eroare la încărcarea consilierilor:", error);
+    container.innerHTML = "<p>Nu s-au putut încărca consilierii.</p>";
+  }
+}
+
 // ===== INIT EVENTS =====
 function initMenu() {
   items.forEach((item) => {
@@ -249,6 +303,7 @@ function initApp() {
   initDropdowns();
   initSearch();
   initGlobalEvents();
+  loadConsilieri();
 }
 
 initApp();
