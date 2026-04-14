@@ -543,6 +543,9 @@ footer {
   nav.active {
     transform: translateX(0);
   }
+  body.nav-open {
+    overflow: hidden;
+  }
   body.nav-open::after {
     content: "";
     position: fixed;
@@ -553,8 +556,7 @@ footer {
     background: rgba(0, 0, 0, 0.3);
     z-index: 900;
   }
-
-  nav > ul {
+  body.nav-open nav > ul {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
