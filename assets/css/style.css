@@ -88,12 +88,14 @@ header {
   color: var(--white);
   position: sticky;
   top: 0;
+  height: 130px;
   z-index: 1000;
 }
 
 .logo {
   width: 120px;
   transition: transform 0.3s;
+  border-radius: 42% 42% 85% 85%;
 }
 .logo:hover {
   transform: scale(1.05);
@@ -487,9 +489,22 @@ footer {
 }
 @media (max-width: 900px) {
   header {
-    background: var(--white);
+    background: var(--heading-color);
     z-index: 1000;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+  }
+
+  header.scrolled {
+    background: var(--white);
+    box-shadow: var(--shadow);
+  }
+
+  header.scrolled nav a {
+    color: var(--text);
   }
   .logo {
     position: fixed;
@@ -499,16 +514,16 @@ footer {
   .search-form {
     margin-left: auto;
   }
-  header .search-form {
+  .search-form {
     position: absolute;
     top: 5px;
     right: 115px;
   }
-  header .search-form input,
-  header .search-form label {
+  .search-form input,
+  .search-form label {
     display: none;
   }
-  header .search-form button {
+  .search-form button {
     padding: 10px;
     border-radius: 50%;
     background-color: transparent;
@@ -538,23 +553,12 @@ footer {
     background: rgba(0, 0, 0, 0.3);
     z-index: 900;
   }
-  header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px;
-  }
-  header.scrolled {
-    background: var(--white);
-    box-shadow: var(--shadow);
-  }
-
-  header.scrolled nav a {
-    color: var(--text);
-  }
 
   nav > ul {
+    display: flex;
     flex-direction: column;
+    flex-wrap: nowrap;
+    width: 80%;
   }
 
   nav > ul > li > a {
@@ -580,6 +584,8 @@ footer {
   }
   nav > ul > li > a {
     font-size: 14px;
+    display: block;
+    width: 100%;
   }
 
   body > header > nav > ul > li.dropdown > div > div.menu-left > ul > li {
@@ -631,7 +637,7 @@ footer {
 
   /* MAIN NAV = LEFT COLUMN */
   nav > ul {
-    width: 30%;
+    width: 33%;
     flex-direction: column;
     border-right: 1px solid var(--whiteish);
   }
