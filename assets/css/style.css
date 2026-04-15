@@ -144,6 +144,7 @@ nav {
 
 nav > ul {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   list-style: none;
   margin: 0;
@@ -476,6 +477,35 @@ footer {
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 600px) {
+  nav {
+    width: 100%;
+  }
+
+  /* cleaner UI */
+  nav > ul > li > a {
+    font-size: 14px;
+    padding: 14px;
+  }
+
+  /* simplify split menu */
+  /* .menu-left {
+    width: 100%;
+  } */
+
+  .menu-right {
+    display: none;
+  }
+
+  .menu-right.active {
+    display: block;
+  }
+
+  /* back button visible */
+  .back-button {
+    display: block;
+    padding: 12px;
+    background: #f5f5f5;
+  }
   #gallery img {
     height: 180px;
   }
@@ -485,6 +515,39 @@ footer {
 
   nav .menu-right {
     width: 55%;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 10px;
+  }
+
+  .logo {
+    width: 90px;
+  }
+
+  /* make nav wider for usability */
+  nav {
+    width: 85%;
+  }
+
+  /* bigger tap targets */
+  nav > ul > li > a {
+    font-size: 15px;
+    padding: 16px;
+  }
+
+  /* split menu becomes full width */
+  .dropdown-menu.split-menu {
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .menu-left,
+  .menu-right {
+    width: 100%;
   }
 }
 @media (max-width: 900px) {
@@ -528,7 +591,15 @@ footer {
     border-radius: 50%;
     background-color: transparent;
   }
-
+  .menu-toggle {
+    display: block;
+    position: fixed;
+    left: 15px;
+    top: 15px;
+    z-index: 1100;
+    color: var(--text);
+    cursor: pointer;
+  }
   nav {
     position: fixed;
     left: 0;
@@ -563,9 +634,16 @@ footer {
     width: 80%;
   }
 
+  nav > ul {
+    width: 33%;
+    gap: 0;
+    flex-direction: column;
+    border-right: 1px solid var(--whiteish);
+  }
+
   nav > ul > li > a {
     display: block;
-    padding: 14px 16px;
+    padding: 14px;
     font-size: 16px;
     color: var(--text);
     border-left: 4px solid transparent;
@@ -626,24 +704,9 @@ footer {
     border-left-color: var(--section-color-monitor);
   }
 
-  .menu-toggle {
-    display: block;
-    position: fixed;
-    left: 15px;
-    top: 15px;
-    z-index: 1100;
-    color: var(--text);
-    cursor: pointer;
-  }
-
   /* ===== SPLIT MENU FULLSCREEN ===== */
 
   /* MAIN NAV = LEFT COLUMN */
-  nav > ul {
-    width: 33%;
-    flex-direction: column;
-    border-right: 1px solid var(--whiteish);
-  }
 
   /* DROPDOWN CONTAINER = RIGHT SIDE */
   nav .dropdown {
@@ -653,7 +716,7 @@ footer {
   nav .dropdown-menu.split-menu {
     position: absolute;
     top: 0;
-    left: 30%;
+    left: 31%;
     width: 70%;
     height: 85vh;
     display: flex;
@@ -693,6 +756,21 @@ footer {
   }
 
   .back-button {
+    display: block;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  .dropdown.active .split-menu {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .menu-right {
     display: none;
+  }
+
+  .menu-right.active {
+    display: block;
   }
 }
