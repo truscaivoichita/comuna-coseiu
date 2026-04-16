@@ -23,6 +23,27 @@
   --economie: #00b7c3;
   --monitor: #3179b6;
 }
+
+body.dark-mode {
+  --bg: #020617;
+  --text: #e2e8f0;
+  --heading-color: #f8fafc;
+  --white: #0f172a;
+  --whiteish: #1e293b;
+  --text-greyish: #94a3b8;
+  --border: rgba(255, 255, 255, 0.08);
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+  --text: #e5e7eb;
+  --text-greyish: #94a3b8;
+  --heading-color: #f9fafb;
+  --heading-border-color: #3b82f6;
+  --button: #2563eb;
+  --border: rgba(255, 255, 255, 0.06);
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.9);
+  --button: #3b82f6;
+  --accent: #fb923c;
+  --accent-dark: #ea580c;
+}
 /* ===== RESET ===== */
 * {
   box-sizing: border-box;
@@ -36,7 +57,7 @@ html {
 body {
   font-family: "Inter", "Segoe UI", sans-serif;
   background: var(--bg);
-  color: var(--bg-color);
+  color: var(--text);
   line-height: 1.6;
 }
 mark {
@@ -72,7 +93,38 @@ h2 {
 h3 {
   margin-bottom: 10px;
 }
+body.dark-mode h2 {
+  color: var(--heading-color);
+  border-left: 5px solid var(--heading-border-color);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+body.dark-mode section h2 {
+  color: var(--heading-color);
+}
+body.dark-mode section h2 span {
+  color: var(--heading-border-color);
+}
+body.dark-mode h3 {
+  color: #e2e8f0;
+}
+body.dark-mode section > div,
+body.dark-mode .card {
+  background: linear-gradient(145deg, #0f172a, #020617);
+}
 /* ===== HEADER ===== */
+#theme-toggle {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 10px;
+  color: var(--text);
+  transition: 0.3s;
+}
+
+#theme-toggle:hover {
+  transform: scale(1.1);
+}
 header {
   display: flex;
   align-items: center;
@@ -94,6 +146,7 @@ header {
 .logo:hover {
   transform: scale(1.05);
 }
+
 .menu-toggle {
   display: none;
 }
@@ -156,9 +209,12 @@ a {
   color: var(--heading-border-color);
   transition: 0.2s;
 }
-a:hover {
-  color: var(--heading-border-color);
+body.dark-mode a:hover {
+  color: #93c5fd;
 }
+/* a:hover {
+  color: var(--heading-border-color);
+} */
 /* ===== SPLIT MENU ===== */
 
 nav .dropdown-menu.split-menu {
@@ -203,7 +259,7 @@ nav .dropdown-menu.split-menu {
 }
 .menu-left li:hover,
 .menu-left li.active {
-  background: color-mix(in srgb, var(--section-color) 15%, var(--white));
+  background: color-mix(in srgb, var(--section-color) 25%, transparent);
   color: var(--section-color);
   font-weight: 600;
   cursor: pointer;
@@ -289,9 +345,11 @@ section {
   padding: 80px 20px;
   max-width: 1200px;
   margin: auto;
+  border-top: 1px solid var(--border);
 }
 section > div {
   background: var(--white);
+  border: 1px solid var(--border);
   padding: 20px;
   border-radius: 16px;
   box-shadow: var(--shadow);
@@ -307,7 +365,7 @@ section h3 {
   margin-bottom: 20px;
 }
 .cards {
-  background: #fff;
+  /* background: #fff; */
   border-radius: 16px;
   padding: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
@@ -344,7 +402,7 @@ section h3 {
   margin: 15px 0;
   box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
   transition: all 0.3s ease;
-  border: 1px solid var(--card);
+  border: 1px solid var(--border);
 }
 /* profile cards */
 .profile-card {
@@ -444,8 +502,8 @@ section h3 {
 }
 /* ===== FOOTER ===== */
 footer {
-  background: var(--heading-color);
-  color: var(--footer-color);
+  /* background: var(--heading-color); */
+  /* color: var(--footer-color); */
   padding: 40px 20px;
   margin-top: 60px;
 }
@@ -594,6 +652,10 @@ footer {
     flex-wrap: nowrap;
     width: 40%;
   }
+  body.dark-mode header {
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(10px);
+  }
   nav > ul {
     width: 37%;
     gap: 0;
@@ -616,6 +678,11 @@ footer {
     background: var(--bg);
     padding-left: 20px;
   }
+  /* .dropdown.active .split-menu {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  } */
   .dropdown.active > a {
     background: var(--bg);
     font-weight: 600;
