@@ -1,11 +1,18 @@
 console.log("Menu working ✅");
 // ===== GLOBAL SELECTORS =====
-const nav = document.querySelector("nav");
-const toggle = document.querySelector(".menu-toggle");
+let nav, toggle;
+
+// const nav = document.querySelector("nav");
+// const toggle = document.querySelector(".menu-toggle");
 const items = document.querySelectorAll(".menu-left li");
 const contents = document.querySelectorAll(".menu-content");
 const searchInput = document.getElementById("search-input");
-const allSections = document.querySelectorAll("body > section");
+let allSections = [];
+// const allSections = document.querySelectorAll("body > section");
+function cacheDOM() {
+  nav = document.querySelector("nav");
+  toggle = document.querySelector(".menu-toggle");
+}
 // ===== MOBILE SPLIT MENU =====
 function handleMobileMenuClick(item) {
   const targetId = item.dataset.target;
@@ -138,7 +145,11 @@ function handleSearchScroll() {
 // ===== HIGHLIGHT =====
 function highlightText(element, query) {
   const regex = new RegExp(`(${query})`, "gi");
-  element.innerHTML = element.innerHTML.replace(regex, `<mark>$1</mark>`);
+  element.querySelectorAll("*").forEach((node) => {
+    if (node.children.length === 0) {
+      node.innerHTML = node.innerHTML.replace(regex, `<mark>$1</mark>`);
+    }
+  });
 }
 function removeHighlights(element) {
   const marks = element.querySelectorAll("mark");
@@ -211,7 +222,10 @@ function initDropdowns() {
 }
 function initSearch() {
   if (!searchInput) return;
-  searchInput.addEventListener("input", handleSearchInput);
+  searchInput.addEventListener("input", () => {
+    updateSections();
+    handleSearchInput();
+  });
   searchInput.addEventListener("change", handleSearchScroll);
 }
 function initGlobalEvents() {
@@ -234,8 +248,60 @@ function initGlobalEvents() {
   document.addEventListener("click", handleOutsideClick);
   window.addEventListener("resize", handleResize);
 }
+// ===== UPDATE SECTIONS =====
+function updateSections() {
+  allSections = document.querySelectorAll("section");
+}
+// ===== COMPONENT LOADER =====
+async function loadComponent(containerId, filePath) {
+  try {
+    const res = await fetch(filePath);
+    if (!res.ok) throw new Error(`Failed to load ${filePath}`);
+    const html = await res.text();
+    document.getElementById(containerId).innerHTML = html;
+  } catch (err) {
+    console.error(`Error loading component ${filePath}:`, err);
+  }
+}
+// ===== LOAD ALL COMPONENTS =====
+async function loadAllComponents() {
+  await Promise.all([
+    loadComponent("header-container", "assets/components/partials/header.html"),
+    loadComponent("home-container", "assets/components/sections/home.html"),
+    loadComponent(
+      "comunitate-container",
+      "assets/components/sections/comunitate.html",
+    ),
+    loadComponent(
+      "administratie-container",
+      "assets/components/sections/administratie.html",
+    ),
+    loadComponent(
+      "locuire-container",
+      "assets/components/sections/locuire.html",
+    ),
+    loadComponent("mediu-container", "assets/components/sections/mediu.html"),
+    loadComponent(
+      "mobilitate-container",
+      "assets/components/sections/mobilitate.html",
+    ),
+    loadComponent(
+      "economie-container",
+      "assets/components/sections/economie.html",
+    ),
+    loadComponent(
+      "monitor-container",
+      "assets/components/sections/monitor.html",
+    ),
+    loadComponent("footer-container", "assets/components/partials/footer.html"),
+  ]);
+}
 // ===== RUN APP =====
-function initApp() {
+async function initApp() {
+  await loadAllComponents();
+  // document.getElementById(containerId).innerHTML = "<p>Se încarcă...</p>";
+  cacheDOM();
+  updateSections();
   initMenu();
   initDropdowns();
   initSearch();
