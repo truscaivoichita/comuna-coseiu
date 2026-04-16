@@ -1,4 +1,30 @@
 console.log("Menu working ✅");
+// ===== LANGUAGE SYSTEM =====
+let currentLang = localStorage.getItem("lang") || "ro";
+const i18n = {
+  ro: {
+    search_placeholder: "🔎 Caută...",
+    back: "← Înapoi",
+    community: "👥 COMUNITATE",
+    administration: "🏛️ ADMINISTRAȚIE",
+    housing: "🏡 LOCUIRE",
+    environment: "🌱 MEDIU",
+    mobility: "🚗 MOBILITATE",
+    economy: "💰 ECONOMIE",
+    monitor: "📄 MONITOR",
+  },
+  hu: {
+    search_placeholder: "🔎 Keresés...",
+    back: "← Vissza",
+    community: "👥 KÖZÖSSÉG",
+    administration: "🏛️ KÖZIGAZGATÁS",
+    housing: "🏡 LAKÓHELY",
+    environment: "🌱 KÖRNYEZET",
+    mobility: "🚗 MOBILITÁS",
+    economy: "💰 GAZDASÁG",
+    monitor: "📄 MONITOR",
+  },
+};
 // ===== GLOBAL =====
 let nav, toggle;
 let allSections = [];
@@ -130,6 +156,53 @@ function initMenuSystem() {
   preventCloseOnInternalLinks();
   initResizeFix();
 }
+function applyLanguage() {
+  const dict = i18n[currentLang];
+  if (searchInput) {
+    searchInput.placeholder = dict.search_placeholder;
+  }
+  document.querySelectorAll("nav > ul > li.dropdown > a").forEach((el) => {
+    const key = el.getAttribute("href")?.replace("#", "");
+    switch (key) {
+      case "comunitate":
+        el.textContent = dict.community;
+        break;
+      case "administratie":
+        el.textContent = dict.administration;
+        break;
+      case "locuire":
+        el.textContent = dict.housing;
+        break;
+      case "mediu":
+        el.textContent = dict.environment;
+        break;
+      case "mobilitate":
+        el.textContent = dict.mobility;
+        break;
+      case "economie":
+        el.textContent = dict.economy;
+        break;
+      case "monitor":
+        el.textContent = dict.monitor;
+        break;
+    }
+  });
+  document.querySelectorAll(".back-button").forEach((btn) => {
+    btn.textContent = dict.back;
+  });
+}
+function initLanguageToggle() {
+  const btn = document.getElementById("lang-toggle");
+  if (!btn) return;
+  // initial label
+  btn.textContent = currentLang.toUpperCase();
+  btn.addEventListener("click", () => {
+    currentLang = currentLang === "ro" ? "hu" : "ro";
+    localStorage.setItem("lang", currentLang);
+    btn.textContent = currentLang.toUpperCase();
+    applyLanguage();
+  });
+}
 // ===== SEARCH =====
 function updateSections() {
   allSections = document.querySelectorAll("section");
@@ -232,5 +305,7 @@ async function initApp() {
   updateSections();
   initSearch();
   initThemeToggle();
+  initLanguageToggle();
+  applyLanguage();
 }
 initApp();
