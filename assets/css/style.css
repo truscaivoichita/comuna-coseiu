@@ -79,7 +79,7 @@ header {
   justify-content: space-between;
   padding: 15px 30px;
   /* background: linear-gradient(135deg, var(--accent), var(--primary)); */
-  background: var(--heading-color);
+  /* background: var(--heading-color); */
   color: var(--white);
   position: sticky;
   top: 0;
@@ -286,14 +286,14 @@ nav .dropdown-menu.split-menu {
 /* ===== SECTION ===== */
 section {
   margin-top: 50px;
-  padding: 40px 20px;
+  padding: 80px 20px;
   max-width: 1200px;
   margin: auto;
 }
 section > div {
   background: var(--white);
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 16px;
   box-shadow: var(--shadow);
   margin-bottom: 20px;
 }
@@ -305,6 +305,25 @@ section h2 {
 section h3 {
   color: var(--primary);
   margin-bottom: 20px;
+}
+.cards {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+}
+#home {
+  height: 450px;
+  background: url(/assets/images/heart.png) center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#home::before {
+  content: "";
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
 }
 /* .profile-card {
   display: flex;
