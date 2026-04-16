@@ -1,0 +1,39 @@
+{
+  "title": "👥 KÖZÖSSÉG",
+
+  "cetateni": {
+    "title": "⭐ Lakosok",
+    "description": "Coșeiu községben körülbelül 2000 lakos él, többségük magyar nemzetiségű, majd román és roma lakosság követi.",
+
+    "etnic": {
+      "title": "Etnikai összetétel",
+      "items": [
+        "Magyarok (50,63%)",
+        "Románok (40,09%)",
+        "Romák (4,59%)",
+        "Ismeretlen (4,68%)"
+      ]
+    },
+
+    "religie": {
+      "title": "Vallási összetétel",
+      "items": [
+        "Ortodox (36,31%)",
+        "Református (34,14%)",
+        "Baptista (16,76%)",
+        "Görögkatolikus (5,5%)",
+        "Egyéb vallások (1,89%)",
+        "Ismeretlen (5,41%)"
+      ]
+    }
+  },
+
+  "educatie": {
+    "title": "🎓 Oktatás",
+    "description": "Coșeiu községben általános és gimnáziumi iskolák, valamint óvodák működnek.",
+    "transport_title": "🚌 Szállítás",
+    "transport_text": "A diákok szervezett iskolai közlekedésben részesülnek.",
+    "autobuze_title": "🚍 Buszok",
+    "autobuze_text": "A tömegközlekedés összeköti a környező településeket."
+  }
+}

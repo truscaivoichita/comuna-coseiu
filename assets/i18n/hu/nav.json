@@ -1,0 +1,14 @@
+{
+  "search_placeholder": "🔎 Keresés...",
+  "back": "← Vissza",
+
+  "menu": {
+    "comunitate": "👥 KÖZÖSSÉG",
+    "administratie": "🏛️ KÖZIGAZGATÁS",
+    "mediu": "🏡 LAKÓHELY",
+    "environment": "🌱 KÖRNYEZET",
+    "mobilitate": "🚗 MOBILITÁS",
+    "economie": "💰 GAZDASÁG",
+    "monitor": "📄 MONITOR"
+  }
+}

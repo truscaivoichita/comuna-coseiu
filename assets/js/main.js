@@ -1,30 +1,8 @@
 console.log("Menu working ✅");
 // ===== LANGUAGE SYSTEM =====
 let currentLang = localStorage.getItem("lang") || "ro";
-const i18n = {
-  ro: {
-    search_placeholder: "🔎 Caută...",
-    back: "← Înapoi",
-    community: "👥 COMUNITATE",
-    administration: "🏛️ ADMINISTRAȚIE",
-    housing: "🏡 LOCUIRE",
-    environment: "🌱 MEDIU",
-    mobility: "🚗 MOBILITATE",
-    economy: "💰 ECONOMIE",
-    monitor: "📄 MONITOR",
-  },
-  hu: {
-    search_placeholder: "🔎 Keresés...",
-    back: "← Vissza",
-    community: "👥 KÖZÖSSÉG",
-    administration: "🏛️ KÖZIGAZGATÁS",
-    housing: "🏡 LAKÓHELY",
-    environment: "🌱 KÖRNYEZET",
-    mobility: "🚗 MOBILITÁS",
-    economy: "💰 GAZDASÁG",
-    monitor: "📄 MONITOR",
-  },
-};
+let communityDict = {};
+let navDict = {};
 // ===== GLOBAL =====
 let nav, toggle;
 let allSections = [];
@@ -156,51 +134,94 @@ function initMenuSystem() {
   preventCloseOnInternalLinks();
   initResizeFix();
 }
-function applyLanguage() {
-  const dict = i18n[currentLang];
+async function loadNavLang(lang) {
+  const res = await fetch(`/assets/i18n/${lang}/nav.json`);
+  navDict = await res.json();
+  requestAnimationFrame(() => {
+    applyNavLang();
+  });
+}
+function applyNavLang() {
+  console.log("nav items:", document.querySelectorAll(".menu-left li").length);
+  if (!navDict) return;
+  const items = document.querySelectorAll(".menu-left li");
+  if (!items.length) return;
+  // placeholder
   if (searchInput) {
-    searchInput.placeholder = dict.search_placeholder;
+    searchInput.placeholder = navDict.search_placeholder;
   }
+  // back buttons
+  document.querySelectorAll(".back-button").forEach((btn) => {
+    btn.textContent = navDict.back;
+  });
+  // menu items
   document.querySelectorAll("nav > ul > li.dropdown > a").forEach((el) => {
-    const key = el.getAttribute("href")?.replace("#", "");
-    switch (key) {
+    const text = el.getAttribute("href").replace("#", "");
+    switch (text) {
       case "comunitate":
-        el.textContent = dict.community;
+        el.textContent = navDict.menu.comunitate;
         break;
       case "administratie":
-        el.textContent = dict.administration;
+        el.textContent = navDict.menu.administratie;
         break;
       case "locuire":
-        el.textContent = dict.housing;
+        el.textContent = navDict.menu.locuire;
         break;
       case "mediu":
-        el.textContent = dict.environment;
+        el.textContent = navDict.menu.mediu;
         break;
       case "mobilitate":
-        el.textContent = dict.mobility;
+        el.textContent = navDict.menu.mobilitate;
         break;
       case "economie":
-        el.textContent = dict.economy;
+        el.textContent = navDict.menu.economie;
         break;
       case "monitor":
-        el.textContent = dict.monitor;
+        el.textContent = navDict.menu.monitor;
         break;
     }
   });
-  document.querySelectorAll(".back-button").forEach((btn) => {
-    btn.textContent = dict.back;
+}
+async function loadCommunityLang(lang) {
+  const res = await fetch(`/assets/i18n/${lang}/comunitate.json`);
+  communityDict = await res.json();
+  applyCommunityLang();
+}
+function applyCommunityLang() {
+  if (!communityDict) return;
+  // simple text nodes
+  document.querySelectorAll("[data-i18n]").forEach((el) => {
+    const key = el.getAttribute("data-i18n");
+    const value = key.split(".").reduce((o, i) => o?.[i], communityDict);
+    if (typeof value === "string") {
+      el.textContent = value;
+    }
   });
+  // lists
+  const etnicList = document.getElementById("etnic-list");
+  const religieList = document.getElementById("religie-list");
+  if (etnicList) {
+    etnicList.innerHTML = communityDict.cetateni.etnic.items
+      .map((i) => `<li>${i}</li>`)
+      .join("");
+  }
+  if (religieList) {
+    religieList.innerHTML = communityDict.cetateni.religie.items
+      .map((i) => `<li>${i}</li>`)
+      .join("");
+  }
 }
 function initLanguageToggle() {
   const btn = document.getElementById("lang-toggle");
   if (!btn) return;
   // initial label
   btn.textContent = currentLang.toUpperCase();
-  btn.addEventListener("click", () => {
+  btn.addEventListener("click", async () => {
     currentLang = currentLang === "ro" ? "hu" : "ro";
     localStorage.setItem("lang", currentLang);
     btn.textContent = currentLang.toUpperCase();
-    applyLanguage();
+    await loadNavLang(currentLang);
+    await loadCommunityLang(currentLang);
   });
 }
 // ===== SEARCH =====
@@ -301,11 +322,14 @@ async function loadAllComponents() {
 // ===== APP INIT =====
 async function initApp() {
   await loadAllComponents();
+  cacheDOM();
   initMenuSystem();
   updateSections();
   initSearch();
   initThemeToggle();
   initLanguageToggle();
-  applyLanguage();
+  await loadNavLang(currentLang);
+  await new Promise((r) => requestAnimationFrame(r));
+  cacheDOM();
 }
 initApp();

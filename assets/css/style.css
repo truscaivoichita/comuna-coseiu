@@ -597,9 +597,19 @@ footer {
     margin-left: auto;
   }
   .search-form {
-    position: absolute;
+    position: fixed;
     top: 5px;
     right: 115px;
+  }
+  #theme-toggle {
+    position: fixed;
+    top: 45px;
+    right: 130px;
+  }
+  #lang-toggle {
+    position: fixed;
+    top: 80px;
+    right: 130px;
   }
   .search-form input,
   .search-form label {

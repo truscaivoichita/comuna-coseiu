@@ -1,0 +1,39 @@
+{
+  "title": "👥 Comunitate",
+
+  "cetateni": {
+    "title": "⭐ Cetățeni",
+    "description": "Comuna Coșeiu are o populație de aproximativ 2.000 de locuitori, majoritatea fiind de etnie maghiară, urmată de români și romi.",
+
+    "etnic": {
+      "title": "Componența etnică",
+      "items": [
+        "Maghiari (50,63%)",
+        "Români (40,09%)",
+        "Romi (4,59%)",
+        "Necunoscută (4,68%)"
+      ]
+    },
+
+    "religie": {
+      "title": "Componența confesională",
+      "items": [
+        "Ortodocși (36,31%)",
+        "Reformați (34,14%)",
+        "Baptiști (16,76%)",
+        "Greco-catolici (5,5%)",
+        "Alte religii (1,89%)",
+        "Necunoscută (5,41%)"
+      ]
+    }
+  },
+
+  "educatie": {
+    "title": "🎓 Educație",
+    "description": "Comuna Coșeiu dispune de școli primare și gimnaziale și grădinițe.",
+    "transport_title": "🚌 Transport",
+    "transport_text": "Elevii beneficiază de transport organizat către unitățile de învățământ.",
+    "autobuze_title": "🚍 Autobuze",
+    "autobuze_text": "Transportul public asigură legătura cu localitățile învecinate."
+  }
+}

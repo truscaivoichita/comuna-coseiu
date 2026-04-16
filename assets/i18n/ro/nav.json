@@ -1,0 +1,14 @@
+{
+  "search_placeholder": "🔎 Caută...",
+  "back": "← Înapoi",
+
+  "menu": {
+    "comunitate": "👥 COMUNITATE",
+    "administratie": "🏛️ ADMINISTRAȚIE",
+    "locuire": "🏡 LOCUIRE",
+    "mediu": "🌱 MEDIU",
+    "mobilitate": "🚗 MOBILITATE",
+    "economie": "💰 ECONOMIE",
+    "monitor": "📄 MONITOR"
+  }
+}
