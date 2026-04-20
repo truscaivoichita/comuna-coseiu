@@ -1,14 +1,235 @@
 {
-  "search_placeholder": "🔎 Keresés...",
-  "back": "← Vissza",
+  "cauta": "🔎 Keresés...",
+  "inapoi": "← Vissza",
 
   "menu": {
     "comunitate": "👥 KÖZÖSSÉG",
+    "locuire": "🏡 LAKHATÁS",
     "administratie": "🏛️ KÖZIGAZGATÁS",
-    "mediu": "🏡 LAKÓHELY",
-    "environment": "🌱 KÖRNYEZET",
+    "mediu": "🌱 KÖRNYEZET",
     "mobilitate": "🚗 MOBILITÁS",
     "economie": "💰 GAZDASÁG",
-    "monitor": "📄 MONITOR"
+    "monitor": "📄 KÖZLÖNY"
+  },
+
+  "submenu": {
+    "comunitate": {
+      "cetateni": {
+        "dezbateri_publice": "💬 Nyilvános viták",
+        "newsletter": "📧 Hírlevél",
+        "cetateni_onoare": "🏅 Díszpolgárok",
+        "sugestii_reclamatii": "📝 Javaslatok és panaszok",
+        "bugetare_participativa": "💰 Részvételi költségvetés",
+        "proceduri_online": "🖥️ Online szolgáltatások",
+        "live_webcam": "📡 Élő webkamera"
+      },
+      "educatie": {
+        "transport": "🚌 Szállítás",
+        "autobuze": "🚍 Buszok",
+        "legislatie_educatie": "📚 Oktatási Jogszabályok",
+        "crese": "🏫 Bölcsődék",
+        "gradinite": "🎒 Óvodák",
+        "scoli": "🏫 Iskolák"
+      },
+      "cultura": {
+        "biblioteci": "📖 Könyvtárak",
+        "finantari_cultura": "🎨 Kulturális Támogatások",
+        "personalitati_locale": "⭐ Személyiségek",
+        "evenimente_culturale": "🎭 Kulturális Események"
+      },
+      "sport": {
+        "structuri_sportive": "🏟️ Sportlétesítmények",
+        "finantari_sportive": "💸 Sporttámogatások",
+        "baze_sportive": "⚽ Sportpályák",
+        "sala_sport": "🏋️ Sportcsarnokok",
+        "cluburi_sportive": "🏆 Sportklubok"
+      },
+      "sanatate": {
+        "cabinete_medicale": "🩺 Orvosi rendelők",
+        "finantari_sanatate": "💊 Egészségügyi Támogatások",
+        "farmacii": "💊 Gyógyszertárak",
+        "urgente": "🚑 Sürgősségi Ellátás"
+      },
+      "social": {
+        "varstnici": "👵 Idősek",
+        "adapost": "🏠 Menedék",
+        "ajutor_social": "🤲 Szociális Segítség",
+        "tichete_sociale": "🎟️ Szociális Utalványok",
+        "stomatologie": "🦷 Fogászat"
+      },
+      "animale": {
+        "sterilizare": "🐕 Ivartalanítás",
+        "adoptii": "❤️ Örökbefogadás",
+        "boluri_apa": "💧 Itatók",
+        "adaposturi": "🏡 Állatmenhelyek",
+        "registru_animale": "📋 Állatnyilvántartás"
+      },
+      "turism": {
+        "centru_info": "ℹ️ Információs Központ",
+        "harta": "🗺️ Térkép",
+        "cazare": "🏨 Szállás",
+        "visit_coseiu": "📌 Látogasd Meg Coșeiut",
+        "monumente_istorice": "📍 Történelmi Műemlékek"
+      },
+      "evenimente": {
+        "zilele_coseiului": "🎊 Coșeiu Napok",
+        "targ_craciun": "🎄 Karácsonyi Vásár",
+        "piata_locala": "🛍️ Helyi Piac",
+        "festivaluri": "🎪 Fesztiválok"
+      }
+    },
+
+    "locuire": {
+      "strategii": {
+        "strategii": "📊 Városfejlesztési Stratégiák"
+      },
+      "urbanism": {
+        "urbanism": "🏗️ Városrendezés"
+      },
+      "autorizatii_constructie": {
+        "autorizatii_constructie": "📄 Építési Engedélyek"
+      },
+      "strazi": {
+        "strazi": "🛣️ Utcák"
+      },
+      "locuinte": {
+        "locuinte": "🏘️ Lakások"
+      },
+      "gis": {
+        "gis": "🛰️ GIS"
+      }
+    },
+
+    "administratie": {
+      "primarie": {
+        "primar": "👤 Polgármester",
+        "viceprimar": "👤 Alpolgármester",
+        "secretar": "📑 Jegyző",
+        "organigrama": "🧭 Szervezeti Felépítés",
+        "regulament": "📜 Szabályzat",
+        "sediu": "📍 Székhely"
+      },
+      "consiliu": {
+        "consilieri": "👥 Tanácsosok",
+        "comisii": "📌 Bizottságok",
+        "sedinte": "🗓️ Ülések",
+        "hotarari_consiliu": "📜 Határozatok"
+      },
+      "evidenta": {
+        "nasteri": "👶 Születések",
+        "acte": "🪪 Okmányok",
+        "casatorii": "💍 Házasságok",
+        "divorturi": "⚖️ Válások",
+        "decese": "⚰️ Halálozások",
+        "pasapoarte": "🌍 Útlevelek"
+      },
+      "politia": {
+        "informatii_politie": "🚓 Információk",
+        "atributii": "📋 Feladatok",
+        "amenzi": "💰 Bírságok",
+        "ridicari_auto": "🚗 Autóelszállítás"
+      },
+      "informatii": {
+        "anunturi": "📢 Hirdetmények",
+        "concursuri": "🏆 Pályázatok",
+        "cereri": "📄 Kérelmek",
+        "audiente": "🗣️ Fogadóórák",
+        "contracte": "📑 Szerződések",
+        "plati_online": "💳 Online Fizetések",
+        "licitatii": "🏛️ Közbeszerzések",
+        "documente": "📁 Dokumentumok"
+      },
+      "altele": {
+        "transformare_digitala": "💻 Digitalizáció",
+        "servicii_online": "🖥️ Online Szolgáltatások",
+        "transparenta": "👁 Átláthatóság"
+      }
+    },
+
+    "mediu": {
+      "salubritate": {
+        "colectare_selectiva": "♻️ Szelektív Gyűjtés",
+        "salubritate_menajera": "🗑️ Háztartási Hulladék",
+        "salubritate_stradala": "🧹 Utcai Tisztítás",
+        "dezapezire": "❄️ Hóeltakarítás"
+      },
+      "curatenie": {
+        "cereri_specifice": "📝 Kérelmek",
+        "curatenie_primavara": "🌸 Tavaszi Nagytakarítás",
+        "deratizare": "🐀 Rágcsálóirtás"
+      },
+      "spatii_verzi": {
+        "adopta_spatiu": "🌿 Zöldterület örökbefogadás",
+        "ambrozie": "🌾 Parlagfű"
+      },
+      "energie": {
+        "panouri_fotovoltaice": "☀️ Napelemek",
+        "finantare": "💰 Finanszírozás"
+      },
+      "altele_mediu": {
+        "calitatea_aerului": "🌫️ Levegőminőség",
+        "harta_zgomot": "🔊 Zajtérkép"
+      }
+    },
+
+    "mobilitate": {
+      "plan_mobilitate": {
+        "plan_mobilitate": "📍 Mobilitási Terv"
+      },
+      "parcari": {
+        "parcari": "🅿️ Parkolók"
+      },
+      "transport_public": {
+        "transport_public": "🚌 Tömegközlekedés"
+      },
+      "biciclete": {
+        "biciclete": "🚲 Kerékpárok"
+      },
+      "siguranta_circulatiei": {
+        "siguranta_circulatiei": "🚦 Közlekedésbiztonság"
+      }
+    },
+
+    "economie": {
+      "taxe_impozite": {
+        "taxe_impozite": "📊 Adók és Illetékek"
+      },
+      "plati_online": {
+        "plati_online": "💳 Online Fizetések"
+      },
+      "buget": {
+        "buget": "📒 Költségvetés"
+      },
+      "achizitii": {
+        "achizitii": "🏛️ Beszerzések"
+      },
+      "proiecte_ue": {
+        "proiecte_ue": "🇪🇺 EU projektek"
+      },
+      "investitori": {
+        "investitori": "🏭 Befektetők"
+      }
+    },
+
+    "monitor": {
+      "statut": {
+        "statut": "📜 Statútum"
+      },
+      "regulamente": {
+        "regulamente": "📘 Szabályzatok"
+      },
+      "hotarari": {
+        "hotarari": "📑 Határozatok"
+      },
+      "dispozitii": {
+        "dispozitii": "📋 Rendelkezések"
+      },
+      "documente_financiare": {
+        "documente_financiare": "💰 Pénzügyi Dokumentumok"
+      },
+      "alte_documente": {
+        "alte_documente": "📁 Egyéb Dokumentumok"
+      }
+    }
   }
 }

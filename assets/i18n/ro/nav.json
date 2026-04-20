@@ -1,14 +1,235 @@
 {
-  "search_placeholder": "🔎 Caută...",
-  "back": "← Înapoi",
+  "cauta": "🔎 Căutare...",
+  "inapoi": "← Înapoi",
 
   "menu": {
     "comunitate": "👥 COMUNITATE",
-    "administratie": "🏛️ ADMINISTRAȚIE",
     "locuire": "🏡 LOCUIRE",
+    "administratie": "🏛️ ADMINISTRAȚIE",
     "mediu": "🌱 MEDIU",
     "mobilitate": "🚗 MOBILITATE",
     "economie": "💰 ECONOMIE",
     "monitor": "📄 MONITOR"
+  },
+
+  "submenu": {
+    "comunitate": {
+      "cetateni": {
+        "dezbateri_publice": "💬 Dezbateri Publice",
+        "newsletter": "📧 Buletin Informativ",
+        "cetateni_onoare": "🏅 Cetățeni Onoare",
+        "sugestii_reclamatii": "📝 Sugestii Reclamații",
+        "bugetare_participativa": "💰 Bugetare Participativă",
+        "proceduri_online": "🖥️ Servicii Online",
+        "live_webcam": "📡 Cameră Web Live"
+      },
+      "educatie": {
+        "transport": "🚌 Transport",
+        "autobuze": "🚍 Autobuze",
+        "legislatie_educatie": "📚 Legislație Educație",
+        "crese": "🏫 Creșe",
+        "gradinite": "🎒 Grădinițe",
+        "scoli": "🏫 Școli"
+      },
+      "cultura": {
+        "biblioteci": "📖 Biblioteci",
+        "finantari_cultura": "🎨 Finanțări Cultură",
+        "personalitati_locale": "⭐ Personalități locale",
+        "evenimente_culturale": "🎭 Evenimente Culturale"
+      },
+      "sport": {
+        "structuri_sportive": "🏟️ Structuri Sportive",
+        "finantari_sportive": "💸 Finanțări Sportive",
+        "baze_sportive": "⚽ Baze Sportive",
+        "sala_sport": "🏋️ Săli Sport",
+        "cluburi_sportive": "🏆 Cluburi Sportive"
+      },
+      "sanatate": {
+        "cabinete_medicale": "🩺 Cabinete Medicale",
+        "finantari_sanatate": "💊 Finanțări Sănătate",
+        "farmacii": "💊 Farmacii",
+        "urgente": "🚑 Urgențe"
+      },
+      "social": {
+        "varstnici": "👵 Vârstnici",
+        "adapost": "🏠 Adăpost",
+        "ajutor_social": "🤲 Ajutor Social",
+        "tichete_sociale": "🎟️ Tichete Sociale",
+        "stomatologie": "🦷 Stomatologie"
+      },
+      "animale": {
+        "sterilizare": "🐕 Sterilizare",
+        "adoptii": "❤️ Adopții",
+        "boluri_apa": "💧 Boluri Apă",
+        "adaposturi": "🏡 Adăposturi Animale",
+        "registru_animale": "📋 Registru Animale"
+      },
+      "turism": {
+        "centru_info": "ℹ️ Centru Informare",
+        "harta": "🗺️ Hartă",
+        "cazare": "🏨 Cazare",
+        "visit_coseiu": "📌 Vizitează Coșeiu",
+        "monumente_istorice": "📍 Monumente Istorice"
+      },
+      "evenimente": {
+        "zilele_coseiului": "🎊 Zilele Coșeiului",
+        "targ_craciun": "🎄 Târg Crăciun",
+        "piata_locala": "🛍️ Piață Locală",
+        "festivaluri": "🎪 Festivaluri"
+      }
+    },
+
+    "locuire": {
+      "strategii": {
+        "strategii": "📊 Strategii Dezvoltare Urbană"
+      },
+      "urbanism": {
+        "urbanism": "🏗️ Urbanism"
+      },
+      "autorizatii_constructie": {
+        "autorizatii_constructie": "📄 Autorizații Construcție"
+      },
+      "strazi": {
+        "strazi": "🛣️ Străzi"
+      },
+      "locuinte": {
+        "locuinte": "🏘️ Locuințe"
+      },
+      "gis": {
+        "gis": "🛰️ GIS"
+      }
+    },
+
+    "administratie": {
+      "primarie": {
+        "primar": "👤 Primar",
+        "viceprimar": "👤 Viceprimar",
+        "secretar": "📑 Secretar",
+        "organigrama": "🧭 Organigramă",
+        "regulament": "📜 Regulament",
+        "sediu": "📍 Sediu"
+      },
+      "consiliu": {
+        "consilieri": "👥 Consilieri",
+        "comisii": "📌 Comisii",
+        "sedinte": "🗓️ Ședințe",
+        "hotarari_consiliu": "📜 Hotărâri"
+      },
+      "evidenta": {
+        "nasteri": "👶 Nașteri",
+        "acte": "🪪 Acte",
+        "casatorii": "💍 Căsătorii",
+        "divorturi": "⚖️ Divorțuri",
+        "decese": "⚰️ Decese",
+        "pasapoarte": "🌍 Pașapoarte"
+      },
+      "politia": {
+        "informatii_politie": "🚓 Informații poliție",
+        "atributii": "📋 Atribuții",
+        "amenzi": "💰 Amenzi",
+        "ridicari_auto": "🚗 Ridicări Auto"
+      },
+      "informatii": {
+        "anunturi": "📢 Anunțuri",
+        "concursuri": "🏆 Concursuri",
+        "cereri": "📄 Cereri",
+        "audiente": "🗣️ Audiențe",
+        "contracte": "📑 Contracte",
+        "plati_online": "💳 Plăți Online",
+        "licitatii": "🏛️ Licitații Publice",
+        "documente": "📁 Documente"
+      },
+      "altele": {
+        "transformare_digitala": "💻 Digitalizare",
+        "servicii_online": "🖥️ Servicii Online",
+        "transparenta": "👁 Transparență"
+      }
+    },
+
+    "mediu": {
+      "salubritate": {
+        "colectare_selectiva": "♻️ Colectare Selectivă",
+        "salubritate_menajera": "🗑️ Salubritate Menajeră",
+        "salubritate_stradala": "🧹 Salubritate Stradală",
+        "dezapezire": "❄️ Dezăpezire"
+      },
+      "curatenie": {
+        "cereri_specifice": "📝 Cereri specifice",
+        "curatenie_primavara": "🌸 Curățenie Primăvară",
+        "deratizare": "🐀 Deratizare"
+      },
+      "spatii_verzi": {
+        "adopta_spatiu": "🌿 Adoptă Spațiu Verde",
+        "ambrozie": "🌾 Ambrozie"
+      },
+      "energie": {
+        "panouri_fotovoltaice": "☀️ Panouri Fotovoltaice",
+        "finantare": "💰 Finanțare"
+      },
+      "altele_mediu": {
+        "calitatea_aerului": "🌫️ Calitatea Aerului",
+        "harta_zgomot": "🔊 Harta Zgomot"
+      }
+    },
+
+    "mobilitate": {
+      "plan_mobilitate": {
+        "plan_mobilitate": "📍 Plan Mobilitate"
+      },
+      "parcari": {
+        "parcari": "🅿️ Parcări"
+      },
+      "transport_public": {
+        "transport_public": "🚌 Transport Public"
+      },
+      "biciclete": {
+        "biciclete": "🚲 Biciclete"
+      },
+      "siguranta_circulatiei": {
+        "siguranta_circulatiei": "🚦 Siguranța Circulației"
+      }
+    },
+
+    "economie": {
+      "taxe_impozite": {
+        "taxe_impozite": "📊 Taxe Impozite"
+      },
+      "plati_online": {
+        "plati_online": "💳 Plăți Online"
+      },
+      "buget": {
+        "buget": "📒 Buget"
+      },
+      "achizitii": {
+        "achizitii": "🏛️ Achiziții"
+      },
+      "proiecte_ue": {
+        "proiecte_ue": "🇪🇺 Proiecte UE"
+      },
+      "investitori": {
+        "investitori": "🏭 Investitori"
+      }
+    },
+
+    "monitor": {
+      "statut": {
+        "statut": "📜 Statut"
+      },
+      "regulamente": {
+        "regulamente": "📘 Regulamente"
+      },
+      "hotarari": {
+        "hotarari": "📑 Hotărâri"
+      },
+      "dispozitii": {
+        "dispozitii": "📋 Dispoziții"
+      },
+      "documente_financiare": {
+        "documente_financiare": "💰 Documente Financiare"
+      },
+      "alte_documente": {
+        "alte_documente": "📁 Alte Documente"
+      }
+    }
   }
 }

@@ -46,7 +46,7 @@ function addBackButton(container) {
   if (container.querySelector(".back-button")) return;
   const btn = document.createElement("div");
   btn.className = "back-button";
-  btn.textContent = "← Înapoi";
+  btn.textContent = navDict.inapoi || btn.textContent;
   btn.addEventListener("click", () => {
     container.classList.remove("active");
   });
@@ -57,13 +57,18 @@ function handleDesktopMenu(item) {
   const menu = item.closest(".split-menu");
   const rightSide = menu.querySelector(".menu-right");
   const targetId = item.dataset.target;
-  const allItems = menu.querySelectorAll(".menu-left li");
-  const allContent = menu.querySelectorAll(".menu-content");
-  allItems.forEach((i) => i.classList.remove("active"));
-  allContent.forEach((c) => c.classList.remove("active"));
+  menu
+    .querySelectorAll(".menu-left li")
+    .forEach((i) => i.classList.remove("active"));
+  rightSide
+    .querySelectorAll(".menu-content")
+    .forEach((c) => c.classList.remove("active"));
   item.classList.add("active");
   const active = rightSide.querySelector(`#${targetId}`);
-  if (active) active.classList.add("active");
+  if (active) {
+    active.classList.add("active");
+    rightSide.classList.add("active"); // 👈 IMPORTANT
+  }
 }
 // ===== NAV TOGGLE =====
 function initNavToggle() {
@@ -144,42 +149,56 @@ async function loadNavLang(lang) {
 function applyNavLang() {
   console.log("nav items:", document.querySelectorAll(".menu-left li").length);
   if (!navDict) return;
-  const items = document.querySelectorAll(".menu-left li");
-  if (!items.length) return;
-  // placeholder
   if (searchInput) {
-    searchInput.placeholder = navDict.search_placeholder;
+    searchInput.placeholder = navDict.cauta;
   }
-  // back buttons
   document.querySelectorAll(".back-button").forEach((btn) => {
-    btn.textContent = navDict.back;
+    btn.textContent = navDict.inapoi;
   });
-  // menu items
   document.querySelectorAll("nav > ul > li.dropdown > a").forEach((el) => {
-    const text = el.getAttribute("href").replace("#", "");
-    switch (text) {
-      case "comunitate":
-        el.textContent = navDict.menu.comunitate;
-        break;
-      case "administratie":
-        el.textContent = navDict.menu.administratie;
-        break;
-      case "locuire":
-        el.textContent = navDict.menu.locuire;
-        break;
-      case "mediu":
-        el.textContent = navDict.menu.mediu;
-        break;
-      case "mobilitate":
-        el.textContent = navDict.menu.mobilitate;
-        break;
-      case "economie":
-        el.textContent = navDict.menu.economie;
-        break;
-      case "monitor":
-        el.textContent = navDict.menu.monitor;
-        break;
+    const key = el.getAttribute("href").replace("#", "");
+    el.textContent = navDict.menu?.[key] || el.textContent;
+  });
+  requestAnimationFrame(() => {
+    applySubmenuLang();
+  });
+}
+function applySubmenuLang() {
+  document.querySelectorAll(".menu-left li").forEach((el) => {
+    const target = el.dataset.target;
+    if (!target) return;
+    const splitMenu = el.closest(".split-menu");
+    const dropdown = splitMenu?.closest(".dropdown");
+    const category = [...dropdown.classList].find((c) => c !== "dropdown");
+    if (!category) return;
+    const key = target.replace("menu-", "");
+    const submenuObj = navDict?.submenu?.[category]?.[key];
+    if (typeof submenuObj === "object") {
+      // ia primul text din obiect (ex: "dezbateri", "transport", etc.)
+      const firstValue = Object.values(submenuObj)[0];
+      if (firstValue) {
+        el.textContent = firstValue;
+      }
+    } else if (typeof submenuObj === "string") {
+      el.textContent = submenuObj;
+    } else {
+      console.warn("Missing translation:", { category, key });
     }
+  });
+  document.querySelectorAll(".menu-content").forEach((menu) => {
+    const id = menu.id.replace("menu-", "");
+    const splitMenu = menu.closest(".split-menu");
+    const dropdown = splitMenu?.closest(".dropdown");
+    const category = [...dropdown.classList].find((c) => c !== "dropdown");
+    const submenuObj = navDict?.submenu?.[category]?.[id];
+    if (!submenuObj) return;
+    const links = menu.querySelectorAll("a");
+    links.forEach((link, index) => {
+      const values = Object.values(submenuObj);
+      if (values[index]) {
+        link.textContent = values[index];
+      }
+    });
   });
 }
 async function loadCommunityLang(lang) {
@@ -323,13 +342,15 @@ async function loadAllComponents() {
 async function initApp() {
   await loadAllComponents();
   cacheDOM();
+  await loadNavLang(currentLang);
+  await loadCommunityLang(currentLang);
   initMenuSystem();
   updateSections();
   initSearch();
   initThemeToggle();
   initLanguageToggle();
-  await loadNavLang(currentLang);
   await new Promise((r) => requestAnimationFrame(r));
   cacheDOM();
+  applyNavLang();
 }
 initApp();
