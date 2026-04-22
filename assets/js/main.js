@@ -7,6 +7,7 @@ let navDict = {};
 let nav, toggle;
 let allSections = [];
 let searchInput;
+
 // ===== CACHE DOM =====
 function cacheDOM() {
   nav = document.querySelector("nav");
@@ -130,6 +131,28 @@ function initResizeFix() {
         r.classList.remove("active");
       });
     }
+  });
+}
+// ===== BACK TO TOP =====
+function initBackToTop() {
+  const btn = document.getElementById("backToTop");
+  if (!btn) return;
+
+  // Show button on scroll
+  window.addEventListener("scroll", () => {
+    if (document.documentElement.scrollTop > 200) {
+      btn.style.display = "block";
+    } else {
+      btn.style.display = "none";
+    }
+  });
+
+  // Scroll to top smoothly
+  btn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   });
 }
 // ===== MENU INIT =====
@@ -396,5 +419,6 @@ async function initApp() {
   initSearch();
   initThemeToggle();
   initLanguageToggle();
+  initBackToTop();
 }
 initApp();

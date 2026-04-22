@@ -138,6 +138,27 @@ header {
   height: 130px;
   z-index: 1000;
 }
+.lang-theme {
+  display: flex;
+}
+/* Button style */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: none;
+  padding: 12px 16px;
+  font-size: 18px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--button);
+  color: white;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+#backToTop:hover {
+  background-color: var(--heading-border-color);
+}
 .logo {
   width: 120px;
   transition: transform 0.3s;
