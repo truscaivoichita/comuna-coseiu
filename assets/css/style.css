@@ -180,7 +180,7 @@ header {
 }
 /* ===== NAVBAR ===== */
 nav {
-  position: relative;
+  position: static;
   z-index: 1000;
 }
 nav > ul {
@@ -237,7 +237,7 @@ nav .dropdown-menu.split-menu {
   border-radius: 0 0 12px 12px;
   /* background-color: inherit */
   background-color: var(--white);
-  color: var(--text) !important;
+  color: var(--section-color) !important;
 }
 .dropdown:hover .split-menu {
   visibility: visible;
@@ -253,21 +253,25 @@ nav .dropdown-menu.split-menu {
   list-style: none;
 }
 .menu-left li {
-  padding: 12px;
+  padding: 10px;
   border-radius: 6px;
   transition: 0.2s;
 }
 .menu-left li:hover,
 .menu-left li.active {
-  background: color-mix(in srgb, var(--section-color) 25%, transparent);
   color: var(--section-color);
+  background-color: var(--white);
   font-weight: 600;
   cursor: pointer;
+  transition: 0.2s;
 }
 /* ===== RIGHT SIDE ===== */
 .menu-right {
   width: 30%;
+  /* height: 100%; */
+  color: var(--section-color) !important;
 }
+
 .menu-right .menu-content {
   display: none;
   flex-direction: column;
@@ -276,8 +280,8 @@ nav .dropdown-menu.split-menu {
   display: flex;
 }
 .menu-right a {
-  padding: 8px 0;
-  /* color: var(--white); */
+  padding: 12px;
+  color: var(--section-color);
   border-bottom: 1px solid var(--whiteish);
   transition: 0.2s;
 }
@@ -286,6 +290,7 @@ nav .dropdown-menu.split-menu {
   background-color: var(--white);
   padding-left: 6px;
   border-radius: 3px;
+  padding: 12px;
 }
 /* ===== SCROLLBAR ===== */
 .menu-right::-webkit-scrollbar {
@@ -328,6 +333,7 @@ nav .dropdown-menu.split-menu {
   display: block;
   height: 2px;
   background: var(--section-color);
+  color: var(--white);
   transform: scaleX(0);
   transition: transform 0.5s;
 }
@@ -695,14 +701,13 @@ footer {
   } */
   .dropdown.active > a {
     background: var(--bg);
-    font-weight: 600;
-    font-size: 10px;
+    font-size: 18px;
   }
   body > header > nav > ul > li.dropdown > div > div.menu-left > ul > li {
-    font-size: 13px;
+    font-size: 14px;
   }
   .menu-content a {
-    font-size: 13px;
+    font-size: 14px;
   }
   .dropdown-menu {
     width: 30%;
@@ -798,12 +803,11 @@ footer {
     padding: 15px 10px;
     font-size: 16px;
     border-bottom: 1px solid var(--border);
+    color: var(--white);
   }
   /* RIGHT SIDE */
   .menu-right {
     display: block;
-
-    /* position: relative; */
     flex: 1;
     height: 100%;
     overflow-y: auto;
@@ -811,6 +815,9 @@ footer {
     transform: none;
     border-left: 4px solid var(--border);
     padding-left: 10px;
+  }
+  .menu-right a {
+    color: var(--white);
   }
   .menu-right.active {
     transform: none;

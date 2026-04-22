@@ -17,16 +17,15 @@ function cacheDOM() {
 function initMenu() {
   const menuItems = document.querySelectorAll(".menu-left li");
   menuItems.forEach((item) => {
-    item.addEventListener("click", () => {
-      if (window.innerWidth <= 900) {
-        handleMobileMenu(item);
-      }
-    });
-    item.addEventListener("mouseenter", () => {
-      if (window.innerWidth > 900) {
-        handleDesktopMenu(item);
-      }
-    });
+    item.replaceWith(item.cloneNode(true));
+  });
+  const freshItems = document.querySelectorAll(".menu-left li");
+  freshItems.forEach((item) => {
+    if (window.innerWidth <= 900) {
+      item.addEventListener("click", () => handleMobileMenu(item));
+    } else {
+      item.addEventListener("mouseenter", () => handleDesktopMenu(item));
+    }
   });
 }
 // ===== MOBILE MENU =====
@@ -81,14 +80,18 @@ function initNavToggle() {
 // ===== DROPDOWN =====
 function initDropdowns() {
   document.querySelectorAll(".dropdown > a").forEach((link) => {
+    link.onclick = null; // reset
     link.addEventListener("click", (e) => {
       if (window.innerWidth > 900) return;
       e.preventDefault();
       const parent = link.parentElement;
-      document.querySelectorAll(".dropdown").forEach((d) => {
-        if (d !== parent) d.classList.remove("active");
-      });
-      parent.classList.toggle("active");
+      const isActive = parent.classList.contains("active");
+      document
+        .querySelectorAll(".dropdown")
+        .forEach((d) => d.classList.remove("active"));
+      if (!isActive) {
+        parent.classList.add("active");
+      }
     });
   });
 }
@@ -169,7 +172,9 @@ function applySubmenuLang() {
     if (!target) return;
     const splitMenu = el.closest(".split-menu");
     const dropdown = splitMenu?.closest(".dropdown");
-    const category = [...dropdown.classList].find((c) => c !== "dropdown");
+    const category = [...dropdown.classList].find(
+      (c) => c !== "dropdown" && c !== "active",
+    );
     if (!category) return;
     const key = target.replace("menu-", "");
     const submenuObj = navDict?.submenu?.[category]?.[key];
@@ -177,7 +182,12 @@ function applySubmenuLang() {
       // ia primul text din obiect (ex: "dezbateri", "transport", etc.)
       const firstValue = Object.values(submenuObj)[0];
       if (firstValue) {
-        el.textContent = firstValue;
+        const textNode = [...el.childNodes].find(
+          (n) => n.nodeType === Node.TEXT_NODE,
+        );
+        if (textNode) {
+          textNode.textContent = " " + firstValue;
+        }
       }
     } else if (typeof submenuObj === "string") {
       el.textContent = submenuObj;
@@ -196,7 +206,12 @@ function applySubmenuLang() {
     links.forEach((link, index) => {
       const values = Object.values(submenuObj);
       if (values[index]) {
-        link.textContent = values[index];
+        const textNode = [...link.childNodes].find(
+          (n) => n.nodeType === Node.TEXT_NODE,
+        );
+        if (textNode && values[index]) {
+          textNode.textContent = " " + values[index];
+        }
       }
     });
   });
@@ -229,6 +244,36 @@ function applyCommunityLang() {
       .map((i) => `<li>${i}</li>`)
       .join("");
   }
+  // 🆕 NEWSLETTER LIST (DACA VREI)
+  const newsletterList = document.getElementById("newsletter-list");
+  if (newsletterList && communityDict.newsletter?.items) {
+    newsletterList.innerHTML = communityDict.newsletter.items
+      .map((i) => `<li>${i}</li>`)
+      .join("");
+  }
+  // 🆕 CETATENI ONOARE LIST
+  const onoareList = document.getElementById("onoare-list");
+  if (onoareList && communityDict.cetateni_onoare?.items) {
+    onoareList.innerHTML = communityDict.cetateni_onoare.items
+      .map((i) => `<li>${i}</li>`)
+      .join("");
+  }
+  // 🆕 BUGETARE PARTICIPATIVA LIST
+  const bugetareParticipativa = document.getElementById(
+    "bugetare_participativa-list",
+  );
+  if (bugetareParticipativa && communityDict.bugetare_participativa?.steps) {
+    bugetareParticipativa.innerHTML = communityDict.bugetare_participativa.steps
+      .map((i) => `<li>${i}</li>`)
+      .join("");
+  }
+  // 🆕 PROCEDURI ONLINE LIST
+  const proceduriOnline = document.getElementById("proceduri_online-list");
+  if (proceduriOnline && communityDict.proceduri_online?.items) {
+    proceduriOnline.innerHTML = communityDict.proceduri_online.items
+      .map((i) => `<li>${i}</li>`)
+      .join("");
+  }
 }
 function initLanguageToggle() {
   const btn = document.getElementById("lang-toggle");
@@ -241,6 +286,7 @@ function initLanguageToggle() {
     btn.textContent = currentLang.toUpperCase();
     await loadNavLang(currentLang);
     await loadCommunityLang(currentLang);
+    initMenuSystem();
   });
 }
 // ===== SEARCH =====
@@ -341,16 +387,14 @@ async function loadAllComponents() {
 // ===== APP INIT =====
 async function initApp() {
   await loadAllComponents();
+  await new Promise((r) => requestAnimationFrame(r));
   cacheDOM();
+  initMenuSystem();
   await loadNavLang(currentLang);
   await loadCommunityLang(currentLang);
-  initMenuSystem();
   updateSections();
   initSearch();
   initThemeToggle();
   initLanguageToggle();
-  await new Promise((r) => requestAnimationFrame(r));
-  cacheDOM();
-  applyNavLang();
 }
 initApp();

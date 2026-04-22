@@ -35,5 +35,74 @@
     "transport_text": "A diákok szervezett iskolai közlekedésben részesülnek.",
     "autobuze_title": "🚍 Buszok",
     "autobuze_text": "A tömegközlekedés összeköti a környező településeket."
+  },
+
+  "newsletter": {
+    "title": "📩 Hírlevél",
+    "description": "Iratkozzon fel Coșeiu Polgármesteri Hivatalának hírlevelére, hogy megkapja a legfrissebb információkat a projektekről, közleményekről és helyi eseményekről.",
+    "items": [
+      "📢 Fontos bejelentések",
+      "🏗️ Folyamatban lévő projektek",
+      "📅 Helyi események"
+    ],
+    "gdpr": "A hírlevél rendszeresen kerül kiküldésre, és megfelel a személyes adatok védelmére vonatkozó jogszabályoknak (GDPR).",
+    "placeholder_email": "Email cím",
+    "button": "Feliratkozás"
+  },
+
+  "cetateni_onoare": {
+    "title": "🏅 Díszpolgárok",
+    "description": "A „Díszpolgár” címet azok a személyek kapják, akik jelentősen hozzájárultak Coșeiu község fejlődéséhez vagy hírnevének növeléséhez.",
+    "items": [
+      "🏆 Kiemelkedő helyi személyiségek",
+      "🏆 Hozzájárulás az oktatás, kultúra vagy közigazgatás területén",
+      "🏆 A közösség fejlődésének támogatása"
+    ],
+    "note": "A díszpolgárok listáját a helyi tanács határozatai alapján rendszeresen frissítik."
+  },
+
+  "sugestii_reclamatii": {
+    "title": "🗣️ Javaslatok és panaszok",
+    "description": "A lakosok javaslatokat, észrevételeket vagy panaszokat nyújthatnak be a helyi közigazgatás tevékenységével kapcsolatban.",
+    "placeholders": {
+      "name": "Név",
+      "email": "Email",
+      "message": "Az Ön üzenete"
+    },
+    "button": "Küldés",
+    "note": "Minden beadványt a döntéshozatali átláthatóságra és a közérdekű információkhoz való hozzáférésre vonatkozó jogszabályok szerint vizsgálnak meg."
+  },
+
+  "bugetare_participativa": {
+    "title": "💰 Részvételi költségvetés",
+    "description": "A részvételi költségvetés lehetővé teszi a lakosok számára, hogy projekteket javasoljanak és szavazzanak a közösség fejlesztése érdekében.",
+    "steps_title": "Lépések:",
+    "steps": [
+      "1. Javaslatok benyújtása",
+      "2. Projektek elemzése",
+      "3. Lakossági szavazás",
+      "4. A nyertes projektek megvalósítása"
+    ],
+    "note": "Ez a kezdeményezés támogatja a közösség közvetlen részvételét a helyi döntéshozatalban."
+  },
+
+  "proceduri_online": {
+    "title": "🧾 Online ügyintézés",
+    "description": "Coșeiu Polgármesteri Hivatala számos olyan adminisztratív eljárást kínál, amelyek online is elvégezhetők a várakozási idő csökkentése érdekében.",
+    "items": [
+      "📄 Kérelmek benyújtása",
+      "💳 Adók és illetékek befizetése",
+      "📅 Időpontfoglalás ügyfélfogadásra",
+      "📬 Közérdekű információk igénylése"
+    ],
+    "note": "A közszolgáltatások digitalizálása a helyi közigazgatás egyik prioritása."
+  },
+
+  "live_webcam": {
+    "title": "📷 Élő webkamera",
+    "description": "Az élő webkamera valós idejű képeket biztosít Coșeiu község központi pontjairól.",
+    "card_title": "📍 Élő kép",
+    "card_description": "Valós idejű közvetítés (ha a videós infrastruktúra rendelkezésre áll).",
+    "note": "Élő közvetítés a település központjából (IP kamera)."
   }
 }

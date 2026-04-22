@@ -20,105 +20,128 @@
   <!-- Dezbateri publice -->
   <div id="dezbateri_publice">
     <div id="newsletter">
-      <h4>📩 Newsletter</h4>
-      <p>
+      <h4 data-i18n="newsletter.title">📩 Newsletter</h4>
+      <p data-i18n="newsletter.description">
         Abonați-vă la newsletter-ul Primăriei Coșeiu pentru a primi cele mai
         recente informații despre proiecte, anunțuri publice și evenimente
         locale.
       </p>
-      <ul>
-        <li>📢 Anunțuri importante</li>
-        <li>🏗️ Proiecte în derulare</li>
-        <li>📅 Evenimente locale</li>
-      </ul>
-      <p>
+      <ul id="newsletter-list"></ul>
+      <p data-i18n="newsletter.gdpr">
         Newsletter-ul este transmis periodic și respectă legislația privind
         protecția datelor personale (GDPR).
       </p>
       <form>
-        <input type="email" placeholder="Adresa de email" required />
-        <button type="submit">Abonare</button>
+        <input
+          data-i18n="newsletter.placeholder_email"
+          type="email"
+          placeholder="Adresa de email"
+          required
+        />
+        <button data-i18n="newsletter.burron" type="submit">Abonare</button>
       </form>
     </div>
     <div id="cetateni_onoare">
-      <h4>🏅 Cetățeni de Onoare</h4>
-      <p>
+      <h4 data-i18n="cetateni_onoare.title">🏅 Cetățeni de Onoare</h4>
+      <p data-i18n="cetateni_onoare.description">
         Titlul de „Cetățean de onoare” este acordat persoanelor care au
         contribuit în mod semnificativ la dezvoltarea comunei Coșeiu sau la
         promovarea imaginii acesteia.
       </p>
-      <ul>
+      <ul id="onoare-list">
         <li>🏆 Personalități locale cu activitate remarcabilă</li>
         <li>🏆 Contribuții în educație, cultură sau administrație</li>
         <li>🏆 Sprijin pentru dezvoltarea comunității</li>
       </ul>
-      <p>
+      <p data-i18n="cetateni_onoare.note">
         Lista cetățenilor de onoare este actualizată periodic prin hotărâre a
         Consiliului Local.
       </p>
     </div>
     <div id="sugestii_reclamatii">
-      <h4>🗣️ Sugestii și Reclamații</h4>
-      <p>
+      <h4 data-i18n="sugestii_reclamatii.title">🗣️ Sugestii și Reclamații</h4>
+      <p data-i18n="sugestii_reclamatii.description">
         Cetățenii pot transmite sugestii, sesizări sau reclamații privind
         activitatea administrației publice locale.
       </p>
       <form>
-        <input type="text" placeholder="Nume" required />
-        <input type="email" placeholder="Email" required />
-        <textarea placeholder="Mesajul dvs." rows="5" required></textarea>
-        <button type="submit">Trimite</button>
+        <input
+          type="text"
+          data-i18n="sugestii_reclamatii.placeholders.name"
+          placeholder="Nume"
+          required
+        />
+        <input
+          data-i18n="sugestii_reclamatii.placeholders.email"
+          type="email"
+          placeholder="Email"
+          required
+        />
+        <textarea
+          data-i18n="sugestii_reclamatii.placeholders.message"
+          placeholder="Mesajul dvs."
+          rows="5"
+          required
+        ></textarea>
+        <button
+          data-i18n="sugestii_reclamatii.placeholders.button"
+          type="submit"
+        >
+          Trimite
+        </button>
       </form>
-      <p>
+      <p data-i18n="sugestii_reclamatii.note">
         Toate solicitările sunt analizate în conformitate cu legislația privind
         transparența decizională și accesul la informații publice.
       </p>
     </div>
     <div id="bugetare_participativa">
-      <h4>💰 Bugetare Participativă</h4>
-      <p>
+      <h4 data-i18n="bugetare_participativa.title">
+        💰 Bugetare Participativă
+      </h4>
+      <p data-i18n="bugetare_participativa.description">
         Bugetarea participativă permite cetățenilor să propună și să voteze
         proiecte pentru îmbunătățirea comunității.
       </p>
-      <h5>Pași:</h5>
-      <ul>
+      <h5 data-i18n="bugetare_participativa.steps_title">Pași:</h5>
+      <ul id="bugetare_participativa-list">
         <li>1. Depunerea propunerilor</li>
         <li>2. Analiza proiectelor</li>
         <li>3. Votul cetățenilor</li>
         <li>4. Implementarea proiectelor câștigătoare</li>
       </ul>
-      <p>
+      <p data-i18n="bugetare_participativa.note">
         Această inițiativă sprijină implicarea directă a comunității în luarea
         deciziilor locale.
       </p>
     </div>
     <div id="proceduri_online">
-      <h4>🧾 Proceduri Online</h4>
-      <p>
+      <h4 data-i18n="proceduri_online.title">🧾 Proceduri Online</h4>
+      <p data-i18n="proceduri_online.description">
         Primăria Coșeiu oferă o serie de proceduri administrative care pot fi
         realizate online pentru a reduce timpul de așteptare.
       </p>
-      <ul>
+      <ul id="proceduri_online-list">
         <li>📄 Depunere cereri tip</li>
         <li>💳 Plata taxelor și impozitelor</li>
         <li>📅 Programări pentru audiențe</li>
         <li>📬 Solicitări de informații publice</li>
       </ul>
-      <p>
+      <p data-i18n="proceduri_online.note">
         Digitalizarea serviciilor publice este o prioritate a administrației
         locale.
       </p>
     </div>
     <div id="live_webcam">
-      <h4>📷 Live Webcam</h4>
-      <p>
+      <h4 data-i18n="live_webcam.title">📷 Live Webcam</h4>
+      <p data-i18n="live_webcam.description">
         Camera web live oferă imagini în timp real din puncte centrale ale
         comunei Coșeiu.
       </p>
 
       <div class="card">
-        <h5>📍 Imagine Live</h5>
-        <p>
+        <h5 data-i18n="live_webcam.card_title">📍 Imagine Live</h5>
+        <p data-i18n="live_webcam.card_description">
           Transmisiune în timp real (dacă este disponibilă infrastructura
           video).
         </p>
@@ -129,7 +152,9 @@
           style="width: 100%; border-radius: 12px"
         />
       </div>
-      <p>Transmisiune live din centrul localității (IP Camera).</p>
+      <p data-i18n="live_webcam.note">
+        Transmisiune live din centrul localității (IP Camera).
+      </p>
     </div>
   </div>
 
@@ -316,8 +341,8 @@
   <!-- SOCIAL -->
   <div id="social" class="cards">
     <h3>🤝 Social</h3>
-    <div id="varstnice">
-      <h4>👵 Persoane Vârstnice</h4>
+    <div id="varstnici">
+      <h4>👵 Vârstnici</h4>
       <p>
         Sprijin pentru persoanele în vârstă prin servicii sociale și asistență
         comunitară.
