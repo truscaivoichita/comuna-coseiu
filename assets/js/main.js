@@ -349,6 +349,36 @@ function removeHighlights(element) {
     parent.normalize();
   });
 }
+// ===== CONSILIERI RENDER =====
+async function loadConsilieri() {
+  try {
+    const res = await fetch("assets/data/consilieri.json"); // adjust path if needed
+    const consilieri = await res.json();
+    const container = document.getElementById("consilieri-container");
+    if (!container) return;
+    container.innerHTML = "";
+    consilieri.forEach((c) => {
+      const card = document.createElement("div");
+      card.className = "card consilier-card";
+      card.innerHTML = `
+        <h5><i class="fa-solid fa-user"></i> ${c.name}</h5>
+        <p><strong>Partid:</strong> ${c.partid}</p>
+        <p><strong>Mandat:</strong> ${c.mandat}</p>
+        <p><i class="fa-solid fa-phone"></i> ${c.tel}</p>
+        <p><i class="fa-solid fa-envelope"></i> ${c.email}</p>
+        <a href="${c.avere}" target="_blank" class="btn-link">
+          📄 Declarația de avere
+        </a>
+        <a href="${c.interese}" target="_blank" class="btn-link">
+          📄 Declarația de interese
+        </a>
+      `;
+      container.appendChild(card);
+    });
+  } catch (err) {
+    console.error("Error loading consilieri:", err);
+  }
+}
 // ===== THEME =====
 function initThemeToggle() {
   const btn = document.getElementById("theme-toggle");
@@ -415,6 +445,7 @@ async function initApp() {
   initMenuSystem();
   await loadNavLang(currentLang);
   await loadCommunityLang(currentLang);
+  loadConsilieri();
   updateSections();
   initSearch();
   initThemeToggle();

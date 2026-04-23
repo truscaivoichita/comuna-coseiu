@@ -1,27 +1,30 @@
 [
   {
-    "name": "BODA PAUL",
+    "name": "BODA P.PAUL",
     "partid": "UDMR",
     "mandat": "2024-2028",
     "tel": "+40722123456",
     "email": "contact@email.com",
-    "declaratie": "declaratii/boda-paul.pdf"
+    "avere": "assets/data/declaratii/Boda-P.Paul-declaratie-de-avere.pdf",
+    "interese": "assets/data/declaratii/Boda-P.Paul-declaratie-de-interese.pdf"
   },
   {
-    "name": "CHIOREAN IOAN-ALEXANDRU",
+    "name": "CHIOREAN A.IOAN-ALEXANDRU",
     "partid": "PNL",
     "mandat": "2024-2028",
     "tel": "+40722123456",
     "email": "contact@email.com",
-    "declaratie": "declaratii/chiorean-ioan.pdf"
+    "avere": "assets/data/declaratii/Chiorean-A.Ioan-Alexandru-declaratie-de-avere.pdf",
+    "interese": "assets/data/declaratii/Chiorean-A.Ioan-Alexandru-declaratie-de-interese.pdf"
   },
   {
-    "name": "CSAKI GEZA",
+    "name": "CSAKI I.GEZA",
     "partid": "UDMR",
     "mandat": "2024-2028",
     "tel": "+40722123456",
     "email": "contact@email.com",
-    "declaratie": "declaratii/csaki-geza.pdf"
+    "avere": "assets/data/declaratii/Csaki-I.Geza-declaratie-de-avere.pdf",
+    "interese": "assets/data/declaratii/Csaki-I.Geza-declaratie-de-interese.pdf"
   },
   {
     "name": "DEBCREZENI DEZIDERIU",
@@ -29,46 +32,52 @@
     "mandat": "2024-2028",
     "tel": "+40722123456",
     "email": "contact@email.com",
-    "declaratie": "declaratii/debcrezeni-dezideriu.pdf"
+    "avere": "assets/data/declaratii/debcrezeni-dezideriu.pdf",
+    "interese": "assets/data/declaratii/debcrezeni-dezideriu.pdf"
   },
   {
-    "name": "MESEȘAN IOAN",
+    "name": "MESEȘAN V.IOAN",
     "partid": "PSD",
     "mandat": "2024-2028",
     "tel": "+40722123456",
     "email": "contact@email.com",
-    "declaratie": "declaratii/mesesan-ioan.pdf"
+    "avere": "assets/data/declaratii/Mesesan-V.Ioan-declaratie-de-avere.pdf",
+    "interese": "assets/data/declaratii/Mesesan-V.Ioan-declaratie-de-interese.pdf"
   },
   {
-    "name": "PÜSÖK SÁNDOR-LEVENTE",
+    "name": "PÜSÖK G.SÁNDOR-LEVENTE",
     "partid": "PNL",
     "mandat": "2024-2028",
     "tel": "+40722123456",
     "email": "contact@email.com",
-    "declaratie": "declaratii/pusok_sandor-levente.pdf"
+    "avere": "assets/data/declaratii/Pusok-G.Sandor-Levente-declaratie-de-avere.pdf",
+    "interese": "assets/data/declaratii/Pusok-G.Sandor-Levente-declaratie-de-interese.pdf"
   },
   {
-    "name": "SAS SORIN-DAVID",
+    "name": "SAS G.SORIN-DAVID",
     "partid": "UDMR",
     "mandat": "2024-2028",
     "tel": "+40722123456",
     "email": "contact@email.com",
-    "declaratie": "declaratii/sas_sorin-david.pdf"
+    "avere": "assets/data/declaratii/Sas-G.Sorin-David-declaratie-de-avere.pdf",
+    "interese": "assets/data/declaratii/Sas-G.Sorin-David-declaratie-de-interese.pdf"
   },
   {
-    "name": "SATMARI MARIN-VIOREL",
+    "name": "SATMARI M.MARIN-VIOREL",
     "partid": "AUR",
     "mandat": "2024-2028",
     "tel": "+40722123456",
     "email": "contact@email.com",
-    "declaratie": "declaratii/satmari_marin-viorel.pdf"
+    "avere": "assets/data/declaratii/Satmari-M.Marin-Viorel-declaratie-de-avere.pdf",
+    "interese": "assets/data/declaratii/Satmari-M.Marin-Viorel-declaratie-de-interese.pdf"
   },
   {
-    "name": "SOMOGYI JANOS-MIKLOS",
+    "name": "SOMOGYI C.JANOS-MIKLOS",
     "partid": "PNL",
     "mandat": "2024-2028",
     "tel": "+40722123456",
     "email": "contact@email.com",
-    "declaratie": "declaratii/somogyi_janos-miklos.pdf"
+    "avere": "assets/data/declaratii/Somogyi-C.Janos-Miklos-declaratie-de-avere.pdf",
+    "interese": "assets/data/declaratii/Somogyi-C.Janos-Miklos-declaratie-de-interese.pdf"
   }
 ]
