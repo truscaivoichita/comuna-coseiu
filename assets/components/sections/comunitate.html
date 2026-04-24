@@ -1,4 +1,4 @@
-<!-- COMUNITATE -->
+<!--
 <section id="comunitate">
   <h2 data-i18n="title"></h2>
   <div id="cetateni" class="cards">
@@ -17,7 +17,6 @@
       </div>
     </div>
   </div>
-  <!-- Dezbateri publice -->
   <div id="dezbateri_publice">
     <div id="newsletter">
       <h4 data-i18n="newsletter.title">📩 Newsletter</h4>
@@ -38,7 +37,7 @@
           placeholder="Adresa de email"
           required
         />
-        <button data-i18n="newsletter.burron" type="submit">Abonare</button>
+        <button data-i18n="newsletter.button" type="submit">Abonare</button>
       </form>
     </div>
     <div id="cetateni_onoare">
@@ -83,10 +82,7 @@
           rows="5"
           required
         ></textarea>
-        <button
-          data-i18n="sugestii_reclamatii.placeholders.button"
-          type="submit"
-        >
+        <button data-i18n="sugestii_reclamatii.button" type="submit">
           Trimite
         </button>
       </form>
@@ -138,14 +134,12 @@
         Camera web live oferă imagini în timp real din puncte centrale ale
         comunei Coșeiu.
       </p>
-
       <div class="card">
         <h5 data-i18n="live_webcam.card_title">📍 Imagine Live</h5>
         <p data-i18n="live_webcam.card_description">
           Transmisiune în timp real (dacă este disponibilă infrastructura
           video).
         </p>
-        <!-- Placeholder -->
         <img
           src="http://IP-UL-TAU:PORT/video.cgi"
           alt="Live webcam Coșeiu"
@@ -158,7 +152,6 @@
     </div>
   </div>
 
-  <!-- EDUCATIE -->
   <div id="educatie" class="cards grid">
     <h3 data-i18n="educatie.title"></h3>
     <p data-i18n="educatie.description"></p>
@@ -210,7 +203,6 @@
     </div>
   </div>
 
-  <!-- CULTURA -->
   <div id="cultura" class="cards">
     <h3>🎭 Cultură și Tradiții</h3>
     <p>Obiceiuri locale: Paște, colinde, Ziua Coșeiului????</p>
@@ -251,7 +243,6 @@
     </div>
   </div>
 
-  <!-- SPORT -->
   <div id="sport" class="cards">
     <h3>⚽ Sport</h3>
     <div id="structuri_sportive">
@@ -289,7 +280,6 @@
     </div>
   </div>
 
-  <!-- SANATATE -->
   <div id="sanatate" class="cards">
     <h3>🏥 Sănătate</h3>
     <div id="cabinete_medicale">
@@ -338,7 +328,6 @@
     </div>
   </div>
 
-  <!-- SOCIAL -->
   <div id="social" class="cards">
     <h3>🤝 Social</h3>
     <div id="varstnici">
@@ -381,7 +370,6 @@
     </div>
   </div>
 
-  <!-- ANIMALE -->
   <div id="animale" class="cards">
     <h3>🐾 Programe Animale</h3>
     <div id="sterilizare">
@@ -426,7 +414,6 @@
     </div>
   </div>
 
-  <!-- TURISM -->
   <div id="turism" class="cards">
     <h3>🧭 Turism</h3>
 
@@ -481,7 +468,6 @@
     </div>
   </div>
 
-  <!-- EVENIMENTE -->
   <div id="evenimente" class="cards">
     <h3>🎉 Evenimente</h3>
     <div id="zilele_coseiului">
@@ -507,6 +493,303 @@
     <div id="festivaluri">
       <h4>🎉 Festivaluri</h4>
       <p>Festivalul anual care promovează tradițiile și cultura locală.</p>
+    </div>
+  </div>
+</section> -->
+<section id="comunitate">
+  <h2 data-i18n="title"></h2>
+
+  <div id="cetateni" class="cards">
+    <h3 data-i18n="cetateni.title"></h3>
+    <p data-i18n="cetateni.description"></p>
+
+    <div class="componenta">
+      <div class="etnic">
+        <h4 data-i18n="cetateni.etnic.title"></h4>
+        <ul id="etnic-list"></ul>
+      </div>
+
+      <div class="religie">
+        <h4 data-i18n="cetateni.religie.title"></h4>
+        <ul id="religie-list"></ul>
+      </div>
+    </div>
+  </div>
+
+  <div id="dezbateri_publice">
+    <div id="newsletter">
+      <h4 data-i18n="newsletter.title"></h4>
+      <p data-i18n="newsletter.description"></p>
+      <ul id="newsletter-list"></ul>
+      <p data-i18n="newsletter.gdpr"></p>
+
+      <form>
+        <input type="email" data-i18n="newsletter.placeholder_email" required />
+        <button data-i18n="newsletter.button" type="submit"></button>
+      </form>
+    </div>
+
+    <div id="cetateni_onoare">
+      <h4 data-i18n="cetateni_onoare.title"></h4>
+      <p data-i18n="cetateni_onoare.description"></p>
+      <ul id="onoare-list"></ul>
+      <p data-i18n="cetateni_onoare.note"></p>
+    </div>
+
+    <div id="sugestii_reclamatii">
+      <h4 data-i18n="sugestii_reclamatii.title"></h4>
+      <p data-i18n="sugestii_reclamatii.description"></p>
+
+      <form>
+        <input
+          type="text"
+          data-i18n="sugestii_reclamatii.placeholders.name"
+          required
+        />
+        <input
+          type="email"
+          data-i18n="sugestii_reclamatii.placeholders.email"
+          required
+        />
+        <textarea
+          data-i18n="sugestii_reclamatii.placeholders.message"
+          rows="5"
+          required
+        ></textarea>
+        <button data-i18n="sugestii_reclamatii.button" type="submit"></button>
+      </form>
+
+      <p data-i18n="sugestii_reclamatii.note"></p>
+    </div>
+
+    <div id="bugetare_participativa">
+      <h4 data-i18n="bugetare_participativa.title"></h4>
+      <p data-i18n="bugetare_participativa.description"></p>
+      <h5 data-i18n="bugetare_participativa.steps_title"></h5>
+      <ul id="bugetare_participativa-list"></ul>
+      <p data-i18n="bugetare_participativa.note"></p>
+    </div>
+
+    <div id="proceduri_online">
+      <h4 data-i18n="proceduri_online.title"></h4>
+      <p data-i18n="proceduri_online.description"></p>
+      <ul id="proceduri_online-list"></ul>
+      <p data-i18n="proceduri_online.note"></p>
+    </div>
+
+    <div id="live_webcam">
+      <h4 data-i18n="live_webcam.title"></h4>
+      <p data-i18n="live_webcam.description"></p>
+
+      <div class="card">
+        <h5 data-i18n="live_webcam.card_title"></h5>
+        <p data-i18n="live_webcam.card_description"></p>
+        <img src="http://IP-UL-TAU:PORT/video.cgi" alt="webcam" />
+      </div>
+
+      <p data-i18n="live_webcam.note"></p>
+    </div>
+  </div>
+
+  <!-- EDUCATIE -->
+  <div id="educatie" class="cards grid">
+    <h3 data-i18n="educatie.title"></h3>
+    <p data-i18n="educatie.description"></p>
+
+    <div>
+      <h4 data-i18n="educatie.transport_title"></h4>
+      <p data-i18n="educatie.transport_text"></p>
+    </div>
+
+    <div>
+      <h4 data-i18n="educatie.autobuze_title"></h4>
+      <p data-i18n="educatie.autobuze_text"></p>
+    </div>
+  </div>
+
+  <!-- CULTURA -->
+  <div id="cultura" class="cards">
+    <h3 data-i18n="cultura.title"></h3>
+    <p data-i18n="cultura.description"></p>
+
+    <div>
+      <h4 data-i18n="cultura.biblioteci.title"></h4>
+      <p data-i18n="cultura.biblioteci.text"></p>
+    </div>
+
+    <div>
+      <h4 data-i18n="cultura.finantari.title"></h4>
+      <p data-i18n="cultura.finantari.text"></p>
+      <ul id="cultura-finantari-list"></ul>
+    </div>
+
+    <div>
+      <h4 data-i18n="cultura.personalitati.title"></h4>
+      <p data-i18n="cultura.personalitati.text"></p>
+    </div>
+
+    <div>
+      <h4 data-i18n="cultura.evenimente.title"></h4>
+      <p data-i18n="cultura.evenimente.text"></p>
+    </div>
+  </div>
+
+  <!-- SPORT -->
+  <div id="sport" class="cards">
+    <h3 data-i18n="sport.title"></h3>
+
+    <div>
+      <h4 data-i18n="sport.structuri.title"></h4>
+      <p data-i18n="sport.structuri.text"></p>
+    </div>
+
+    <div>
+      <h4 data-i18n="sport.finantari.title"></h4>
+      <p data-i18n="sport.finantari.text"></p>
+    </div>
+
+    <div>
+      <h4 data-i18n="sport.baze.title"></h4>
+      <p data-i18n="sport.baze.text"></p>
+    </div>
+
+    <div>
+      <h4 data-i18n="sport.sala.title"></h4>
+      <p data-i18n="sport.sala.text"></p>
+    </div>
+  </div>
+
+  <!-- SANATATE -->
+  <div id="sanatate" class="cards">
+    <h3 data-i18n="sanatate.title"></h3>
+
+    <div>
+      <h4 data-i18n="sanatate.cabinete.title"></h4>
+      <p data-i18n="sanatate.cabinete.text"></p>
+    </div>
+
+    <div>
+      <h4 data-i18n="sanatate.finantari.title"></h4>
+      <p data-i18n="sanatate.finantari.text"></p>
+    </div>
+
+    <div>
+      <h4 data-i18n="sanatate.farmacii.title"></h4>
+      <p data-i18n="sanatate.farmacii.text"></p>
+    </div>
+
+    <div>
+      <h4 data-i18n="sanatate.urgenta.title"></h4>
+      <p data-i18n="sanatate.urgenta.text"></p>
+    </div>
+  </div>
+
+  <!-- SOCIAL -->
+  <div id="social" class="cards">
+    <h3 data-i18n="social.title"></h3>
+
+    <div>
+      <h4 data-i18n="social.varstnici.title"></h4>
+      <p data-i18n="social.varstnici.text"></p>
+    </div>
+
+    <div>
+      <h4 data-i18n="social.adapost.title"></h4>
+      <p data-i18n="social.adapost.text"></p>
+    </div>
+
+    <div>
+      <h4 data-i18n="social.ajutor.title"></h4>
+      <p data-i18n="social.ajutor.text"></p>
+    </div>
+
+    <div>
+      <h4 data-i18n="social.tichete.title"></h4>
+      <p data-i18n="social.tichete.text"></p>
+    </div>
+
+    <div>
+      <h4 data-i18n="social.stomatologie.title"></h4>
+      <p data-i18n="social.stomatologie.text"></p>
+    </div>
+  </div>
+
+  <!-- ANIMALE -->
+  <div id="animale" class="cards">
+    <h3 data-i18n="animale.title"></h3>
+
+    <div>
+      <h4 data-i18n="animale.sterilizare.title"></h4>
+      <p data-i18n="animale.sterilizare.text"></p>
+    </div>
+
+    <div>
+      <h4 data-i18n="animale.adoptii.title"></h4>
+      <p data-i18n="animale.adoptii.text"></p>
+    </div>
+
+    <div>
+      <h4 data-i18n="animale.apa.title"></h4>
+      <p data-i18n="animale.apa.text"></p>
+    </div>
+
+    <div>
+      <h4 data-i18n="animale.adaposturi.title"></h4>
+      <p data-i18n="animale.adaposturi.text"></p>
+    </div>
+
+    <div>
+      <h4 data-i18n="animale.registru.title"></h4>
+      <p data-i18n="animale.registru.text"></p>
+    </div>
+  </div>
+
+  <!-- TURISM -->
+  <div id="turism" class="cards">
+    <h3 data-i18n="turism.title"></h3>
+
+    <div>
+      <h4 data-i18n="turism.centru.title"></h4>
+      <p data-i18n="turism.centru.text"></p>
+    </div>
+
+    <div>
+      <h4 data-i18n="turism.cazare.title"></h4>
+      <p data-i18n="turism.cazare.text"></p>
+    </div>
+
+    <div>
+      <h4 data-i18n="turism.visit.title"></h4>
+      <p data-i18n="turism.visit.text"></p>
+    </div>
+
+    <div>
+      <h4 data-i18n="turism.monumente.title"></h4>
+    </div>
+  </div>
+
+  <!-- EVENIMENTE -->
+  <div id="evenimente" class="cards">
+    <h3 data-i18n="evenimente.title"></h3>
+
+    <div>
+      <h4 data-i18n="evenimente.zile.title"></h4>
+      <p data-i18n="evenimente.zile.text"></p>
+    </div>
+
+    <div>
+      <h4 data-i18n="evenimente.craciun.title"></h4>
+      <p data-i18n="evenimente.craciun.text"></p>
+    </div>
+
+    <div>
+      <h4 data-i18n="evenimente.piata.title"></h4>
+      <p data-i18n="evenimente.piata.text"></p>
+    </div>
+
+    <div>
+      <h4 data-i18n="evenimente.festival.title"></h4>
+      <p data-i18n="evenimente.festival.text"></p>
     </div>
   </div>
 </section>

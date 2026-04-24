@@ -246,7 +246,11 @@ function applyCommunityLang() {
     const key = el.getAttribute("data-i18n");
     const value = key.split(".").reduce((o, i) => o?.[i], communityDict);
     if (typeof value === "string") {
-      el.textContent = value;
+      if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
+        el.placeholder = value;
+      } else {
+        el.textContent = value;
+      }
     }
   });
   const etnicList = document.getElementById("etnic-list");

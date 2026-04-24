@@ -1,10 +1,8 @@
 {
   "title": "👥 KÖZÖSSÉG",
-
   "cetateni": {
     "title": "⭐ Lakosok",
     "description": "Coșeiu községben körülbelül 2000 lakos él, többségük magyar nemzetiségű, majd román és roma lakosság követi.",
-
     "etnic": {
       "title": "Etnikai összetétel",
       "items": [
@@ -14,7 +12,6 @@
         "Ismeretlen (4,68%)"
       ]
     },
-
     "religie": {
       "title": "Vallási összetétel",
       "items": [
@@ -26,15 +23,6 @@
         "Ismeretlen (5,41%)"
       ]
     }
-  },
-
-  "educatie": {
-    "title": "🎓 Oktatás",
-    "description": "Coșeiu községben általános és gimnáziumi iskolák, valamint óvodák működnek.",
-    "transport_title": "🚌 Szállítás",
-    "transport_text": "A diákok szervezett iskolai közlekedésben részesülnek.",
-    "autobuze_title": "🚍 Buszok",
-    "autobuze_text": "A tömegközlekedés összeköti a környező településeket."
   },
 
   "newsletter": {
@@ -49,7 +37,6 @@
     "placeholder_email": "Email cím",
     "button": "Feliratkozás"
   },
-
   "cetateni_onoare": {
     "title": "🏅 Díszpolgárok",
     "description": "A „Díszpolgár” címet azok a személyek kapják, akik jelentősen hozzájárultak Coșeiu község fejlődéséhez vagy hírnevének növeléséhez.",
@@ -60,7 +47,6 @@
     ],
     "note": "A díszpolgárok listáját a helyi tanács határozatai alapján rendszeresen frissítik."
   },
-
   "sugestii_reclamatii": {
     "title": "🗣️ Javaslatok és panaszok",
     "description": "A lakosok javaslatokat, észrevételeket vagy panaszokat nyújthatnak be a helyi közigazgatás tevékenységével kapcsolatban.",
@@ -72,7 +58,6 @@
     "button": "Küldés",
     "note": "Minden beadványt a döntéshozatali átláthatóságra és a közérdekű információkhoz való hozzáférésre vonatkozó jogszabályok szerint vizsgálnak meg."
   },
-
   "bugetare_participativa": {
     "title": "💰 Részvételi költségvetés",
     "description": "A részvételi költségvetés lehetővé teszi a lakosok számára, hogy projekteket javasoljanak és szavazzanak a közösség fejlesztése érdekében.",
@@ -85,7 +70,6 @@
     ],
     "note": "Ez a kezdeményezés támogatja a közösség közvetlen részvételét a helyi döntéshozatalban."
   },
-
   "proceduri_online": {
     "title": "🧾 Online ügyintézés",
     "description": "Coșeiu Polgármesteri Hivatala számos olyan adminisztratív eljárást kínál, amelyek online is elvégezhetők a várakozási idő csökkentése érdekében.",
@@ -97,12 +81,172 @@
     ],
     "note": "A közszolgáltatások digitalizálása a helyi közigazgatás egyik prioritása."
   },
-
   "live_webcam": {
     "title": "📷 Élő webkamera",
     "description": "Az élő webkamera valós idejű képeket biztosít Coșeiu község központi pontjairól.",
     "card_title": "📍 Élő kép",
     "card_description": "Valós idejű közvetítés (ha a videós infrastruktúra rendelkezésre áll).",
     "note": "Élő közvetítés a település központjából (IP kamera)."
+  },
+  "educatie": {
+    "title": "🎓 Oktatás",
+    "description": "Coșeiu községben általános és gimnáziumi iskolák, valamint óvodák működnek.",
+    "transport_title": "🚌 Szállítás",
+    "transport_text": "A diákok szervezett iskolai közlekedésben részesülnek.",
+    "autobuze_title": "🚍 Buszok",
+    "autobuze_text": "A tömegközlekedés összeköti a környező településeket."
+  },
+
+  "cultura": {
+    "title": "🎭 Kultúra és hagyományok",
+    "description": "Helyi szokások: Húsvét, karácsonyi énekek, Coșeiu napja",
+    "biblioteci": {
+      "title": "📖 Könyvtárak",
+      "text": "A községi könyvtár könyvekhez és oktatási forrásokhoz biztosít hozzáférést minden korosztály számára."
+    },
+    "finantari": {
+      "title": "🎨 Kulturális támogatások",
+      "text": "A polgármesteri hivatal támogatja a kulturális tevékenységeket a helyi költségvetésből.",
+      "items": [
+        "Helyi kulturális projektek támogatása",
+        "Hagyományos események szervezése",
+        "Partnerségek kulturális intézményekkel"
+      ]
+    },
+    "personalitati": {
+      "title": "⭐ Helyi személyiségek",
+      "text": "Coșeiu község számos jelentős személyiséget adott a közösségnek."
+    },
+    "evenimente": {
+      "title": "🎭 Kulturális események",
+      "text": "A község helyi kulturális eseményeket szervez."
+    }
+  },
+
+  "sport": {
+    "title": "⚽ Sport",
+    "structuri": {
+      "title": "🏟️ Sportlétesítmények",
+      "text": "A sporttevékenységek a helyi infrastruktúrára épülnek."
+    },
+    "finantari": {
+      "title": "💸 Sporttámogatások",
+      "text": "A sporttevékenységek a helyi költségvetésből támogatottak."
+    },
+    "baze": {
+      "title": "⚽ Sportpályák",
+      "text": "A sportpályák szabadidős és versenytevékenységekre használhatók."
+    },
+    "sala": {
+      "title": "🏋️ Sportcsarnok",
+      "text": "A sportcsarnok oktatási és szabadidős célokat szolgál."
+    }
+  },
+
+  "sanatate": {
+    "title": "🏥 Egészségügy",
+    "cabinete": {
+      "title": "🏥 Orvosi rendelők",
+      "text": "Az egészségügyi szolgáltatások korlátozottan érhetők el a községben."
+    },
+    "finantari": {
+      "title": "💊 Egészségügyi finanszírozás",
+      "text": "Az egészségügyi szolgáltatások országos programokon keresztül támogatottak."
+    },
+    "farmacii": {
+      "title": "💊 Gyógyszertárak",
+      "text": "A közeli gyógyszertárak biztosítják a gyógyszereket."
+    },
+    "urgenta": {
+      "title": "🚑 Sürgősség",
+      "text": "Sürgős esetben hívja a 112-es segélyhívót."
+    }
+  },
+
+  "social": {
+    "title": "🤝 Szociális",
+    "varstnici": {
+      "title": "👵 Idősek",
+      "text": "Támogatás az idősek számára szociális szolgáltatásokon keresztül."
+    },
+    "adapost": {
+      "title": "🏠 Menedék",
+      "text": "A hajléktalan személyek támogatást kaphatnak."
+    },
+    "ajutor": {
+      "title": "🤲 Szociális segély",
+      "text": "Jogosult személyek szociális támogatásban részesülhetnek."
+    },
+    "tichete": {
+      "title": "🎟️ Szociális utalványok",
+      "text": "A rászorulók számára támogatási programok állnak rendelkezésre."
+    },
+    "stomatologie": {
+      "title": "🦷 Fogászat",
+      "text": "A fogászati szolgáltatások időpont alapján érhetők el."
+    }
+  },
+
+  "animale": {
+    "title": "🐾 Állatprogramok",
+    "sterilizare": {
+      "title": "🐕 Ivartalanítás",
+      "text": "Kampányok a kóbor állatok számának csökkentésére."
+    },
+    "adoptii": {
+      "title": "❤️ Örökbefogadás",
+      "text": "Az örökbefogadás támogatott."
+    },
+    "apa": {
+      "title": "💧 Víz",
+      "text": "Nyáron víztálak kihelyezése az állatok számára."
+    },
+    "adaposturi": {
+      "title": "🏠 Menhelyek",
+      "text": "Az állatok menhelyekkel együttműködve vannak kezelve."
+    },
+    "registru": {
+      "title": "📋 Állatnyilvántartás",
+      "text": "Az állatok regisztrációja kötelező."
+    }
+  },
+
+  "turism": {
+    "title": "🧭 Turizmus",
+    "centru": {
+      "title": "ℹ️ Turisztikai információs központ",
+      "text": "Információk a helyi látványosságokról."
+    },
+    "cazare": {
+      "title": "🏨 Szállás",
+      "text": "Szálláslehetőségek a környéken."
+    },
+    "visit": {
+      "title": "💘 Visit Coșeiu",
+      "text": "Nyugodt környezet a pihenéshez."
+    },
+    "monumente": {
+      "title": "🏛️ Történelmi emlékek"
+    }
+  },
+
+  "evenimente": {
+    "title": "🎉 Események",
+    "zile": {
+      "title": "🎊 Coșeiu napjai",
+      "text": "Éves közösségi esemény."
+    },
+    "craciun": {
+      "title": "🎄 Karácsonyi vásár",
+      "text": "Téli ünnepi események."
+    },
+    "piata": {
+      "title": "🛍️ Helyi piac",
+      "text": "Friss helyi termékek."
+    },
+    "festival": {
+      "title": "🎉 Fesztiválok",
+      "text": "Hagyományőrző események."
+    }
   }
 }

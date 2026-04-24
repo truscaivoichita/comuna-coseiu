@@ -4,7 +4,6 @@
   "cetateni": {
     "title": "⭐ Cetățeni",
     "description": "Comuna Coșeiu are o populație de aproximativ 2.000 de locuitori, majoritatea fiind de etnie maghiară, urmată de români și romi.",
-
     "etnic": {
       "title": "Componența etnică",
       "items": [
@@ -14,7 +13,6 @@
         "Necunoscută (4,68%)"
       ]
     },
-
     "religie": {
       "title": "Componența confesională",
       "items": [
@@ -28,6 +26,75 @@
     }
   },
 
+  "newsletter": {
+    "title": "📩 Newsletter",
+    "description": "Abonați-vă la newsletterul Primăriei Coșeiu pentru a primi cele mai recente informații despre proiecte, anunțuri și evenimente locale.",
+    "items": [
+      "📢 Anunțuri importante",
+      "🏗️ Proiecte în desfășurare",
+      "📅 Evenimente locale"
+    ],
+    "gdpr": "Newsletterul este trimis periodic și respectă legislația privind protecția datelor cu caracter personal (GDPR).",
+    "placeholder_email": "Adresă email",
+    "button": "Abonare"
+  },
+
+  "cetateni_onoare": {
+    "title": "🏅 Cetățeni de onoare",
+    "description": "Titlul de „Cetățean de onoare” este acordat persoanelor care au contribuit semnificativ la dezvoltarea sau promovarea comunei Coșeiu.",
+    "items": [
+      "🏆 Personalități locale remarcabile",
+      "🏆 Contribuții în educație, cultură sau administrație",
+      "🏆 Sprijin pentru dezvoltarea comunității"
+    ],
+    "note": "Lista cetățenilor de onoare este actualizată periodic prin hotărâri ale consiliului local."
+  },
+
+  "sugestii_reclamatii": {
+    "title": "🗣️ Sugestii și reclamații",
+    "description": "Locuitorii pot transmite sugestii, observații sau reclamații privind activitatea administrației locale.",
+    "placeholders": {
+      "name": "Nume",
+      "email": "Email",
+      "message": "Mesajul dumneavoastră"
+    },
+    "button": "Trimite",
+    "note": "Toate solicitările sunt analizate conform legislației privind transparența decizională și accesul la informații de interes public."
+  },
+
+  "bugetare_participativa": {
+    "title": "💰 Bugetare participativă",
+    "description": "Bugetarea participativă permite locuitorilor să propună și să voteze proiecte pentru dezvoltarea comunității.",
+    "steps_title": "Etape:",
+    "steps": [
+      "1. Depunerea propunerilor",
+      "2. Analiza proiectelor",
+      "3. Votul cetățenilor",
+      "4. Implementarea proiectelor câștigătoare"
+    ],
+    "note": "Această inițiativă susține implicarea directă a comunității în procesul decizional local."
+  },
+
+  "proceduri_online": {
+    "title": "🧾 Servicii online",
+    "description": "Primăria Coșeiu oferă multiple servicii administrative care pot fi realizate online pentru a reduce timpul de așteptare.",
+    "items": [
+      "📄 Depunere cereri",
+      "💳 Plata taxelor și impozitelor",
+      "📅 Programări pentru audiențe",
+      "📬 Solicitări de informații publice"
+    ],
+    "note": "Digitalizarea serviciilor publice este o prioritate a administrației locale."
+  },
+
+  "live_webcam": {
+    "title": "📷 Cameră live",
+    "description": "Camera live oferă imagini în timp real din punctele centrale ale comunei Coșeiu.",
+    "card_title": "📍 Imagine live",
+    "card_description": "Transmisie în timp real (dacă infrastructura video este disponibilă).",
+    "note": "Transmisie din centrul localității (cameră IP)."
+  },
+
   "educatie": {
     "title": "🎓 Educație",
     "description": "Comuna Coșeiu dispune de școli primare și gimnaziale și grădinițe.",
@@ -35,5 +102,158 @@
     "transport_text": "Elevii beneficiază de transport organizat către unitățile de învățământ.",
     "autobuze_title": "🚍 Autobuze",
     "autobuze_text": "Transportul public asigură legătura cu localitățile învecinate."
+  },
+
+  "cultura": {
+    "title": "🎭 Cultură și tradiții",
+    "description": "Tradiții locale: Paște, colinde de Crăciun, Zilele Coșeiu",
+    "biblioteci": {
+      "title": "📖 Biblioteci",
+      "text": "Biblioteca comunală oferă acces la cărți și resurse educaționale pentru toate vârstele."
+    },
+    "finantari": {
+      "title": "🎨 Finanțări culturale",
+      "text": "Primăria sprijină activitățile culturale din bugetul local.",
+      "items": [
+        "Sprijin pentru proiecte culturale locale",
+        "Organizarea de evenimente tradiționale",
+        "Parteneriate cu instituții culturale"
+      ]
+    },
+    "personalitati": {
+      "title": "⭐ Personalități locale",
+      "text": "Comuna Coșeiu a dat numeroase personalități importante."
+    },
+    "evenimente": {
+      "title": "🎭 Evenimente culturale",
+      "text": "Sunt organizate periodic evenimente culturale locale."
+    }
+  },
+
+  "sport": {
+    "title": "⚽ Sport",
+    "structuri": {
+      "title": "🏟️ Infrastructură sportivă",
+      "text": "Activitățile sportive se desfășoară pe baza infrastructurii locale."
+    },
+    "finantari": {
+      "title": "💸 Finanțare sport",
+      "text": "Activitățile sportive sunt susținute din bugetul local."
+    },
+    "baze": {
+      "title": "⚽ Terenuri sportive",
+      "text": "Terenurile sunt utilizate pentru activități recreative și competiționale."
+    },
+    "sala": {
+      "title": "🏋️ Sală de sport",
+      "text": "Sala de sport este folosită pentru activități educaționale și recreative."
+    }
+  },
+
+  "sanatate": {
+    "title": "🏥 Sănătate",
+    "cabinete": {
+      "title": "🏥 Cabinete medicale",
+      "text": "Serviciile medicale sunt disponibile limitat în comună."
+    },
+    "finantari": {
+      "title": "💊 Finanțare sănătate",
+      "text": "Serviciile medicale sunt susținute prin programe naționale."
+    },
+    "farmacii": {
+      "title": "💊 Farmacii",
+      "text": "Farmaciile din apropiere asigură accesul la medicamente."
+    },
+    "urgenta": {
+      "title": "🚑 Urgențe",
+      "text": "În caz de urgență apelați 112."
+    }
+  },
+
+  "social": {
+    "title": "🤝 Social",
+    "varstnici": {
+      "title": "👵 Vârstnici",
+      "text": "Sprijin pentru persoanele în vârstă prin servicii sociale."
+    },
+    "adapost": {
+      "title": "🏠 Adăpost",
+      "text": "Persoanele fără locuință pot beneficia de sprijin."
+    },
+    "ajutor": {
+      "title": "🤲 Ajutor social",
+      "text": "Persoanele eligibile pot beneficia de sprijin financiar."
+    },
+    "tichete": {
+      "title": "🎟️ Tichete sociale",
+      "text": "Programe de sprijin pentru persoanele vulnerabile."
+    },
+    "stomatologie": {
+      "title": "🦷 Stomatologie",
+      "text": "Serviciile stomatologice sunt disponibile pe bază de programare."
+    }
+  },
+
+  "animale": {
+    "title": "🐾 Protecția animalelor",
+    "sterilizare": {
+      "title": "🐕 Sterilizare",
+      "text": "Campanii pentru reducerea numărului de animale fără stăpân."
+    },
+    "adoptii": {
+      "title": "❤️ Adopții",
+      "text": "Adopția animalelor este încurajată."
+    },
+    "apa": {
+      "title": "💧 Apă",
+      "text": "Vara sunt amplasate recipiente cu apă pentru animale."
+    },
+    "adaposturi": {
+      "title": "🏠 Adăposturi",
+      "text": "Animalele sunt gestionate în colaborare cu adăposturi."
+    },
+    "registru": {
+      "title": "📋 Registru animale",
+      "text": "Înregistrarea animalelor este obligatorie."
+    }
+  },
+
+  "turism": {
+    "title": "🧭 Turism",
+    "centru": {
+      "title": "ℹ️ Centru de informare turistică",
+      "text": "Oferă informații despre obiectivele locale."
+    },
+    "cazare": {
+      "title": "🏨 Cazare",
+      "text": "Există opțiuni de cazare în zonă."
+    },
+    "visit": {
+      "title": "💘 Visit Coșeiu",
+      "text": "Un loc liniștit ideal pentru relaxare."
+    },
+    "monumente": {
+      "title": "🏛️ Monumente istorice"
+    }
+  },
+
+  "evenimente": {
+    "title": "🎉 Evenimente",
+    "zile": {
+      "title": "🎊 Zilele Coșeiu",
+      "text": "Eveniment anual al comunității."
+    },
+    "craciun": {
+      "title": "🎄 Târg de Crăciun",
+      "text": "Evenimente festive de iarnă."
+    },
+    "piata": {
+      "title": "🛍️ Piață locală",
+      "text": "Produse locale proaspete."
+    },
+    "festival": {
+      "title": "🎉 Festivaluri",
+      "text": "Evenimente tradiționale."
+    }
   }
 }
