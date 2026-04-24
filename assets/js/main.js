@@ -1,35 +1,31 @@
 console.log("Menu working ✅");
-// ===== LANGUAGE SYSTEM =====
 let currentLang = localStorage.getItem("lang") || "ro";
 let communityDict = {};
 let navDict = {};
-// ===== GLOBAL =====
 let nav, toggle;
 let allSections = [];
 let searchInput;
-
-// ===== CACHE DOM =====
 function cacheDOM() {
   nav = document.querySelector("nav");
   toggle = document.querySelector(".menu-toggle");
   searchInput = document.getElementById("search-input");
 }
-// ===== MENU =====
 function initMenu() {
-  const menuItems = document.querySelectorAll(".menu-left li");
-  menuItems.forEach((item) => {
-    item.replaceWith(item.cloneNode(true));
+  document.querySelectorAll(".menu-left").forEach((menuLeft) => {
+    menuLeft.replaceWith(menuLeft.cloneNode(true));
   });
-  const freshItems = document.querySelectorAll(".menu-left li");
-  freshItems.forEach((item) => {
-    if (window.innerWidth <= 900) {
-      item.addEventListener("click", () => handleMobileMenu(item));
-    } else {
-      item.addEventListener("mouseenter", () => handleDesktopMenu(item));
-    }
+  document.querySelectorAll(".menu-left").forEach((menuLeft) => {
+    menuLeft.addEventListener("click", (e) => {
+      const item = e.target.closest("li");
+      if (!item) return;
+      if (window.innerWidth <= 900) {
+        handleMobileMenu(item);
+      } else {
+        handleDesktopMenu(item);
+      }
+    });
   });
 }
-// ===== MOBILE MENU =====
 function handleMobileMenu(item) {
   const targetId = item.dataset.target;
   const menu = item.closest(".split-menu");
@@ -52,7 +48,6 @@ function addBackButton(container) {
   });
   container.prepend(btn);
 }
-// ===== DESKTOP MENU =====
 function handleDesktopMenu(item) {
   const menu = item.closest(".split-menu");
   const rightSide = menu.querySelector(".menu-right");
@@ -67,10 +62,9 @@ function handleDesktopMenu(item) {
   const active = rightSide.querySelector(`#${targetId}`);
   if (active) {
     active.classList.add("active");
-    rightSide.classList.add("active"); // 👈 IMPORTANT
+    rightSide.classList.add("active");
   }
 }
-// ===== NAV TOGGLE =====
 function initNavToggle() {
   if (!toggle) return;
   toggle.addEventListener("click", () => {
@@ -78,10 +72,20 @@ function initNavToggle() {
     document.body.classList.toggle("nav-open");
   });
 }
-// ===== DROPDOWN =====
 function initDropdowns() {
-  document.querySelectorAll(".dropdown > a").forEach((link) => {
-    link.onclick = null; // reset
+  document.querySelectorAll(".dropdown").forEach((dropdown) => {
+    dropdown.addEventListener("mouseenter", () => {
+      if (window.innerWidth > 900) {
+        dropdown.classList.add("active");
+      }
+    });
+    dropdown.addEventListener("mouseleave", () => {
+      if (window.innerWidth > 900) {
+        dropdown.classList.remove("active");
+      }
+    });
+  });
+  document.querySelectorAll(".dropdown>a").forEach((link) => {
     link.addEventListener("click", (e) => {
       if (window.innerWidth > 900) return;
       e.preventDefault();
@@ -96,8 +100,8 @@ function initDropdowns() {
     });
   });
 }
-// ===== OUTSIDE CLICK =====
 function initOutsideClick() {
+  if (!nav) return;
   document.addEventListener("click", (e) => {
     if (!e.target.closest("nav") && !e.target.closest(".menu-toggle")) {
       nav.classList.remove("active");
@@ -111,7 +115,6 @@ function initOutsideClick() {
     }
   });
 }
-// ===== PREVENT CLOSE =====
 function preventCloseOnInternalLinks() {
   document.querySelectorAll(".dropdown a").forEach((link) => {
     link.addEventListener("click", (e) => {
@@ -121,24 +124,26 @@ function preventCloseOnInternalLinks() {
     });
   });
 }
-// ===== RESIZE FIX =====
 function initResizeFix() {
+  let lastWidth = window.innerWidth;
   window.addEventListener("resize", () => {
-    if (window.innerWidth > 900) {
+    const currentWidth = window.innerWidth;
+    if (
+      (lastWidth <= 900 && currentWidth > 900) ||
+      (lastWidth > 900 && currentWidth <= 900)
+    ) {
+      initMenu();
+    }
+    if (currentWidth > 900) {
       nav.classList.remove("active");
       document.body.classList.remove("nav-open");
-      document.querySelectorAll(".menu-right").forEach((r) => {
-        r.classList.remove("active");
-      });
     }
+    lastWidth = currentWidth;
   });
 }
-// ===== BACK TO TOP =====
 function initBackToTop() {
   const btn = document.getElementById("backToTop");
   if (!btn) return;
-
-  // Show button on scroll
   window.addEventListener("scroll", () => {
     if (document.documentElement.scrollTop > 200) {
       btn.style.display = "block";
@@ -146,16 +151,10 @@ function initBackToTop() {
       btn.style.display = "none";
     }
   });
-
-  // Scroll to top smoothly
   btn.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   });
 }
-// ===== MENU INIT =====
 function initMenuSystem() {
   cacheDOM();
   initMenu();
@@ -173,7 +172,6 @@ async function loadNavLang(lang) {
   });
 }
 function applyNavLang() {
-  console.log("nav items:", document.querySelectorAll(".menu-left li").length);
   if (!navDict) return;
   if (searchInput) {
     searchInput.placeholder = navDict.cauta;
@@ -181,9 +179,11 @@ function applyNavLang() {
   document.querySelectorAll(".back-button").forEach((btn) => {
     btn.textContent = navDict.inapoi;
   });
-  document.querySelectorAll("nav > ul > li.dropdown > a").forEach((el) => {
+  document.querySelectorAll("nav>ul>li.dropdown>a").forEach((el) => {
     const key = el.getAttribute("href").replace("#", "");
-    el.textContent = navDict.menu?.[key] || el.textContent;
+    if (navDict.menu?.[key]) {
+      el.textContent = navDict.menu[key];
+    }
   });
   requestAnimationFrame(() => {
     applySubmenuLang();
@@ -195,45 +195,41 @@ function applySubmenuLang() {
     if (!target) return;
     const splitMenu = el.closest(".split-menu");
     const dropdown = splitMenu?.closest(".dropdown");
+    if (!dropdown) return;
     const category = [...dropdown.classList].find(
       (c) => c !== "dropdown" && c !== "active",
     );
     if (!category) return;
     const key = target.replace("menu-", "");
     const submenuObj = navDict?.submenu?.[category]?.[key];
-    if (typeof submenuObj === "object") {
-      // ia primul text din obiect (ex: "dezbateri", "transport", etc.)
-      const firstValue = Object.values(submenuObj)[0];
-      if (firstValue) {
-        const textNode = [...el.childNodes].find(
-          (n) => n.nodeType === Node.TEXT_NODE,
-        );
-        if (textNode) {
-          textNode.textContent = " " + firstValue;
-        }
-      }
-    } else if (typeof submenuObj === "string") {
-      el.textContent = submenuObj;
-    } else {
-      console.warn("Missing translation:", { category, key });
+    if (!submenuObj) return;
+    // 🔥 TITLE (meniul din stânga)
+    const textNode = [...el.childNodes].find(
+      (n) => n.nodeType === Node.TEXT_NODE,
+    );
+    if (textNode) {
+      textNode.textContent = " " + submenuObj.title;
     }
   });
+  // 🔥 RIGHT SIDE (linkuri)
   document.querySelectorAll(".menu-content").forEach((menu) => {
     const id = menu.id.replace("menu-", "");
     const splitMenu = menu.closest(".split-menu");
     const dropdown = splitMenu?.closest(".dropdown");
-    const category = [...dropdown.classList].find((c) => c !== "dropdown");
+    if (!dropdown) return;
+    const category = [...dropdown.classList].find(
+      (c) => c !== "dropdown" && c !== "active",
+    );
     const submenuObj = navDict?.submenu?.[category]?.[id];
-    if (!submenuObj) return;
+    if (!submenuObj || !submenuObj.links) return;
     const links = menu.querySelectorAll("a");
     links.forEach((link, index) => {
-      const values = Object.values(submenuObj);
-      if (values[index]) {
+      if (submenuObj.links[index]) {
         const textNode = [...link.childNodes].find(
           (n) => n.nodeType === Node.TEXT_NODE,
         );
-        if (textNode && values[index]) {
-          textNode.textContent = " " + values[index];
+        if (textNode) {
+          textNode.textContent = " " + submenuObj.links[index].label;
         }
       }
     });
@@ -246,7 +242,6 @@ async function loadCommunityLang(lang) {
 }
 function applyCommunityLang() {
   if (!communityDict) return;
-  // simple text nodes
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const key = el.getAttribute("data-i18n");
     const value = key.split(".").reduce((o, i) => o?.[i], communityDict);
@@ -254,7 +249,6 @@ function applyCommunityLang() {
       el.textContent = value;
     }
   });
-  // lists
   const etnicList = document.getElementById("etnic-list");
   const religieList = document.getElementById("religie-list");
   if (etnicList) {
@@ -267,21 +261,18 @@ function applyCommunityLang() {
       .map((i) => `<li>${i}</li>`)
       .join("");
   }
-  // 🆕 NEWSLETTER LIST (DACA VREI)
   const newsletterList = document.getElementById("newsletter-list");
   if (newsletterList && communityDict.newsletter?.items) {
     newsletterList.innerHTML = communityDict.newsletter.items
       .map((i) => `<li>${i}</li>`)
       .join("");
   }
-  // 🆕 CETATENI ONOARE LIST
   const onoareList = document.getElementById("onoare-list");
   if (onoareList && communityDict.cetateni_onoare?.items) {
     onoareList.innerHTML = communityDict.cetateni_onoare.items
       .map((i) => `<li>${i}</li>`)
       .join("");
   }
-  // 🆕 BUGETARE PARTICIPATIVA LIST
   const bugetareParticipativa = document.getElementById(
     "bugetare_participativa-list",
   );
@@ -290,7 +281,6 @@ function applyCommunityLang() {
       .map((i) => `<li>${i}</li>`)
       .join("");
   }
-  // 🆕 PROCEDURI ONLINE LIST
   const proceduriOnline = document.getElementById("proceduri_online-list");
   if (proceduriOnline && communityDict.proceduri_online?.items) {
     proceduriOnline.innerHTML = communityDict.proceduri_online.items
@@ -301,7 +291,6 @@ function applyCommunityLang() {
 function initLanguageToggle() {
   const btn = document.getElementById("lang-toggle");
   if (!btn) return;
-  // initial label
   btn.textContent = currentLang.toUpperCase();
   btn.addEventListener("click", async () => {
     currentLang = currentLang === "ro" ? "hu" : "ro";
@@ -309,10 +298,8 @@ function initLanguageToggle() {
     btn.textContent = currentLang.toUpperCase();
     await loadNavLang(currentLang);
     await loadCommunityLang(currentLang);
-    initMenuSystem();
   });
 }
-// ===== SEARCH =====
 function updateSections() {
   allSections = document.querySelectorAll("section");
 }
@@ -349,10 +336,9 @@ function removeHighlights(element) {
     parent.normalize();
   });
 }
-// ===== CONSILIERI RENDER =====
 async function loadConsilieri() {
   try {
-    const res = await fetch("assets/data/consilieri.json"); // adjust path if needed
+    const res = await fetch("assets/data/consilieri.json");
     const consilieri = await res.json();
     const container = document.getElementById("consilieri-container");
     if (!container) return;
@@ -360,26 +346,13 @@ async function loadConsilieri() {
     consilieri.forEach((c) => {
       const card = document.createElement("div");
       card.className = "card consilier-card";
-      card.innerHTML = `
-        <h5><i class="fa-solid fa-user"></i> ${c.name}</h5>
-        <p><strong>Partid:</strong> ${c.partid}</p>
-        <p><strong>Mandat:</strong> ${c.mandat}</p>
-        <p><i class="fa-solid fa-phone"></i> ${c.tel}</p>
-        <p><i class="fa-solid fa-envelope"></i> ${c.email}</p>
-        <a href="${c.avere}" target="_blank" class="btn-link">
-          📄 Declarația de avere
-        </a>
-        <a href="${c.interese}" target="_blank" class="btn-link">
-          📄 Declarația de interese
-        </a>
-      `;
+      card.innerHTML = `<h5><i class="fa-solid fa-user"></i> ${c.name}</h5><p><strong>Partid:</strong> ${c.partid}</p><p><strong>Mandat:</strong> ${c.mandat}</p><p><i class="fa-solid fa-phone"></i> ${c.tel}</p><p><i class="fa-solid fa-envelope"></i> ${c.email}</p><a href="${c.avere}" target="_blank" class="btn-link">📄 Declarația de avere</a><a href="${c.interese}" target="_blank" class="btn-link">📄 Declarația de interese</a>`;
       container.appendChild(card);
     });
   } catch (err) {
     console.error("Error loading consilieri:", err);
   }
 }
-// ===== THEME =====
 function initThemeToggle() {
   const btn = document.getElementById("theme-toggle");
   if (!btn) return;
@@ -395,7 +368,6 @@ function initThemeToggle() {
     btn.textContent = isDark ? "☀️" : "🌙";
   });
 }
-// ===== COMPONENT LOADER =====
 async function loadComponent(id, path) {
   try {
     const res = await fetch(path);
@@ -437,10 +409,13 @@ async function loadAllComponents() {
     loadComponent("footer-container", "assets/components/partials/footer.html"),
   ]);
 }
-// ===== APP INIT =====
 async function initApp() {
   await loadAllComponents();
-  await new Promise((r) => requestAnimationFrame(r));
+  await new Promise((r) =>
+    requestAnimationFrame(() => {
+      requestAnimationFrame(r);
+    }),
+  );
   cacheDOM();
   initMenuSystem();
   await loadNavLang(currentLang);

@@ -1,7 +1,6 @@
 {
   "cauta": "🔎 Keresés...",
   "inapoi": "← Vissza",
-
   "menu": {
     "comunitate": "👥 KÖZÖSSÉG",
     "locuire": "🏡 LAKHATÁS",
@@ -11,224 +10,320 @@
     "economie": "💰 GAZDASÁG",
     "monitor": "📄 KÖZLÖNY"
   },
-
   "submenu": {
     "comunitate": {
       "cetateni": {
-        "dezbateri_publice": "💬 Nyilvános viták",
-        "newsletter": "📧 Hírlevél",
-        "cetateni_onoare": "🏅 Díszpolgárok",
-        "sugestii_reclamatii": "📝 Javaslatok és panaszok",
-        "bugetare_participativa": "💰 Részvételi költségvetés",
-        "proceduri_online": "🖥️ Online szolgáltatások",
-        "live_webcam": "📡 Élő webkamera"
+        "title": "👤 Állampolgárok",
+        "links": [
+          { "key": "dezbateri_publice", "label": "💬 Nyilvános viták" },
+          { "key": "newsletter", "label": "📧 Hírlevél" },
+          { "key": "cetateni_onoare", "label": "🏅 Díszpolgárok" },
+          {
+            "key": "sugestii_reclamatii",
+            "label": "📝 Javaslatok és panaszok"
+          },
+          {
+            "key": "bugetare_participativa",
+            "label": "💰 Részvételi költségvetés"
+          },
+          { "key": "proceduri_online", "label": "🖥️ Online szolgáltatások" },
+          { "key": "live_webcam", "label": "📡 Élő webkamera" }
+        ]
       },
       "educatie": {
-        "transport": "🚌 Szállítás",
-        "autobuze": "🚍 Buszok",
-        "legislatie_educatie": "📚 Oktatási Jogszabályok",
-        "crese": "🏫 Bölcsődék",
-        "gradinite": "🎒 Óvodák",
-        "scoli": "🏫 Iskolák"
+        "title": "🎓 Oktatás",
+        "links": [
+          { "key": "transport", "label": "🚌 Szállítás" },
+          { "key": "autobuze", "label": "🚍 Buszok" },
+          { "key": "legislatie_educatie", "label": "📚 Oktatási jogszabályok" },
+          { "key": "crese", "label": "🏫 Bölcsődék" },
+          { "key": "gradinite", "label": "🎒 Óvodák" },
+          { "key": "scoli", "label": "🏫 Iskolák" }
+        ]
       },
       "cultura": {
-        "biblioteci": "📖 Könyvtárak",
-        "finantari_cultura": "🎨 Kulturális Támogatások",
-        "personalitati_locale": "⭐ Személyiségek",
-        "evenimente_culturale": "🎭 Kulturális Események"
+        "title": "🎭 Kultúra",
+        "links": [
+          { "key": "biblioteci", "label": "📖 Könyvtárak" },
+          { "key": "finantari_cultura", "label": "🎨 Kulturális támogatások" },
+          { "key": "personalitati_locale", "label": "⭐ Helyi személyiségek" },
+          { "key": "evenimente_culturale", "label": "🎭 Kulturális események" }
+        ]
       },
       "sport": {
-        "structuri_sportive": "🏟️ Sportlétesítmények",
-        "finantari_sportive": "💸 Sporttámogatások",
-        "baze_sportive": "⚽ Sportpályák",
-        "sala_sport": "🏋️ Sportcsarnokok",
-        "cluburi_sportive": "🏆 Sportklubok"
+        "title": "⚽ Sport",
+        "links": [
+          { "key": "structuri_sportive", "label": "🏟️ Sportlétesítmények" },
+          { "key": "finantari_sportive", "label": "💸 Sporttámogatások" },
+          { "key": "baze_sportive", "label": "⚽ Sportbázisok" },
+          { "key": "sala_sport", "label": "🏋️ Sportcsarnokok" },
+          { "key": "cluburi_sportive", "label": "🏆 Sportklubok" }
+        ]
       },
       "sanatate": {
-        "cabinete_medicale": "🩺 Orvosi rendelők",
-        "finantari_sanatate": "💊 Egészségügyi Támogatások",
-        "farmacii": "💊 Gyógyszertárak",
-        "urgente": "🚑 Sürgősségi Ellátás"
+        "title": "🏥 Egészség",
+        "links": [
+          { "key": "cabinete_medicale", "label": "🩺 Orvosi rendelők" },
+          {
+            "key": "finantari_sanatate",
+            "label": "💊 Egészségügyi támogatások"
+          },
+          { "key": "farmacii", "label": "💊 Gyógyszertárak" },
+          { "key": "urgente", "label": "🚑 Sürgősség" }
+        ]
       },
       "social": {
-        "varstnici": "👵 Idősek",
-        "adapost": "🏠 Menedék",
-        "ajutor_social": "🤲 Szociális Segítség",
-        "tichete_sociale": "🎟️ Szociális Utalványok",
-        "stomatologie": "🦷 Fogászat"
+        "title": "🤝 Szociális",
+        "links": [
+          { "key": "varstnici", "label": "👵 Idősek" },
+          { "key": "adapost", "label": "🏠 Menedék" },
+          { "key": "ajutor_social", "label": "🤲 Szociális segítség" },
+          { "key": "tichete_sociale", "label": "🎟️ Szociális utalványok" },
+          { "key": "stomatologie", "label": "🦷 Fogászat" }
+        ]
       },
       "animale": {
-        "sterilizare": "🐕 Ivartalanítás",
-        "adoptii": "❤️ Örökbefogadás",
-        "boluri_apa": "💧 Itatók",
-        "adaposturi": "🏡 Állatmenhelyek",
-        "registru_animale": "📋 Állatnyilvántartás"
+        "title": "🐾 Állatok",
+        "links": [
+          { "key": "sterilizare", "label": "🐕 Ivartalanítás" },
+          { "key": "adoptii", "label": "❤️ Örökbefogadás" },
+          { "key": "boluri_apa", "label": "💧 Itatók" },
+          { "key": "adaposturi", "label": "🏡 Menhelyek" },
+          { "key": "registru_animale", "label": "📋 Állatnyilvántartás" }
+        ]
       },
       "turism": {
-        "centru_info": "ℹ️ Információs Központ",
-        "harta": "🗺️ Térkép",
-        "cazare": "🏨 Szállás",
-        "visit_coseiu": "📌 Látogasd Meg Coșeiut",
-        "monumente_istorice": "📍 Történelmi Műemlékek"
+        "title": "🧭 Turizmus",
+        "links": [
+          { "key": "centru_info", "label": "ℹ️ Információs központ" },
+          { "key": "harta", "label": "🗺️ Térkép" },
+          { "key": "cazare", "label": "🏨 Szállás" },
+          { "key": "visit_coseiu", "label": "📌 Coșeiu látogatása" },
+          { "key": "monumente_istorice", "label": "📍 Történelmi műemlékek" }
+        ]
       },
       "evenimente": {
-        "zilele_coseiului": "🎊 Coșeiu Napok",
-        "targ_craciun": "🎄 Karácsonyi Vásár",
-        "piata_locala": "🛍️ Helyi Piac",
-        "festivaluri": "🎪 Fesztiválok"
+        "title": "🎉 Események",
+        "links": [
+          { "key": "zilele_coseiului", "label": "🎊 Coșeiu napok" },
+          { "key": "targ_craciun", "label": "🎄 Karácsonyi vásár" },
+          { "key": "piata_locala", "label": "🛍️ Helyi piac" },
+          { "key": "festivaluri", "label": "🎪 Fesztiválok" }
+        ]
       }
     },
-
     "locuire": {
       "strategii": {
-        "strategii": "📊 Városfejlesztési Stratégiák"
+        "title": "📊 Városfejlesztési stratégiák",
+        "links": [
+          {
+            "key": "strategii_urbane",
+            "label": "📊 Városfejlesztési stratégiák"
+          }
+        ]
       },
       "urbanism": {
-        "urbanism": "🏗️ Városrendezés"
+        "title": "🏗️ Városrendezés",
+        "links": [{ "key": "urbanism", "label": "🏗️ Városrendezés" }]
       },
       "autorizatii_constructie": {
-        "autorizatii_constructie": "📄 Építési Engedélyek"
+        "title": "📄 Építési engedélyek",
+        "links": [
+          { "key": "autorizatii_constructie", "label": "📄 Építési engedélyek" }
+        ]
       },
       "strazi": {
-        "strazi": "🛣️ Utcák"
+        "title": "🛣️ Utcák",
+        "links": [{ "key": "strazi", "label": "🛣️ Utcák" }]
       },
       "locuinte": {
-        "locuinte": "🏘️ Lakások"
+        "title": "🏘️ Lakások",
+        "links": [{ "key": "locuinte", "label": "🏘️ Lakások" }]
       },
       "gis": {
-        "gis": "🛰️ GIS"
+        "title": "🛰️ GIS",
+        "links": [{ "key": "gis", "label": "🛰️ GIS" }]
       }
     },
-
     "administratie": {
       "primarie": {
-        "primar": "👤 Polgármester",
-        "viceprimar": "👤 Alpolgármester",
-        "secretar": "📑 Jegyző",
-        "organigrama": "🧭 Szervezeti Felépítés",
-        "regulament": "📜 Szabályzat",
-        "sediu": "📍 Székhely"
+        "title": "🏢 Polgármesteri hivatal",
+        "links": [
+          { "key": "primar", "label": "👤 Polgármester" },
+          { "key": "viceprimar", "label": "👤 Alpolgármester" },
+          { "key": "secretar", "label": "📑 Jegyző" },
+          { "key": "organigrama", "label": "🧭 Szervezeti felépítés" },
+          { "key": "regulament", "label": "📜 Szabályzat" },
+          { "key": "sediu", "label": "📍 Székhely" }
+        ]
       },
       "consiliu": {
-        "consilieri": "👥 Tanácsosok",
-        "comisii": "📌 Bizottságok",
-        "sedinte": "🗓️ Ülések",
-        "hotarari_consiliu": "📜 Határozatok"
+        "title": "👥 Helyi tanács",
+        "links": [
+          { "key": "consilieri", "label": "👥 Tanácsosok" },
+          { "key": "comisii", "label": "📌 Bizottságok" },
+          { "key": "sedinte", "label": "🗓️ Ülések" },
+          { "key": "hotarari_consiliu", "label": "📜 Határozatok" }
+        ]
       },
-      "evidenta": {
-        "nasteri": "👶 Születések",
-        "acte": "🪪 Okmányok",
-        "casatorii": "💍 Házasságok",
-        "divorturi": "⚖️ Válások",
-        "decese": "⚰️ Halálozások",
-        "pasapoarte": "🌍 Útlevelek"
+      "evidenta_persoanelor": {
+        "title": "📑 Népességnyilvántartás",
+        "links": [
+          { "key": "nasteri", "label": "👶 Születések" },
+          { "key": "acte", "label": "🪪 Okmányok" },
+          { "key": "casatorii", "label": "💍 Házasságok" },
+          { "key": "divorturi", "label": "⚖️ Válások" },
+          { "key": "decese", "label": "⚰️ Halálozások" },
+          { "key": "pasapoarte", "label": "🌍 Útlevelek" }
+        ]
       },
       "politia": {
-        "informatii_politie": "🚓 Információk",
-        "atributii": "📋 Feladatok",
-        "amenzi": "💰 Bírságok",
-        "ridicari_auto": "🚗 Autóelszállítás"
+        "title": "🚓 Rendőrség",
+        "links": [
+          { "key": "informatii_politie", "label": "🚓 Információk" },
+          { "key": "atributii", "label": "📋 Feladatok" },
+          { "key": "amenzi", "label": "💰 Bírságok" },
+          { "key": "ridicari_auto", "label": "🚗 Autóelszállítás" }
+        ]
       },
       "informatii": {
-        "anunturi": "📢 Hirdetmények",
-        "concursuri": "🏆 Pályázatok",
-        "cereri": "📄 Kérelmek",
-        "audiente": "🗣️ Fogadóórák",
-        "contracte": "📑 Szerződések",
-        "plati_online": "💳 Online Fizetések",
-        "licitatii": "🏛️ Közbeszerzések",
-        "documente": "📁 Dokumentumok"
+        "title": "📢 Információk",
+        "links": [
+          { "key": "anunturi", "label": "📢 Hirdetmények" },
+          { "key": "concursuri", "label": "🏆 Pályázatok" },
+          { "key": "cereri", "label": "📄 Kérelmek" },
+          { "key": "audiente", "label": "🗣️ Fogadóórák" },
+          { "key": "contracte", "label": "📑 Szerződések" },
+          { "key": "plati_online", "label": "💳 Online fizetés" },
+          { "key": "licitatii", "label": "🏛️ Közbeszerzések" },
+          { "key": "documente", "label": "📁 Dokumentumok" }
+        ]
       },
       "altele": {
-        "transformare_digitala": "💻 Digitalizáció",
-        "servicii_online": "🖥️ Online Szolgáltatások",
-        "transparenta": "👁 Átláthatóság"
+        "title": "⚙️ Egyéb",
+        "links": [
+          { "key": "transformare_digitala", "label": "💻 Digitalizáció" },
+          { "key": "servicii_online", "label": "🖥️ Online szolgáltatások" },
+          { "key": "transparenta", "label": "👁 Átláthatóság" }
+        ]
       }
     },
-
     "mediu": {
       "salubritate": {
-        "colectare_selectiva": "♻️ Szelektív Gyűjtés",
-        "salubritate_menajera": "🗑️ Háztartási Hulladék",
-        "salubritate_stradala": "🧹 Utcai Tisztítás",
-        "dezapezire": "❄️ Hóeltakarítás"
+        "title": "🗑️ Hulladékgazdálkodás",
+        "links": [
+          { "key": "colectare_selectiva", "label": "♻️ Szelektív gyűjtés" },
+          { "key": "salubritate_menajera", "label": "🗑️ Háztartási hulladék" },
+          { "key": "salubritate_stradala", "label": "🧹 Utcai takarítás" },
+          { "key": "dezapezire", "label": "❄️ Hóeltakarítás" }
+        ]
       },
       "curatenie": {
-        "cereri_specifice": "📝 Kérelmek",
-        "curatenie_primavara": "🌸 Tavaszi Nagytakarítás",
-        "deratizare": "🐀 Rágcsálóirtás"
+        "title": "🧹 Tisztaság",
+        "links": [
+          { "key": "cereri_specifice", "label": "📝 Kérelmek" },
+          { "key": "curatenie_primavara", "label": "🌸 Tavaszi nagytakarítás" },
+          { "key": "deratizare", "label": "🐀 Rágcsálóirtás" }
+        ]
       },
       "spatii_verzi": {
-        "adopta_spatiu": "🌿 Zöldterület örökbefogadás",
-        "ambrozie": "🌾 Parlagfű"
+        "title": "🌳 Zöldterületek",
+        "links": [
+          { "key": "adopta_spatiu", "label": "🌿 Zöldterület örökbefogadása" },
+          { "key": "ambrozie", "label": "🌾 Parlagfű" }
+        ]
       },
       "energie": {
-        "panouri_fotovoltaice": "☀️ Napelemek",
-        "finantare": "💰 Finanszírozás"
+        "title": "⚡ Energia",
+        "links": [
+          { "key": "panouri_fotovoltaice", "label": "☀️ Napelemek" },
+          { "key": "finantare", "label": "💰 Finanszírozás" }
+        ]
       },
       "altele_mediu": {
-        "calitatea_aerului": "🌫️ Levegőminőség",
-        "harta_zgomot": "🔊 Zajtérkép"
+        "title": "🌍 Egyéb",
+        "links": [
+          { "key": "calitatea_aerului", "label": "🌫️ Levegőminőség" },
+          { "key": "harta_zgomot", "label": "🔊 Zajtérkép" }
+        ]
       }
     },
-
     "mobilitate": {
       "plan_mobilitate": {
-        "plan_mobilitate": "📍 Mobilitási Terv"
+        "title": "📍 Mobilitási terv",
+        "links": [{ "key": "plan_mobilitate", "label": "📍 Mobilitási terv" }]
       },
       "parcari": {
-        "parcari": "🅿️ Parkolók"
+        "title": "🅿️ Parkolók",
+        "links": [{ "key": "parcari", "label": "🅿️ Parkolók" }]
       },
       "transport_public": {
-        "transport_public": "🚌 Tömegközlekedés"
+        "title": "🚌 Tömegközlekedés",
+        "links": [{ "key": "transport_public", "label": "🚌 Tömegközlekedés" }]
       },
       "biciclete": {
-        "biciclete": "🚲 Kerékpárok"
+        "title": "🚲 Kerékpárok",
+        "links": [{ "key": "biciclete", "label": "🚲 Kerékpárok" }]
       },
       "siguranta_circulatiei": {
-        "siguranta_circulatiei": "🚦 Közlekedésbiztonság"
+        "title": "🚦 Közlekedésbiztonság",
+        "links": [
+          { "key": "siguranta_circulatiei", "label": "🚦 Közlekedésbiztonság" }
+        ]
       }
     },
-
     "economie": {
       "taxe_impozite": {
-        "taxe_impozite": "📊 Adók és Illetékek"
+        "title": "📊 Adók és illetékek",
+        "links": [{ "key": "taxe_impozite", "label": "📊 Adók és illetékek" }]
       },
       "plati_online": {
-        "plati_online": "💳 Online Fizetések"
+        "title": "💳 Online fizetés",
+        "links": [{ "key": "plati_online", "label": "💳 Online fizetés" }]
       },
       "buget": {
-        "buget": "📒 Költségvetés"
+        "title": "📒 Költségvetés",
+        "links": [{ "key": "buget", "label": "📒 Költségvetés" }]
       },
       "achizitii": {
-        "achizitii": "🏛️ Beszerzések"
+        "title": "🏛️ Beszerzések",
+        "links": [{ "key": "achizitii", "label": "🏛️ Beszerzések" }]
       },
       "proiecte_ue": {
-        "proiecte_ue": "🇪🇺 EU projektek"
+        "title": "🇪🇺 EU projektek",
+        "links": [{ "key": "proiecte_ue", "label": "🇪🇺 EU projektek" }]
       },
       "investitori": {
-        "investitori": "🏭 Befektetők"
+        "title": "🏭 Befektetők",
+        "links": [{ "key": "investitori", "label": "🏭 Befektetők" }]
       }
     },
-
     "monitor": {
       "statut": {
-        "statut": "📜 Statútum"
+        "title": "📜 Statútum",
+        "links": [{ "key": "statut", "label": "📜 Statútum" }]
       },
       "regulamente": {
-        "regulamente": "📘 Szabályzatok"
+        "title": "📘 Szabályzatok",
+        "links": [{ "key": "regulamente", "label": "📘 Szabályzatok" }]
       },
       "hotarari": {
-        "hotarari": "📑 Határozatok"
+        "title": "📑 Határozatok",
+        "links": [{ "key": "hotarari", "label": "📑 Határozatok" }]
       },
       "dispozitii": {
-        "dispozitii": "📋 Rendelkezések"
+        "title": "📋 Rendelkezések",
+        "links": [{ "key": "dispozitii", "label": "📋 Rendelkezések" }]
       },
       "documente_financiare": {
-        "documente_financiare": "💰 Pénzügyi Dokumentumok"
+        "title": "💰 Pénzügyi dokumentumok",
+        "links": [
+          { "key": "documente_financiare", "label": "💰 Pénzügyi dokumentumok" }
+        ]
       },
       "alte_documente": {
-        "alte_documente": "📁 Egyéb Dokumentumok"
+        "title": "📁 Egyéb dokumentumok",
+        "links": [{ "key": "alte_documente", "label": "📁 Egyéb dokumentumok" }]
       }
     }
   }

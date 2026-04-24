@@ -15,220 +15,318 @@
   "submenu": {
     "comunitate": {
       "cetateni": {
-        "dezbateri_publice": "💬 Dezbateri Publice",
-        "newsletter": "📧 Buletin Informativ",
-        "cetateni_onoare": "🏅 Cetățeni Onoare",
-        "sugestii_reclamatii": "📝 Sugestii Reclamații",
-        "bugetare_participativa": "💰 Bugetare Participativă",
-        "proceduri_online": "🖥️ Servicii Online",
-        "live_webcam": "📡 Cameră Web Live"
+        "title": "👤 Cetățeni",
+        "links": [
+          { "key": "dezbateri_publice", "label": "💬 Dezbateri Publice" },
+          { "key": "newsletter", "label": "📧 Buletin Informativ" },
+          { "key": "cetateni_onoare", "label": "🏅 Cetățeni Onoare" },
+          { "key": "sugestii_reclamatii", "label": "📝 Sugestii Reclamații" },
+          {
+            "key": "bugetare_participativa",
+            "label": "💰 Bugetare Participativă"
+          },
+          { "key": "proceduri_online", "label": "🖥️ Servicii Online" },
+          { "key": "live_webcam", "label": "📡 Cameră Web Live" }
+        ]
       },
       "educatie": {
-        "transport": "🚌 Transport",
-        "autobuze": "🚍 Autobuze",
-        "legislatie_educatie": "📚 Legislație Educație",
-        "crese": "🏫 Creșe",
-        "gradinite": "🎒 Grădinițe",
-        "scoli": "🏫 Școli"
+        "title": "🎓 Educație",
+        "links": [
+          { "key": "transport", "label": "🚌 Transport" },
+          { "key": "autobuze", "label": "🚍 Autobuze" },
+          { "key": "legislatie_educatie", "label": "📚 Legislație Educație" },
+          { "key": "crese", "label": "🏫 Creșe" },
+          { "key": "gradinite", "label": "🎒 Grădinițe" },
+          { "key": "scoli", "label": "🏫 Școli" }
+        ]
       },
       "cultura": {
-        "biblioteci": "📖 Biblioteci",
-        "finantari_cultura": "🎨 Finanțări Cultură",
-        "personalitati_locale": "⭐ Personalități locale",
-        "evenimente_culturale": "🎭 Evenimente Culturale"
+        "title": "🎭 Cultură",
+        "links": [
+          { "key": "biblioteci", "label": "📖 Biblioteci" },
+          { "key": "finantari_cultura", "label": "🎨 Finanțări Cultură" },
+          { "key": "personalitati_locale", "label": "⭐ Personalități locale" },
+          { "key": "evenimente_culturale", "label": "🎭 Evenimente Culturale" }
+        ]
       },
       "sport": {
-        "structuri_sportive": "🏟️ Structuri Sportive",
-        "finantari_sportive": "💸 Finanțări Sportive",
-        "baze_sportive": "⚽ Baze Sportive",
-        "sala_sport": "🏋️ Săli Sport",
-        "cluburi_sportive": "🏆 Cluburi Sportive"
+        "title": "⚽ Sport",
+        "links": [
+          { "key": "structuri_sportive", "label": "🏟️ Structuri Sportive" },
+          { "key": "finantari_sportive", "label": "💸 Finanțări Sportive" },
+          { "key": "baze_sportive", "label": "⚽ Baze Sportive" },
+          { "key": "sala_sport", "label": "🏋️ Săli Sport" },
+          { "key": "cluburi_sportive", "label": "🏆 Cluburi Sportive" }
+        ]
       },
       "sanatate": {
-        "cabinete_medicale": "🩺 Cabinete Medicale",
-        "finantari_sanatate": "💊 Finanțări Sănătate",
-        "farmacii": "💊 Farmacii",
-        "urgente": "🚑 Urgențe"
+        "title": "🏥 Sănătate",
+        "links": [
+          { "key": "cabinete_medicale", "label": "🩺 Cabinete Medicale" },
+          { "key": "finantari_sanatate", "label": "💊 Finanțări Sănătate" },
+          { "key": "farmacii", "label": "💊 Farmacii" },
+          { "key": "urgente", "label": "🚑 Urgențe" }
+        ]
       },
       "social": {
-        "varstnici": "👵 Vârstnici",
-        "adapost": "🏠 Adăpost",
-        "ajutor_social": "🤲 Ajutor Social",
-        "tichete_sociale": "🎟️ Tichete Sociale",
-        "stomatologie": "🦷 Stomatologie"
+        "title": "🤝 Social",
+        "links": [
+          { "key": "varstnici", "label": "👵 Vârstnici" },
+          { "key": "adapost", "label": "🏠 Adăpost" },
+          { "key": "ajutor_social", "label": "🤲 Ajutor Social" },
+          { "key": "tichete_sociale", "label": "🎟️ Tichete Sociale" },
+          { "key": "stomatologie", "label": "🦷 Stomatologie" }
+        ]
       },
       "animale": {
-        "sterilizare": "🐕 Sterilizare",
-        "adoptii": "❤️ Adopții",
-        "boluri_apa": "💧 Boluri Apă",
-        "adaposturi": "🏡 Adăposturi Animale",
-        "registru_animale": "📋 Registru Animale"
+        "title": "🐾 Animale",
+        "links": [
+          { "key": "sterilizare", "label": "🐕 Sterilizare" },
+          { "key": "adoptii", "label": "❤️ Adopții" },
+          { "key": "boluri_apa", "label": "💧 Boluri Apă" },
+          { "key": "adaposturi", "label": "🏡 Adăposturi Animale" },
+          { "key": "registru_animale", "label": "📋 Registru Animale" }
+        ]
       },
       "turism": {
-        "centru_info": "ℹ️ Centru Informare",
-        "harta": "🗺️ Hartă",
-        "cazare": "🏨 Cazare",
-        "visit_coseiu": "📌 Vizitează Coșeiu",
-        "monumente_istorice": "📍 Monumente Istorice"
+        "title": "🧭 Turism",
+        "links": [
+          { "key": "centru_info", "label": "ℹ️ Centru Informare" },
+          { "key": "harta", "label": "🗺️ Hartă" },
+          { "key": "cazare", "label": "🏨 Cazare" },
+          { "key": "visit_coseiu", "label": "📌 Vizitează Coșeiu" },
+          { "key": "monumente_istorice", "label": "📍 Monumente Istorice" }
+        ]
       },
       "evenimente": {
-        "zilele_coseiului": "🎊 Zilele Coșeiului",
-        "targ_craciun": "🎄 Târg Crăciun",
-        "piata_locala": "🛍️ Piață Locală",
-        "festivaluri": "🎪 Festivaluri"
+        "title": "🎉 Evenimente",
+        "links": [
+          { "key": "zilele_coseiului", "label": "🎊 Zilele Coșeiului" },
+          { "key": "targ_craciun", "label": "🎄 Târg Crăciun" },
+          { "key": "piata_locala", "label": "🛍️ Piață Locală" },
+          { "key": "festivaluri", "label": "🎪 Festivaluri" }
+        ]
       }
     },
 
     "locuire": {
       "strategii": {
-        "strategii": "📊 Strategii Dezvoltare Urbană"
+        "title": "📊 Strategii Urbane",
+        "links": [{ "key": "strategii_urbane", "label": "📊 Strategii Urbane" }]
       },
       "urbanism": {
-        "urbanism": "🏗️ Urbanism"
+        "title": "🏗️ Urbanism",
+        "links": [{ "key": "urbanism", "label": "🏗️ Urbanism" }]
       },
       "autorizatii_constructie": {
-        "autorizatii_constructie": "📄 Autorizații Construcție"
+        "title": "📄 Autorizații",
+        "links": [
+          {
+            "key": "autorizatii_constructie",
+            "label": "📄 Autorizații Construcție"
+          }
+        ]
       },
       "strazi": {
-        "strazi": "🛣️ Străzi"
+        "title": "🛣️ Străzi",
+        "links": [{ "key": "strazi", "label": "🛣️ Străzi" }]
       },
       "locuinte": {
-        "locuinte": "🏘️ Locuințe"
+        "title": "🏘️ Locuințe",
+        "links": [{ "key": "locuinte", "label": "🏘️ Locuințe" }]
       },
       "gis": {
-        "gis": "🛰️ GIS"
+        "title": "🛰️ GIS",
+        "links": [{ "key": "gis", "label": "🛰️ GIS" }]
       }
     },
 
     "administratie": {
       "primarie": {
-        "primar": "👤 Primar",
-        "viceprimar": "👤 Viceprimar",
-        "secretar": "📑 Secretar",
-        "organigrama": "🧭 Organigramă",
-        "regulament": "📜 Regulament",
-        "sediu": "📍 Sediu"
+        "title": "🏢 Primărie",
+        "links": [
+          { "key": "primar", "label": "👤 Primar" },
+          { "key": "viceprimar", "label": "👤 Viceprimar" },
+          { "key": "secretar", "label": "📑 Secretar" },
+          { "key": "organigrama", "label": "🧭 Organigramă" },
+          { "key": "regulament", "label": "📜 Regulament" },
+          { "key": "sediu", "label": "📍 Sediu" }
+        ]
       },
       "consiliu": {
-        "consilieri": "👥 Consilieri",
-        "comisii": "📌 Comisii",
-        "sedinte": "🗓️ Ședințe",
-        "hotarari_consiliu": "📜 Hotărâri"
+        "title": "👥 Consiliu Local",
+        "links": [
+          { "key": "consilieri", "label": "👥 Consilieri" },
+          { "key": "comisii", "label": "📌 Comisii" },
+          { "key": "sedinte", "label": "🗓️ Ședințe" },
+          { "key": "hotarari_consiliu", "label": "📜 Hotărâri" }
+        ]
       },
-      "evidenta": {
-        "nasteri": "👶 Nașteri",
-        "acte": "🪪 Acte",
-        "casatorii": "💍 Căsătorii",
-        "divorturi": "⚖️ Divorțuri",
-        "decese": "⚰️ Decese",
-        "pasapoarte": "🌍 Pașapoarte"
+      "evidenta_persoanelor": {
+        "title": "📑 Evidență Persoane",
+        "links": [
+          { "key": "nasteri", "label": "👶 Nașteri" },
+          { "key": "acte", "label": "🪪 Acte" },
+          { "key": "casatorii", "label": "💍 Căsătorii" },
+          { "key": "divorturi", "label": "⚖️ Divorțuri" },
+          { "key": "decese", "label": "⚰️ Decese" },
+          { "key": "pasapoarte", "label": "🌍 Pașapoarte" }
+        ]
       },
       "politia": {
-        "informatii_politie": "🚓 Informații poliție",
-        "atributii": "📋 Atribuții",
-        "amenzi": "💰 Amenzi",
-        "ridicari_auto": "🚗 Ridicări Auto"
+        "title": "🚓 Poliția Locală",
+        "links": [
+          { "key": "informatii_politie", "label": "🚓 Informații Poliție" },
+          { "key": "atributii", "label": "📋 Atribuții" },
+          { "key": "amenzi", "label": "💰 Amenzi" },
+          { "key": "ridicari_auto", "label": "🚗 Ridicări Auto" }
+        ]
       },
       "informatii": {
-        "anunturi": "📢 Anunțuri",
-        "concursuri": "🏆 Concursuri",
-        "cereri": "📄 Cereri",
-        "audiente": "🗣️ Audiențe",
-        "contracte": "📑 Contracte",
-        "plati_online": "💳 Plăți Online",
-        "licitatii": "🏛️ Licitații Publice",
-        "documente": "📁 Documente"
+        "title": "📢 Informații Publice",
+        "links": [
+          { "key": "anunturi", "label": "📢 Anunțuri" },
+          { "key": "concursuri", "label": "🏆 Concursuri" },
+          { "key": "cereri", "label": "📄 Cereri" },
+          { "key": "audiente", "label": "🗣️ Audiențe" },
+          { "key": "contracte", "label": "📑 Contracte" },
+          { "key": "plati_online", "label": "💳 Plăți Online" },
+          { "key": "licitatii", "label": "🏛️ Licitații Publice" },
+          { "key": "documente", "label": "📁 Documente" }
+        ]
       },
       "altele": {
-        "transformare_digitala": "💻 Digitalizare",
-        "servicii_online": "🖥️ Servicii Online",
-        "transparenta": "👁 Transparență"
+        "title": "⚙️ Alte Informații",
+        "links": [
+          { "key": "transformare_digitala", "label": "💻 Digitalizare" },
+          { "key": "servicii_online", "label": "🖥️ Servicii Online" },
+          { "key": "transparenta", "label": "👁 Transparență" }
+        ]
       }
     },
 
     "mediu": {
       "salubritate": {
-        "colectare_selectiva": "♻️ Colectare Selectivă",
-        "salubritate_menajera": "🗑️ Salubritate Menajeră",
-        "salubritate_stradala": "🧹 Salubritate Stradală",
-        "dezapezire": "❄️ Dezăpezire"
+        "title": "🗑️ Salubritate",
+        "links": [
+          { "key": "colectare_selectiva", "label": "♻️ Colectare Selectivă" },
+          { "key": "salubritate_menajera", "label": "🗑️ Salubritate Menajeră" },
+          { "key": "salubritate_stradala", "label": "🧹 Salubritate Stradală" },
+          { "key": "dezapezire", "label": "❄️ Dezăpezire" }
+        ]
       },
       "curatenie": {
-        "cereri_specifice": "📝 Cereri specifice",
-        "curatenie_primavara": "🌸 Curățenie Primăvară",
-        "deratizare": "🐀 Deratizare"
+        "title": "🧹 Curățenie",
+        "links": [
+          { "key": "cereri_specifice", "label": "📝 Cereri specifice" },
+          { "key": "curatenie_primavara", "label": "🌸 Curățenie Primăvară" },
+          { "key": "deratizare", "label": "🐀 Deratizare" }
+        ]
       },
       "spatii_verzi": {
-        "adopta_spatiu": "🌿 Adoptă Spațiu Verde",
-        "ambrozie": "🌾 Ambrozie"
+        "title": "🌳 Spații Verzi",
+        "links": [
+          { "key": "adopta_spatiu", "label": "🌿 Adoptă Spațiu Verde" },
+          { "key": "ambrozie", "label": "🌾 Ambrozie" }
+        ]
       },
       "energie": {
-        "panouri_fotovoltaice": "☀️ Panouri Fotovoltaice",
-        "finantare": "💰 Finanțare"
+        "title": "⚡ Energie",
+        "links": [
+          { "key": "panouri_fotovoltaice", "label": "☀️ Panouri Fotovoltaice" },
+          { "key": "finantare", "label": "💰 Finanțare" }
+        ]
       },
       "altele_mediu": {
-        "calitatea_aerului": "🌫️ Calitatea Aerului",
-        "harta_zgomot": "🔊 Harta Zgomot"
+        "title": "🌍 Altele Mediu",
+        "links": [
+          { "key": "calitatea_aerului", "label": "🌫️ Calitatea Aerului" },
+          { "key": "harta_zgomot", "label": "🔊 Harta Zgomot" }
+        ]
       }
     },
 
     "mobilitate": {
       "plan_mobilitate": {
-        "plan_mobilitate": "📍 Plan Mobilitate"
+        "title": "📍 Plan Mobilitate",
+        "links": [{ "key": "plan_mobilitate", "label": "📍 Plan Mobilitate" }]
       },
       "parcari": {
-        "parcari": "🅿️ Parcări"
+        "title": "🅿️ Parcări",
+        "links": [{ "key": "parcari", "label": "🅿️ Parcări" }]
       },
       "transport_public": {
-        "transport_public": "🚌 Transport Public"
+        "title": "🚌 Transport Public",
+        "links": [{ "key": "transport_public", "label": "🚌 Transport Public" }]
       },
       "biciclete": {
-        "biciclete": "🚲 Biciclete"
+        "title": "🚲 Biciclete",
+        "links": [{ "key": "biciclete", "label": "🚲 Biciclete" }]
       },
       "siguranta_circulatiei": {
-        "siguranta_circulatiei": "🚦 Siguranța Circulației"
+        "title": "🚦 Siguranța circulației",
+        "links": [
+          {
+            "key": "siguranta_circulatiei",
+            "label": "🚦 Siguranța Circulației"
+          }
+        ]
       }
     },
 
     "economie": {
       "taxe_impozite": {
-        "taxe_impozite": "📊 Taxe Impozite"
+        "title": "📊 Taxe Impozite",
+        "links": [{ "key": "taxe_impozite", "label": "📊 Taxe Impozite" }]
       },
       "plati_online": {
-        "plati_online": "💳 Plăți Online"
+        "title": "💳 Plăți Online",
+        "links": [{ "key": "plati_online", "label": "💳 Plăți Online" }]
       },
       "buget": {
-        "buget": "📒 Buget"
+        "title": "📒 Buget",
+        "links": [{ "key": "buget", "label": "📒 Buget" }]
       },
       "achizitii": {
-        "achizitii": "🏛️ Achiziții"
+        "title": "🏛️ Achiziții",
+        "links": [{ "key": "achizitii", "label": "🏛️ Achiziții" }]
       },
       "proiecte_ue": {
-        "proiecte_ue": "🇪🇺 Proiecte UE"
+        "title": "🇪🇺 Proiecte UE",
+        "links": [{ "key": "proiecte_ue", "label": "🇪🇺 Proiecte UE" }]
       },
       "investitori": {
-        "investitori": "🏭 Investitori"
+        "title": "🏭 Investitori",
+        "links": [{ "key": "investitori", "label": "🏭 Investitori" }]
       }
     },
 
     "monitor": {
       "statut": {
-        "statut": "📜 Statut"
+        "title": "📜 Statut",
+        "links": [{ "key": "statut", "label": "📜 Statut" }]
       },
       "regulamente": {
-        "regulamente": "📘 Regulamente"
+        "title": "📘 Regulamente",
+        "links": [{ "key": "regulamente", "label": "📘 Regulamente" }]
       },
       "hotarari": {
-        "hotarari": "📑 Hotărâri"
+        "title": "📑 Hotărâri",
+        "links": [{ "key": "hotarari", "label": "📑 Hotărâri" }]
       },
       "dispozitii": {
-        "dispozitii": "📋 Dispoziții"
+        "title": "📋 Dispoziții",
+        "links": [{ "key": "dispozitii", "label": "📋 Dispoziții" }]
       },
       "documente_financiare": {
-        "documente_financiare": "💰 Documente Financiare"
+        "title": "💰 Documente Financiare",
+        "links": [
+          { "key": "documente_financiare", "label": "💰 Documente Financiare" }
+        ]
       },
       "alte_documente": {
-        "alte_documente": "📁 Alte Documente"
+        "title": "📁 Alte Documente",
+        "links": [{ "key": "alte_documente", "label": "📁 Alte Documente" }]
       }
     }
   }
