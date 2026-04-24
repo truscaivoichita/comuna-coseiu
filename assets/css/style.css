@@ -742,11 +742,6 @@ body.dark-mode .newsletter input {
     top: 80px;
     right: 130px;
   }
-  #lang-toggle,
-  #theme-toggle,
-  .menu-toggle {
-    z-index: 1201;
-  }
   .search-form input,
   .search-form label {
     display: none;
