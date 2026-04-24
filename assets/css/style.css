@@ -400,7 +400,7 @@ section h3 {
 }
 #home {
   height: 450px;
-  background: url(/assets/images/heart.png) center/cover;
+  background: url(assets/images/heart.png) center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
