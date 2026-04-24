@@ -165,7 +165,7 @@ function initMenuSystem() {
   initResizeFix();
 }
 async function loadNavLang(lang) {
-  const res = await fetch(`/assets/i18n/${lang}/nav.json`);
+  const res = await fetch(`assets/i18n/${lang}/nav.json`);
   navDict = await res.json();
   requestAnimationFrame(() => {
     applyNavLang();
