@@ -236,9 +236,16 @@ function applySubmenuLang() {
   });
 }
 async function loadCommunityLang(lang) {
-  const res = await fetch(`/assets/i18n/${lang}/comunitate.json`);
-  communityDict = await res.json();
-  applyCommunityLang();
+  try {
+    const res = await fetch(`assets/i18n/${lang}/comunitate.json`);
+    if (!res.ok) {
+      throw new Error(`HTTP error: ${res.status}`);
+    }
+    communityDict = await res.json();
+    applyCommunityLang();
+  } catch (err) {
+    console.error("Failed to load comunitate.json:", err);
+  }
 }
 function applyCommunityLang() {
   if (!communityDict) return;
