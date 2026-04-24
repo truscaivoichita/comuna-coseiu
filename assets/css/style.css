@@ -138,9 +138,13 @@ header {
   height: 130px;
   z-index: 1000;
 }
-.lang-theme {
+#lang-theme {
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
 }
+
 /* Button style */
 #backToTop {
   position: fixed;
@@ -175,8 +179,8 @@ header {
 .search-form {
   display: flex;
   align-items: center;
-  background: var(--white);
-  border-radius: 30px;
+  /* background: var(--white); */
+  /* border-radius: 30px; */
   box-shadow: var(--shadow);
 }
 .search-form input {
@@ -721,8 +725,8 @@ body.dark-mode .newsletter input {
   }
   .search-form {
     position: fixed;
-    top: 5px;
-    right: 115px;
+    top: 100px;
+    right: 30px;
   }
   .consilieri-row {
     display: grid;
@@ -734,13 +738,13 @@ body.dark-mode .newsletter input {
   }
   #theme-toggle {
     position: fixed;
-    top: 45px;
-    right: 130px;
+    top: 100px;
+    right: 10px;
   }
   #lang-toggle {
     position: fixed;
-    top: 80px;
-    right: 130px;
+    top: 100px;
+    right: 65px;
   }
   #lang-toggle,
   #theme-toggle,
@@ -811,8 +815,8 @@ body.dark-mode .newsletter input {
   nav > ul > li > a {
     /* display: block; */
     /* flex-direction: row; */
-    padding: 14px;
-    font-size: 16px;
+    /* padding: 14px; */
+    font-size: 14px;
     color: var(--text);
     border-left: 4px solid transparent;
     border-left-width: 5px;
@@ -822,7 +826,7 @@ body.dark-mode .newsletter input {
   }
   nav > ul > li > a:hover {
     background: var(--bg);
-    padding-left: 20px;
+    padding-left: 10px;
   }
   /* .dropdown.active .split-menu {
     visibility: visible;
@@ -831,10 +835,10 @@ body.dark-mode .newsletter input {
   } */
   .dropdown.active > a {
     background: var(--bg);
-    font-size: 18px;
+    font-size: 15px;
   }
   body > header > nav > ul > li.dropdown > div > div.menu-left > ul > li {
-    font-size: 14px;
+    font-size: 12px;
   }
   .menu-content a {
     font-size: 14px;
