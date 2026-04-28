@@ -255,8 +255,10 @@ nav .dropdown-menu.split-menu {
 }
 .menu-left li {
   padding: 10px;
-  border-radius: 6px;
-  transition: 0.2s;
+  background-color: var(--section-color);
+  color: var(--white);
+  border-radius: 3px;
+  transition: 0.5s;
 }
 .menu-left li:hover,
 .menu-left li.active {
@@ -264,7 +266,8 @@ nav .dropdown-menu.split-menu {
   background-color: var(--white);
   font-weight: 600;
   cursor: pointer;
-  transition: 0.2s;
+  transition: 0.5s;
+  padding-left: 5px;
 }
 .menu-right {
   width: 30%;
@@ -279,16 +282,17 @@ nav .dropdown-menu.split-menu {
 }
 .menu-right a {
   padding: 12px;
-  color: var(--section-color);
+  background-color: var(--section-color);
+  color: var(--white);
   border-bottom: 1px solid var(--whiteish);
-  transition: 0.2s;
+  transition: 0.5s;
 }
 .menu-right a:hover {
   color: var(--section-color);
   background-color: var(--white);
-  padding-left: 6px;
+  padding-left: 5px;
   border-radius: 3px;
-  padding: 12px;
+  /* padding: 12px; */
 }
 .menu-right::-webkit-scrollbar {
   width: 6px;
@@ -324,6 +328,7 @@ nav .dropdown-menu.split-menu {
 }
 .dropdown:hover > a {
   color: var(--section-color);
+  background-color: var(--white);
 }
 .dropdown > a::after {
   content: "";
@@ -340,7 +345,7 @@ nav .dropdown-menu.split-menu {
 .dropdown:hover .split-menu {
   border-bottom: 4px solid var(--section-color);
   border-right: 4px solid var(--section-color);
-  background-color: color-mix(in srgb, var(--section-color) 25%, var(--white));
+  background-color: var(--section-color);
 }
 /* ===== SECTION ===== */
 section {
