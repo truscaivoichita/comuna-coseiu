@@ -486,7 +486,8 @@ section > div:hover {
   margin-top: 20px;
 }
 .hero-image img {
-  max-width: 400px;
+  max-width: 100%;
+  height: auto;
   border-radius: 12px;
 }
 .quick-links {
@@ -524,6 +525,7 @@ body.dark-mode .btn-glass {
   display: flex;
   align-items: center;
   justify-content: center;
+  max-width: 1200px;
 }
 #home::before {
   content: "";
@@ -978,6 +980,7 @@ body.dark-mode .newsletter input {
     left: 0;
     width: 70%;
     flex-direction: column;
+    padding: 0;
   }
   .menu-left,
   .menu-right {
@@ -1021,6 +1024,42 @@ body.dark-mode .newsletter input {
     position: fixed;
     top: 0px;
     right: 0px;
+  }
+  .hero-image img {
+    max-width: 100%;
+  }
+  .profile-card {
+    grid-template-columns: 1fr;
+  }
+  .hero {
+    padding: 0;
+  }
+  .hero h1 {
+    font-size: 1.6rem;
+    line-height: 1.2;
+  }
+  .hero p {
+    font-size: 0.95rem;
+  }
+  .hero-content {
+    max-width: 100%;
+  }
+  .hero-image img {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .hero {
+    text-align: center;
+  }
+  .hero-buttons .btn {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
   }
   .consilieri-row {
     display: grid;
@@ -1102,7 +1141,7 @@ body.dark-mode .newsletter input {
     backdrop-filter: blur(10px);
   }
   nav > ul {
-    width: 37%;
+    width: 30%;
     gap: 0;
     flex-direction: column;
     border-right: 1px solid var(--surface-2);
@@ -1162,9 +1201,9 @@ body.dark-mode .newsletter input {
   nav .dropdown-menu.split-menu {
     position: absolute;
     top: 0;
-    left: 31%;
-    width: 70%;
-    height: 85vh;
+    left: 30%;
+    width: auto;
+    height: auto;
     display: flex;
     flex-direction: row;
     border-radius: 0;
