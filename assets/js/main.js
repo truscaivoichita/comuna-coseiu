@@ -357,7 +357,7 @@ async function loadConsilieri() {
     consilieri.forEach((c) => {
       const card = document.createElement("div");
       card.className = "card consilier-card";
-      card.innerHTML = `<h5><i class="fa-solid fa-user"></i> ${c.name}</h5><p><strong>Partid:</strong> ${c.partid}</p><p><strong>Mandat:</strong> ${c.mandat}</p><p><i class="fa-solid fa-phone"></i> ${c.tel}</p><p><i class="fa-solid fa-envelope"></i> ${c.email}</p><a href="${c.avere}" target="_blank" class="btn-link">📄 Declarația de avere</a><a href="${c.interese}" target="_blank" class="btn-link">📄 Declarația de interese</a>`;
+      card.innerHTML = `<h5><i class="fa-solid fa-user"></i> ${c.name}</h5><p><strong>Partid:</strong> ${c.partid}</p><p><strong>Mandat:</strong> ${c.mandat}</p><p><i class="fa-solid fa-phone"></i> ${c.tel}</p><p><i class="fa-solid fa-envelope"></i> ${c.email}</p><a href="${c.avere}" target="_blank" class="btn-link btn-section">📄 Declarația de avere</a><a href="${c.interese}" target="_blank" class="btn-link btn-section">📄 Declarația de interese</a>`;
       container.appendChild(card);
     });
   } catch (err) {

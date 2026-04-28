@@ -408,7 +408,6 @@ section:nth-of-type(even) {
 section:nth-of-type(odd) {
   background: var(--bg);
 }
-
 section > div {
   position: relative;
   padding: 24px;
@@ -510,6 +509,15 @@ section > div:hover {
 .news-item {
   margin-bottom: 20px;
 }
+.btn-glass {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+}
+body.dark-mode .btn-glass {
+  background: rgba(255, 255, 255, 0.05);
+}
 #home {
   min-height: 60vh;
   background: url(assets/images/heart.png) center/cover;
@@ -607,19 +615,73 @@ section > div:hover {
 }
 .btn,
 .btn-link {
-  display: inline-block;
-  padding: 10px 16px;
+  max-width: 400px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 20px;
   border-radius: 999px;
-  background: var(--button);
-  color: var(--text-inverse);
-  text-decoration: none;
   font-weight: 600;
-  transition: 0.25s ease;
+  letter-spacing: 0.3px;
+  text-decoration: none;
+  color: var(--text-inverse);
+  background: linear-gradient(135deg, var(--button), var(--button-hover));
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.25);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  margin-bottom: 20px;
 }
 .btn:hover,
 .btn-link:hover {
-  background: var(--button-hover);
-  transform: translateY(-1px);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.35);
+}
+.btn:active,
+.btn-link:active {
+  transform: scale(0.97);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+.btn::after,
+.btn-link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transform: skewX(-20deg);
+  transition: 0.5s;
+}
+.btn:hover::after,
+.btn-link:hover::after {
+  left: 130%;
+}
+.btn i {
+  font-size: 14px;
+}
+.btn-accent {
+  background: linear-gradient(135deg, var(--accent-color));
+  box-shadow: 0 6px 18px rgba(249, 115, 22, 0.3);
+  padding: 12px 10px;
+}
+.btn-section {
+  background: none;
+  color: var(--accent-color);
+  box-shadow: 0 6px 18px
+    color-mix(in srgb, var(--section-color) 40%, transparent);
+}
+.btn-section:hover {
+  background: color-mix(in srgb, var(--accent-color) 85%, black);
 }
 section ul {
   list-style: none;
