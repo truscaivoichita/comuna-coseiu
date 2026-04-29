@@ -6,27 +6,23 @@
     class="logo"
     loading="lazy"
   />
+  <div class="top-controls">
+    <div class="lang-theme">
+      <button id="theme-toggle" aria-label="Toggle dark mode">🖤</button>
+      <button id="lang-toggle" aria-label="Language switch">RO</button>
+      <button id="backToTop"><i class="fa-solid fa-arrow-up"></i></button>
+    </div>
 
-  <div class="lang-theme">
-    <button id="theme-toggle" aria-label="Toggle dark mode">
-      <i class="fa-solid fa-moon"></i>
+    <form class="search-form" id="search-form">
+      <label for="search-input" class="visually-hidden">Caută</label>
+      <input type="text" id="search-input" placeholder="🔎 Caută..." />
+      <button type="submit">🔍</button>
+    </form>
+
+    <button class="menu-toggle" aria-label="Deschide meniul">
+      <i class="fa-solid fa-bars"></i>
     </button>
-    <button id="lang-toggle" aria-label="Language switch">
-      <i class="fa-solid fa-language"></i> RO
-    </button>
-    <button id="backToTop"><i class="fa-solid fa-arrow-up"></i> Top</button>
   </div>
-
-  <form class="search-form" id="search-form">
-    <label for="search-input" class="visually-hidden">Caută</label>
-    <input type="text" id="search-input" placeholder="🔎 Caută..." />
-    <button type="submit">🔍</button>
-  </form>
-
-  <button class="menu-toggle" aria-label="Deschide meniul">
-    <i class="fa-solid fa-bars"></i>
-  </button>
-
   <nav aria-label="Main navigation">
     <ul>
       <!-- ================= COMUNITATE ================= -->

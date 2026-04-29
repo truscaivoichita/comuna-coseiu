@@ -384,22 +384,25 @@ async function loadConsilieri() {
 function initThemeToggle() {
   const btn = document.getElementById("theme-toggle");
   if (!btn) return;
+  // Load saved theme
   const saved = localStorage.getItem("theme");
   if (saved === "dark") {
     document.body.classList.add("dark-mode");
-    btn.innerHTML = isDark
-      ? '<i class="fa-solid fa-sun"></i>'
-      : '<i class="fa-solid fa-moon"></i>';
   }
+  // Set initial icon
+  updateIcon();
   btn.addEventListener("click", () => {
     document.body.classList.toggle("dark-mode");
     const isDark = document.body.classList.contains("dark-mode");
     localStorage.setItem("theme", isDark ? "dark" : "light");
-    if (saved === "dark") {
-      document.body.classList.add("dark-mode");
-      btn.innerHTML = '<i class="fa-solid fa-sun"></i>';
-    }
+    updateIcon();
   });
+  function updateIcon() {
+    const isDark = document.body.classList.contains("dark-mode");
+    btn.innerHTML = isDark
+      ? '<i class="fa-solid fa-sun"></i>'
+      : '<i class="fa-solid fa-moon"></i>';
+  }
 }
 async function loadComponent(id, path) {
   try {

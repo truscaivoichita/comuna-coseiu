@@ -152,18 +152,6 @@ body.dark-mode .card {
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
 /* ===== HEADER ===== */
-#theme-toggle {
-  background: transparent;
-  border: none;
-  font-size: 20px;
-  cursor: pointer;
-  margin-left: 10px;
-  color: var(--text);
-  transition: var(--transition-smooth);
-}
-#theme-toggle:hover {
-  transform: scale(1.1);
-}
 header {
   display: flex;
   align-items: center;
@@ -176,16 +164,56 @@ header {
   z-index: 1000;
   box-shadow: var(--shadow-sm);
 }
+.top-controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  flex-wrap: wrap;
+  width: 15%;
+}
+.lang-theme {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.lang-theme button {
+  border: none;
+  background: var(--button);
+  color: var(--surface);
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+.lang-theme button:hover {
+  background: var(--button-hover);
+  transform: translateY(-1px);
+}
 #lang-theme {
   display: flex;
   flex-direction: row;
   align-items: center;
   text-align: center;
 }
+/* #lang-toggle {
+  position: fixed;
+  top: 60px;
+  right: 10px;
+  background-color: var(--button);
+  color: var(--surface);
+  padding: 2px;
+}
+#theme-toggle,
+#menu-toggle {
+  z-index: 1201;
+  background-color: var(--button);
+  color: var(--surface);
+} */
 #backToTop {
   position: fixed;
-  bottom: 30px;
-  right: 30px;
+  bottom: 20px;
+  right: 20px;
   display: none;
   padding: 12px 16px;
   font-size: 18px;
@@ -195,6 +223,7 @@ header {
   color: white;
   cursor: pointer;
   transition: opacity 0.3s;
+  z-index: 999;
 }
 #backToTop:hover {
   background-color: var(--button-hover);
@@ -214,27 +243,28 @@ header {
 .search-form {
   display: flex;
   align-items: center;
-  box-shadow: var(--shadow-sm);
+  background: var(--surface);
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  max-width: 260px;
+  width: 100%;
 }
 .search-form input {
-  max-width: 100px;
+  flex: 1;
   border: none;
-  padding: 10px 15px;
-  outline: 2px solid var(--color-accent);
+  padding: 8px 12px;
+  outline: none;
+  min-width: 0;
+  background: transparent;
+  color: var(--text-primary);
 }
 .search-form button {
   background: var(--color-accent);
   border: none;
   color: var(--surface);
-  padding: 10px 16px;
+  padding: 8px 12px;
   cursor: pointer;
-  transition: 0.3s;
-  white-space: nowrap;
-  font-weight: 500;
-  border-radius: 20px;
-}
-.search-form button:hover {
-  background: var(--color-accent-dark);
 }
 /* ===== NAVBAR ===== */
 nav {
@@ -640,6 +670,7 @@ body.dark-mode .btn-glass {
 }
 .btn:hover,
 .btn-link:hover {
+  color: var(--surface);
   transform: translateY(-2px) scale(1.02);
   box-shadow: 0 10px 25px rgba(37, 99, 235, 0.35);
 }
@@ -970,6 +1001,18 @@ body.dark-mode .newsletter input {
   color: var(--text);
 }
 /* ===== RESPONSIVE ===== */
+@media (max-width: 480px) {
+  .search-form {
+    max-width: 140px;
+  }
+  .lang-theme {
+    gap: 5px;
+  }
+  .lang-theme button {
+    padding: 5px 6px;
+    font-size: 12px;
+  }
+}
 @media (max-width: 600px) {
   nav {
     width: 100%;
@@ -1019,8 +1062,30 @@ body.dark-mode .newsletter input {
   header {
     padding: 8px;
   }
+  .top-controls {
+    justify-content: space-between;
+    padding: 5px 10px;
+  }
+  .search-form {
+    max-width: 120px;
+  }
+  .search-form input {
+    display: none;
+  }
+  .search-form button {
+    border-radius: 50%;
+    padding: 10px;
+  }
+  .lang-theme button {
+    padding: 6px 8px;
+    font-size: 14px;
+  }
   .logo {
     width: 90px;
+  }
+  #lang-toggle {
+    top: 100px;
+    right: 20px;
   }
   nav {
     width: 70%;
@@ -1072,7 +1137,7 @@ body.dark-mode .newsletter input {
   .logo {
     position: fixed;
     right: 35px;
-    top: 10px;
+    top: 40px;
   }
   .search-form {
     margin-left: auto;
@@ -1082,7 +1147,21 @@ body.dark-mode .newsletter input {
     top: 0px;
     right: 0px;
   }
-  .hero-image img {
+  #lang-toggle {
+    position: fixed;
+    top: 100px;
+    right: 10px;
+  }
+  #theme-toggle {
+    position: fixed;
+    top: 70px;
+    right: 10px;
+  }
+  /* #theme-toggle,
+  #menu-toggle {
+    z-index: 1201;
+  } */
+  */ .hero-image img {
     max-width: 100%;
   }
   .profile-card {
@@ -1130,21 +1209,6 @@ body.dark-mode .newsletter input {
   .consilier-card {
     padding: 10px;
   }
-  #theme-toggle {
-    position: fixed;
-    top: 25px;
-    right: 10px;
-  }
-  #lang-toggle {
-    position: fixed;
-    top: 60px;
-    right: 10px;
-  }
-  #lang-toggle,
-  #theme-toggle,
-  .menu-toggle {
-    z-index: 1201;
-  }
   .search-form input,
   .search-form label {
     display: none;
@@ -1156,8 +1220,8 @@ body.dark-mode .newsletter input {
   .menu-toggle {
     display: block;
     position: fixed;
-    left: 15px;
-    top: 15px;
+    right: 10px;
+    top: 50px;
     z-index: 1100;
     color: var(--text);
     cursor: pointer;
