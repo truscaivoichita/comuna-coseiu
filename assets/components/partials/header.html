@@ -8,9 +8,13 @@
   />
 
   <div class="lang-theme">
-    <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
-    <button id="lang-toggle" aria-label="Language switch">RO</button>
-    <button id="backToTop">↑ Top</button>
+    <button id="theme-toggle" aria-label="Toggle dark mode">
+      <i class="fa-solid fa-moon"></i>
+    </button>
+    <button id="lang-toggle" aria-label="Language switch">
+      <i class="fa-solid fa-language"></i> RO
+    </button>
+    <button id="backToTop"><i class="fa-solid fa-arrow-up"></i> Top</button>
   </div>
 
   <form class="search-form" id="search-form">
@@ -19,100 +23,198 @@
     <button type="submit">🔍</button>
   </form>
 
-  <button class="menu-toggle" aria-label="Deschide meniul">☰</button>
+  <button class="menu-toggle" aria-label="Deschide meniul">
+    <i class="fa-solid fa-bars"></i>
+  </button>
 
   <nav aria-label="Main navigation">
     <ul>
       <!-- ================= COMUNITATE ================= -->
       <li class="dropdown comunitate">
-        <a href="#comunitate">👥 COMUNITATE</a>
+        <a href="#comunitate"><i class="fa-solid fa-users"></i> COMUNITATE</a>
 
         <div class="dropdown-menu split-menu">
           <div class="menu-left">
             <ul>
-              <li data-target="menu-cetateni" class="active">👤 Cetățeni</li>
-              <li data-target="menu-educatie">🎓 Educație</li>
-              <li data-target="menu-cultura">🎭 Cultură</li>
-              <li data-target="menu-sport">⚽ Sport</li>
-              <li data-target="menu-sanatate">🏥 Sănătate</li>
-              <li data-target="menu-social">🤝 Social</li>
-              <li data-target="menu-animale">🐾 Animale</li>
-              <li data-target="menu-turism">🧭 Turism</li>
-              <li data-target="menu-evenimente">🎉 Evenimente</li>
+              <li data-target="menu-cetateni" class="active">
+                <i class="fa-solid fa-users"></i> Cetățeni
+              </li>
+              <li data-target="menu-educatie">
+                <i class="fa-solid fa-graduation-cap"></i> Educație
+              </li>
+              <li data-target="menu-cultura">
+                <i class="fa-solid fa-masks-theater"></i> Cultură
+              </li>
+              <li data-target="menu-sport">
+                <i class="fa-solid fa-futbol"></i> Sport
+              </li>
+              <li data-target="menu-sanatate">
+                <i class="fa-solid fa-hospital"></i> Sănătate
+              </li>
+              <li data-target="menu-social">
+                <i class="fa-solid fa-handshake"></i> Social
+              </li>
+              <li data-target="menu-animale">
+                <i class="fa-solid fa-paw"></i> Animale
+              </li>
+              <li data-target="menu-turism">
+                <i class="fa-solid fa-compass"></i> Turism
+              </li>
+              <li data-target="menu-evenimente">
+                <i class="fa-solid fa-calendar-check"></i> Evenimente
+              </li>
             </ul>
           </div>
 
           <div class="menu-right">
             <div class="menu-content active" id="menu-cetateni">
-              <a href="#dezbateri_publice">💬 Dezbateri Publice</a>
-              <a href="#newsletter">📧 Newsletter</a>
-              <a href="#cetateni_onoare">🏅 Cetățeni Onoare</a>
-              <a href="#sugestii_reclamatii">📝 Sugestii Reclamații</a>
-              <a href="#bugetare_participativa">💰 Bugetare Participativă</a>
-              <a href="#proceduri_online">🖥️ Proceduri Online</a>
-              <a href="#live_webcam">📡 Live Webcam</a>
+              <a href="#dezbateri_publice"
+                ><i class="fa-solid fa-comments"></i> Dezbateri Publice</a
+              >
+              <a href="#newsletter">
+                <i class="fa-solid fa-envelope"></i> Newsletter</a
+              >
+              <a href="#cetateni_onoare"
+                ><i class="fa-solid fa-medal"></i> Cetățeni Onoare</a
+              >
+              <a href="#sugestii_reclamatii"
+                ><i class="fa-solid fa-pen"></i> Sugestii Reclamații</a
+              >
+              <a href="#bugetare_participativa"
+                ><i class="fa-solid fa-coins"></i> Bugetare Participativă</a
+              >
+              <a href="#proceduri_online"
+                ><i class="fa-solid fa-desktop"></i> Proceduri Online</a
+              >
+              <a href="#live_webcam"
+                ><i class="fa-solid fa-satellite-dish"></i> Live Webcam</a
+              >
             </div>
 
             <div class="menu-content" id="menu-educatie">
-              <a href="#transport">🚌 Transport</a>
-              <a href="#autobuze">🚍 Autobuze</a>
-              <a href="#legislatie_educatie">📚 Legislație Educație</a>
-              <a href="#crese">🏫 Creșe</a>
-              <a href="#gradinite">🎒 Grădinițe</a>
-              <a href="#scoli">🏫 Școli</a>
+              <a href="#transport">
+                <i class="fa-solid fa-bus"></i> Transport</a
+              >
+              <a href="#autobuze"
+                ><i class="fa-solid fa-bus-simple"></i> Autobuze</a
+              >
+              <a href="#legislatie_educatie"
+                ><i class="fa-solid fa-book"></i> Legislație Educație</a
+              >
+              <a href="#crese"><i class="fa-solid fa-school"></i> Creșe</a>
+              <a href="#gradinite"
+                ><i class="fa-solid fa-backpack"></i> Grădinițe</a
+              >
+              <a href="#scoli"><i class="fa-solid fa-school"></i> Școli</a>
             </div>
 
             <div class="menu-content" id="menu-cultura">
-              <a href="#biblioteci">📖 Biblioteci</a>
-              <a href="#finantari_cultura">🎨 Finanțări Cultură</a>
-              <a href="#personalitati_locale">⭐ Personalități locale</a>
-              <a href="#evenimente_culturale">🎭 Evenimente Culturale</a>
+              <a href="#biblioteci"
+                ><i class="fa-solid fa-book-open"></i> Biblioteci</a
+              >
+              <a href="#finantari_cultura"
+                ><i class="fa-solid fa-palette"></i> Finanțări Cultură</a
+              >
+              <a href="#personalitati_locale"
+                ><i class="fa-solid fa-star"></i> Personalități locale</a
+              >
+              <a href="#evenimente_culturale"
+                ><i class="fa-solid fa-masks-theater"></i> Evenimente
+                Culturale</a
+              >
             </div>
 
             <div class="menu-content" id="menu-sport">
-              <a href="#structuri_sportive">🏟️ Structuri Sportive</a>
-              <a href="#finantari_sportive">💸 Finanțări Sportive</a>
-              <a href="#baze_sportive">⚽ Baze Sportive</a>
-              <a href="#sala_sport">🏋️ Sală Sport</a>
-              <a href="#cluburi_sportive">🏆 Cluburi Sportive</a>
+              <a href="#structuri_sportive"
+                ><i class="fa-solid fa-stadium"></i> Structuri Sportive</a
+              >
+              <a href="#finantari_sportive"
+                ><i class="fa-solid fa-money-bill-wave"></i> Finanțări
+                Sportive</a
+              >
+              <a href="#baze_sportive"
+                ><i class="fa-solid fa-futbol"></i> Baze Sportive</a
+              >
+              <a href="#sala_sport"
+                ><i class="fa-solid fa-dumbbell"></i> Sală Sport</a
+              >
+              <a href="#cluburi_sportive"
+                ><i class="fa-solid fa-trophy"></i> Cluburi Sportive</a
+              >
             </div>
 
             <div class="menu-content" id="menu-sanatate">
-              <a href="#cabinete_medicale">🩺 Cabinete Medicale</a>
-              <a href="#finantari_sanatate">💊 Finanțări Sănătate</a>
-              <a href="#farmacii">💊 Farmacii</a>
-              <a href="#urgente">🚑 Urgențe</a>
+              <a href="#cabinete_medicale"
+                ><i class="fa-solid fa-stethoscope"></i> Cabinete Medicale</a
+              >
+              <a href="#finantari_sanatate"
+                ><i class="fa-solid fa-pills"></i> Finanțări Sănătate</a
+              >
+              <a href="#farmacii"><i class="fa-solid fa-pills"></i> Farmacii</a>
+              <a href="#urgente"
+                ><i class="fa-solid fa-truck-medical"></i> Urgențe</a
+              >
             </div>
 
             <div class="menu-content" id="menu-social">
-              <a href="#varstnici">👵 Vârstnici</a>
-              <a href="#adapost">🏠 Adăpost</a>
-              <a href="#ajutor_social">🤲 Ajutor Social</a>
-              <a href="#tichete_sociale">🎟️ Tichete sociale</a>
-              <a href="#stomatologie">🦷 Stomatologie</a>
+              <a href="#varstnici"
+                ><i class="fa-solid fa-person-cane"></i> Vârstnici</a
+              >
+              <a href="#adapost"><i class="fa-solid fa-house"></i> Adăpost</a>
+              <a href="#ajutor_social"
+                ><i class="fa-solid fa-hands-holding"></i> Ajutor Social</a
+              >
+              <a href="#tichete_sociale"
+                ><i class="fa-solid fa-ticket"></i> Tichete sociale</a
+              >
+              <a href="#stomatologie"
+                ><i class="fa-solid fa-tooth"></i> Stomatologie</a
+              >
             </div>
 
             <div class="menu-content" id="menu-animale">
-              <a href="#sterilizare">🐕 Sterilizare</a>
-              <a href="#adoptii">❤️ Adopții</a>
-              <a href="#boluri_apa">💧 Boluri Apă</a>
-              <a href="#adaposturi">🏡 Adăposturi</a>
-              <a href="#registru_animale">📋 Registru Animale</a>
+              <a href="#sterilizare"
+                ><i class="fa-solid fa-dog"></i> Sterilizare</a
+              >
+              <a href="#adoptii"><i class="fa-solid fa-heart"></i> Adopții</a>
+              <a href="#boluri_apa"
+                ><i class="fa-solid fa-droplet"></i> Boluri Apă</a
+              >
+              <a href="#adaposturi"
+                ><i class="fa-solid fa-house-chimney"></i> Adăposturi</a
+              >
+              <a href="#registru_animale"
+                ><i class="fa-solid fa-clipboard-list"></i> Registru Animale</a
+              >
             </div>
 
             <div class="menu-content" id="menu-turism">
-              <a href="#centru_info">ℹ️ Centru Info</a>
-              <a href="#harta">🗺️ Hartă</a>
-              <a href="#cazare">🏨 Cazare</a>
-              <a href="#visit_coseiu">📌 Visit Coșeiu</a>
-              <a href="#monumente_istorice">📍 Monumente Istorice</a>
+              <a href="#centru_info"
+                ><i class="fa-solid fa-circle-info"></i> Centru Info</a
+              >
+              <a href="#harta"><i class="fa-solid fa-map"></i> Hartă</a>
+              <a href="#cazare"><i class="fa-solid fa-hotel"></i> Cazare</a>
+              <a href="#visit_coseiu"
+                ><i class="fa-solid fa-location-pin"></i> Visit Coșeiu</a
+              >
+              <a href="#monumente_istorice"
+                ><i class="fa-solid fa-location-dot"></i> Monumente Istorice</a
+              >
             </div>
 
             <div class="menu-content" id="menu-evenimente">
-              <a href="#zilele_coseiului">🎊 Zilele Coșeiului</a>
-              <a href="#targ_craciun">🎄 Târg Crăciun</a>
-              <a href="#piata_locala">🛍️ Piața Locală</a>
-              <a href="#festivaluri">🎪 Festivaluri</a>
+              <a href="#zilele_coseiului"
+                ><i class="fa-solid fa-party-horn"></i> Zilele Coșeiului</a
+              >
+              <a href="#targ_craciun"
+                ><i class="fa-solid fa-tree"></i> Târg Crăciun</a
+              >
+              <a href="#piata_locala"
+                ><i class="fa-solid fa-bag-shopping"></i> Piața Locală</a
+              >
+              <a href="#festivaluri"
+                ><i class="fa-solid fa-tents"></i> Festivaluri</a
+              >
             </div>
           </div>
         </div>
@@ -120,40 +222,56 @@
 
       <!-- ================= LOCUIRE ================= -->
       <li class="dropdown locuire">
-        <a href="#locuire">🏡 LOCUIRE</a>
+        <a href="#locuire"><i class="fa-solid fa-house"></i> LOCUIRE</a>
 
         <div class="dropdown-menu split-menu">
           <div class="menu-left">
             <ul>
               <li data-target="menu-strategii" class="active">
-                📊 Strategii Urbane
+                <i class="fa-solid fa-chart-line"></i> Strategii Urbane
               </li>
-              <li data-target="menu-urbanism">🏗️ Urbanism</li>
-              <li data-target="menu-autorizatii_constructie">📄 Autorizații</li>
-              <li data-target="menu-strazi">🛣️ Străzi</li>
-              <li data-target="menu-locuinte">🏘️ Locuințe</li>
-              <li data-target="menu-gis">🛰️ GIS</li>
+              <li data-target="menu-urbanism">
+                <i class="fa-solid fa-building"></i> Urbanism
+              </li>
+              <li data-target="menu-autorizatii_constructie">
+                <i class="fa-solid fa-file"></i> Autorizații
+              </li>
+              <li data-target="menu-strazi">
+                <i class="fa-solid fa-road"></i> Străzi
+              </li>
+              <li data-target="menu-locuinte">
+                <i class="fa-solid fa-city"></i> Locuințe
+              </li>
+              <li data-target="menu-gis">
+                <i class="fa-solid fa-satellite"></i> GIS
+              </li>
             </ul>
           </div>
 
           <div class="menu-right">
             <div class="menu-content active" id="menu-strategii">
-              <a href="#strategii_urbane">📊 Strategii Urbane</a>
+              <a href="#strategii_urbane"
+                ><i class="fa-solid fa-chart-line"></i> Strategii Urbane</a
+              >
             </div>
             <div class="menu-content" id="menu-urbanism">
-              <a href="#urbanism">🏗️ Urbanism</a>
+              <a href="#urbanism"
+                ><i class="fa-solid fa-building"></i> Urbanism</a
+              >
             </div>
             <div class="menu-content" id="menu-autorizatii_constructie">
-              <a href="#autorizatii_constructie">📄 Autorizații Construcție</a>
+              <a href="#autorizatii_constructie"
+                ><i class="fa-solid fa-file"></i> Autorizații Construcție</a
+              >
             </div>
             <div class="menu-content" id="menu-strazi">
-              <a href="#strazi">🛣️ Străzi</a>
+              <a href="#strazi"><i class="fa-solid fa-road"></i> Străzi</a>
             </div>
             <div class="menu-content" id="menu-locuinte">
-              <a href="#locuinte">🏘️ Locuințe</a>
+              <a href="#locuinte"><i class="fa-solid fa-city"></i> Locuințe</a>
             </div>
             <div class="menu-content" id="menu-gis">
-              <a href="#gis">🛰️ GIS</a>
+              <a href="#gis"><i class="fa-solid fa-satellite"></i> GIS</a>
             </div>
           </div>
         </div>
@@ -161,70 +279,132 @@
 
       <!-- ================= ADMINISTRAȚIE ================= -->
       <li class="dropdown administratie">
-        <a href="#administratie">🏛️ ADMINISTRAȚIE</a>
+        <a href="#administratie"
+          ><i class="fa-solid fa-building-columns"></i> ADMINISTRAȚIE</a
+        >
 
         <div class="dropdown-menu split-menu">
           <div class="menu-left">
             <ul>
-              <li data-target="menu-primarie" class="active">🏢 Primărie</li>
-              <li data-target="menu-consiliu">👥 Consiliu Local</li>
-              <li data-target="menu-evidenta_persoanelor">
-                📑 Evidență Persoane
+              <li data-target="menu-primarie" class="active">
+                <i class="fa-solid fa-building"></i> Primărie
               </li>
-              <li data-target="menu-politia">🚓 Poliția Locală</li>
-              <li data-target="menu-informatii">📢 Informații Publice</li>
-              <li data-target="menu-altele">⚙️ Alte Informații</li>
+              <li data-target="menu-consiliu">
+                <i class="fa-solid fa-users"></i> Consiliu Local
+              </li>
+              <li data-target="menu-evidenta_persoanelor">
+                <i class="fa-solid fa-file-lines"></i> Evidență Persoane
+              </li>
+              <li data-target="menu-politia">
+                <i class="fa-solid fa-car-side"></i> Poliția Locală
+              </li>
+              <li data-target="menu-informatii">
+                <i class="fa-solid fa-bullhorn"></i> Informații Publice
+              </li>
+              <li data-target="menu-altele">
+                <i class="fa-solid fa-gear"></i> Alte Informații
+              </li>
             </ul>
           </div>
 
           <div class="menu-right">
             <div class="menu-content active" id="menu-primarie">
-              <a href="#primar">👤 Primar</a>
-              <a href="#viceprimar">👤 Viceprimar</a>
-              <a href="#secretar">📑 Secretar</a>
-              <a href="#organigrama">🧭 Organigramă</a>
-              <a href="#regulament">📜 Regulament</a>
-              <a href="#sediu">📍 Sediu</a>
+              <a href="#primar"><i class="fa-solid fa-user"></i> Primar</a>
+              <a href="#viceprimar"
+                ><i class="fa-solid fa-user"></i> Viceprimar</a
+              >
+              <a href="#secretar"
+                ><i class="fa-solid fa-file-lines"></i> Secretar</a
+              >
+              <a href="#organigrama"
+                ><i class="fa-solid fa-compass"></i> Organigramă</a
+              >
+              <a href="#regulament"
+                ><i class="fa-solid fa-scroll"></i> Regulament</a
+              >
+              <a href="#sediu"
+                ><i class="fa-solid fa-location-dot"></i> Sediu</a
+              >
             </div>
 
             <div class="menu-content" id="menu-consiliu">
-              <a href="#consilieri">👥 Consilieri</a>
-              <a href="#comisii">📌 Comisii</a>
-              <a href="#sedinte">🗓️ Ședințe</a>
-              <a href="#hotarari_consiliu">📜 Hotărâri consiliu</a>
+              <a href="#consilieri"
+                ><i class="fa-solid fa-users"></i> Consilieri</a
+              >
+              <a href="#comisii"
+                ><i class="fa-solid fa-location-pin"></i> Comisii</a
+              >
+              <a href="#sedinte"
+                ><i class="fa-solid fa-calendar-days"></i> Ședințe</a
+              >
+              <a href="#hotarari_consiliu"
+                ><i class="fa-solid fa-scroll"></i> Hotărâri consiliu</a
+              >
             </div>
 
             <div class="menu-content" id="menu-evidenta_persoanelor">
-              <a href="#nasteri">👶 Nașteri</a>
-              <a href="#acte">🪪 Acte</a>
-              <a href="#casatorii">💍 Căsătorii</a>
-              <a href="#divorturi">⚖️ Divorțuri</a>
-              <a href="#decese">⚰️ Decese</a>
-              <a href="#pasapoarte">🌍 Pașapoarte</a>
+              <a href="#nasteri"><i class="fa-solid fa-baby"></i> Nașteri</a>
+              <a href="#acte"><i class="fa-solid fa-file"></i> Acte</a>
+              <a href="#casatorii"
+                ><i class="fa-solid fa-ring"></i> Căsătorii</a
+              >
+              <a href="#divorturi"
+                ><i class="fa-solid fa-scale-balanced"></i> Divorțuri</a
+              >
+              <a href="#decese"><i class="fa-solid fa-cross"></i> Decese</a>
+              <a href="#pasapoarte"
+                ><i class="fa-solid fa-earth-europe"></i> Pașapoarte</a
+              >
             </div>
 
             <div class="menu-content" id="menu-politia">
-              <a href="#informatii_politie">🚓 Informații Poliție</a>
-              <a href="#atributii">📋 Atribuții</a>
-              <a href="#amenzi">💰 Amenzi</a>
-              <a href="#ridicari_auto">🚗 Ridicări Auto</a>
+              <a href="#informatii_politie"
+                ><i class="fa-solid fa-car"></i> Informații Poliție</a
+              >
+              <a href="#atributii"
+                ><i class="fa-solid fa-clipboard-list"></i> Atribuții</a
+              >
+              <a href="#amenzi"><i class="fa-solid fa-coins"></i> Amenzi</a>
+              <a href="#ridicari_auto"
+                ><i class="fa-solid fa-car-side"></i> Ridicări Auto</a
+              >
             </div>
 
             <div class="menu-content" id="menu-informatii">
-              <a href="#anunturi">📢 Anunțuri</a>
-              <a href="#concursuri">🏆 Concursuri</a>
-              <a href="#cereri">📄 Cereri</a>
-              <a href="#audiente">🗣️ Audiențe</a>
-              <a href="#contracte">📑 Contracte</a>
-              <a href="#plati_online">💳 Plăți</a>
-              <a href="#licitatii">🏛️ Licitații</a>
-              <a href="#documente">📁 Documente</a>
+              <a href="#anunturi"
+                ><i class="fa-solid fa-bullhorn"></i> Anunțuri</a
+              >
+              <a href="#concursuri"
+                ><i class="fa-solid fa-trophy"></i> Concursuri</a
+              >
+              <a href="#cereri"><i class="fa-solid fa-pen"></i> Cereri</a>
+              <a href="#audiente"
+                ><i class="fa-solid fa-comments"></i> Audiențe</a
+              >
+              <a href="#contracte"
+                ><i class="fa-solid fa-file-lines"></i> Contracte</a
+              >
+              <a href="#plati_online"
+                ><i class="fa-solid fa-credit-card"></i> Plăți</a
+              >
+              <a href="#licitatii"
+                ><i class="fa-solid fa-building-columns"></i> Licitații</a
+              >
+              <a href="#documente"
+                ><i class="fa-solid fa-folder"></i> Documente</a
+              >
             </div>
 
             <div class="menu-content" id="menu-altele">
-              <a href="#transformare_digitala">💻 Transformare Digitală</a>
-              <a href="#servicii_online">🖥️ Servicii Online</a>
-              <a href="#transparenta">👁 Transparență</a>
+              <a href="#transformare_digitala"
+                ><i class="fa-solid fa-laptop"></i> Transformare Digitală</a
+              >
+              <a href="#servicii_online"
+                ><i class="fa-solid fa-laptop"></i> Servicii Online</a
+              >
+              <a href="#transparenta"
+                ><i class="fa-solid fa-eye"></i> Transparență</a
+              >
             </div>
           </div>
         </div>
@@ -232,48 +412,82 @@
 
       <!-- ================= MEDIU ================= -->
       <li class="dropdown mediu">
-        <a href="#mediu">🌱 MEDIU</a>
+        <a href="#mediu"><i class="fa-solid fa-leaf"></i> MEDIU</a>
 
         <div class="dropdown-menu split-menu">
           <div class="menu-left">
             <ul>
               <li data-target="menu-salubritate" class="active">
-                🗑️ Salubritate
+                <i class="fa-solid fa-trash"></i> Salubritate
               </li>
-              <li data-target="menu-curatenie">🧹 Curățenie</li>
-              <li data-target="menu-spatii_verzi">🌳 Spații Verzi</li>
-              <li data-target="menu-energie">⚡ Energie</li>
-              <li data-target="menu-altele_mediu">🌍 Altele Mediu</li>
+              <li data-target="menu-curatenie">
+                <i class="fa-solid fa-broom"></i> Curățenie
+              </li>
+              <li data-target="menu-spatii_verzi">
+                <i class="fa-solid fa-tree"></i> Spații Verzi
+              </li>
+              <li data-target="menu-energie">
+                <i class="fa-solid fa-bolt"></i> Energie
+              </li>
+              <li data-target="menu-altele_mediu">
+                <i class="fa-solid fa-earth-europe"></i> Altele Mediu
+              </li>
             </ul>
           </div>
 
           <div class="menu-right">
             <div class="menu-content active" id="menu-salubritate">
-              <a href="#colectare_selectiva">♻️ Colectare Selectivă</a>
-              <a href="#salubritate_menajera">🗑️ Salubritate Menajeră</a>
-              <a href="#salubritate_stradala">🧹 Salubritate Stradală</a>
-              <a href="#dezapezire">❄️ Dezăpezire</a>
+              <a href="#colectare_selectiva"
+                ><i class="fa-solid fa-recycle"></i> Colectare Selectivă</a
+              >
+              <a href="#salubritate_menajera"
+                ><i class="fa-solid fa-trash"></i> Salubritate Menajeră</a
+              >
+              <a href="#salubritate_stradala"
+                ><i class="fa-solid fa-broom"></i> Salubritate Stradală</a
+              >
+              <a href="#dezapezire"
+                ><i class="fa-solid fa-snowflake"></i> Dezăpezire</a
+              >
             </div>
 
             <div class="menu-content" id="menu-curatenie">
-              <a href="#cereri_specifice">📝 Cereri Specifice</a>
-              <a href="#curatenie_primavara">🌸 Curățenie Primăvară</a>
-              <a href="#deratizare">🐀 Deratizare</a>
+              <a href="#cereri_specifice"
+                ><i class="fa-solid fa-pen"></i> Cereri Specifice</a
+              >
+              <a href="#curatenie_primavara"
+                ><i class="fa-solid fa-seedling"></i> Curățenie Primăvară</a
+              >
+              <a href="#deratizare"
+                ><i class="fa-solid fa-rat"></i> Deratizare</a
+              >
             </div>
 
             <div class="menu-content" id="menu-spatii_verzi">
-              <a href="#adopta_spatiu">🌿 Adoptă Spațiu</a>
-              <a href="#ambrozie">🌾 Ambrozie</a>
+              <a href="#adopta_spatiu"
+                ><i class="fa-solid fa-leaf"></i> Adoptă Spațiu</a
+              >
+              <a href="#ambrozie"
+                ><i class="fa-solid fa-wheat-awn"></i> Ambrozie</a
+              >
             </div>
 
             <div class="menu-content" id="menu-energie">
-              <a href="#panouri_fotovoltaice">☀️ Panouri Fotovoltaice</a>
-              <a href="#finantare">💰 Finanțare</a>
+              <a href="#panouri_fotovoltaice"
+                ><i class="fa-solid fa-sun"></i> Panouri Fotovoltaice</a
+              >
+              <a href="#finantare"
+                ><i class="fa-solid fa-coins"></i> Finanțare</a
+              >
             </div>
 
             <div class="menu-content" id="menu-altele_mediu">
-              <a href="#calitatea_aerului">🌫️ Calitatea Aerului</a>
-              <a href="#harta_zgomot">🔊 Harta Zgomot</a>
+              <a href="#calitatea_aerului"
+                ><i class="fa-solid fa-smog"></i> Calitatea Aerului</a
+              >
+              <a href="#harta_zgomot"
+                ><i class="fa-solid fa-volume-high"></i> Harta Zgomot</a
+              >
             </div>
           </div>
         </div>
@@ -281,38 +495,55 @@
 
       <!-- ================= MOBILITATE ================= -->
       <li class="dropdown mobilitate">
-        <a href="#mobilitate">🚗 MOBILITATE</a>
+        <a href="#mobilitate"><i class="fa-solid fa-car"></i> MOBILITATE</a>
 
         <div class="dropdown-menu split-menu">
           <div class="menu-left">
             <ul>
               <li data-target="menu-plan_mobilitate" class="active">
-                📍 Plan Mobilitate
+                <i class="fa-solid fa-location-dot"></i> Plan Mobilitate
               </li>
-              <li data-target="menu-parcari">🅿️ Parcări</li>
-              <li data-target="menu-transport_public">🚌 Transport Public</li>
-              <li data-target="menu-biciclete">🚲 Biciclete</li>
+              <li data-target="menu-parcari">
+                <i class="fa-solid fa-square-parking"></i> Parcări
+              </li>
+              <li data-target="menu-transport_public">
+                <i class="fa-solid fa-bus"></i> Transport Public
+              </li>
+              <li data-target="menu-biciclete">
+                <i class="fa-solid fa-bicycle"></i> Biciclete
+              </li>
               <li data-target="menu-siguranta_circulatiei">
-                🚦 Siguranța circulației
+                <i class="fa-solid fa-traffic-light"></i> Siguranța circulației
               </li>
             </ul>
           </div>
 
           <div class="menu-right">
             <div class="menu-content active" id="menu-plan_mobilitate">
-              <a href="#plan_mobilitate">📍 Plan Mobilitate</a>
+              <a href="#plan_mobilitate"
+                ><i class="fa-solid fa-location-dot"></i> Plan Mobilitate</a
+              >
             </div>
             <div class="menu-content" id="menu-parcari">
-              <a href="#parcari">🅿️ Parcări</a>
+              <a href="#parcari"
+                ><i class="fa-solid fa-square-parking"></i> Parcări</a
+              >
             </div>
             <div class="menu-content" id="menu-transport_public">
-              <a href="#transport_public">🚌 Transport Public</a>
+              <a href="#transport_public"
+                ><i class="fa-solid fa-bus"></i> Transport Public</a
+              >
             </div>
             <div class="menu-content" id="menu-biciclete">
-              <a href="#biciclete">🚲 Biciclete</a>
+              <a href="#biciclete"
+                ><i class="fa-solid fa-bicycle"></i> Biciclete</a
+              >
             </div>
             <div class="menu-content" id="menu-siguranta_circulatiei">
-              <a href="#siguranta_circulatiei">🚦 Siguranța Circulației</a>
+              <a href="#siguranta_circulatiei"
+                ><i class="fa-solid fa-traffic-light"></i> Siguranța
+                Circulației</a
+              >
             </div>
           </div>
         </div>
@@ -320,40 +551,60 @@
 
       <!-- ================= ECONOMIE ================= -->
       <li class="dropdown economie">
-        <a href="#economie">💰 ECONOMIE</a>
+        <a href="#economie"><i class="fa-solid fa-coins"></i> ECONOMIE</a>
 
         <div class="dropdown-menu split-menu">
           <div class="menu-left">
             <ul>
               <li data-target="menu-taxe_impozite" class="active">
-                📊 Taxe Impozite
+                <i class="fa-solid fa-chart-line"></i> Taxe Impozite
               </li>
-              <li data-target="menu-plati_online">💳 Plăți Online</li>
-              <li data-target="menu-buget">📒 Buget</li>
-              <li data-target="menu-achizitii">🏛️ Achiziții</li>
-              <li data-target="menu-proiecte_ue">🇪🇺 Proiecte UE</li>
-              <li data-target="menu-investitori">🏭 Investitori</li>
+              <li data-target="menu-plati_online">
+                <i class="fa-solid fa-credit-card"></i> Plăți Online
+              </li>
+              <li data-target="menu-buget">
+                <i class="fa-solid fa-book"></i> Buget
+              </li>
+              <li data-target="menu-achizitii">
+                <i class="fa-solid fa-building-columns"></i> Achiziții
+              </li>
+              <li data-target="menu-proiecte_ue">
+                <i class="fa-solid fa-flag"></i> Proiecte UE
+              </li>
+              <li data-target="menu-investitori">
+                <i class="fa-solid fa-industry"></i> Investitori
+              </li>
             </ul>
           </div>
 
           <div class="menu-right">
             <div class="menu-content active" id="menu-taxe_impozite">
-              <a href="#taxe_impozite">📊 Taxe Impozite</a>
+              <a href="#taxe_impozite"
+                ><i class="fa-solid fa-chart-line"></i> Taxe Impozite</a
+              >
             </div>
             <div class="menu-content" id="menu-plati_online">
-              <a href="#plati_online">💳 Plăți Online</a>
+              <a href="#plati_online"
+                ><i class="fa-solid fa-credit-card"></i> Plăți Online</a
+              >
             </div>
             <div class="menu-content" id="menu-buget">
-              <a href="#buget">📒 Buget</a>
+              <a href="#buget"><i class="fa-solid fa-book"></i> Buget</a>
             </div>
             <div class="menu-content" id="menu-achizitii">
-              <a href="#achizitii">🏛️ Achiziții</a>
+              <a href="#achizitii"
+                ><i class="fa-solid fa-building-columns"></i> Achiziții</a
+              >
             </div>
             <div class="menu-content" id="menu-proiecte_ue">
-              <a href="#proiecte_ue">🇪🇺 Proiecte UE</a>
+              <a href="#proiecte_ue"
+                ><i class="fa-solid fa-flag"></i> Proiecte UE</a
+              >
             </div>
             <div class="menu-content" id="menu-investitori">
-              <a href="#investitori">🏭 Investitori</a>
+              <a href="#investitori"
+                ><i class="fa-solid fa-industry"></i> Investitori</a
+              >
             </div>
           </div>
         </div>
@@ -361,40 +612,60 @@
 
       <!-- ================= MONITOR ================= -->
       <li class="dropdown monitor">
-        <a href="#monitor">📄 MONITOR</a>
+        <a href="#monitor"><i class="fa-solid fa-file-lines"></i> MONITOR</a>
 
         <div class="dropdown-menu split-menu">
           <div class="menu-left">
             <ul>
-              <li data-target="menu-statut" class="active">📜 Statut</li>
-              <li data-target="menu-regulamente">📘 Regulamente</li>
-              <li data-target="menu-hotarari">📑 Hotărâri</li>
-              <li data-target="menu-dispozitii">📋 Dispoziții</li>
-              <li data-target="menu-documente_financiare">
-                💰 Documente Financiare
+              <li data-target="menu-statut" class="active">
+                <i class="fa-solid fa-scroll"></i> Statut
               </li>
-              <li data-target="menu-alte_documente">📁 Alte Documente</li>
+              <li data-target="menu-regulamente">
+                <i class="fa-solid fa-book"></i> Regulamente
+              </li>
+              <li data-target="menu-hotarari">
+                <i class="fa-solid fa-file-lines"></i> Hotărâri
+              </li>
+              <li data-target="menu-dispozitii">
+                <i class="fa-solid fa-clipboard"></i> Dispoziții
+              </li>
+              <li data-target="menu-documente_financiare">
+                <i class="fa-solid fa-coins"></i> Documente Financiare
+              </li>
+              <li data-target="menu-alte_documente">
+                <i class="fa-solid fa-folder"></i> Alte Documente
+              </li>
             </ul>
           </div>
 
           <div class="menu-right">
             <div class="menu-content active" id="menu-statut">
-              <a href="#statut">📜 Statut</a>
+              <a href="#statut"> <i class="fa-solid fa-scroll"></i> Statut</a>
             </div>
             <div class="menu-content" id="menu-regulamente">
-              <a href="#regulamente">📘 Regulamente</a>
+              <a href="#regulamente"
+                ><i class="fa-solid fa-book"></i> Regulamente</a
+              >
             </div>
             <div class="menu-content" id="menu-hotarari">
-              <a href="#hotarari">📑 Hotărâri</a>
+              <a href="#hotarari"
+                ><i class="fa-solid fa-file-lines"></i> Hotărâri</a
+              >
             </div>
             <div class="menu-content" id="menu-dispozitii">
-              <a href="#dispozitii">📋 Dispoziții</a>
+              <a href="#dispozitii"
+                ><i class="fa-solid fa-clipboard"></i> Dispoziții</a
+              >
             </div>
             <div class="menu-content" id="menu-documente_financiare">
-              <a href="#documente_financiare">💰 Documente Financiare</a>
+              <a href="#documente_financiare"
+                ><i class="fa-solid fa-coins"></i> Documente Financiare</a
+              >
             </div>
             <div class="menu-content" id="menu-alte_documente">
-              <a href="#alte_documente">📁 Alte Documente</a>
+              <a href="#alte_documente"
+                ><i class="fa-solid fa-folder"></i> Alte Documente</a
+              >
             </div>
           </div>
         </div>

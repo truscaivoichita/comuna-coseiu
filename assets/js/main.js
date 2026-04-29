@@ -177,12 +177,25 @@ function applyNavLang() {
     searchInput.placeholder = navDict.cauta;
   }
   document.querySelectorAll(".back-button").forEach((btn) => {
-    btn.textContent = navDict.inapoi;
+    btn.innerHTML = `<i class="fa-solid fa-arrow-left"></i> ${navDict.inapoi}`;
   });
   document.querySelectorAll("nav>ul>li.dropdown>a").forEach((el) => {
     const key = el.getAttribute("href").replace("#", "");
     if (navDict.menu?.[key]) {
-      el.textContent = navDict.menu[key];
+      let icon = el.dataset.icon;
+      if (!icon) {
+        icon = el.querySelector("i")?.outerHTML || "";
+        el.dataset.icon = icon; // cache it
+      }
+      const menuItem = navDict.menu?.[key]?.label || key;
+      if (menuItem) {
+        let icon = el.dataset.icon;
+        if (!icon) {
+          icon = el.querySelector("i")?.outerHTML || "";
+          el.dataset.icon = icon;
+        }
+        el.innerHTML = `${icon} ${submenuObj.title}`;
+      }
     }
   });
   requestAnimationFrame(() => {
@@ -204,11 +217,19 @@ function applySubmenuLang() {
     const submenuObj = navDict?.submenu?.[category]?.[key];
     if (!submenuObj) return;
     // 🔥 TITLE (meniul din stânga)
-    const textNode = [...el.childNodes].find(
-      (n) => n.nodeType === Node.TEXT_NODE,
-    );
-    if (textNode) {
-      textNode.textContent = " " + submenuObj.title;
+    let icon = el.dataset.icon;
+    if (!icon) {
+      icon = el.querySelector("i")?.outerHTML || "";
+      el.dataset.icon = icon; // cache it
+    }
+    const menuItem = navDict.menu?.[key]?.label || key;
+    if (menuItem) {
+      let icon = el.dataset.icon;
+      if (!icon) {
+        icon = el.querySelector("i")?.outerHTML || "";
+        el.dataset.icon = icon;
+      }
+      el.innerHTML = `${icon} ${submenuObj.title}`;
     }
   });
   // 🔥 RIGHT SIDE (linkuri)
@@ -225,12 +246,8 @@ function applySubmenuLang() {
     const links = menu.querySelectorAll("a");
     links.forEach((link, index) => {
       if (submenuObj.links[index]) {
-        const textNode = [...link.childNodes].find(
-          (n) => n.nodeType === Node.TEXT_NODE,
-        );
-        if (textNode) {
-          textNode.textContent = " " + submenuObj.links[index].label;
-        }
+        const icon = link.querySelector("i")?.outerHTML || "";
+        link.innerHTML = `${icon} ${submenuObj.links[index].label}`;
       }
     });
   });
@@ -357,7 +374,7 @@ async function loadConsilieri() {
     consilieri.forEach((c) => {
       const card = document.createElement("div");
       card.className = "card consilier-card";
-      card.innerHTML = `<h5><i class="fa-solid fa-user"></i> ${c.name}</h5><p><strong>Partid:</strong> ${c.partid}</p><p><strong>Mandat:</strong> ${c.mandat}</p><p><i class="fa-solid fa-phone"></i> ${c.tel}</p><p><i class="fa-solid fa-envelope"></i> ${c.email}</p><a href="${c.avere}" target="_blank" class="btn-link btn-section">📄 Declarația de avere</a><a href="${c.interese}" target="_blank" class="btn-link btn-section">📄 Declarația de interese</a>`;
+      card.innerHTML = `<h5><i class="fa-solid fa-user"></i> ${c.name}</h5><p><strong>Partid:</strong> ${c.partid}</p><p><strong>Mandat:</strong> ${c.mandat}</p><p><i class="fa-solid fa-phone"></i> ${c.tel}</p><p><i class="fa-solid fa-envelope"></i> ${c.email}</p><a href="${c.avere}" target="_blank" class="btn-link btn-section"><i class="fa-solid fa-file-lines"></i> Declarația de avere</a><a href="${c.interese}" target="_blank" class="btn-link btn-section"><i class="fa-solid fa-file-lines"></i> Declarația de interese</a>`;
       container.appendChild(card);
     });
   } catch (err) {
@@ -370,13 +387,18 @@ function initThemeToggle() {
   const saved = localStorage.getItem("theme");
   if (saved === "dark") {
     document.body.classList.add("dark-mode");
-    btn.textContent = "☀️";
+    btn.innerHTML = isDark
+      ? '<i class="fa-solid fa-sun"></i>'
+      : '<i class="fa-solid fa-moon"></i>';
   }
   btn.addEventListener("click", () => {
     document.body.classList.toggle("dark-mode");
     const isDark = document.body.classList.contains("dark-mode");
     localStorage.setItem("theme", isDark ? "dark" : "light");
-    btn.textContent = isDark ? "☀️" : "🌙";
+    if (saved === "dark") {
+      document.body.classList.add("dark-mode");
+      btn.innerHTML = '<i class="fa-solid fa-sun"></i>';
+    }
   });
 }
 async function loadComponent(id, path) {

@@ -3,7 +3,10 @@
   "inapoi": "← Înapoi",
 
   "menu": {
-    "comunitate": "👥 COMUNITATE",
+    "comunitate": {
+      "label": "COMUNITATE",
+      "icon": "fa-users"
+    },
     "locuire": "🏡 LOCUIRE",
     "administratie": "🏛️ ADMINISTRAȚIE",
     "mediu": "🌱 MEDIU",
