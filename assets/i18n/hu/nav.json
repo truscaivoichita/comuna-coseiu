@@ -1,329 +1,628 @@
 {
-  "cauta": "🔎 Keresés...",
-  "inapoi": "← Vissza",
+  "cauta": "Keresés...",
+  "inapoi": "Vissza",
+
   "menu": {
-    "comunitate": "👥 KÖZÖSSÉG",
-    "locuire": "🏡 LAKHATÁS",
-    "administratie": "🏛️ KÖZIGAZGATÁS",
-    "mediu": "🌱 KÖRNYEZET",
-    "mobilitate": "🚗 MOBILITÁS",
-    "economie": "💰 GAZDASÁG",
-    "monitor": "📄 KÖZLÖNY"
+    "comunitate": { "label": "KÖZÖSSÉG", "icon": "fa-users" },
+    "locuire": { "label": "LAKÓKÖRNYEZET", "icon": "fa-house" },
+    "administratie": { "label": "KÖZIGAZGATÁS", "icon": "fa-building-columns" },
+    "mediu": { "label": "KÖRNYEZET", "icon": "fa-leaf" },
+    "mobilitate": { "label": "MOBILITÁS", "icon": "fa-car" },
+    "economie": { "label": "GAZDASÁG", "icon": "fa-coins" },
+    "monitor": { "label": "DOKUMENTUMOK", "icon": "fa-file-lines" }
   },
+
   "submenu": {
     "comunitate": {
       "cetateni": {
-        "title": "👤 Állampolgárok",
+        "title": "Lakosok",
+        "icon": "fa-users",
         "links": [
-          { "key": "dezbateri_publice", "label": "💬 Nyilvános viták" },
-          { "key": "newsletter", "label": "📧 Hírlevél" },
-          { "key": "cetateni_onoare", "label": "🏅 Díszpolgárok" },
+          {
+            "key": "dezbateri_publice",
+            "label": "Közviták",
+            "icon": "fa-comments"
+          },
+          { "key": "newsletter", "label": "Hírlevél", "icon": "fa-envelope" },
+          {
+            "key": "cetateni_onoare",
+            "label": "Díszpolgárok",
+            "icon": "fa-medal"
+          },
           {
             "key": "sugestii_reclamatii",
-            "label": "📝 Javaslatok és panaszok"
+            "label": "Javaslatok és panaszok",
+            "icon": "fa-pen"
           },
           {
             "key": "bugetare_participativa",
-            "label": "💰 Részvételi költségvetés"
+            "label": "Részvételi költségvetés",
+            "icon": "fa-coins"
           },
-          { "key": "proceduri_online", "label": "🖥️ Online szolgáltatások" },
-          { "key": "live_webcam", "label": "📡 Élő webkamera" }
+          {
+            "key": "proceduri_online",
+            "label": "Online ügyintézés",
+            "icon": "fa-desktop"
+          },
+          {
+            "key": "live_webcam",
+            "label": "Élő kamera",
+            "icon": "fa-satellite-dish"
+          }
         ]
       },
       "educatie": {
-        "title": "🎓 Oktatás",
+        "title": "Oktatás",
+        "icon": "fa-graduation-cap",
         "links": [
-          { "key": "transport", "label": "🚌 Szállítás" },
-          { "key": "autobuze", "label": "🚍 Buszok" },
-          { "key": "legislatie_educatie", "label": "📚 Oktatási jogszabályok" },
-          { "key": "crese", "label": "🏫 Bölcsődék" },
-          { "key": "gradinite", "label": "🎒 Óvodák" },
-          { "key": "scoli", "label": "🏫 Iskolák" }
+          { "key": "transport", "label": "Szállítás", "icon": "fa-bus" },
+          { "key": "autobuze", "label": "Autóbuszok", "icon": "fa-bus-simple" },
+          {
+            "key": "legislatie_educatie",
+            "label": "Oktatási jogszabályok",
+            "icon": "fa-book"
+          },
+          { "key": "crese", "label": "Bölcsődék", "icon": "fa-school" },
+          { "key": "gradinite", "label": "Óvodák", "icon": "fa-backpack" },
+          { "key": "scoli", "label": "Iskolák", "icon": "fa-school" }
         ]
       },
       "cultura": {
-        "title": "🎭 Kultúra",
+        "title": "Kultúra",
+        "icon": "fa-masks-theater",
         "links": [
-          { "key": "biblioteci", "label": "📖 Könyvtárak" },
-          { "key": "finantari_cultura", "label": "🎨 Kulturális támogatások" },
-          { "key": "personalitati_locale", "label": "⭐ Helyi személyiségek" },
-          { "key": "evenimente_culturale", "label": "🎭 Kulturális események" }
+          {
+            "key": "biblioteci",
+            "label": "Könyvtárak",
+            "icon": "fa-book-open"
+          },
+          {
+            "key": "finantari_cultura",
+            "label": "Kulturális támogatások",
+            "icon": "fa-palette"
+          },
+          {
+            "key": "personalitati_locale",
+            "label": "Helyi személyiségek",
+            "icon": "fa-star"
+          },
+          {
+            "key": "evenimente_culturale",
+            "label": "Kulturális események",
+            "icon": "fa-masks-theater"
+          }
         ]
       },
       "sport": {
-        "title": "⚽ Sport",
+        "title": "Sport",
+        "icon": "fa-futbol",
         "links": [
-          { "key": "structuri_sportive", "label": "🏟️ Sportlétesítmények" },
-          { "key": "finantari_sportive", "label": "💸 Sporttámogatások" },
-          { "key": "baze_sportive", "label": "⚽ Sportbázisok" },
-          { "key": "sala_sport", "label": "🏋️ Sportcsarnokok" },
-          { "key": "cluburi_sportive", "label": "🏆 Sportklubok" }
+          {
+            "key": "structuri_sportive",
+            "label": "Sportstruktúrák",
+            "icon": "fa-stadium"
+          },
+          {
+            "key": "finantari_sportive",
+            "label": "Sporttámogatások",
+            "icon": "fa-money-bill-wave"
+          },
+          {
+            "key": "baze_sportive",
+            "label": "Sportlétesítmények",
+            "icon": "fa-futbol"
+          },
+          {
+            "key": "sala_sport",
+            "label": "Sportcsarnok",
+            "icon": "fa-dumbbell"
+          },
+          {
+            "key": "cluburi_sportive",
+            "label": "Sportklubok",
+            "icon": "fa-trophy"
+          }
         ]
       },
       "sanatate": {
-        "title": "🏥 Egészség",
+        "title": "Egészségügy",
+        "icon": "fa-hospital",
         "links": [
-          { "key": "cabinete_medicale", "label": "🩺 Orvosi rendelők" },
+          {
+            "key": "cabinete_medicale",
+            "label": "Orvosi rendelők",
+            "icon": "fa-stethoscope"
+          },
           {
             "key": "finantari_sanatate",
-            "label": "💊 Egészségügyi támogatások"
+            "label": "Egészségügyi támogatások",
+            "icon": "fa-pills"
           },
-          { "key": "farmacii", "label": "💊 Gyógyszertárak" },
-          { "key": "urgente", "label": "🚑 Sürgősség" }
+          { "key": "farmacii", "label": "Gyógyszertárak", "icon": "fa-pills" },
+          {
+            "key": "urgente",
+            "label": "Sürgősségi ellátás",
+            "icon": "fa-truck-medical"
+          }
         ]
       },
       "social": {
-        "title": "🤝 Szociális",
+        "title": "Szociális",
+        "icon": "fa-handshake",
         "links": [
-          { "key": "varstnici", "label": "👵 Idősek" },
-          { "key": "adapost", "label": "🏠 Menedék" },
-          { "key": "ajutor_social", "label": "🤲 Szociális segítség" },
-          { "key": "tichete_sociale", "label": "🎟️ Szociális utalványok" },
-          { "key": "stomatologie", "label": "🦷 Fogászat" }
+          { "key": "varstnici", "label": "Idősek", "icon": "fa-person-cane" },
+          { "key": "adapost", "label": "Menhely", "icon": "fa-house" },
+          {
+            "key": "ajutor_social",
+            "label": "Szociális segély",
+            "icon": "fa-hands-holding"
+          },
+          {
+            "key": "tichete_sociale",
+            "label": "Szociális utalványok",
+            "icon": "fa-ticket"
+          },
+          { "key": "stomatologie", "label": "Fogászat", "icon": "fa-tooth" }
         ]
       },
       "animale": {
-        "title": "🐾 Állatok",
+        "title": "Állatok",
+        "icon": "fa-paw",
         "links": [
-          { "key": "sterilizare", "label": "🐕 Ivartalanítás" },
-          { "key": "adoptii", "label": "❤️ Örökbefogadás" },
-          { "key": "boluri_apa", "label": "💧 Itatók" },
-          { "key": "adaposturi", "label": "🏡 Menhelyek" },
-          { "key": "registru_animale", "label": "📋 Állatnyilvántartás" }
+          { "key": "sterilizare", "label": "Ivartalanítás", "icon": "fa-dog" },
+          { "key": "adoptii", "label": "Örökbefogadás", "icon": "fa-heart" },
+          { "key": "boluri_apa", "label": "Vizes tálak", "icon": "fa-droplet" },
+          {
+            "key": "adaposturi",
+            "label": "Állatmenhelyek",
+            "icon": "fa-house-chimney"
+          },
+          {
+            "key": "registru_animale",
+            "label": "Állatnyilvántartás",
+            "icon": "fa-clipboard-list"
+          }
         ]
       },
       "turism": {
-        "title": "🧭 Turizmus",
+        "title": "Turizmus",
+        "icon": "fa-compass",
         "links": [
-          { "key": "centru_info", "label": "ℹ️ Információs központ" },
-          { "key": "harta", "label": "🗺️ Térkép" },
-          { "key": "cazare", "label": "🏨 Szállás" },
-          { "key": "visit_coseiu", "label": "📌 Coșeiu látogatása" },
-          { "key": "monumente_istorice", "label": "📍 Történelmi műemlékek" }
+          {
+            "key": "centru_info",
+            "label": "Információs központ",
+            "icon": "fa-circle-info"
+          },
+          { "key": "harta", "label": "Térkép", "icon": "fa-map" },
+          { "key": "cazare", "label": "Szállás", "icon": "fa-hotel" },
+          {
+            "key": "visit_coseiu",
+            "label": "Visit Coșeiu",
+            "icon": "fa-location-pin"
+          },
+          {
+            "key": "monumente_istorice",
+            "label": "Műemlékek",
+            "icon": "fa-location-dot"
+          }
         ]
       },
       "evenimente": {
-        "title": "🎉 Események",
+        "title": "Események",
+        "icon": "fa-calendar-check",
         "links": [
-          { "key": "zilele_coseiului", "label": "🎊 Coșeiu napok" },
-          { "key": "targ_craciun", "label": "🎄 Karácsonyi vásár" },
-          { "key": "piata_locala", "label": "🛍️ Helyi piac" },
-          { "key": "festivaluri", "label": "🎪 Fesztiválok" }
+          {
+            "key": "zilele_coseiului",
+            "label": "Coșeiu napjai",
+            "icon": "fa-party-horn"
+          },
+          {
+            "key": "targ_craciun",
+            "label": "Karácsonyi vásár",
+            "icon": "fa-tree"
+          },
+          {
+            "key": "piata_locala",
+            "label": "Helyi piac",
+            "icon": "fa-bag-shopping"
+          },
+          { "key": "festivaluri", "label": "Fesztiválok", "icon": "fa-tents" }
         ]
       }
     },
+
     "locuire": {
       "strategii": {
-        "title": "📊 Városfejlesztési stratégiák",
+        "title": "Városfejlesztési stratégiák",
+        "icon": "fa-chart-line",
         "links": [
           {
             "key": "strategii_urbane",
-            "label": "📊 Városfejlesztési stratégiák"
+            "label": "Városfejlesztési stratégiák",
+            "icon": "fa-chart-line"
           }
         ]
       },
       "urbanism": {
-        "title": "🏗️ Városrendezés",
-        "links": [{ "key": "urbanism", "label": "🏗️ Városrendezés" }]
+        "title": "Városrendezés",
+        "icon": "fa-city",
+        "links": [
+          { "key": "urbanism", "label": "Városrendezés", "icon": "fa-city" }
+        ]
       },
       "autorizatii_constructie": {
-        "title": "📄 Építési engedélyek",
+        "title": "Építési engedélyek",
+        "icon": "fa-file",
         "links": [
-          { "key": "autorizatii_constructie", "label": "📄 Építési engedélyek" }
+          {
+            "key": "autorizatii_constructie",
+            "label": "Építési engedélyek",
+            "icon": "fa-file"
+          }
         ]
       },
       "strazi": {
-        "title": "🛣️ Utcák",
-        "links": [{ "key": "strazi", "label": "🛣️ Utcák" }]
+        "title": "Utcák",
+        "icon": "fa-road",
+        "links": [{ "key": "strazi", "label": "Utcák", "icon": "fa-road" }]
       },
       "locuinte": {
-        "title": "🏘️ Lakások",
-        "links": [{ "key": "locuinte", "label": "🏘️ Lakások" }]
+        "title": "Lakások",
+        "icon": "fa-building",
+        "links": [
+          { "key": "locuinte", "label": "Lakások", "icon": "fa-building" }
+        ]
       },
       "gis": {
-        "title": "🛰️ GIS",
-        "links": [{ "key": "gis", "label": "🛰️ GIS" }]
+        "title": "GIS",
+        "icon": "fa-satellite",
+        "links": [{ "key": "gis", "label": "GIS", "icon": "fa-satellite" }]
       }
     },
+
     "administratie": {
       "primarie": {
-        "title": "🏢 Polgármesteri hivatal",
+        "title": "Polgármesteri hivatal",
+        "icon": "fa-building-columns",
         "links": [
-          { "key": "primar", "label": "👤 Polgármester" },
-          { "key": "viceprimar", "label": "👤 Alpolgármester" },
-          { "key": "secretar", "label": "📑 Jegyző" },
-          { "key": "organigrama", "label": "🧭 Szervezeti felépítés" },
-          { "key": "regulament", "label": "📜 Szabályzat" },
-          { "key": "sediu", "label": "📍 Székhely" }
+          { "key": "primar", "label": "Polgármester", "icon": "fa-user" },
+          { "key": "viceprimar", "label": "Alpolgármester", "icon": "fa-user" },
+          { "key": "secretar", "label": "Jegyző", "icon": "fa-file-signature" },
+          {
+            "key": "organigrama",
+            "label": "Szervezeti felépítés",
+            "icon": "fa-sitemap"
+          },
+          { "key": "regulament", "label": "Szabályzat", "icon": "fa-scroll" },
+          { "key": "sediu", "label": "Székhely", "icon": "fa-location-dot" }
         ]
       },
       "consiliu": {
-        "title": "👥 Helyi tanács",
+        "title": "Helyi tanács",
+        "icon": "fa-users",
         "links": [
-          { "key": "consilieri", "label": "👥 Tanácsosok" },
-          { "key": "comisii", "label": "📌 Bizottságok" },
-          { "key": "sedinte", "label": "🗓️ Ülések" },
-          { "key": "hotarari_consiliu", "label": "📜 Határozatok" }
+          { "key": "consilieri", "label": "Tanácsosok", "icon": "fa-users" },
+          {
+            "key": "comisii",
+            "label": "Bizottságok",
+            "icon": "fa-diagram-project"
+          },
+          { "key": "sedinte", "label": "Ülések", "icon": "fa-calendar" },
+          {
+            "key": "hotarari_consiliu",
+            "label": "Határozatok",
+            "icon": "fa-file-lines"
+          }
         ]
       },
       "evidenta_persoanelor": {
-        "title": "📑 Népességnyilvántartás",
+        "title": "Népességnyilvántartás",
+        "icon": "fa-id-card",
         "links": [
-          { "key": "nasteri", "label": "👶 Születések" },
-          { "key": "acte", "label": "🪪 Okmányok" },
-          { "key": "casatorii", "label": "💍 Házasságok" },
-          { "key": "divorturi", "label": "⚖️ Válások" },
-          { "key": "decese", "label": "⚰️ Halálozások" },
-          { "key": "pasapoarte", "label": "🌍 Útlevelek" }
+          { "key": "nasteri", "label": "Születések", "icon": "fa-baby" },
+          { "key": "acte", "label": "Okmányok", "icon": "fa-id-card" },
+          { "key": "casatorii", "label": "Házasságok", "icon": "fa-ring" },
+          {
+            "key": "divorturi",
+            "label": "Válások",
+            "icon": "fa-scale-balanced"
+          },
+          { "key": "decese", "label": "Halálozások", "icon": "fa-cross" },
+          { "key": "pasapoarte", "label": "Útlevelek", "icon": "fa-passport" }
         ]
       },
       "politia": {
-        "title": "🚓 Rendőrség",
+        "title": "Rendőrség",
+        "icon": "fa-shield-halved",
         "links": [
-          { "key": "informatii_politie", "label": "🚓 Információk" },
-          { "key": "atributii", "label": "📋 Feladatok" },
-          { "key": "amenzi", "label": "💰 Bírságok" },
-          { "key": "ridicari_auto", "label": "🚗 Autóelszállítás" }
+          {
+            "key": "informatii_politie",
+            "label": "Információk",
+            "icon": "fa-circle-info"
+          },
+          { "key": "atributii", "label": "Feladatok", "icon": "fa-list" },
+          { "key": "amenzi", "label": "Bírságok", "icon": "fa-money-bill" },
+          {
+            "key": "ridicari_auto",
+            "label": "Autóelszállítás",
+            "icon": "fa-car"
+          }
         ]
       },
       "informatii": {
-        "title": "📢 Információk",
+        "title": "Információk",
+        "icon": "fa-bullhorn",
         "links": [
-          { "key": "anunturi", "label": "📢 Hirdetmények" },
-          { "key": "concursuri", "label": "🏆 Pályázatok" },
-          { "key": "cereri", "label": "📄 Kérelmek" },
-          { "key": "audiente", "label": "🗣️ Fogadóórák" },
-          { "key": "contracte", "label": "📑 Szerződések" },
-          { "key": "plati_online", "label": "💳 Online fizetés" },
-          { "key": "licitatii", "label": "🏛️ Közbeszerzések" },
-          { "key": "documente", "label": "📁 Dokumentumok" }
+          { "key": "anunturi", "label": "Hirdetmények", "icon": "fa-bullhorn" },
+          { "key": "concursuri", "label": "Pályázatok", "icon": "fa-trophy" },
+          { "key": "cereri", "label": "Kérelmek", "icon": "fa-file" },
+          { "key": "audiente", "label": "Fogadóórák", "icon": "fa-comments" },
+          {
+            "key": "contracte",
+            "label": "Szerződések",
+            "icon": "fa-file-contract"
+          },
+          {
+            "key": "plati_online",
+            "label": "Online fizetés",
+            "icon": "fa-credit-card"
+          },
+          { "key": "licitatii", "label": "Közbeszerzések", "icon": "fa-gavel" },
+          { "key": "documente", "label": "Dokumentumok", "icon": "fa-folder" }
         ]
       },
       "altele": {
-        "title": "⚙️ Egyéb",
+        "title": "Egyéb",
+        "icon": "fa-gear",
         "links": [
-          { "key": "transformare_digitala", "label": "💻 Digitalizáció" },
-          { "key": "servicii_online", "label": "🖥️ Online szolgáltatások" },
-          { "key": "transparenta", "label": "👁 Átláthatóság" }
+          {
+            "key": "transformare_digitala",
+            "label": "Digitalizáció",
+            "icon": "fa-laptop-code"
+          },
+          {
+            "key": "servicii_online",
+            "label": "Online szolgáltatások",
+            "icon": "fa-desktop"
+          },
+          { "key": "transparenta", "label": "Átláthatóság", "icon": "fa-eye" }
         ]
       }
     },
+
     "mediu": {
       "salubritate": {
-        "title": "🗑️ Hulladékgazdálkodás",
+        "title": "Hulladékgazdálkodás",
+        "icon": "fa-trash",
         "links": [
-          { "key": "colectare_selectiva", "label": "♻️ Szelektív gyűjtés" },
-          { "key": "salubritate_menajera", "label": "🗑️ Háztartási hulladék" },
-          { "key": "salubritate_stradala", "label": "🧹 Utcai takarítás" },
-          { "key": "dezapezire", "label": "❄️ Hóeltakarítás" }
+          {
+            "key": "colectare_selectiva",
+            "label": "Szelektív gyűjtés",
+            "icon": "fa-recycle"
+          },
+          {
+            "key": "salubritate_menajera",
+            "label": "Háztartási hulladék",
+            "icon": "fa-trash"
+          },
+          {
+            "key": "salubritate_stradala",
+            "label": "Utcai takarítás",
+            "icon": "fa-broom"
+          },
+          {
+            "key": "dezapezire",
+            "label": "Hóeltakarítás",
+            "icon": "fa-snowflake"
+          }
         ]
       },
       "curatenie": {
-        "title": "🧹 Tisztaság",
+        "title": "Tisztaság",
+        "icon": "fa-broom",
         "links": [
-          { "key": "cereri_specifice", "label": "📝 Kérelmek" },
-          { "key": "curatenie_primavara", "label": "🌸 Tavaszi nagytakarítás" },
-          { "key": "deratizare", "label": "🐀 Rágcsálóirtás" }
+          { "key": "cereri_specifice", "label": "Kérelmek", "icon": "fa-pen" },
+          {
+            "key": "curatenie_primavara",
+            "label": "Tavaszi nagytakarítás",
+            "icon": "fa-seedling"
+          },
+          { "key": "deratizare", "label": "Rágcsálóirtás", "icon": "fa-bug" }
         ]
       },
       "spatii_verzi": {
-        "title": "🌳 Zöldterületek",
+        "title": "Zöldterületek",
+        "icon": "fa-tree",
         "links": [
-          { "key": "adopta_spatiu", "label": "🌿 Zöldterület örökbefogadása" },
-          { "key": "ambrozie", "label": "🌾 Parlagfű" }
+          {
+            "key": "adopta_spatiu",
+            "label": "Zöldterület örökbefogadása",
+            "icon": "fa-leaf"
+          },
+          { "key": "ambrozie", "label": "Parlagfű", "icon": "fa-seedling" }
         ]
       },
       "energie": {
-        "title": "⚡ Energia",
+        "title": "Energia",
+        "icon": "fa-bolt",
         "links": [
-          { "key": "panouri_fotovoltaice", "label": "☀️ Napelemek" },
-          { "key": "finantare", "label": "💰 Finanszírozás" }
+          {
+            "key": "panouri_fotovoltaice",
+            "label": "Napelemek",
+            "icon": "fa-solar-panel"
+          },
+          { "key": "finantare", "label": "Finanszírozás", "icon": "fa-coins" }
         ]
       },
       "altele_mediu": {
-        "title": "🌍 Egyéb",
+        "title": "Egyéb",
+        "icon": "fa-globe",
         "links": [
-          { "key": "calitatea_aerului", "label": "🌫️ Levegőminőség" },
-          { "key": "harta_zgomot", "label": "🔊 Zajtérkép" }
+          {
+            "key": "calitatea_aerului",
+            "label": "Levegőminőség",
+            "icon": "fa-wind"
+          },
+          {
+            "key": "harta_zgomot",
+            "label": "Zajtérkép",
+            "icon": "fa-volume-high"
+          }
         ]
       }
     },
+
     "mobilitate": {
       "plan_mobilitate": {
-        "title": "📍 Mobilitási terv",
-        "links": [{ "key": "plan_mobilitate", "label": "📍 Mobilitási terv" }]
+        "title": "Mobilitási terv",
+        "icon": "fa-map-location",
+        "links": [
+          {
+            "key": "plan_mobilitate",
+            "label": "Mobilitási terv",
+            "icon": "fa-map-location"
+          }
+        ]
       },
       "parcari": {
-        "title": "🅿️ Parkolók",
-        "links": [{ "key": "parcari", "label": "🅿️ Parkolók" }]
+        "title": "Parkolók",
+        "icon": "fa-square-parking",
+        "links": [
+          { "key": "parcari", "label": "Parkolók", "icon": "fa-square-parking" }
+        ]
       },
       "transport_public": {
-        "title": "🚌 Tömegközlekedés",
-        "links": [{ "key": "transport_public", "label": "🚌 Tömegközlekedés" }]
+        "title": "Tömegközlekedés",
+        "icon": "fa-bus",
+        "links": [
+          {
+            "key": "transport_public",
+            "label": "Tömegközlekedés",
+            "icon": "fa-bus"
+          }
+        ]
       },
       "biciclete": {
-        "title": "🚲 Kerékpárok",
-        "links": [{ "key": "biciclete", "label": "🚲 Kerékpárok" }]
+        "title": "Kerékpárok",
+        "icon": "fa-bicycle",
+        "links": [
+          { "key": "biciclete", "label": "Kerékpárok", "icon": "fa-bicycle" }
+        ]
       },
       "siguranta_circulatiei": {
-        "title": "🚦 Közlekedésbiztonság",
+        "title": "Közlekedésbiztonság",
+        "icon": "fa-traffic-light",
         "links": [
-          { "key": "siguranta_circulatiei", "label": "🚦 Közlekedésbiztonság" }
+          {
+            "key": "siguranta_circulatiei",
+            "label": "Közlekedésbiztonság",
+            "icon": "fa-traffic-light"
+          }
         ]
       }
     },
+
     "economie": {
       "taxe_impozite": {
-        "title": "📊 Adók és illetékek",
-        "links": [{ "key": "taxe_impozite", "label": "📊 Adók és illetékek" }]
+        "title": "Adók és illetékek",
+        "icon": "fa-chart-pie",
+        "links": [
+          {
+            "key": "taxe_impozite",
+            "label": "Adók és illetékek",
+            "icon": "fa-chart-pie"
+          }
+        ]
       },
       "plati_online": {
-        "title": "💳 Online fizetés",
-        "links": [{ "key": "plati_online", "label": "💳 Online fizetés" }]
+        "title": "Online fizetés",
+        "icon": "fa-credit-card",
+        "links": [
+          {
+            "key": "plati_online",
+            "label": "Online fizetés",
+            "icon": "fa-credit-card"
+          }
+        ]
       },
       "buget": {
-        "title": "📒 Költségvetés",
-        "links": [{ "key": "buget", "label": "📒 Költségvetés" }]
+        "title": "Költségvetés",
+        "icon": "fa-book",
+        "links": [
+          { "key": "buget", "label": "Költségvetés", "icon": "fa-book" }
+        ]
       },
       "achizitii": {
-        "title": "🏛️ Beszerzések",
-        "links": [{ "key": "achizitii", "label": "🏛️ Beszerzések" }]
+        "title": "Beszerzések",
+        "icon": "fa-gavel",
+        "links": [
+          { "key": "achizitii", "label": "Beszerzések", "icon": "fa-gavel" }
+        ]
       },
       "proiecte_ue": {
-        "title": "🇪🇺 EU projektek",
-        "links": [{ "key": "proiecte_ue", "label": "🇪🇺 EU projektek" }]
+        "title": "EU projektek",
+        "icon": "fa-flag",
+        "links": [
+          { "key": "proiecte_ue", "label": "EU projektek", "icon": "fa-flag" }
+        ]
       },
       "investitori": {
-        "title": "🏭 Befektetők",
-        "links": [{ "key": "investitori", "label": "🏭 Befektetők" }]
+        "title": "Befektetők",
+        "icon": "fa-industry",
+        "links": [
+          { "key": "investitori", "label": "Befektetők", "icon": "fa-industry" }
+        ]
       }
     },
+
     "monitor": {
       "statut": {
-        "title": "📜 Statútum",
-        "links": [{ "key": "statut", "label": "📜 Statútum" }]
+        "title": "Statútum",
+        "icon": "fa-scroll",
+        "links": [{ "key": "statut", "label": "Statútum", "icon": "fa-scroll" }]
       },
       "regulamente": {
-        "title": "📘 Szabályzatok",
-        "links": [{ "key": "regulamente", "label": "📘 Szabályzatok" }]
+        "title": "Szabályzatok",
+        "icon": "fa-book",
+        "links": [
+          { "key": "regulamente", "label": "Szabályzatok", "icon": "fa-book" }
+        ]
       },
       "hotarari": {
-        "title": "📑 Határozatok",
-        "links": [{ "key": "hotarari", "label": "📑 Határozatok" }]
+        "title": "Határozatok",
+        "icon": "fa-file-lines",
+        "links": [
+          { "key": "hotarari", "label": "Határozatok", "icon": "fa-file-lines" }
+        ]
       },
       "dispozitii": {
-        "title": "📋 Rendelkezések",
-        "links": [{ "key": "dispozitii", "label": "📋 Rendelkezések" }]
+        "title": "Rendelkezések",
+        "icon": "fa-list",
+        "links": [
+          { "key": "dispozitii", "label": "Rendelkezések", "icon": "fa-list" }
+        ]
       },
       "documente_financiare": {
-        "title": "💰 Pénzügyi dokumentumok",
+        "title": "Pénzügyi dokumentumok",
+        "icon": "fa-coins",
         "links": [
-          { "key": "documente_financiare", "label": "💰 Pénzügyi dokumentumok" }
+          {
+            "key": "documente_financiare",
+            "label": "Pénzügyi dokumentumok",
+            "icon": "fa-coins"
+          }
         ]
       },
       "alte_documente": {
-        "title": "📁 Egyéb dokumentumok",
-        "links": [{ "key": "alte_documente", "label": "📁 Egyéb dokumentumok" }]
+        "title": "Egyéb dokumentumok",
+        "icon": "fa-folder",
+        "links": [
+          {
+            "key": "alte_documente",
+            "label": "Egyéb dokumentumok",
+            "icon": "fa-folder"
+          }
+        ]
       }
     }
   }

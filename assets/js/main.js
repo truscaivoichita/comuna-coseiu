@@ -181,21 +181,14 @@ function applyNavLang() {
   });
   document.querySelectorAll("nav>ul>li.dropdown>a").forEach((el) => {
     const key = el.getAttribute("href").replace("#", "");
-    if (navDict.menu?.[key]) {
+    const menuItem = navDict.menu?.[key];
+    if (menuItem?.label) {
       let icon = el.dataset.icon;
       if (!icon) {
-        icon = el.querySelector("i")?.outerHTML || "";
-        el.dataset.icon = icon; // cache it
+        icon = `<i class="fa-solid ${menuItem.icon}"></i>`;
+        el.dataset.icon = icon;
       }
-      const menuItem = navDict.menu?.[key]?.label || key;
-      if (menuItem) {
-        let icon = el.dataset.icon;
-        if (!icon) {
-          icon = el.querySelector("i")?.outerHTML || "";
-          el.dataset.icon = icon;
-        }
-        el.innerHTML = `${icon} ${submenuObj.title}`;
-      }
+      el.innerHTML = `${icon} ${menuItem.label}`;
     }
   });
   requestAnimationFrame(() => {
@@ -217,14 +210,15 @@ function applySubmenuLang() {
     const submenuObj = navDict?.submenu?.[category]?.[key];
     if (!submenuObj) return;
     // 🔥 TITLE (meniul din stânga)
-    let icon = el.dataset.icon;
+    let icon = submenuObj.icon
+      ? `<i class="fa-solid ${submenuObj.icon}"></i>`
+      : "";
+    el.dataset.icon = icon;
     if (!icon) {
       icon = el.querySelector("i")?.outerHTML || "";
       el.dataset.icon = icon; // cache it
     }
-    const menuItem = navDict.menu?.[key]?.label || key;
-    if (menuItem) {
-      let icon = el.dataset.icon;
+    if (submenuObj?.title) {
       if (!icon) {
         icon = el.querySelector("i")?.outerHTML || "";
         el.dataset.icon = icon;
@@ -246,7 +240,8 @@ function applySubmenuLang() {
     const links = menu.querySelectorAll("a");
     links.forEach((link, index) => {
       if (submenuObj.links[index]) {
-        const icon = link.querySelector("i")?.outerHTML || "";
+        const iconClass = submenuObj.links[index].icon;
+        const icon = iconClass ? `<i class="fa-solid ${iconClass}"></i>` : "";
         link.innerHTML = `${icon} ${submenuObj.links[index].label}`;
       }
     });
