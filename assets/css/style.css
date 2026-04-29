@@ -492,6 +492,7 @@ section > div:hover {
 }
 .quick-links {
   display: flex;
+  flex-direction: row;
   gap: 20px;
   padding: 40px 20px;
   justify-content: center;
@@ -960,6 +961,11 @@ body.dark-mode .newsletter input {
   nav .menu-right {
     width: 55%;
   }
+  .quick-links {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
 }
 @media (max-width: 768px) {
   header {
@@ -1060,6 +1066,10 @@ body.dark-mode .newsletter input {
     width: 100%;
     max-width: 280px;
     margin: 0 auto;
+  }
+  .quick-links {
+    display: flex;
+    flex-direction: column;
   }
   .consilieri-row {
     display: grid;
