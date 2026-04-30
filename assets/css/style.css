@@ -196,6 +196,9 @@ header {
   align-items: center;
   text-align: center;
 }
+.menu-toggle {
+  background-color: var(--text-primary);
+}
 /* #lang-toggle {
   position: fixed;
   top: 60px;
