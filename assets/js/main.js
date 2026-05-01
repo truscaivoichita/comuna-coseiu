@@ -2,6 +2,7 @@ console.log("Menu working ✅");
 let currentLang = localStorage.getItem("lang") || "ro";
 let communityDict = {};
 let navDict = {};
+let homeDict = {};
 let nav, toggle;
 let allSections = [];
 let searchInput;
@@ -247,6 +248,84 @@ function applySubmenuLang() {
     });
   });
 }
+async function loadHomeLang(lang) {
+  try {
+    const res = await fetch(`assets/i18n/${lang}/home.json`);
+    homeDict = await res.json();
+
+    renderHome(); // 🔥 instead of applyHomeLang()
+  } catch (err) {
+    console.error("Failed to load home.json:", err);
+  }
+}
+function renderHome() {
+  if (!homeDict?.home) return;
+  const data = homeDict.home;
+  const container = document.getElementById("home-container");
+  if (!container) return;
+  container.innerHTML = `
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <i class="fa-solid ${data.icon}"></i>
+        <h1>${data.title}</h1>
+        <p>${data.subtitle}</p>
+        <div class="hero-buttons">
+          ${Object.values(data.buttons)
+            .map(
+              (btn) => `
+              <a href="${btn.target}" class="btn btn-glass">
+                <i class="fa-solid ${btn.icon}"></i> ${btn.label}
+              </a>
+            `,
+            )
+            .join("")}
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="${data.image.src}" alt="${data.image.alt}" loading="lazy" />
+      </div>
+      <section class="quick-links">
+        ${Object.values(data.quick_links)
+          .map(
+            (card) => `
+            <div class="quick-card">
+              <i class="fa-solid ${card.icon}"></i>
+              <h3>${card.title}</h3>
+              <p>
+                ${card.description}
+                ${card.links
+                  .map(
+                    (l) =>
+                      `<div>
+                        <a href="${l.href}" class="btn-link btn-section">${l.label}</a>
+                      </div>`,
+                  )
+                  .join(" ")}
+              </p>
+            </div>
+          `,
+          )
+          .join("")}
+      </section>
+      <section class="news">
+      <i class="fa-solid ${data.news.icon}"></i>
+        <h2>${data.news.title}</h2>
+        <div class="news-list">
+          ${data.news.items
+            .map(
+              (n) => `
+              <article class="news-item">
+                <h4><i class="fa-solid ${n.icon}"></i> ${n.title}</h4>
+                <p>${n.description}</p>
+              </article>
+            `,
+            )
+            .join("")}
+        </div>
+      </section>
+    </section>
+  `;
+}
 async function loadCommunityLang(lang) {
   try {
     const res = await fetch(`assets/i18n/${lang}/comunitate.json`);
@@ -321,6 +400,7 @@ function initLanguageToggle() {
     btn.textContent = currentLang.toUpperCase();
     await loadNavLang(currentLang);
     await loadCommunityLang(currentLang);
+    await loadHomeLang(currentLang);
   });
 }
 function updateSections() {
@@ -411,7 +491,7 @@ async function loadComponent(id, path) {
 async function loadAllComponents() {
   await Promise.all([
     loadComponent("header-container", "assets/components/partials/header.html"),
-    loadComponent("home-container", "assets/components/sections/home.html"),
+    // loadComponent("home-container", "assets/components/sections/home.html"),
     loadComponent(
       "comunitate-container",
       "assets/components/sections/comunitate.html",
@@ -451,6 +531,7 @@ async function initApp() {
   initMenuSystem();
   await loadNavLang(currentLang);
   await loadCommunityLang(currentLang);
+  await loadHomeLang(currentLang);
   loadConsilieri();
   updateSections();
   initSearch();

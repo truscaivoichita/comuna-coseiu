@@ -1,0 +1,69 @@
+{
+  "home": {
+    "title": "Kusaly község",
+    "icon": "fa-house",
+    "subtitle": "Üdvözöljük Kusaly község hivatalos weboldalán, Szilágy megyében.",
+
+    "buttons": {
+      "admin": {
+        "label": "Közigazgatás",
+        "icon": "fa-building",
+        "target": "#administratie"
+      },
+      "comunitate": {
+        "label": "Közösség",
+        "icon": "fa-users",
+        "target": "#comunitate"
+      }
+    },
+
+    "quick_links": {
+      "docs": {
+        "title": "Dokumentumok",
+        "icon": "fa-file",
+        "description": "Hozzáférés tanácsi határozatokhoz, hirdetményekhez és hivatalos iratokhoz.",
+        "links": [
+          { "label": "Tanácsi határozatok", "href": "#hotarari_consiliu" },
+          { "label": "Hirdetmények", "href": "#anunturi" }
+        ]
+      },
+      "cetateni": {
+        "title": "Lakosok",
+        "icon": "fa-users",
+        "description": "Hasznos információk a lakosok számára, befizetések és közszolgáltatások.",
+        "links": [
+          { "label": "Lakosok", "href": "#comunitate" },
+          { "label": "Online befizetések", "href": "#plati_online" }
+        ]
+      },
+      "mediu": {
+        "title": "Környezet",
+        "icon": "fa-leaf",
+        "description": "Projektek és kezdeményezések a környezetvédelem érdekében.",
+        "links": [{ "label": "Környezetvédelem", "href": "#mediu" }]
+      }
+    },
+
+    "news": {
+      "title": "Hírek",
+      "icon": "fa-bullhorn",
+      "items": [
+        {
+          "title": "Helyi tanács ülés",
+          "description": "Összehívás 2026. május 25-re.",
+          "icon": "fa-landmark"
+        },
+        {
+          "title": "Helyi költségvetési projekt",
+          "description": "Nyilvános konzultáció a lakosok számára.",
+          "icon": "fa-coins"
+        }
+      ]
+    },
+
+    "image": {
+      "src": "assets/images/comuna.png",
+      "alt": "Kusaly község"
+    }
+  }
+}

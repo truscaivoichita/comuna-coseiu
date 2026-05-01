@@ -537,6 +537,9 @@ section > div:hover {
   max-width: 250px;
   box-shadow: var(--shadow-md);
 }
+.quick-card div a.btn-link:hover {
+  color: var(--text-primary);
+}
 .news {
   padding: 40px 20px;
 }

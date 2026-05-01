@@ -1,0 +1,69 @@
+{
+  "home": {
+    "title": "Comuna Coșeiu",
+    "icon": "fa-house",
+    "subtitle": "Bine ați venit pe site-ul oficial al comunei Coșeiu, județul Sălaj.",
+
+    "buttons": {
+      "admin": {
+        "label": "Administrație",
+        "icon": "fa-building",
+        "target": "#administratie"
+      },
+      "comunitate": {
+        "label": "Comunitate",
+        "icon": "fa-users",
+        "target": "#comunitate"
+      }
+    },
+
+    "quick_links": {
+      "docs": {
+        "title": "Documente",
+        "icon": "fa-file",
+        "description": "Accesează hotărâri de consiliu, anunțuri și acte oficiale.",
+        "links": [
+          { "label": "Hotărâri de Consiliu", "href": "#hotarari_consiliu" },
+          { "label": "Anunțuri", "href": "#anunturi" }
+        ]
+      },
+      "cetateni": {
+        "title": "Cetățeni",
+        "icon": "fa-users",
+        "description": "Informații utile pentru locuitori, plăți și servicii publice.",
+        "links": [
+          { "label": "Locuitori", "href": "#comunitate" },
+          { "label": "Plăți Online", "href": "#plati_online" }
+        ]
+      },
+      "mediu": {
+        "title": "Mediu",
+        "icon": "fa-leaf",
+        "description": "Proiecte și inițiative pentru protecția mediului.",
+        "links": [{ "label": "Protecția Mediului", "href": "#mediu" }]
+      }
+    },
+
+    "news": {
+      "title": "Noutăți",
+      "icon": "fa-bullhorn",
+      "items": [
+        {
+          "title": "Ședință Consiliu Local",
+          "description": "Convocare pentru data de 25 mai 2026.",
+          "icon": "fa-landmark"
+        },
+        {
+          "title": "Proiect buget local",
+          "description": "Consultare publică deschisă pentru cetățeni.",
+          "icon": "fa-coins"
+        }
+      ]
+    },
+
+    "image": {
+      "src": "assets/images/comuna.png",
+      "alt": "Comuna Coșeiu"
+    }
+  }
+}
