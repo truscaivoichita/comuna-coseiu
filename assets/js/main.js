@@ -11,29 +11,39 @@ function cacheDOM() {
   toggle = document.querySelector(".menu-toggle");
   searchInput = document.getElementById("search-input");
 }
-function initMenu() {
-  document.querySelectorAll(".menu-left").forEach((menuLeft) => {
-    menuLeft.replaceWith(menuLeft.cloneNode(true));
-  });
-  document.querySelectorAll(".menu-left").forEach((menuLeft) => {
-    menuLeft.addEventListener("click", (e) => {
-      const item = e.target.closest("li");
-      if (!item) return;
+function initMenuDelegation() {
+  document.addEventListener("click", (e) => {
+    const item = e.target.closest(".menu-left li");
+    if (item) {
       if (window.innerWidth <= 900) {
         handleMobileMenu(item);
       } else {
         handleDesktopMenu(item);
       }
-    });
+    }
+    if (!e.target.closest("nav") && !e.target.closest(".menu-toggle")) {
+      if (nav) {
+        nav.classList.remove("active");
+        document.body.classList.remove("nav-open");
+      }
+      document
+        .querySelectorAll(".dropdown")
+        .forEach((d) => d.classList.remove("active"));
+      document
+        .querySelectorAll(".menu-right")
+        .forEach((r) => r.classList.remove("active"));
+    }
   });
 }
 function handleMobileMenu(item) {
   const targetId = item.dataset.target;
   const menu = item.closest(".split-menu");
+  if (!menu) return;
   const rightSide = menu.querySelector(".menu-right");
-  rightSide.querySelectorAll(".menu-content").forEach((c) => {
-    c.classList.remove("active");
-  });
+  if (!rightSide) return;
+  rightSide
+    .querySelectorAll(".menu-content")
+    .forEach((c) => c.classList.remove("active"));
   const active = rightSide.querySelector(`#${targetId}`);
   if (active) active.classList.add("active");
   rightSide.classList.add("active");
@@ -51,7 +61,9 @@ function addBackButton(container) {
 }
 function handleDesktopMenu(item) {
   const menu = item.closest(".split-menu");
+  if (!menu) return;
   const rightSide = menu.querySelector(".menu-right");
+  if (!rightSide) return;
   const targetId = item.dataset.target;
   menu
     .querySelectorAll(".menu-left li")
@@ -67,7 +79,7 @@ function handleDesktopMenu(item) {
   }
 }
 function initNavToggle() {
-  if (!toggle) return;
+  if (!toggle || !nav) return;
   toggle.addEventListener("click", () => {
     nav.classList.toggle("active");
     document.body.classList.toggle("nav-open");
@@ -101,21 +113,6 @@ function initDropdowns() {
     });
   });
 }
-function initOutsideClick() {
-  if (!nav) return;
-  document.addEventListener("click", (e) => {
-    if (!e.target.closest("nav") && !e.target.closest(".menu-toggle")) {
-      nav.classList.remove("active");
-      document.body.classList.remove("nav-open");
-      document.querySelectorAll(".dropdown").forEach((d) => {
-        d.classList.remove("active");
-      });
-      document.querySelectorAll(".menu-right").forEach((r) => {
-        r.classList.remove("active");
-      });
-    }
-  });
-}
 function preventCloseOnInternalLinks() {
   document.querySelectorAll(".dropdown a").forEach((link) => {
     link.addEventListener("click", (e) => {
@@ -129,13 +126,7 @@ function initResizeFix() {
   let lastWidth = window.innerWidth;
   window.addEventListener("resize", () => {
     const currentWidth = window.innerWidth;
-    if (
-      (lastWidth <= 900 && currentWidth > 900) ||
-      (lastWidth > 900 && currentWidth <= 900)
-    ) {
-      initMenu();
-    }
-    if (currentWidth > 900) {
+    if (currentWidth > 900 && nav) {
       nav.classList.remove("active");
       document.body.classList.remove("nav-open");
     }
@@ -146,11 +137,8 @@ function initBackToTop() {
   const btn = document.getElementById("backToTop");
   if (!btn) return;
   window.addEventListener("scroll", () => {
-    if (document.documentElement.scrollTop > 200) {
-      btn.style.display = "block";
-    } else {
-      btn.style.display = "none";
-    }
+    btn.style.display =
+      document.documentElement.scrollTop > 200 ? "block" : "none";
   });
   btn.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -158,10 +146,9 @@ function initBackToTop() {
 }
 function initMenuSystem() {
   cacheDOM();
-  initMenu();
+  initMenuDelegation();
   initNavToggle();
   initDropdowns();
-  initOutsideClick();
   preventCloseOnInternalLinks();
   initResizeFix();
 }
@@ -210,14 +197,13 @@ function applySubmenuLang() {
     const key = target.replace("menu-", "");
     const submenuObj = navDict?.submenu?.[category]?.[key];
     if (!submenuObj) return;
-    // 🔥 TITLE (meniul din stânga)
     let icon = submenuObj.icon
       ? `<i class="fa-solid ${submenuObj.icon}"></i>`
       : "";
     el.dataset.icon = icon;
     if (!icon) {
       icon = el.querySelector("i")?.outerHTML || "";
-      el.dataset.icon = icon; // cache it
+      el.dataset.icon = icon;
     }
     if (submenuObj?.title) {
       if (!icon) {
@@ -227,7 +213,6 @@ function applySubmenuLang() {
       el.innerHTML = `${icon} ${submenuObj.title}`;
     }
   });
-  // 🔥 RIGHT SIDE (linkuri)
   document.querySelectorAll(".menu-content").forEach((menu) => {
     const id = menu.id.replace("menu-", "");
     const splitMenu = menu.closest(".split-menu");
@@ -252,8 +237,7 @@ async function loadHomeLang(lang) {
   try {
     const res = await fetch(`assets/i18n/${lang}/home.json`);
     homeDict = await res.json();
-
-    renderHome(); // 🔥 instead of applyHomeLang()
+    renderHome();
   } catch (err) {
     console.error("Failed to load home.json:", err);
   }
@@ -263,75 +247,30 @@ function renderHome() {
   const data = homeDict.home;
   const container = document.getElementById("home-container");
   if (!container) return;
-  container.innerHTML = `
-    <section id="home" class="hero">
-      <div class="hero-content">
-        <i class="fa-solid ${data.icon}"></i>
-        <h1>${data.title}</h1>
-        <p>${data.subtitle}</p>
-        <div class="hero-buttons">
-          ${Object.values(data.buttons)
-            .map(
-              (btn) => `
-              <a href="${btn.target}" class="btn btn-glass">
-                <i class="fa-solid ${btn.icon}"></i> ${btn.label}
-              </a>
-            `,
-            )
-            .join("")}
-        </div>
-      </div>
-      <div class="hero-image">
-        <img src="${data.image.src}" alt="${data.image.alt}" loading="lazy" />
-      </div>
-      <section class="quick-links">
-        ${Object.values(data.quick_links)
-          .map(
-            (card) => `
-            <div class="quick-card">
-              <i class="fa-solid ${card.icon}"></i>
-              <h3>${card.title}</h3>
-              <p>
-                ${card.description}
-                ${card.links
-                  .map(
-                    (l) =>
-                      `<div>
-                        <a href="${l.href}" class="btn-link btn-section">${l.label}</a>
-                      </div>`,
-                  )
-                  .join(" ")}
-              </p>
-            </div>
-          `,
-          )
-          .join("")}
-      </section>
-      <section class="news">
-      <i class="fa-solid ${data.news.icon}"></i>
-        <h2>${data.news.title}</h2>
-        <div class="news-list">
-          ${data.news.items
-            .map(
-              (n) => `
-              <article class="news-item">
-                <h4><i class="fa-solid ${n.icon}"></i> ${n.title}</h4>
-                <p>${n.description}</p>
-              </article>
-            `,
-            )
-            .join("")}
-        </div>
-      </section>
-    </section>
-  `;
+  container.innerHTML = `<section id="home" class="hero"><div class="hero-content"><i class="fa-solid ${data.icon}"></i><h1>${data.title}</h1><p>${data.subtitle}</p><div class="hero-buttons">${Object.values(
+    data.buttons,
+  )
+    .map(
+      (btn) =>
+        `<a href="${btn.target}" class="btn btn-glass"><i class="fa-solid ${btn.icon}"></i> ${btn.label}</a>`,
+    )
+    .join(
+      "",
+    )}</div></div><div class="hero-image"><img src="${data.image.src}" alt="${data.image.alt}" loading="lazy"/></div><section class="quick-links">${Object.values(
+    data.quick_links,
+  )
+    .map(
+      (card) =>
+        `<div class="quick-card"><i class="fa-solid ${card.icon}"></i><h3>${card.title}</h3><p>${card.description}${card.links.map((l) => `<div><a href="${l.href}" class="btn-link btn-section">${l.label}</a></div>`).join(" ")}</p></div>`,
+    )
+    .join(
+      "",
+    )}</section><section class="news"><i class="fa-solid ${data.news.icon}"></i><h2>${data.news.title}</h2><div class="news-list">${data.news.items.map((n) => `<article class="news-item"><h4><i class="fa-solid ${n.icon}"></i> ${n.title}</h4><p>${n.description}</p></article>`).join("")}</div></section></section>`;
 }
 async function loadCommunityLang(lang) {
   try {
     const res = await fetch(`assets/i18n/${lang}/comunitate.json`);
-    if (!res.ok) {
-      throw new Error(`HTTP error: ${res.status}`);
-    }
+    if (!res.ok) throw new Error(`HTTP error: ${res.status}`);
     communityDict = await res.json();
     applyCommunityLang();
   } catch (err) {
@@ -351,51 +290,30 @@ function applyCommunityLang() {
       }
     }
   });
-  const etnicList = document.getElementById("etnic-list");
-  const religieList = document.getElementById("religie-list");
-  if (etnicList) {
-    etnicList.innerHTML = communityDict.cetateni.etnic.items
-      .map((i) => `<li>${i}</li>`)
-      .join("");
-  }
-  if (religieList) {
-    religieList.innerHTML = communityDict.cetateni.religie.items
-      .map((i) => `<li>${i}</li>`)
-      .join("");
-  }
-  const newsletterList = document.getElementById("newsletter-list");
-  if (newsletterList && communityDict.newsletter?.items) {
-    newsletterList.innerHTML = communityDict.newsletter.items
-      .map((i) => `<li>${i}</li>`)
-      .join("");
-  }
-  const onoareList = document.getElementById("onoare-list");
-  if (onoareList && communityDict.cetateni_onoare?.items) {
-    onoareList.innerHTML = communityDict.cetateni_onoare.items
-      .map((i) => `<li>${i}</li>`)
-      .join("");
-  }
-  const bugetareParticipativa = document.getElementById(
+  const mapList = (id, data) => {
+    const el = document.getElementById(id);
+    if (el && data) {
+      el.innerHTML = data.map((i) => `<li>${i}</li>`).join("");
+    }
+  };
+  mapList("etnic-list", communityDict.cetateni?.etnic?.items);
+  mapList("religie-list", communityDict.cetateni?.religie?.items);
+  mapList("newsletter-list", communityDict.newsletter?.items);
+  mapList("onoare-list", communityDict.cetateni_onoare?.items);
+  mapList(
     "bugetare_participativa-list",
+    communityDict.bugetare_participativa?.steps,
   );
-  if (bugetareParticipativa && communityDict.bugetare_participativa?.steps) {
-    bugetareParticipativa.innerHTML = communityDict.bugetare_participativa.steps
-      .map((i) => `<li>${i}</li>`)
-      .join("");
-  }
-  const proceduriOnline = document.getElementById("proceduri_online-list");
-  if (proceduriOnline && communityDict.proceduri_online?.items) {
-    proceduriOnline.innerHTML = communityDict.proceduri_online.items
-      .map((i) => `<li>${i}</li>`)
-      .join("");
-  }
+  mapList("proceduri_online-list", communityDict.proceduri_online?.items);
 }
 function initLanguageToggle() {
   const btn = document.getElementById("lang-toggle");
   if (!btn) return;
+  const languages = ["ro", "hu"];
   btn.textContent = currentLang.toUpperCase();
   btn.addEventListener("click", async () => {
-    currentLang = currentLang === "ro" ? "hu" : "ro";
+    let index = languages.indexOf(currentLang);
+    currentLang = languages[(index + 1) % languages.length];
     localStorage.setItem("lang", currentLang);
     btn.textContent = currentLang.toUpperCase();
     await loadNavLang(currentLang);
@@ -408,27 +326,33 @@ function updateSections() {
 }
 function initSearch() {
   if (!searchInput) return;
+  let timeout;
   searchInput.addEventListener("input", () => {
-    const query = searchInput.value.toLowerCase().trim();
-    allSections.forEach((section) => {
-      const text = section.innerText.toLowerCase();
-      removeHighlights(section);
-      if (text.includes(query)) {
-        section.style.display = "block";
-        if (query.length > 2) {
-          highlightText(section, query);
+    clearTimeout(timeout);
+    timeout = setTimeout(() => {
+      const query = searchInput.value.toLowerCase().trim();
+      allSections.forEach((section) => {
+        const text = section.innerText.toLowerCase();
+        removeHighlights(section);
+        if (text.includes(query)) {
+          section.style.display = "block";
+          if (query.length > 2) {
+            highlightText(section, query);
+          }
+        } else {
+          section.style.display = query ? "none" : "block";
         }
-      } else {
-        section.style.display = query ? "none" : "block";
-      }
-    });
+      });
+    }, 200);
   });
 }
 function highlightText(element, query) {
   const regex = new RegExp(`(${query})`, "gi");
   element.querySelectorAll("*").forEach((node) => {
-    if (node.children.length === 0) {
-      node.innerHTML = node.innerHTML.replace(regex, `<mark>$1</mark>`);
+    if (node.children.length === 0 && node.textContent.trim()) {
+      const span = document.createElement("span");
+      span.innerHTML = node.textContent.replace(regex, "<mark>$1</mark>");
+      node.replaceWith(span);
     }
   });
 }
@@ -459,12 +383,10 @@ async function loadConsilieri() {
 function initThemeToggle() {
   const btn = document.getElementById("theme-toggle");
   if (!btn) return;
-  // Load saved theme
   const saved = localStorage.getItem("theme");
   if (saved === "dark") {
     document.body.classList.add("dark-mode");
   }
-  // Set initial icon
   updateIcon();
   btn.addEventListener("click", () => {
     document.body.classList.toggle("dark-mode");
@@ -491,7 +413,6 @@ async function loadComponent(id, path) {
 async function loadAllComponents() {
   await Promise.all([
     loadComponent("header-container", "assets/components/partials/header.html"),
-    // loadComponent("home-container", "assets/components/sections/home.html"),
     loadComponent(
       "comunitate-container",
       "assets/components/sections/comunitate.html",
@@ -523,9 +444,7 @@ async function loadAllComponents() {
 async function initApp() {
   await loadAllComponents();
   await new Promise((r) =>
-    requestAnimationFrame(() => {
-      requestAnimationFrame(r);
-    }),
+    requestAnimationFrame(() => requestAnimationFrame(r)),
   );
   cacheDOM();
   initMenuSystem();
