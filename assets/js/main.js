@@ -1,6 +1,7 @@
 console.log("Menu working ✅");
 let currentLang = localStorage.getItem("lang") || "ro";
 let communityDict = {};
+let adminDict = {};
 let navDict = {};
 let homeDict = {};
 let nav, toggle;
@@ -267,6 +268,447 @@ function renderHome() {
       "",
     )}</section><section class="news"><i class="fa-solid ${data.news.icon}"></i><h2>${data.news.title}</h2><div class="news-list">${data.news.items.map((n) => `<article class="news-item"><h4><i class="fa-solid ${n.icon}"></i> ${n.title}</h4><p>${n.description}</p></article>`).join("")}</div></section></section>`;
 }
+function renderAdministratie(data) {
+  const a = data.administratie;
+  console.log("Administratie data:", data);
+  return `
+<section id="administratie">
+  <h2>
+    <i class="fa-solid ${a.icon}"></i>
+    <span>${a.title}</span>
+  </h2>
+  <div>
+    <h3>🏢 ${a.primarie.title}</h3>
+    ${renderPersonFull(a.primarie.primar, a.labels)}
+    ${renderPersonFull(a.primarie.viceprimar, a.labels)}
+    ${renderPersonFull(a.primarie.secretar, a.labels)}
+    ${renderOrganigramaFull(a.organigrama, a.labels)}
+    ${renderRegulament(a.regulament)}
+    ${renderSediuFull(a.sediu)}
+  </div>
+  ${renderConsiliuFull(a.consiliu_local)}
+  ${renderEvidentaFull(a.evidenta_persoanelor)}
+  ${renderPolitiaFull(a.politia_locala)}
+  ${renderInformatiiFull(a.informatii_publice)}
+  ${renderAlteleFull(a.altele)}
+</section>
+  `;
+}
+function renderPersonFull(p, labels) {
+  if (!p) return "";
+  const contact = labels?.contact || {};
+  const buttons = labels?.buttons || {};
+  return `
+<div id="${p.id}" class="card profile-card">
+  <img src="${p.imagine}" alt="${p.alt}" class="profile-img" loading="lazy"/>
+  <h4>
+    <i class="fa-solid ${p.icon || "fa-user"}"></i> ${p.functie || ""}
+  </h4>
+  <div class="card">
+    <h5>${contact.title || ""}</h5>
+    <p>
+      <i class="fa-solid fa-user"></i>
+      <strong>${contact.name || "Nume"}:</strong> ${p.nume || ""}
+    </p>
+    <p>
+      <i class="fa-solid fa-envelope"></i>
+      <strong>${contact.email || "Email"}:</strong> ${p.contact?.email || ""}
+    </p>
+    <p>
+      <i class="fa-solid fa-phone"></i>
+      <strong>${contact.phone || "Telefon"}:</strong> ${p.contact?.telefon || ""}
+    </p>
+    <p>
+      <i class="fa-solid fa-clock"></i>
+      <strong>${contact.schedule || "Program"}:</strong>
+    </p>
+    <ul>
+      ${(p.contact?.program || []).map((x) => `<li>${x}</li>`).join("")}
+    </ul>
+    ${
+      p.declaratii
+        ? `
+      <a href="${p.declaratii.avere}" target="_blank">
+        📄 ${labels?.buttons?.avere || "Declarația de avere"}
+      </a>
+      <a href="${p.declaratii.interese}" target="_blank">
+        📄 ${labels?.buttons?.interese || "Declarația de interese"}
+      </a>
+    `
+        : ""
+    }
+  </div>
+  <div class="card">
+    <h4><i class="fa-solid fa-list"></i> ${p.atributii.title || "Atribuții"}</h4>
+    <p>${p.descriere || ""}</p>
+    <ul class="atributii">
+      ${(p.atributii.items || []).map((i) => `<li>${i}</li>`).join("")}
+    </ul>
+  </div>
+</div>`;
+}
+function renderOrganigramaFull(o, labels = {}) {
+  const buttons = labels?.buttons ?? {};
+  const contact = labels?.contact ?? {};
+  return `
+<div id="organigrama" class="card profile-card">
+  <h4>🧭 ${o.title}</h4>
+  <!-- Conducere -->
+  <div class="card">
+    <h5>
+      <i class="fa-solid fa-users"></i> 
+      ${o.conducere.title || "Conducerea administrației"}
+    </h5>
+    <ul class="clean-list">
+      ${o.conducere.items
+        .map(
+          (p) => `
+        <li>
+          <strong>${p.functie}</strong> - ${p.nume}
+          ${
+            p.declaratii
+              ? `
+            <div class="links">
+              <a href="${p.declaratii.avere}" target="_blank">
+                📄 ${buttons.avere}
+              </a>
+              <a href="${p.declaratii.interese}" target="_blank">
+                📄 ${buttons.interese}
+              </a>
+            </div>
+          `
+              : ""
+          }
+        </li>
+      `,
+        )
+        .join("")}
+    </ul>
+  </div>
+
+  <!-- Compartimente -->
+  <div class="card">
+    <h5>
+      <i class="fa-solid ${o.compartimente.icon || "fa-building"}"></i>
+      ${o.compartimente.title.toUpperCase()}
+    </h5>
+
+    <div class="cards grid">
+      ${o.compartimente.items
+        .map((entry) => {
+          const comp = Object.values(entry)[0];
+          return `
+          <div class="card">
+            <h5>
+              <i class="fa-solid ${comp.icon || "fa-building"}"></i> 
+              ${comp.title}
+            </h5>
+            <ul class="clean-list">
+              ${(comp.items || [])
+                .map((item) => {
+                  if (typeof item === "string") {
+                    return `<li><i class="fa-solid fa-user"></i> ${item}</li>`;
+                  }
+                  return `
+                    <li>
+                      <i class="fa-solid ${item.icon || "fa-user"}"></i>
+                      ${item.nume} - ${item.functie || ""}
+                      ${
+                        item.declaratii
+                          ? `
+                        <div class="links">
+                          <a href="${item.declaratii.avere}" target="_blank">
+                            📄 ${buttons.avere}
+                          </a>
+                          <a href="${item.declaratii.interese}" target="_blank">
+                            📄 ${buttons.interese}
+                          </a>
+                        </div>
+                      `
+                          : ""
+                      }
+                    </li>
+                  `;
+                })
+                .join("")}
+            </ul>
+          </div>
+        `;
+        })
+        .join("")}
+    </div>
+  </div>
+</div>
+  `;
+}
+function renderRegulament(r) {
+  return `
+<div id="regulament" class="card profile-card">
+  <h4><i class="fa-solid fa-user"></i> ${r.title}</h4>
+  <p>
+    <a href="${r.link}" class="btn btn-section">
+      ${r.descriere}
+    </a>
+  </p>
+</div>
+  `;
+}
+function renderSediuFull(s) {
+  return `
+<div id="sediu">
+  <h3><i class="fa ${s.icon}"></i> ${s.title}</h3>
+  <ul>
+    <li><i class="fa ${s.adresa_icon}"></i> ${s.adresa}</li>
+    <li><i class="fa ${s.email_icon}"></i> ${s.email}</li>
+    <li><i class="fa ${s.telefon_icon}"></i> ${s.telefon}</li>
+  </ul>
+</div>
+  `;
+}
+function renderConsilieri(consilieri, labels = {}) {
+  const buttons = labels?.buttons ?? {};
+  const contact = labels?.contact ?? {};
+  if (!consilieri || !Array.isArray(consilieri)) return "";
+  return `
+    <div class="consilieri-row">
+      ${consilieri
+        .map(
+          (c) => `
+        <div class="card consilier-card">
+          <h5><i class="fa-solid fa-user"></i> ${c.name}</h5>
+          <p>
+            <strong>${contact.partid || "Partid"}:</strong> ${c.partid}
+          </p>
+          <p>
+            <strong>${contact.mandat || "Mandat"}:</strong> ${c.mandat}
+          </p>
+          <p>
+            <i class="fa-solid fa-phone"></i>
+            <strong>${contact.phone || "Telefon"}:</strong> ${c.tel}
+          </p>
+          <p>
+            <i class="fa-solid fa-envelope"></i>
+            <strong>${contact.email || "Email"}:</strong> ${c.email}
+          </p>
+          <a href="${c.avere}" target="_blank" class="btn-link btn-section">
+            <i class="fa-solid fa-file-lines"></i>
+            ${buttons.avere || "Declarația de avere"}
+          </a>
+          <a href="${c.interese}" target="_blank" class="btn-link btn-section">
+            <i class="fa-solid fa-file-lines"></i>
+            ${buttons.interese || "Declarația de interese"}
+          </a>
+        </div>
+      `,
+        )
+        .join("")}
+    </div>
+  `;
+}
+function renderConsiliuFull(c) {
+  return `
+<div id="consiliu">
+  <h3>🗳️ ${c.title}</h3>
+  <p>${c.descriere}</p>
+  <div id="consilieri">
+      <h4 data-i18n="consiliu.consilieri.title">
+        <i class="fa-solid fa-landmark"></i>
+         ${adminDict?.labels?.consilieri?.title || "Consilieri"}
+      </h4>
+      <div class="consilieri-row" id="consilieri-container"></div>
+    </div>
+  <div id="${c.comisii.id}" class="card cards grid">
+    <h4>${c.comisii.title}</h4>
+    <p>${c.comisii.comisii_descriere1}</p>
+    <ul>
+      ${c.comisii.items.map((i) => `<li>${i}</li>`).join("")}
+    </ul>
+    <p>${c.comisii.comisii_descriere2}</p>
+  </div>
+  <div id="${c.sedinte.id}" class="card cards grid">
+    <h4><i class="fa fa-calendar"></i> ${c.sedinte.title}</h4>
+    <p>${c.sedinte.descriere1}</p>
+    <p>${c.sedinte.descriere2}</p>
+    <h5><i class="fa ${c.sedinte.urmatoare.icon}"></i> ${c.sedinte.urmatoare.title}</h5>
+    <ul>
+      <li>${c.sedinte.urmatoare.data_label}: ${c.sedinte.urmatoare.data}</li>
+      <li>${c.sedinte.urmatoare.ora_label}: ${c.sedinte.urmatoare.ora}</li>
+      <li>${c.sedinte.urmatoare.locatie_label}: ${c.sedinte.urmatoare.locatie}</li>
+    </ul>
+    <h5><i class="fa ${c.sedinte.ordine_de_zi.icon}"></i> ${c.sedinte.ordine_de_zi.title}</h5>
+    <ul>
+      ${c.sedinte.ordine_de_zi.items.map((item) => `<li>${item}</li>`).join("")}
+    </ul>
+  </div>
+  <div id="hotarari_consiliu" class="card cards grid">
+  <h4><i class="fa-solid fa-scroll"></i> ${c.hotarari.title}</h4>
+    <p>${c.hotarari.descriere}</p>
+  <ul>
+    ${c.hotarari.items
+      .map(
+        (item) => `
+      <li><a href="${item.link}">${item.titlu}</a></li>
+    `,
+      )
+      .join("")}
+  </ul>
+</div>
+</div>
+  `;
+}
+function renderEvidentaFull(e) {
+  return `
+<div id="evidenta_persoanelor" class="cards grid">
+  <h3>
+    <i class="fa-solid ${e.icon}"></i> ${e.title}
+  </h3>
+  <div>
+    <p>${e.descriere[0]}</p>
+    <p>${e.descriere[1]}</p>
+  </div>
+  ${e.servicii
+    .map(
+      (s) => `
+    <div id="${s.id}">
+      <h4>
+        <i class="fa-solid ${s.icon}"></i> ${s.title}
+      </h4>
+      <p>${s.descriere}</p>
+    </div>
+  `,
+    )
+    .join("")}
+</div>
+  `;
+}
+function renderPolitiaFull(p) {
+  return `
+    <div id="politia_locala" class="cards grid">
+      <h3>
+        <i class="fa-solid ${p.icon}"></i> ${p.title}
+      </h3>
+      <!-- Descriere -->
+      <div id="informatii_politie">
+        <h4>
+          <i class="fa-solid fa-info-circle"></i> ${p.title}
+        </h4>
+        ${p.descriere.map((d) => `<p>${d}</p>`).join("")}
+      </div>
+      <!-- Servicii -->
+      ${p.servicii
+        .map(
+          (serviciu) => `
+        <div id="${serviciu.id}">
+          <h4>
+            <i class="fa-solid ${serviciu.icon}"></i> ${serviciu.title}
+          </h4>
+          <p>${serviciu.descriere}</p>
+        </div>
+      `,
+        )
+        .join("")}
+
+    </div>
+  `;
+}
+function renderInformatiiFull(i) {
+  return `
+    <div id="informatii" class="cards grid">
+      <h3>
+        <i class="fa-solid ${i.icon}"></i> ${i.title}
+      </h3>
+      ${i.servicii
+        .map(
+          (serviciu) => `
+        <div id="${serviciu.id}">
+          <h4>
+            <i class="fa-solid ${serviciu.icon}"></i> ${serviciu.title}
+          </h4>
+          ${serviciu.descriere ? `<p>${serviciu.descriere}</p>` : ""}
+          ${
+            serviciu.lista
+              ? `
+            <ul>
+              ${serviciu.lista
+                .map(
+                  (item) => `
+                <li>
+                  <a href="${item.link}" target="_blank">
+                    <i class="fa-solid ${item.icon}"></i> ${item.text}
+                  </a>
+                </li>
+              `,
+                )
+                .join("")}
+            </ul>
+          `
+              : ""
+          }
+        </div>
+      `,
+        )
+        .join("")}
+    </div>
+  `;
+}
+function renderAlteleFull(a) {
+  if (!a) {
+    console.error("Altele data is undefined");
+    return "<p>Data not available</p>";
+  }
+  return `
+    <div id="altele" class="cards grid">
+      <h3>
+        <i class="fa-solid ${a.icon}"></i> ${a.title}
+      </h3>
+      ${(a.servicii || [])
+        .map(
+          (serviciu) => `
+        <div id="${serviciu.id}">
+          <h4>
+            <i class="fa-solid ${serviciu.icon}"></i> ${serviciu.title}
+          </h4>
+          ${serviciu.descriere ? `<p>${serviciu.descriere}</p>` : ""}
+          ${
+            serviciu.lista
+              ? `
+            <ul>
+              ${serviciu.lista
+                .map(
+                  (item) => `
+                <li>
+                  <a href="${item.link}" target="_blank">
+                    <i class="fa-solid ${item.icon}"></i> ${item.text}
+                  </a>
+                </li>
+              `,
+                )
+                .join("")}
+            </ul>
+          `
+              : ""
+          }
+        </div>
+      `,
+        )
+        .join("")}
+    </div>
+  `;
+}
+async function loadAdministratieLang(lang) {
+  try {
+    const res = await fetch(`assets/i18n/${lang}/administratie.json`);
+    const data = await res.json();
+    adminDict = data.administratie || {};
+    const container = document.getElementById("administratie-container");
+    if (container) {
+      container.innerHTML = renderAdministratie(data);
+    }
+    loadConsilieri();
+  } catch (err) {
+    console.error("Failed to load administratie.json:", err);
+  }
+}
 async function loadCommunityLang(lang) {
   try {
     const res = await fetch(`assets/i18n/${lang}/comunitate.json`);
@@ -317,8 +759,9 @@ function initLanguageToggle() {
     localStorage.setItem("lang", currentLang);
     btn.textContent = currentLang.toUpperCase();
     await loadNavLang(currentLang);
-    await loadCommunityLang(currentLang);
     await loadHomeLang(currentLang);
+    await loadCommunityLang(currentLang);
+    await loadAdministratieLang(currentLang);
   });
 }
 function updateSections() {
@@ -365,17 +808,11 @@ function removeHighlights(element) {
 }
 async function loadConsilieri() {
   try {
-    const res = await fetch("assets/data/consilieri.json");
+    const res = await fetch(`assets/i18n/${currentLang}/consilieri.json`);
     const consilieri = await res.json();
     const container = document.getElementById("consilieri-container");
     if (!container) return;
-    container.innerHTML = "";
-    consilieri.forEach((c) => {
-      const card = document.createElement("div");
-      card.className = "card consilier-card";
-      card.innerHTML = `<h5><i class="fa-solid fa-user"></i> ${c.name}</h5><p><strong>Partid:</strong> ${c.partid}</p><p><strong>Mandat:</strong> ${c.mandat}</p><p><i class="fa-solid fa-phone"></i> ${c.tel}</p><p><i class="fa-solid fa-envelope"></i> ${c.email}</p><a href="${c.avere}" target="_blank" class="btn-link btn-section"><i class="fa-solid fa-file-lines"></i> Declarația de avere</a><a href="${c.interese}" target="_blank" class="btn-link btn-section"><i class="fa-solid fa-file-lines"></i> Declarația de interese</a>`;
-      container.appendChild(card);
-    });
+    container.innerHTML = renderConsilieri(consilieri, adminDict.labels);
   } catch (err) {
     console.error("Error loading consilieri:", err);
   }
@@ -449,9 +886,9 @@ async function initApp() {
   cacheDOM();
   initMenuSystem();
   await loadNavLang(currentLang);
-  await loadCommunityLang(currentLang);
   await loadHomeLang(currentLang);
-  loadConsilieri();
+  await loadCommunityLang(currentLang);
+  await loadAdministratieLang(currentLang);
   updateSections();
   initSearch();
   initThemeToggle();

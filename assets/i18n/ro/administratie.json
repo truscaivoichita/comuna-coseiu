@@ -1,0 +1,602 @@
+{
+  "administratie": {
+    "title": "Administrație",
+    "icon": "fa-building",
+
+    "labels": {
+      "contact": {
+        "title": "Informații de contact",
+        "name": "Nume",
+        "email": "Email",
+        "phone": "Telefon",
+        "schedule": "Program audiențe",
+        "partid": "Partid",
+        "mandat": "Mandat"
+      },
+
+      "buttons": {
+        "avere": "Declarația de avere",
+        "interese": "Declarația de interese"
+      },
+      "consilieri": {
+        "title": "Consilieri"
+      }
+    },
+
+    "primarie": {
+      "title": "Primărie",
+      "icon": "fa-landmark",
+
+      "primar": {
+        "id": "primar",
+        "functie": "Primar",
+        "icon": "fa-user-tie",
+        "nume": "Vulpe Lucian-Andrei",
+        "imagine": "assets/images/primar.jpg",
+        "alt": "Primar Vulpe Lucian-Andrei",
+
+        "contact": {
+          "email": "primariacoseiu@yahoo.com",
+          "telefon": "+40 260 653 021",
+          "program": ["Luni: 10:00 - 12:00", "Joi: 10:00 - 12:00"]
+        },
+
+        "declaratii": {
+          "avere": "assets/data/declaratii/Vulpe-G.Lucian-Andrei-declaratie-de-avere.pdf",
+          "interese": "assets/data/declaratii/Vulpe-G.Lucian-Andrei-declaratie-de-interese.pdf"
+        },
+
+        "descriere": "Primarul este autoritatea executivă locală și are responsabilitatea de a implementa deciziile consiliului local și de a asigura funcționarea administrației publice locale.",
+
+        "atributii": {
+          "title": "Atribuții",
+          "items": [
+            "Aplică legile și hotărârile consiliului local",
+            "Coordonează bugetul local și execuția financiară",
+            "Gestionează serviciile publice locale",
+            "Asigură ordinea publică și situațiile de urgență",
+            "Supraveghează urbanismul și infrastructura",
+            "Emite autorizații și avize locale",
+            "Administrează domeniul public și privat al comunei",
+            "Coordonează evidența stării civile"
+          ]
+        }
+      },
+
+      "viceprimar": {
+        "id": "viceprimar",
+        "functie": "Viceprimar",
+        "icon": "fa-user",
+        "nume": "Somogyi János-Miklós",
+        "imagine": "assets/images/logo1.png",
+        "alt": "Viceprimar Somogyi János-Miklós",
+
+        "contact": {
+          "email": "somogyijanos-miklos@gmail.com",
+          "telefon": "+40 260 653 021",
+          "program": ["Miercuri: 10:00 - 12:00"]
+        },
+
+        "declaratii": {
+          "avere": "assets/data/declaratii/Somogyi-C.Janos-Miklos-declaratie-de-avere.pdf",
+          "interese": "assets/data/declaratii/Somogyi-C.Janos-Miklos-declaratie-de-interese.pdf"
+        },
+
+        "descriere": "Viceprimarul este autoritatea executivă secundară a administrației locale și îl înlocuiește pe primar atunci când este necesar.",
+
+        "atributii": {
+          "title": "Atribuții",
+          "items": [
+            "Este subordonat primarului",
+            "Înlocuiește primarul în absența acestuia",
+            "Primește atribuții delegate de primar",
+            "Contribuie la conducerea administrației locale"
+          ]
+        }
+      },
+
+      "secretar": {
+        "id": "secretar",
+        "functie": "Secretar",
+        "icon": "fa-user",
+        "nume": "Pop Mădălina-Maria",
+        "imagine": "assets/images/logo1.png",
+        "alt": "Secretar Pop Mădălina-Maria",
+
+        "contact": {
+          "email": "popmadalinaaa@gmail.com",
+          "telefon": "+40 260 653 021",
+          "program": ["Marți: 10:00 - 12:00"]
+        },
+
+        "declaratii": {
+          "avere": "assets/data/declaratii/Pop-V.Madalina-Maria-declaratie-de-avere.pdf",
+          "interese": "assets/data/declaratii/Pop-V.Madalina-Maria-declaratie-de-interese.pdf"
+        },
+
+        "descriere": "Secretarul unității administrativ-teritoriale are rolul de a asigura legalitatea actelor administrative și buna funcționare a aparatului administrativ local.",
+
+        "atributii": {
+          "title": "Atribuții",
+          "items": [
+            "Participă la ședințele consiliului local",
+            "Avizează legalitatea hotărârilor și dispozițiilor",
+            "Coordonează activități juridice și administrative",
+            "Gestionează corespondența oficială",
+            "Asigură publicarea actelor administrative",
+            "Certifică documente și copii conforme",
+            "Pregătește lucrările consiliului local"
+          ]
+        }
+      }
+    },
+
+    "organigrama": {
+      "title": "Organigramă",
+      "icon": "fa-sitemap",
+
+      "conducere": {
+        "title": "Conducerea administrației",
+        "icon": "fa-users",
+        "items": [
+          {
+            "functie": "Primar",
+            "icon": "fa-user-tie",
+            "nume": "Vulpe Lucian-Andrei",
+            "declaratii": {
+              "avere": "assets/data/declaratii/Vulpe-G.Lucian-Andrei-declaratie-de-avere.pdf",
+              "interese": "assets/data/declaratii/Vulpe-G.Lucian-Andrei-declaratie-de-interese.pdf",
+              "icon": "fa-file-pdf"
+            }
+          },
+          {
+            "functie": "Viceprimar",
+            "icon": "fa-user",
+            "nume": "Somogyi Janos-Miklos",
+            "declaratii": {
+              "avere": "assets/data/declaratii/Somogyi-C.Janos-Miklos-declaratie-de-avere.pdf",
+              "interese": "assets/data/declaratii/Somogyi-C.Janos-Miklos-declaratie-de-interese.pdf",
+              "icon": "fa-file-pdf"
+            }
+          },
+          {
+            "functie": "Secretar General",
+            "icon": "fa-user",
+            "nume": "Pop Mădălina-Maria",
+            "declaratii": {
+              "avere": "assets/data/declaratii/Pop-V.Madalina-Maria-declaratie-de-avere.pdf",
+              "interese": "assets/data/declaratii/Pop-V.Madalina-Maria-declaratie-de-interese.pdf",
+              "icon": "fa-file-pdf"
+            }
+          }
+        ]
+      },
+      "compartimente": {
+        "title": "Compartimente și servicii",
+        "icon": "fa-building-columns",
+
+        "items": [
+          {
+            "servicii_sociale": {
+              "title": "Servicii sociale",
+              "icon": "fa-hand-holding-heart",
+              "items": [
+                "Post vacant - Inspector debutant",
+                "Gal Debora - Asistent medical comunitar"
+              ]
+            }
+          },
+
+          {
+            "stare_civila": {
+              "title": "Stare civilă",
+              "icon": "fa-ring",
+              "items": [
+                {
+                  "nume": "Pusok Katalin",
+                  "functie": "Inspector principal",
+                  "icon": "fa-user",
+                  "declaratii": {
+                    "avere": "assets/data/declaratii/Pusok-A.Katalin-declaratie-de-avere.pdf",
+                    "interese": "assets/data/declaratii/Pusok-A.Katalin-declaratie-de-interese.pdf",
+                    "icon": "fa-file-pdf"
+                  }
+                }
+              ]
+            }
+          },
+
+          {
+            "buget_finante": {
+              "title": "Buget și finanțe",
+              "icon": "fa-coins",
+              "items": [
+                {
+                  "nume": "Săbău Anca-Ioana",
+                  "functie": "Inspector superior",
+                  "icon": "fa-user",
+                  "declaratii": {
+                    "avere": "assets/data/declaratii/Sabau-Z.Anca-Ioana-declaratie-de-avere.pdf",
+                    "interese": "assets/data/declaratii/Sabau-Z.Anca-Ioana-declaratie-de-interese.pdf",
+                    "icon": "fa-file-pdf"
+                  }
+                },
+                {
+                  "nume": "Chiş Liviu-Alexandru",
+                  "functie": "Inspector superior",
+                  "icon": "fa-user",
+                  "declaratii": {
+                    "avere": "assets/data/declaratii/Chis-A.Liviu-Alexandru-declaratie-de-avere.pdf",
+                    "interese": "assets/data/declaratii/Chis-A.Liviu-Alexandru-declaratie-de-interese.pdf",
+                    "icon": "fa-file-pdf"
+                  }
+                }
+              ]
+            }
+          },
+
+          {
+            "registru_agricol": {
+              "title": "Registru agricol",
+              "icon": "fa-tractor",
+              "items": ["Post vacant - Inspector debutant"]
+            }
+          },
+
+          {
+            "administrativ": {
+              "title": "Administrativ",
+              "icon": "fa-screwdriver-wrench",
+              "items": [
+                {
+                  "nume": "Csáki Ferenc",
+                  "functie": "Guard"
+                },
+                {
+                  "nume": "Somogyi Kalman",
+                  "functie": " Buldoexcavatorist"
+                },
+                {
+                  "nume": "Varga Csaba",
+                  "functie": "Muncitor"
+                },
+                {
+                  "nume": "Gal Hajnal",
+                  "functie": "Muncitor"
+                }
+              ]
+            }
+          },
+
+          {
+            "biblioteca": {
+              "title": "Bibliotecă",
+              "icon": "fa-book",
+              "items": ["Marton-Gergely Edit-Estera - Bibliotecar"]
+            }
+          },
+
+          {
+            "proiecte": {
+              "title": "Proiecte",
+              "icon": "fa-diagram-project",
+              "items": ["Post vacant - Consilier școlar"]
+            }
+          }
+        ]
+      }
+    },
+
+    "regulament": {
+      "title": "Regulament",
+      "icon": "fa-file-contract",
+      "link": "assets/data/pdfs/regulament-organizare-functionare.pdf",
+      "descriere": "Aici găsiți informații din regulametul de organizare și funcționare al Primăriei Coșeiu"
+    },
+
+    "sediu": {
+      "title": "Sediul Primăriei Coșeiu",
+      "icon": "fa-map-marker-alt",
+      "adresa": "Localitatea Coșeiu, Nr.222, Jud.Sălaj",
+      "adresa_icon": "fa-location-dot",
+      "email": "primariacoseiu@yahoo.com",
+      "email_icon": "fa-envelope",
+      "telefon": "+40 260 653 021",
+      "telefon_icon": "fa-phone"
+    },
+
+    "consiliu_local": {
+      "title": "Consiliul Local",
+      "icon": "fa-landmark",
+      "descriere": "Consiliul local este organul de conducere al comunei, compus din consilieri aleși de către cetățenii din aceasta.",
+      "comisii": {
+        "id": "comisii",
+        "title": "Comisii",
+        "icon": "fa-people-group",
+        "comisii_descriere1": "Comisiile de specialitate ale Consiliului Local Coșeiu analizează proiectele de hotărâri și emit avize consultative înainte de adoptarea acestora în plen.",
+        "items": [
+          "Comisia pentru buget, finanțe și administrarea domeniului public și privat",
+          "Comisia pentru agricultură, mediu și dezvoltare rurală",
+          "Comisia pentru învățământ, sănătate, cultură și protecție socială"
+        ],
+        "comisii_descriere2": "Fiecare comisie este formată din consilieri locali și funcționează conform regulamentului de organizare și funcționare al Consiliului Local."
+      },
+
+      "sedinte": {
+        "id": "sedinte",
+        "title": "Sedinte",
+        "icon": "fa-calendar",
+        "descriere1": "Ședințele Consiliului Local sunt publice și se desfășoară în condițiile prevăzute de Codul administrativ, fiind aduse la cunoștința cetățenilor.",
+        "descriere2": "Ședințele Consiliului Local Coșeiu sunt anunțate în prealabil și sunt deschise publicului.",
+        "urmatoare": {
+          "title": "Următoarea ședință",
+          "icon": "fa-calendar-check",
+          "data": "15 mai 2026",
+          "data_label": "Data",
+          "ora": "18:00",
+          "ora_label": "Ora",
+          "locatie": "Sala de ședințe a Primăriei",
+          "locatie_label": "Locația"
+        },
+        "ordine_de_zi": {
+          "title": "Ordinea de zi",
+          "icon": "fa-list",
+          "items": [
+            "Aprobarea bugetului local",
+            "Proiecte de infrastructură",
+            "Diverse"
+          ]
+        }
+      },
+
+      "hotarari": {
+        "title": "Hotărâri Consiliu",
+        "icon": "fa-scroll",
+        "descriere": "Hotărârile Consiliului Local sunt acte administrative cu caracter normativ sau individual și se publică pentru asigurarea transparenței decizionale.",
+        "items": [
+          {
+            "titlu": "HCL nr. 10 / 2026 - Buget local",
+            "link": "#"
+          },
+          {
+            "titlu": "HCL nr. 11 / 2026 - Taxe și impozite",
+            "link": "assets/data/pdfs/taxe-impozite-2026.pdf"
+          },
+          {
+            "titlu": "HCL nr. 12 / 2026 - Investiții locale",
+            "link": "#"
+          }
+        ]
+      }
+    },
+
+    "evidenta_persoanelor": {
+      "title": "Evidența Persoanelor",
+      "icon": "fa-id-card",
+      "descriere": [
+        "Serviciul de evidență a persoanelor asigură gestionarea actelor de stare civilă și a documentelor de identitate pentru cetățenii comunei Coșeiu. Cetățenii se pot adresa primăriei pentru eliberarea documentelor, înregistrarea evenimentelor de viață și obținerea informațiilor necesare.",
+        "Cetățenii se pot adresa primăriei pentru eliberarea documentelor, înregistrarea evenimentelor de viață și obținerea informațiilor necesare."
+      ],
+      "servicii": [
+        {
+          "id": "nasteri",
+          "title": "Nasteri",
+          "icon": "fa-baby",
+          "descriere": "Înregistrarea nașterii se face în termenul prevăzut de lege, pe baza documentelor medicale și a actelor de identitate ale părinților."
+        },
+        {
+          "id": "acte",
+          "title": "Acte de identitate",
+          "icon": "fa-file",
+          "descriere": "Eliberarea cărților de identitate se realizează la cererea cetățenilor, în baza documentelor justificative necesare."
+        },
+        {
+          "id": "casatorii",
+          "title": "Căsătorii",
+          "icon": "fa-heart",
+          "descriere": "Căsătoria civilă se încheie la sediul primăriei, în baza unei programări prealabile și a depunerii actelor necesare."
+        },
+        {
+          "id": "divorturi",
+          "title": "Divorțuri",
+          "icon": "fa-gavel",
+          "descriere": "Divorțul pe cale administrativă se poate realiza în anumite condiții, conform legislației în vigoare, la cererea ambilor soți."
+        },
+        {
+          "id": "decese",
+          "title": "Decese",
+          "icon": "fa-cross",
+          "descriere": "Înregistrarea decesului se face pe baza certificatului medical constatator și a actelor persoanei decedate."
+        },
+        {
+          "id": "pasapoarte",
+          "title": "Pașapoarte",
+          "icon": "fa-passport",
+          "descriere": "Pentru eliberarea pașapoartelor, cetățenii sunt îndrumați către serviciile competente din cadrul Direcției de Pașapoarte."
+        }
+      ]
+    },
+
+    "politia_locala": {
+      "title": "Poliția Locală",
+      "icon": "fa-shield",
+      "descriere": [
+        "Poliția Locală din Coșeiu asigură respectarea legii și menținerea ordinii publice pe raza comunei."
+      ],
+      "servicii": [
+        {
+          "id": "informatii_politie",
+          "title": "Informații Poliție",
+          "icon": "fa-info-circle",
+          "descriere": "Poliția Locală din Coșeiu asigură respectarea legii și menținerea ordinii publice pe raza comunei."
+        },
+        {
+          "id": "atributii",
+          "title": "Atribuții Poliție",
+          "icon": "fa-list",
+          "descriere": "Menținerea ordinii și liniștii publice; Controlul respectării normelor de conviețuire socială; Supravegherea circulației pe drumurile publice; Protejarea bunurilor publice și private."
+        },
+        {
+          "id": "amenzi",
+          "title": "Plata amenzilor",
+          "icon": "fa-money-bill",
+          "descriere": "Amenzile pot fi achitate la casieria primăriei sau prin metode electronice, conform instrucțiunilor disponibile."
+        },
+        {
+          "id": "ridicari_auto",
+          "title": "Ridicări Auto",
+          "icon": "fa-car",
+          "descriere": "Ridicarea autovehiculelor parcate neregulamentar se realizează conform legislației în vigoare."
+        }
+      ]
+    },
+
+    "informatii_publice": {
+      "id": "informatii_publice",
+      "title": "Informații publice",
+      "icon": "fa-circle-exclamation",
+      "descriere": [],
+      "servicii": [
+        {
+          "id": "anunturi",
+          "title": "Anunțuri",
+          "icon": "fa-bullhorn",
+          "descriere": "Primăria Comunei Coșeiu publică periodic anunțuri de interes public pentru cetățeni.",
+          "lista": [
+            {
+              "text": "ANUNT privind afisarea publica a documentelor tehnice ale cadastrului (2026)",
+              "icon": "fa-file-lines",
+              "link": "assets/data/pdfs/anunt-cadastru-2026.pdf"
+            },
+            {
+              "text": "Anunț privind taxe și impozite 2026",
+              "icon": "fa-coins",
+              "link": "assets/data/pdfs/taxe-impozite-2026.pdf"
+            },
+            {
+              "text": "Concurs posturi vacante 2026",
+              "icon": "fa-trophy",
+              "link": "assets/data/pdfs/concurs-posturi-2026.pdf"
+            },
+            {
+              "text": "Informare lucrări publice",
+              "icon": "fa-road",
+              "link": "assets/data/pdfs/lucrari-publice.pdf"
+            },
+            {
+              "text": "Anunț privind înscrierea în programul de cadastru gratuit pe sectoare",
+              "icon": "fa-map",
+              "link": "assets/data/pdfs/programul-cadastru.pdf"
+            },
+            {
+              "text": "Concurs pentru ocuparea posturilor vacante din cadrul primăriei",
+              "icon": "fa-pen",
+              "link": "assets/data/pdfs/concurs-posturi.pdf"
+            },
+            {
+              "text": "Rezultatele concursurilor organizate la nivel local",
+              "icon": "fa-eye",
+              "link": "assets/data/pdfs/rezultate-concursuri.pdf"
+            },
+            {
+              "text": "Informări privind lucrări publice și proiecte în desfășurare",
+              "icon": "fa-circle-exclamation",
+              "link": "assets/data/pdfs/lucrari-proiecte.pdf"
+            }
+          ]
+        },
+        {
+          "id": "concursuri",
+          "title": "Concursuri",
+          "icon": "fa-trophy",
+          "descriere": "Primăria organizează concursuri pentru ocuparea posturilor vacante, în conformitate cu legislația în vigoare. Anunțurile sunt publicate pe site și la sediul instituției."
+        },
+        {
+          "id": "cereri",
+          "title": "Cereri Tip",
+          "icon": "fa-file-lines",
+          "descriere": "Cetățenii au la dispoziție formulare standard pentru diverse solicitări administrative, disponibile online sau la sediul primăriei."
+        },
+        {
+          "id": "audiente",
+          "title": "Audiențe",
+          "icon": "fa-comments",
+          "descriere": "Programările pentru audiențe se pot face telefonic sau la sediul primăriei, în intervalul programului de lucru."
+        },
+        {
+          "id": "contracte",
+          "title": "Contracte",
+          "icon": "fa-file-contract",
+          "descriere": "Contractele încheiate de primărie sunt publicate pentru asigurarea transparenței și respectarea legislației în vigoare."
+        },
+        {
+          "id": "plati",
+          "title": "Plăți",
+          "icon": "fa-credit-card",
+          "descriere": "Plățile către bugetul local pot fi efectuate numerar, prin transfer bancar sau online."
+        },
+        {
+          "id": "licitatii",
+          "title": "Licitații publice",
+          "icon": "fa-landmark",
+          "descriere": "Procedurile de achiziții publice și licitațiile sunt organizate în conformitate cu legislația în domeniu și sunt publicate pe platformele oficiale."
+        },
+        {
+          "id": "documente",
+          "title": "Documente",
+          "icon": "fa-folder-open",
+          "descriere": "Documentele publice pot fi consultate online sau la sediul primăriei, în condițiile legii."
+        }
+      ]
+    },
+
+    "altele": {
+      "title": "Altele",
+      "icon": "fa-circle-question",
+      "descriere": [],
+
+      "servicii": [
+        {
+          "id": "transformare_digitala",
+          "title": "Transformare digitală",
+          "icon": "fa-laptop-code",
+          "descriere": "Primăria Coșeiu urmărește digitalizarea serviciilor publice pentru a facilita accesul cetățenilor la informații și servicii administrative."
+        },
+        {
+          "id": "servicii_online",
+          "title": "Servicii Online",
+          "icon": "fa-desktop",
+          "descriere": "Cetățenii pot beneficia de servicii online precum depunerea cererilor, plata taxelor și accesarea documentelor oficiale.",
+          "lista": [
+            {
+              "text": "Depunere cereri online",
+              "icon": "fa-check",
+              "link": "#"
+            },
+            {
+              "text": "Plată taxe și impozite",
+              "icon": "fa-coins",
+              "link": "#"
+            },
+            {
+              "text": "Programări audiențe",
+              "icon": "fa-calendar-check",
+              "link": "#"
+            },
+            {
+              "text": "Solicitări informații publice",
+              "icon": "fa-circle-info",
+              "link": "#"
+            }
+          ]
+        },
+        {
+          "id": "transparenta",
+          "title": "Transparență",
+          "icon": "fa-eye",
+          "descriere": "Ședință publică a Consiliului Local pe data de 15 mai, la ora 18:00, la Primărie."
+        }
+      ]
+    }
+  }
+}

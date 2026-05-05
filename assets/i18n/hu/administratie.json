@@ -1,0 +1,586 @@
+{
+  "administratie": {
+    "title": "Adminisztráció",
+    "icon": "fa-building",
+
+    "labels": {
+      "contact": {
+        "title": "Kapcsolati információk",
+        "name": "Név",
+        "email": "E-mail",
+        "phone": "Telefon",
+        "schedule": "Fogadóóra",
+        "partid": "Párt",
+        "mandat": "Mandátum"
+      },
+
+      "buttons": {
+        "avere": "Vagyonnyilatkozat",
+        "interese": "Érdekeltségi nyilatkozat"
+      },
+      "consilieri": {
+        "title": "Tanácsosok"
+      }
+    },
+    "primarie": {
+      "title": "Polgármesteri Hivatal",
+      "primar": {
+        "id": "primar",
+        "functie": "Polgármester",
+        "icon": "fa-user-tie",
+        "nume": "Vulpe Lucian-Andrei",
+        "imagine": "assets/images/primar.jpg",
+        "alt": "Vulpe Lucian-Andrei polgármester",
+        "contact": {
+          "email": "primariacoseiu@yahoo.com",
+          "telefon": "+40 260 653 021",
+          "program": ["Hétfő: 10:00 - 12:00", "Csütörtök: 10:00 - 12:00"]
+        },
+        "declaratii": {
+          "avere": "assets/data/declaratii/Vulpe-G.Lucian-Andrei-declaratie-de-avere.pdf",
+          "interese": "assets/data/declaratii/Vulpe-G.Lucian-Andrei-declaratie-de-interese.pdf"
+        },
+        "descriere": "A polgármester a helyi végrehajtó hatóság, amely felel a helyi tanács döntéseinek végrehajtásáért és a helyi közigazgatás működéséért.",
+        "atributii": {
+          "title": "Atribútumok",
+          "items": [
+            "A törvények és a helyi tanács határozatainak végrehajtása",
+            "A helyi költségvetés és a pénzügyi végrehajtás koordinálása",
+            "A helyi közszolgáltatások irányítása",
+            "A közrend és a vészhelyzetek biztosítása",
+            "A városrendezés és infrastruktúra felügyelete",
+            "Helyi engedélyek és jóváhagyások kiadása",
+            "A köz- és magántulajdon kezelése",
+            "Az anyakönyvi nyilvántartás koordinálása"
+          ]
+        }
+      },
+      "viceprimar": {
+        "id": "viceprimar",
+        "functie": "Alpolgármester",
+        "icon": "fa-user",
+        "nume": "Somogyi Janos-Miklos",
+        "imagine": "assets/images/logo1.png",
+        "alt": "Somogyi Janos-Miklos alpolgármester",
+        "contact": {
+          "email": "somogyijanos-miklos@gmail.com",
+          "telefon": "+40 260 653 021",
+          "program": ["Szerda: 10:00 - 12:00"]
+        },
+        "declaratii": {
+          "avere": "assets/data/declaratii/Somogyi-C.Janos-Miklos-declaratie-de-avere.pdf",
+          "interese": "assets/data/declaratii/Somogyi-C.Janos-Miklos-declaratie-de-interese.pdf"
+        },
+        "descriere": "Az alpolgármester a helyi közigazgatás másodlagos végrehajtó tisztségviselője, aki szükség esetén helyettesíti a polgármestert.",
+        "atributii": {
+          "title": "Atribútumok",
+          "items": [
+            "A polgármester helyettesítése távollét esetén",
+            "A polgármester által delegált feladatok ellátása",
+            "A helyi közigazgatás működésének támogatása"
+          ]
+        }
+      },
+      "secretar": {
+        "id": "secretar",
+        "functie": "Jegyző",
+        "icon": "fa-user",
+        "nume": "Pop Mădălina-Maria",
+        "imagine": "assets/images/logo1.png",
+        "alt": "Pop Mădălina-Maria jegyző",
+        "contact": {
+          "email": "popmadalinaaa@gmail.com",
+          "telefon": "+40 260 653 021",
+          "program": ["Kedd: 10:00 - 12:00"]
+        },
+        "declaratii": {
+          "avere": "assets/data/declaratii/Pop-V.Madalina-Maria-declaratie-de-avere.pdf",
+          "interese": "assets/data/declaratii/Pop-V.Madalina-Maria-declaratie-de-interese.pdf"
+        },
+        "descriere": "A közigazgatási egység jegyzője biztosítja a közigazgatási aktusok jogszerűségét és a helyi adminisztráció megfelelő működését.",
+        "atributii": {
+          "title": "Atribútumok",
+          "items": [
+            "Részvétel a helyi tanács ülésein",
+            "A határozatok jogszerűségének ellenőrzése",
+            "Jogi és adminisztratív tevékenységek koordinálása",
+            "Hivatalos levelezés kezelése",
+            "Közigazgatási aktusok közzététele",
+            "Dokumentumok hitelesítése",
+            "A tanács munkájának előkészítése"
+          ]
+        }
+      }
+    },
+    "organigrama": {
+      "title": "Szervezeti felépítés",
+      "icon": "fa-sitemap",
+
+      "conducere": {
+        "icon": "fa-users",
+        "title": "Vezetés",
+        "items": [
+          {
+            "functie": "Polgármester",
+            "icon": "fa-user-tie",
+            "nume": "Vulpe Lucian-Andrei",
+            "declaratii": {
+              "avere": "assets/data/declaratii/Vulpe-G.Lucian-Andrei-declaratie-de-avere.pdf",
+              "interese": "assets/data/declaratii/Vulpe-G.Lucian-Andrei-declaratie-de-interese.pdf",
+              "icon": "fa-file-pdf"
+            }
+          },
+          {
+            "functie": "Alpolgármester",
+            "icon": "fa-user",
+            "nume": "Somogyi Janos-Miklos",
+            "declaratii": {
+              "avere": "assets/data/declaratii/Somogyi-C.Janos-Miklos-declaratie-de-avere.pdf",
+              "interese": "assets/data/declaratii/Somogyi-C.Janos-Miklos-declaratie-de-interese.pdf",
+              "icon": "fa-file-pdf"
+            }
+          },
+          {
+            "functie": "Főjegyző",
+            "icon": "fa-user",
+            "nume": "Pop Mădălina-Maria",
+            "declaratii": {
+              "avere": "assets/data/declaratii/Pop-V.Madalina-Maria-declaratie-de-avere.pdf",
+              "interese": "assets/data/declaratii/Pop-V.Madalina-Maria-declaratie-de-interese.pdf",
+              "icon": "fa-file-pdf"
+            }
+          }
+        ]
+      },
+
+      "compartimente": {
+        "title": "Osztályok és szolgáltatások",
+        "icon": "fa-building-columns",
+
+        "items": [
+          {
+            "servicii_sociale": {
+              "title": "Szociális szolgáltatások",
+              "icon": "fa-hand-holding-heart",
+              "items": [
+                "Betöltetlen állás - Kezdő felügyelő",
+                "Gal Debora - Közösségi egészségügyi asszisztens"
+              ]
+            }
+          },
+
+          {
+            "stare_civila": {
+              "title": "Állapot",
+              "icon": "fa-ring",
+              "items": [
+                {
+                  "nume": "Pusok Katalin",
+                  "functie": "Főfelügyelő",
+                  "icon": "fa-user",
+                  "declaratii": {
+                    "avere": "assets/data/declaratii/Pusok-A.Katalin-declaratie-de-avere.pdf",
+                    "interese": "assets/data/declaratii/Pusok-A.Katalin-declaratie-de-interese.pdf",
+                    "icon": "fa-file-pdf"
+                  }
+                }
+              ]
+            }
+          },
+
+          {
+            "buget_finante": {
+              "title": "Költségvetés és pénzügyek",
+              "icon": "fa-coins",
+              "items": [
+                {
+                  "nume": "Săbău Anca-Ioana",
+                  "functie": "Felsőfokú felügyelő",
+                  "icon": "fa-user",
+                  "declaratii": {
+                    "avere": "assets/data/declaratii/Sabau-Z.Anca-Ioana-declaratie-de-avere.pdf",
+                    "interese": "assets/data/declaratii/Sabau-Z.Anca-Ioana-declaratie-de-interese.pdf",
+                    "icon": "fa-file-pdf"
+                  }
+                },
+                {
+                  "nume": "Chiş Liviu-Alexandru",
+                  "functie": "Felsőfokú felügyelő",
+                  "icon": "fa-user",
+                  "declaratii": {
+                    "avere": "assets/data/declaratii/Chis-A.Liviu-Alexandru-declaratie-de-avere.pdf",
+                    "interese": "assets/data/declaratii/Chis-A.Liviu-Alexandru-declaratie-de-interese.pdf",
+                    "icon": "fa-file-pdf"
+                  }
+                }
+              ]
+            }
+          },
+
+          {
+            "registru_agricol": {
+              "icon": "fa-tractor",
+              "title": "Mezőgazdasági regiszter",
+              "items": ["Betöltetlen állás - Kezdő felügyelő"]
+            }
+          },
+
+          {
+            "administrativ": {
+              "icon": "fa-screwdriver-wrench",
+              "title": "Adminisztratív szolgáltatások",
+              "items": [
+                {
+                  "nume": "Csáki Ferenc",
+                  "functie": "Őr"
+                },
+                {
+                  "nume": "Somogyi Kalman",
+                  "functie": "Kotró-rakodógép kezelő"
+                },
+                {
+                  "nume": "Varga Csaba",
+                  "functie": "Munkás"
+                },
+                {
+                  "nume": "Gal Hajnal",
+                  "functie": "Munkás"
+                }
+              ]
+            }
+          },
+
+          {
+            "biblioteca": {
+              "icon": "fa-book",
+              "title": "Könyvtár",
+              "items": ["Marton-Gergely Edit-Estera - Könyvtáros"]
+            }
+          },
+
+          {
+            "proiecte": {
+              "icon": "fa-diagram-project",
+              "title": "Projektek",
+              "items": ["Betöltetlen állás - Iskolai tanácsadó"]
+            }
+          }
+        ]
+      }
+    },
+
+    "regulament": {
+      "title": "Szabályzat",
+      "icon": "fa-file-contract",
+      "link": "assets/data/pdfs/regulament-organizare-functionare.pdf",
+      "descriere": "Itt találhatók a Coșeiu Polgármesteri Hivatal szervezési és működési szabályzatának információi"
+    },
+
+    "sediu": {
+      "title": "A Coșeiu Polgármesteri Hivatal székhelye",
+      "icon": "fa-map-marker-alt",
+      "adresa": "Coșeiu község, 222. szám, Szilágy megye",
+      "adresa_icon": "fa-location-dot",
+      "email": "primariacoseiu@yahoo.com",
+      "email_icon": "fa-envelope",
+      "telefon": "+40 260 653 021",
+      "telefon_icon": "fa-phone"
+    },
+
+    "consiliu_local": {
+      "title": "Helyi Tanács",
+      "icon": "fa-landmark",
+      "descriere": "A helyi tanács a község irányító szerve, amely a lakosok által megválasztott tanácsosokból áll.",
+
+      "comisii": {
+        "id": "comisii",
+        "title": "Bizottságok",
+        "icon": "fa-people-group",
+        "comisii_descriere1": "A Coșeiu Helyi Tanács szakbizottságai elemzik a határozattervezeteket és véleményező javaslatokat adnak ki azok plenáris elfogadása előtt.",
+        "items": [
+          "Költségvetési, pénzügyi és vagyonkezelési bizottság",
+          "Mezőgazdasági, környezetvédelmi és vidékfejlesztési bizottság",
+          "Oktatási, egészségügyi, kulturális és szociális bizottság"
+        ],
+        "comisii_descriere2": "Minden bizottság helyi tanácsosokból áll, és a szervezési és működési szabályzat szerint működik."
+      },
+
+      "sedinte": {
+        "id": "sedinte",
+        "title": "Ülések",
+        "icon": "fa-calendar",
+        "descriere1": "A Helyi Tanács ülései nyilvánosak, és az adminisztratív kódex előírásainak megfelelően zajlanak.",
+        "descriere2": "A Coșeiu Helyi Tanács üléseit előre bejelentik, és nyitottak a nyilvánosság számára.",
+
+        "urmatoare": {
+          "title": "Következő ülés",
+          "icon": "fa-calendar-check",
+          "data": "2026. május 15.",
+          "data_label": "Adata",
+          "ora": "18:00",
+          "ora_label": "Nem",
+          "locatie": "A Polgármesteri Hivatal ülésterme",
+          "locatie_label": "Elhelyezkedés"
+        },
+
+        "ordine_de_zi": {
+          "title": "Napirend",
+          "icon": "fa-list",
+          "items": [
+            "A helyi költségvetés elfogadása",
+            "Infrastrukturális projektek",
+            "Egyebek"
+          ]
+        }
+      },
+
+      "hotarari": {
+        "title": "Tanácsi határozatok",
+        "icon": "fa-scroll",
+        "descriere": "A Helyi Tanács határozatai normatív vagy egyedi jellegű közigazgatási aktusok, amelyeket a döntéshozatal átláthatósága érdekében közzétesznek.",
+        "items": [
+          {
+            "titlu": "HCL nr. 10 / 2026 - Helyi költségvetés",
+            "link": "#"
+          },
+          {
+            "titlu": "HCL nr. 11 / 2026 - Adók és illetékek",
+            "link": "assets/data/pdfs/taxe-impozite-2026.pdf"
+          },
+          {
+            "titlu": "HCL nr. 12 / 2026 - Helyi beruházások",
+            "link": "#"
+          }
+        ]
+      }
+    },
+
+    "evidenta_persoanelor": {
+      "title": "Személynyilvántartás",
+      "icon": "fa-id-card",
+      "descriere": [
+        "A személynyilvántartó szolgálat biztosítja az anyakönyvi okmányok és személyazonosító dokumentumok kezelését Coșeiu község lakosai számára. A polgárok a hivatalhoz fordulhatnak dokumentumok kiállítása, élethelyzeti események bejegyzése és szükséges információk megszerzése érdekében.",
+        "A polgárok a hivatalhoz fordulhatnak dokumentumok kiállítása, élethelyzeti események bejegyzése és szükséges információk megszerzése érdekében."
+      ],
+      "servicii": [
+        {
+          "id": "nasteri",
+          "title": "Születések",
+          "icon": "fa-baby",
+          "descriere": "A születés bejegyzése a törvényben meghatározott határidőn belül történik, az orvosi dokumentumok és a szülők személyazonosító okmányai alapján."
+        },
+        {
+          "id": "acte",
+          "title": "Személyazonosító okmányok",
+          "icon": "fa-file",
+          "descriere": "A személyi igazolványok kiállítása a polgárok kérelmére történik, a szükséges igazoló dokumentumok alapján."
+        },
+        {
+          "id": "casatorii",
+          "title": "Házasságok",
+          "icon": "fa-heart",
+          "descriere": "A polgári házasságkötés a hivatal székhelyén történik, előzetes időpont-egyeztetés és a szükséges dokumentumok benyújtása alapján."
+        },
+        {
+          "id": "divorturi",
+          "title": "Válások",
+          "icon": "fa-gavel",
+          "descriere": "Az adminisztratív úton történő válás bizonyos feltételek mellett, a hatályos jogszabályok szerint, a felek közös kérelmére valósítható meg."
+        },
+        {
+          "id": "decese",
+          "title": "Halálesetek",
+          "icon": "fa-cross",
+          "descriere": "A haláleset bejegyzése a halottvizsgálati bizonyítvány és az elhunyt személy okmányai alapján történik."
+        },
+        {
+          "id": "pasapoarte",
+          "title": "Útlevelek",
+          "icon": "fa-passport",
+          "descriere": "Az útlevelek kiállításához a polgárokat az illetékes útlevél-igazgatóság szolgálataihoz irányítják."
+        }
+      ]
+    },
+
+    "politia_locala": {
+      "title": "Helyi Rendőrség",
+      "icon": "fa-shield",
+      "descriere": [
+        "A Coșeiu-i Helyi Rendőrség biztosítja a törvény betartását és a közrend fenntartását a község területén."
+      ],
+      "servicii": [
+        {
+          "id": "informatii_politie",
+          "title": "Rendőrségi információk",
+          "icon": "fa-info-circle",
+          "descriere": "A Coșeiu-i Helyi Rendőrség biztosítja a törvény betartását és a közrend fenntartását a község területén."
+        },
+        {
+          "id": "atributii",
+          "title": "Rendőrségi feladatok",
+          "icon": "fa-list",
+          "descriere": "A közrend és nyugalom fenntartása; A társadalmi együttélési szabályok betartásának ellenőrzése; A közúti forgalom felügyelete; Köz- és magántulajdon védelme."
+        },
+        {
+          "id": "amenzi",
+          "title": "Bírságok befizetése",
+          "icon": "fa-money-bill",
+          "descriere": "A bírságok befizethetők a hivatal pénztárában vagy elektronikus úton, a rendelkezésre álló útmutatások szerint."
+        },
+        {
+          "id": "ridicari_auto",
+          "title": "Járműelszállítás",
+          "icon": "fa-car",
+          "descriere": "A szabálytalanul parkoló járművek elszállítása a hatályos jogszabályok szerint történik."
+        }
+      ]
+    },
+
+    "informatii_publice": {
+      "id": "informatii_publice",
+      "title": "Közérdekű információk",
+      "icon": "fa-circle-exclamation",
+      "descriere": [],
+      "servicii": [
+        {
+          "id": "anunturi",
+          "title": "Hirdetmények",
+          "icon": "fa-bullhorn",
+          "descriere": "A Coșeiu Községi Polgármesteri Hivatal rendszeresen közzétesz közérdekű hirdetményeket a lakosság számára.",
+          "lista": [
+            {
+              "text": "HIRDETMÉNY a kataszteri műszaki dokumentumok nyilvános kifüggesztéséről (2026)",
+              "icon": "fa-file-lines",
+              "link": "assets/data/pdfs/anunt-cadastru-2026.pdf"
+            },
+            {
+              "text": "Hirdetmény a 2026-os adókról és illetékekről",
+              "icon": "fa-coins",
+              "link": "assets/data/pdfs/taxe-impozite-2026.pdf"
+            },
+            {
+              "text": "Versenyvizsga üres állások betöltésére 2026",
+              "icon": "fa-trophy",
+              "link": "assets/data/pdfs/concurs-posturi-2026.pdf"
+            },
+            {
+              "text": "Tájékoztató közmunkálatokról",
+              "icon": "fa-road",
+              "link": "assets/data/pdfs/lucrari-publice.pdf"
+            },
+            {
+              "text": "Hirdetmény az ingyenes kataszteri programba való beiratkozásról",
+              "icon": "fa-map",
+              "link": "assets/data/pdfs/programul-cadastru.pdf"
+            },
+            {
+              "text": "Versenyvizsga a hivatal üres állásainak betöltésére",
+              "icon": "fa-pen",
+              "link": "assets/data/pdfs/concurs-posturi.pdf"
+            },
+            {
+              "text": "A helyi szinten szervezett versenyvizsgák eredményei",
+              "icon": "fa-eye",
+              "link": "assets/data/pdfs/rezultate-concursuri.pdf"
+            },
+            {
+              "text": "Tájékoztatások közmunkákról és folyamatban lévő projektekről",
+              "icon": "fa-circle-exclamation",
+              "link": "assets/data/pdfs/lucrari-proiecte.pdf"
+            }
+          ]
+        },
+        {
+          "id": "concursuri",
+          "title": "Versenyvizsgák",
+          "icon": "fa-trophy",
+          "descriere": "A hivatal versenyvizsgákat szervez az üres állások betöltésére a hatályos jogszabályoknak megfelelően."
+        },
+        {
+          "id": "cereri",
+          "title": "Űrlapok",
+          "icon": "fa-file-lines",
+          "descriere": "A polgárok számára különböző adminisztratív kérelmekhez szabványos űrlapok állnak rendelkezésre online vagy a hivatal székhelyén."
+        },
+        {
+          "id": "audiente",
+          "title": "Fogadóórák",
+          "icon": "fa-comments",
+          "descriere": "A fogadóórákra történő bejelentkezés telefonon vagy személyesen, munkaidőben lehetséges."
+        },
+        {
+          "id": "contracte",
+          "title": "Szerződések",
+          "icon": "fa-file-contract",
+          "descriere": "A hivatal által kötött szerződések közzétételre kerülnek az átláthatóság biztosítása érdekében."
+        },
+        {
+          "id": "plati",
+          "title": "Fizetések",
+          "icon": "fa-credit-card",
+          "descriere": "A helyi költségvetésbe történő befizetések készpénzzel, banki átutalással vagy online is teljesíthetők."
+        },
+        {
+          "id": "licitatii",
+          "title": "Közbeszerzések",
+          "icon": "fa-landmark",
+          "descriere": "A közbeszerzési eljárások a vonatkozó jogszabályok szerint kerülnek megszervezésre és közzétételre."
+        },
+        {
+          "id": "documente",
+          "title": "Dokumentumok",
+          "icon": "fa-folder-open",
+          "descriere": "A közérdekű dokumentumok online vagy a hivatal székhelyén tekinthetők meg."
+        }
+      ]
+    },
+
+    "altele": {
+      "title": "Egyéb",
+      "icon": "fa-circle-question",
+      "descriere": [],
+      "servicii": [
+        {
+          "id": "transformare_digitala",
+          "title": "Digitális átalakulás",
+          "icon": "fa-laptop-code",
+          "descriere": "A Coșeiu-i Polgármesteri Hivatal célja a közszolgáltatások digitalizálása a lakosság könnyebb hozzáférése érdekében."
+        },
+        {
+          "id": "servicii_online",
+          "title": "Online szolgáltatások",
+          "icon": "fa-desktop",
+          "descriere": "A polgárok online szolgáltatásokat vehetnek igénybe, például kérelmek benyújtását, adók befizetését és hivatalos dokumentumok elérését.",
+          "lista": [
+            {
+              "text": "Online kérelem benyújtása",
+              "icon": "fa-check",
+              "link": "#"
+            },
+            {
+              "text": "Adók és illetékek befizetése",
+              "icon": "fa-coins",
+              "link": "#"
+            },
+            {
+              "text": "Időpontfoglalás fogadóórára",
+              "icon": "fa-calendar-check",
+              "link": "#"
+            },
+            {
+              "text": "Közérdekű információk igénylése",
+              "icon": "fa-circle-info",
+              "link": "#"
+            }
+          ]
+        },
+        {
+          "id": "transparenta",
+          "title": "Átláthatóság",
+          "icon": "fa-eye",
+          "descriere": "Nyilvános Helyi Tanács ülés 2026. május 15-én, 18:00 órakor a Polgármesteri Hivatalban."
+        }
+      ]
+    }
+  }
+}
