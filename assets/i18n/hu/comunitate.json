@@ -1,10 +1,17 @@
 {
-  "title": "👥 KÖZÖSSÉG",
+  "title": "KÖZÖSSÉG",
+  "id": "comunitate",
+  "icon": "fa-users",
+
   "cetateni": {
-    "title": "⭐ Lakosok",
-    "description": "Coșeiu községben körülbelül 2000 lakos él, többségük magyar nemzetiségű, majd román és roma lakosság követi.",
+    "id": "cetateni",
+    "title": "Lakosok",
+    "icon": "fa-people-group",
+    "description": "Kusaly községben körülbelül 2000 lakos él, többségük magyar nemzetiségű, majd román és roma lakosság követi.",
     "etnic": {
+      "id": "etnic",
       "title": "Etnikai összetétel",
+      "icon": "fa-earth-europe",
       "items": [
         "Magyarok (50,63%)",
         "Románok (40,09%)",
@@ -13,7 +20,9 @@
       ]
     },
     "religie": {
+      "id": "religie",
       "title": "Vallási összetétel",
+      "icon": "fa-church",
       "items": [
         "Ortodox (36,31%)",
         "Református (34,14%)",
@@ -24,88 +33,147 @@
       ]
     }
   },
+  "dezbateri_publice": {
+    "id": "dezbateri_publice",
+    "title": "Közviták",
+    "icon": "fa-comments",
 
-  "newsletter": {
-    "title": "📩 Hírlevél",
-    "description": "Iratkozzon fel Coșeiu Polgármesteri Hivatalának hírlevelére, hogy megkapja a legfrissebb információkat a projektekről, közleményekről és helyi eseményekről.",
-    "items": [
-      "📢 Fontos bejelentések",
-      "🏗️ Folyamatban lévő projektek",
-      "📅 Helyi események"
-    ],
-    "gdpr": "A hírlevél rendszeresen kerül kiküldésre, és megfelel a személyes adatok védelmére vonatkozó jogszabályoknak (GDPR).",
-    "placeholder_email": "Email cím",
-    "button": "Feliratkozás"
-  },
-  "cetateni_onoare": {
-    "title": "🏅 Díszpolgárok",
-    "description": "A „Díszpolgár” címet azok a személyek kapják, akik jelentősen hozzájárultak Coșeiu község fejlődéséhez vagy hírnevének növeléséhez.",
-    "items": [
-      "🏆 Kiemelkedő helyi személyiségek",
-      "🏆 Hozzájárulás az oktatás, kultúra vagy közigazgatás területén",
-      "🏆 A közösség fejlődésének támogatása"
-    ],
-    "note": "A díszpolgárok listáját a helyi tanács határozatai alapján rendszeresen frissítik."
-  },
-  "sugestii_reclamatii": {
-    "title": "🗣️ Javaslatok és panaszok",
-    "description": "A lakosok javaslatokat, észrevételeket vagy panaszokat nyújthatnak be a helyi közigazgatás tevékenységével kapcsolatban.",
-    "placeholders": {
-      "name": "Név",
-      "email": "Email",
-      "message": "Az Ön üzenete"
+    "newsletter": {
+      "id": "newsletter",
+      "title": "Hírlevél",
+      "icon": "fa-envelope",
+      "description": "Iratkozzon fel Coșeiu Polgármesteri Hivatalának hírlevelére, hogy megkapja a legfrissebb információkat a projektekről, közleményekről és helyi eseményekről.",
+      "items": [
+        "📢 Fontos bejelentések",
+        "🏗️ Folyamatban lévő projektek",
+        "📅 Helyi események"
+      ],
+      "gdpr": "A hírlevél rendszeresen kerül kiküldésre, és megfelel a személyes adatok védelmére vonatkozó jogszabályoknak (GDPR).",
+      "placeholder_email": "Email cím",
+      "button": "Feliratkozás"
     },
-    "button": "Küldés",
-    "note": "Minden beadványt a döntéshozatali átláthatóságra és a közérdekű információkhoz való hozzáférésre vonatkozó jogszabályok szerint vizsgálnak meg."
+    "cetateni_onoare": {
+      "id": "cetateni_onoare",
+      "title": "Díszpolgárok",
+      "icon": "fa-medal",
+      "description": "A „Díszpolgár” címet azok a személyek kapják, akik jelentősen hozzájárultak Coșeiu község fejlődéséhez vagy hírnevének növeléséhez.",
+      "items": [
+        "🏆 Kiemelkedő helyi személyiségek",
+        "🏆 Hozzájárulás az oktatás, kultúra vagy közigazgatás területén",
+        "🏆 A közösség fejlődésének támogatása"
+      ],
+      "note": "A díszpolgárok listáját a helyi tanács határozatai alapján rendszeresen frissítik."
+    },
+    "sugestii_reclamatii": {
+      "id": "sugestii_reclamatii",
+      "title": "Javaslatok és panaszok",
+      "icon": "fa-comment-dots",
+      "description": "A lakosok javaslatokat, észrevételeket vagy panaszokat nyújthatnak be a helyi közigazgatás tevékenységével kapcsolatban.",
+      "placeholders": {
+        "name": "Név",
+        "email": "Email",
+        "message": "Az Ön üzenete"
+      },
+      "button": "Küldés",
+      "note": "Minden beadványt a döntéshozatali átláthatóságra és a közérdekű információkhoz való hozzáférésre vonatkozó jogszabályok szerint vizsgálnak meg."
+    },
+    "bugetare_participativa": {
+      "id": "bugetare_participativa",
+      "title": "Részvételi költségvetés",
+      "icon": "fa-coins",
+      "description": "A részvételi költségvetés lehetővé teszi a lakosok számára, hogy projekteket javasoljanak és szavazzanak a közösség fejlesztése érdekében.",
+      "steps_title": "Lépések:",
+      "steps": [
+        "1. Javaslatok benyújtása",
+        "2. Projektek elemzése",
+        "3. Lakossági szavazás",
+        "4. A nyertes projektek megvalósítása"
+      ],
+      "note": "Ez a kezdeményezés támogatja a közösség közvetlen részvételét a helyi döntéshozatalban."
+    },
+    "proceduri_online": {
+      "id": "proceduri_online",
+      "title": "Online ügyintézés",
+      "icon": "fa-laptop",
+      "description": "Coșeiu Polgármesteri Hivatala számos olyan adminisztratív eljárást kínál, amelyek online is elvégezhetők a várakozási idő csökkentése érdekében.",
+      "items": [
+        "📄 Kérelmek benyújtása",
+        "💳 Adók és illetékek befizetése",
+        "📅 Időpontfoglalás ügyfélfogadásra",
+        "📬 Közérdekű információk igénylése"
+      ],
+      "note": "A közszolgáltatások digitalizálása a helyi közigazgatás egyik prioritása."
+    },
+    "live_webcam": {
+      "id": "live_webcam",
+      "title": "Élő webkamera",
+      "icon": "fa-video",
+      "description": "Az élő webkamera valós idejű képeket biztosít Coșeiu község központi pontjairól.",
+      "card_title": "Élő kép",
+      "card_description": "Valós idejű közvetítés (ha a videós infrastruktúra rendelkezésre áll).",
+      "note": "Élő közvetítés a település központjából (IP kamera)."
+    }
   },
-  "bugetare_participativa": {
-    "title": "💰 Részvételi költségvetés",
-    "description": "A részvételi költségvetés lehetővé teszi a lakosok számára, hogy projekteket javasoljanak és szavazzanak a közösség fejlesztése érdekében.",
-    "steps_title": "Lépések:",
-    "steps": [
-      "1. Javaslatok benyújtása",
-      "2. Projektek elemzése",
-      "3. Lakossági szavazás",
-      "4. A nyertes projektek megvalósítása"
-    ],
-    "note": "Ez a kezdeményezés támogatja a közösség közvetlen részvételét a helyi döntéshozatalban."
-  },
-  "proceduri_online": {
-    "title": "🧾 Online ügyintézés",
-    "description": "Coșeiu Polgármesteri Hivatala számos olyan adminisztratív eljárást kínál, amelyek online is elvégezhetők a várakozási idő csökkentése érdekében.",
-    "items": [
-      "📄 Kérelmek benyújtása",
-      "💳 Adók és illetékek befizetése",
-      "📅 Időpontfoglalás ügyfélfogadásra",
-      "📬 Közérdekű információk igénylése"
-    ],
-    "note": "A közszolgáltatások digitalizálása a helyi közigazgatás egyik prioritása."
-  },
-  "live_webcam": {
-    "title": "📷 Élő webkamera",
-    "description": "Az élő webkamera valós idejű képeket biztosít Coșeiu község központi pontjairól.",
-    "card_title": "📍 Élő kép",
-    "card_description": "Valós idejű közvetítés (ha a videós infrastruktúra rendelkezésre áll).",
-    "note": "Élő közvetítés a település központjából (IP kamera)."
-  },
+
   "educatie": {
-    "title": "🎓 Oktatás",
+    "id": "educatie",
+    "title": "Oktatás",
+    "icon": "fa-graduation-cap",
     "description": "Coșeiu községben általános és gimnáziumi iskolák, valamint óvodák működnek.",
-    "transport_title": "🚌 Szállítás",
-    "transport_text": "A diákok szervezett iskolai közlekedésben részesülnek.",
-    "autobuze_title": "🚍 Buszok",
-    "autobuze_text": "A tömegközlekedés összeköti a környező településeket."
+
+    "transport": {
+      "id": "transport",
+      "title": "🚌 Szállítás",
+      "icon": "fa-bus",
+      "text": "A diákok szervezett iskolai közlekedésben részesülnek."
+    },
+    "autobuze": {
+      "id": "autobuze",
+      "title": "🚍 Buszok",
+      "icon": "fa-bus-simple",
+      "text": "A tömegközlekedés összeköti a környező településeket."
+    },
+    "legislatie_educatie": {
+      "id": "legislatie_educatie",
+      "title": "Oktatási jogszabályok",
+      "icon": "fa-gavel",
+      "text": "Az oktatási törvény és az iskolai tevékenységekre vonatkozó szabályozások."
+    },
+    "crese": {
+      "id": "crese",
+      "title": "Bölcsődék",
+      "icon": "fa-baby",
+      "text": "Jelenleg nincs bölcsőde a községben, de támogatást nyújtanak a szülőknek a kisgyermekek ellátásának megoldásában."
+    },
+    "gradinite": {
+      "id": "gradinite",
+      "title": "Óvodák",
+      "icon": "fa-baby",
+      "text": "Nem minden településrészen van óvoda, de támogatást nyújtanak a szülőknek."
+    },
+    "scoli": {
+      "id": "scoli",
+      "title": "Iskolák",
+      "icon": "fa-school",
+      "text": "Az iskolák alap- és gimnáziumi oktatást biztosítanak."
+    }
   },
 
   "cultura": {
-    "title": "🎭 Kultúra és hagyományok",
+    "id": "cultura",
+    "title": "Kultúra és hagyományok",
+    "icon": "fa-masks-theater",
     "description": "Helyi szokások: Húsvét, karácsonyi énekek, Coșeiu napja",
     "biblioteci": {
-      "title": "📖 Könyvtárak",
+      "id": "biblioteci",
+      "title": "Könyvtárak",
+      "icon": "fa-book",
       "text": "A községi könyvtár könyvekhez és oktatási forrásokhoz biztosít hozzáférést minden korosztály számára."
     },
-    "finantari": {
-      "title": "🎨 Kulturális támogatások",
+    "finantari_cultura": {
+      "id": "finantari_cultura",
+      "title": "Kulturális támogatások",
+      "icon": "fa-palette",
       "text": "A polgármesteri hivatal támogatja a kulturális tevékenységeket a helyi költségvetésből.",
       "items": [
         "Helyi kulturális projektek támogatása",
@@ -113,139 +181,221 @@
         "Partnerségek kulturális intézményekkel"
       ]
     },
-    "personalitati": {
-      "title": "⭐ Helyi személyiségek",
+    "personalitati_locale": {
+      "id": "personalitati_locale",
+      "title": "Helyi személyiségek",
+      "icon": "fa-star",
       "text": "Coșeiu község számos jelentős személyiséget adott a közösségnek."
     },
-    "evenimente": {
-      "title": "🎭 Kulturális események",
+    "evenimente_culturale": {
+      "id": "evenimente_culturale",
+      "title": "Kulturális események",
+      "icon": "fa-calendar-days",
       "text": "A község helyi kulturális eseményeket szervez."
     }
   },
 
   "sport": {
-    "title": "⚽ Sport",
-    "structuri": {
-      "title": "🏟️ Sportlétesítmények",
+    "id": "sport",
+    "title": "Sport",
+    "icon": "fa-futbol",
+    "structuri_sportive": {
+      "id": "structuri_sportive",
+      "title": "Sportlétesítmények",
+      "icon": "fa-building",
       "text": "A sporttevékenységek a helyi infrastruktúrára épülnek."
     },
-    "finantari": {
-      "title": "💸 Sporttámogatások",
+    "finantari_sportive": {
+      "id": "finantari_sportive",
+      "title": "Sporttámogatások",
+      "icon": "fa-money-bill",
       "text": "A sporttevékenységek a helyi költségvetésből támogatottak."
     },
-    "baze": {
-      "title": "⚽ Sportpályák",
+    "baze_sportive": {
+      "id": "baze_sportive",
+      "title": "Sportpályák",
+      "icon": "fa-futbol",
       "text": "A sportpályák szabadidős és versenytevékenységekre használhatók."
     },
-    "sala": {
-      "title": "🏋️ Sportcsarnok",
+    "sala_sport": {
+      "id": "sala_sport",
+      "title": "Sportcsarnok",
+      "icon": "fa-dumbbell",
       "text": "A sportcsarnok oktatási és szabadidős célokat szolgál."
+    },
+    "cluburi_sportive": {
+      "id": "cluburi_sportive",
+      "title": "Sportegyesületek",
+      "icon": "fa-people-group",
+      "text": "Helyi sportegyesületek működnek, amelyek minden korosztály számára kínálnak tevékenységeket."
     }
   },
 
   "sanatate": {
-    "title": "🏥 Egészségügy",
-    "cabinete": {
-      "title": "🏥 Orvosi rendelők",
+    "id": "sanatate",
+    "title": "Egészségügy",
+    "icon": "fa-hospital",
+    "cabinete_medicale": {
+      "id": "cabinete_medicale",
+      "title": "Orvosi rendelők",
+      "icon": "fa-user-doctor",
       "text": "Az egészségügyi szolgáltatások korlátozottan érhetők el a községben."
     },
-    "finantari": {
-      "title": "💊 Egészségügyi finanszírozás",
+    "finantari_sanatate": {
+      "id": "finantari_sanatate",
+      "title": "Egészségügyi Finanszírozás",
+      "icon": "fa-money-bill",
       "text": "Az egészségügyi szolgáltatások országos programokon keresztül támogatottak."
     },
     "farmacii": {
-      "title": "💊 Gyógyszertárak",
+      "id": "farmacii",
+      "title": "Gyógyszertárak",
+      "icon": "fa-pills",
       "text": "A közeli gyógyszertárak biztosítják a gyógyszereket."
     },
-    "urgenta": {
-      "title": "🚑 Sürgősség",
+    "urgente": {
+      "id": "urgente",
+      "title": "Sürgősség",
+      "icon": "fa-truck-medical",
       "text": "Sürgős esetben hívja a 112-es segélyhívót."
     }
   },
 
   "social": {
-    "title": "🤝 Szociális",
+    "id": "social",
+    "title": "Szociális",
+    "icon": "fa-hand-holding-heart",
     "varstnici": {
-      "title": "👵 Idősek",
+      "id": "varstnici",
+      "title": "Idősek",
+      "icon": "fa-person-cane",
       "text": "Támogatás az idősek számára szociális szolgáltatásokon keresztül."
     },
     "adapost": {
-      "title": "🏠 Menedék",
+      "id": "adapost",
+      "title": "Menedék",
+      "icon": "fa-house",
       "text": "A hajléktalan személyek támogatást kaphatnak."
     },
-    "ajutor": {
-      "title": "🤲 Szociális segély",
+    "ajutor_social": {
+      "id": "ajutor_social",
+      "title": "Szociális segély",
+      "icon": "fa-hands-holding",
       "text": "Jogosult személyek szociális támogatásban részesülhetnek."
     },
-    "tichete": {
-      "title": "🎟️ Szociális utalványok",
+    "tichete_sociale": {
+      "id": "tichete_sociale",
+      "title": "Szociális utalványok",
+      "icon": "fa-ticket",
       "text": "A rászorulók számára támogatási programok állnak rendelkezésre."
     },
     "stomatologie": {
-      "title": "🦷 Fogászat",
+      "id": "stomatologie",
+      "title": "Fogászat",
+      "icon": "fa-tooth",
       "text": "A fogászati szolgáltatások időpont alapján érhetők el."
     }
   },
 
   "animale": {
-    "title": "🐾 Állatprogramok",
+    "id": "animale",
+    "title": "Állatprogramok",
+    "icon": "fa-paw",
     "sterilizare": {
-      "title": "🐕 Ivartalanítás",
+      "id": "sterilizare",
+      "title": "Ivartalanítás",
+      "icon": "fa-scissors",
       "text": "Kampányok a kóbor állatok számának csökkentésére."
     },
     "adoptii": {
-      "title": "❤️ Örökbefogadás",
+      "id": "adoptii",
+      "title": "Örökbefogadás",
+      "icon": "fa-heart",
       "text": "Az örökbefogadás támogatott."
     },
-    "apa": {
-      "title": "💧 Víz",
+    "boluri_apa": {
+      "id": "boluri_apa",
+      "title": "Víz",
+      "icon": "fa-water",
       "text": "Nyáron víztálak kihelyezése az állatok számára."
     },
     "adaposturi": {
-      "title": "🏠 Menhelyek",
+      "id": "adaposturi",
+      "title": "Menhelyek",
+      "icon": "fa-house",
       "text": "Az állatok menhelyekkel együttműködve vannak kezelve."
     },
-    "registru": {
-      "title": "📋 Állatnyilvántartás",
+    "registru_animale": {
+      "id": "registru_animale",
+      "title": "Állatnyilvántartás",
+      "icon": "fa-clipboard-list",
       "text": "Az állatok regisztrációja kötelező."
     }
   },
 
   "turism": {
-    "title": "🧭 Turizmus",
-    "centru": {
-      "title": "ℹ️ Turisztikai információs központ",
+    "id": "turism",
+    "title": "Turizmus",
+    "icon": "fa-map",
+    "centru_info": {
+      "id": "centru_info",
+      "title": "Turisztikai Információs Központ",
+      "icon": "fa-circle-info",
       "text": "Információk a helyi látványosságokról."
     },
+    "harta_turistica": {
+      "id": "harta_turistica",
+      "title": "Turisztikai Térkép",
+      "icon": "fa-map-marked-alt",
+      "text": "A turisztikai látványosságok áttekintése."
+    },
     "cazare": {
-      "title": "🏨 Szállás",
+      "id": "cazare",
+      "title": "Szállás",
+      "icon": "fa-bed",
       "text": "Szálláslehetőségek a környéken."
     },
-    "visit": {
-      "title": "💘 Visit Coșeiu",
+    "visit_coseiu": {
+      "id": "visit_coseiu",
+      "title": "Visit Coșeiu",
+      "icon": "fa-heart",
       "text": "Nyugodt környezet a pihenéshez."
     },
-    "monumente": {
-      "title": "🏛️ Történelmi emlékek"
+    "monumente_istorice": {
+      "id": "monumente_istorice",
+      "title": "Történelmi Emlékek",
+      "icon": "fa-landmark"
     }
   },
 
   "evenimente": {
-    "title": "🎉 Események",
-    "zile": {
-      "title": "🎊 Coșeiu napjai",
+    "id": "evenimente",
+    "title": "Események",
+    "icon": "fa-calendar-days",
+    "text": "Közösségi események és ünnepek Kusaly községben.",
+
+    "zilele_coseiului": {
+      "id": "zilele_coseiului",
+      "title": "Kusaly Napjai",
+      "icon": "fa-calendar-check",
       "text": "Éves közösségi esemény."
     },
-    "craciun": {
-      "title": "🎄 Karácsonyi vásár",
+    "targ_craciun": {
+      "id": "targ_craciun",
+      "title": "Karácsonyi Vásár",
+      "icon": "fa-tree",
       "text": "Téli ünnepi események."
     },
-    "piata": {
-      "title": "🛍️ Helyi piac",
+    "piata_locala": {
+      "id": "piata_locala",
+      "title": "Helyi Piac",
+      "icon": "fa-shop",
       "text": "Friss helyi termékek."
     },
     "festival": {
-      "title": "🎉 Fesztiválok",
+      "id": "festivaluri",
+      "title": "Fesztiválok",
+      "icon": "fa-music",
       "text": "Hagyományőrző események."
     }
   }

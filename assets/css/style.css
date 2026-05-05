@@ -330,6 +330,7 @@ nav .dropdown-menu.split-menu {
 .menu-left {
   width: 30%;
   border-right: 1px solid var(--surface-2);
+  z-index: 2;
 }
 .menu-left ul {
   list-style: none;
@@ -353,6 +354,11 @@ nav .dropdown-menu.split-menu {
 .menu-right {
   width: 30%;
   color: var(--section-color) !important;
+  z-index: 1;
+  pointer-events: auto;
+}
+.menu-right:not(.active) {
+  pointer-events: none;
 }
 .menu-right .menu-content {
   display: none;
@@ -1029,9 +1035,6 @@ body.dark-mode .newsletter input {
   .menu-right {
     display: none;
   }
-  .menu-right.active {
-    display: block;
-  }
   .back-button {
     display: block;
     padding: 12px 0px;
@@ -1168,7 +1171,8 @@ body.dark-mode .newsletter input {
   #menu-toggle {
     z-index: 1201;
   } */
-  */ .hero-image img {
+
+  .hero-image img {
     max-width: 100%;
   }
   .profile-card {

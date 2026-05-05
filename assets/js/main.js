@@ -709,12 +709,177 @@ async function loadAdministratieLang(lang) {
     console.error("Failed to load administratie.json:", err);
   }
 }
+function renderList(items = []) {
+  return `<ul>${items.map((i) => `<li>${i}</li>`).join("")}</ul>`;
+}
+function renderCard(title, text, icon) {
+  return `
+    <div class="card">
+      <h4><i class="fa-solid ${icon || ""}"></i> ${title}</h4>
+      ${text ? `<p>${text}</p>` : ""}
+    </div>
+  `;
+}
+function renderCetateni(c) {
+  return `
+  <div id="${c.id}" class="cards grid">
+    <h3><i class="fa-solid ${c.icon}"></i> ${c.title}</h3>
+    <p>${c.description}</p>
+    <div class="componenta">
+      <div class="etnic">
+        <h4>${c.etnic.title}</h4>
+        ${renderList(c.etnic.items)}
+      </div>
+      <div class="religie">
+        <h4>${c.religie.title}</h4>
+        ${renderList(c.religie.items)}
+      </div>
+    </div>
+  </div>
+  `;
+}
+function renderDezbateri(d) {
+  if (!d) {
+    console.error("dezbateri_publice is missing");
+    return "";
+  }
+  return `
+  <div id="${d.id}" class="cards grid">
+    <h3><i class="fa-solid ${d.icon}"></i> ${d.title}</h3>
+    ${renderNewsletter(d.newsletter)}
+    ${renderCetateniOnoare(d.cetateni_onoare)}
+    ${renderSugestii(d.sugestii_reclamatii)}
+    ${renderBugetare(d.bugetare_participativa)}
+    ${renderProceduri(d.proceduri_online)}
+    ${renderWebcam(d.live_webcam)}
+  </div>
+  `;
+}
+function renderNewsletter(n) {
+  return `
+    <div id="${n.id}">
+      <h4><i class="fa-solid ${n.icon}"></i> ${n.title}</h4>
+      <p>${n.description}</p>
+      ${renderList(n.items)}
+      <p>${n.gdpr}</p>
+      <form>
+        <input type="email" placeholder="${n.placeholder_email}" required />
+        <button>${n.button}</button>
+      </form>
+    </div>
+  `;
+}
+function renderCetateniOnoare(c) {
+  return `
+  <div id="${c.id}">
+      <h4><i class="fa-solid ${c.icon}"></i> ${c.title}</h4>
+      <p>${c.description}</p>
+      <ul id="onoare-list"> ${renderList(c.items)}</ul>
+      <p>${c.note}</p>
+    </div>
+  `;
+}
+function renderSugestii(s) {
+  return `
+  <div id="${s.id}">
+      <h4><i class="fa-solid ${s.icon}"></i> ${s.title}</h4>
+      <p>${s.description}</p>
+        <form>
+          <input type="text" placeholder="${s.placeholders.name}" required />
+          <input type="email" placeholder="${s.placeholders.email}" required />
+          <textarea rows="5" required placeholder="${s.placeholders.message}"/></textarea>
+          <button type="submit">${s.button}</button>
+        </form>
+      <p>${s.note}</p>
+    </div>
+  `;
+}
+function renderBugetare(b) {
+  return `
+  <div id="${b.id}">
+      <h4><i class="fa-solid ${b.icon}"></i> ${b.title}</h4>
+      <p>${b.description}</p>
+      <h5>${b.steps_title}</h5>
+      <ul id="${b.steps_title}">${renderList(b.steps)}</ul>
+      <p>${b.note}</p>
+    </div>
+  `;
+}
+function renderProceduri(p) {
+  return `
+    <div id="${p.id}">
+      <h4><i class="fa-solid ${p.icon}"></i> ${p.title}</h4>
+      <p>${p.description}</p>
+      <ul id="${p.id}-list">${renderList(p.items)}</ul>
+      <p>${p.note}</p>
+    </div>
+  `;
+}
+function renderWebcam(w) {
+  return `
+  <div id="${w.id}">
+      <h4><i class="fa-solid ${w.icon}"></i> ${w.title}</h4>
+      <p>${w.description}</p>
+      <div class="card">
+        <h5>${w.card_title}</h5>
+        <p>${w.card_description}</p>
+        <img src="http://IP-UL-TAU:PORT/video.cgi" alt="webcam" />
+      </div>
+      <p>${w.note}</p>
+    </div>
+  `;
+}
+function renderSimpleSection(section) {
+  const entries = Object.values(section).filter(
+    (v) => typeof v === "object" && v.title && v.id,
+  );
+  return `
+  <div id="${section.id}" class="cards grid">
+    <h3><i class="fa-solid ${section.icon}"></i> ${section.title}</h3>
+    ${section.description ? `<p>${section.description}</p>` : ""}
+    ${entries
+      .map(
+        (e) => `
+      <div>
+        <h4>${e.title}</h4>
+        ${e.text ? `<p>${e.text}</p>` : ""}
+        ${e.items ? renderList(e.items) : ""}
+      </div>
+    `,
+      )
+      .join("")}
+  </div>
+  `;
+}
+function renderCommunity(data) {
+  return `
+  <section id="${data.id}">
+    <h2><i class="fa-solid ${data.icon}"></i> ${data.title}</h2>
+    ${renderCetateni(data.cetateni)}
+    ${renderDezbateri(data.dezbateri_publice)}
+    ${renderSimpleSection(data.educatie)}
+    ${renderSimpleSection(data.cultura)}
+    ${renderSimpleSection(data.sport)}
+    ${renderSimpleSection(data.sanatate)}
+    ${renderSimpleSection(data.social)}
+    ${renderSimpleSection(data.animale)}
+    ${renderSimpleSection(data.turism)}
+    ${renderSimpleSection(data.evenimente)}
+  </section>
+  `;
+}
 async function loadCommunityLang(lang) {
   try {
     const res = await fetch(`assets/i18n/${lang}/comunitate.json`);
     if (!res.ok) throw new Error(`HTTP error: ${res.status}`);
     communityDict = await res.json();
-    applyCommunityLang();
+    const container = document.getElementById("comunitate-container");
+    if (!container) {
+      console.error("Missing comunitate-container");
+      return;
+    }
+    container.innerHTML = renderCommunity(communityDict);
+    updateSections();
   } catch (err) {
     console.error("Failed to load comunitate.json:", err);
   }
@@ -738,15 +903,22 @@ function applyCommunityLang() {
       el.innerHTML = data.map((i) => `<li>${i}</li>`).join("");
     }
   };
-  mapList("etnic-list", communityDict.cetateni?.etnic?.items);
-  mapList("religie-list", communityDict.cetateni?.religie?.items);
-  mapList("newsletter-list", communityDict.newsletter?.items);
-  mapList("onoare-list", communityDict.cetateni_onoare?.items);
+  mapList(
+    "newsletter-list",
+    communityDict.dezbateri_publice?.newsletter?.items,
+  );
+  mapList(
+    "onoare-list",
+    communityDict.dezbateri_publice?.cetateni_onoare?.items,
+  );
   mapList(
     "bugetare_participativa-list",
-    communityDict.bugetare_participativa?.steps,
+    communityDict.dezbateri_publice?.bugetare_participativa?.steps,
   );
-  mapList("proceduri_online-list", communityDict.proceduri_online?.items);
+  mapList(
+    "proceduri_online-list",
+    communityDict.dezbateri_publice?.proceduri_online?.items,
+  );
 }
 function initLanguageToggle() {
   const btn = document.getElementById("lang-toggle");
@@ -762,6 +934,7 @@ function initLanguageToggle() {
     await loadHomeLang(currentLang);
     await loadCommunityLang(currentLang);
     await loadAdministratieLang(currentLang);
+    updateSections();
   });
 }
 function updateSections() {
@@ -850,10 +1023,10 @@ async function loadComponent(id, path) {
 async function loadAllComponents() {
   await Promise.all([
     loadComponent("header-container", "assets/components/partials/header.html"),
-    loadComponent(
-      "comunitate-container",
-      "assets/components/sections/comunitate.html",
-    ),
+    // loadComponent(
+    //   "comunitate-container",
+    //   "assets/components/sections/comunitate.html",
+    // ),
     loadComponent(
       "administratie-container",
       "assets/components/sections/administratie.html",

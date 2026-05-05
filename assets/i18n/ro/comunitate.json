@@ -1,11 +1,17 @@
 {
-  "title": "👥 Comunitate",
+  "title": "Comunitate",
+  "id": "comunitate",
+  "icon": "fa-users",
 
   "cetateni": {
-    "title": "⭐ Cetățeni",
+    "id": "cetateni",
+    "title": "Cetățeni",
+    "icon": "fa-people-group",
     "description": "Comuna Coșeiu are o populație de aproximativ 2.000 de locuitori, majoritatea fiind de etnie maghiară, urmată de români și romi.",
     "etnic": {
+      "id": "etnic",
       "title": "Componența etnică",
+      "icon": "fa-earth-europe",
       "items": [
         "Maghiari (50,63%)",
         "Români (40,09%)",
@@ -14,7 +20,9 @@
       ]
     },
     "religie": {
+      "id": "religie",
       "title": "Componența confesională",
+      "icon": "fa-church",
       "items": [
         "Ortodocși (36,31%)",
         "Reformați (34,14%)",
@@ -25,94 +33,150 @@
       ]
     }
   },
+  "dezbateri_publice": {
+    "id": "dezbateri_publice",
+    "title": "Dezbateri Publice",
+    "icon": "fa-comments",
 
-  "newsletter": {
-    "title": "📩 Newsletter",
-    "description": "Abonați-vă la newsletterul Primăriei Coșeiu pentru a primi cele mai recente informații despre proiecte, anunțuri și evenimente locale.",
-    "items": [
-      "📢 Anunțuri importante",
-      "🏗️ Proiecte în desfășurare",
-      "📅 Evenimente locale"
-    ],
-    "gdpr": "Newsletterul este trimis periodic și respectă legislația privind protecția datelor cu caracter personal (GDPR).",
-    "placeholder_email": "Adresă email",
-    "button": "Abonare"
-  },
-
-  "cetateni_onoare": {
-    "title": "🏅 Cetățeni de onoare",
-    "description": "Titlul de „Cetățean de onoare” este acordat persoanelor care au contribuit semnificativ la dezvoltarea sau promovarea comunei Coșeiu.",
-    "items": [
-      "🏆 Personalități locale remarcabile",
-      "🏆 Contribuții în educație, cultură sau administrație",
-      "🏆 Sprijin pentru dezvoltarea comunității"
-    ],
-    "note": "Lista cetățenilor de onoare este actualizată periodic prin hotărâri ale consiliului local."
-  },
-
-  "sugestii_reclamatii": {
-    "title": "🗣️ Sugestii și reclamații",
-    "description": "Locuitorii pot transmite sugestii, observații sau reclamații privind activitatea administrației locale.",
-    "placeholders": {
-      "name": "Nume",
-      "email": "Email",
-      "message": "Mesajul dumneavoastră"
+    "newsletter": {
+      "id": "newsletter",
+      "title": "Newsletter",
+      "icon": "fa-envelope",
+      "description": "Abonați-vă la newsletterul Primăriei Coșeiu pentru a primi cele mai recente informații despre proiecte, anunțuri și evenimente locale.",
+      "items": [
+        "📢 Anunțuri importante",
+        "🏗️ Proiecte în desfășurare",
+        "📅 Evenimente locale"
+      ],
+      "gdpr": "Newsletterul este trimis periodic și respectă legislația privind protecția datelor cu caracter personal (GDPR).",
+      "placeholder_email": "Adresă email",
+      "button": "Abonare"
     },
-    "button": "Trimite",
-    "note": "Toate solicitările sunt analizate conform legislației privind transparența decizională și accesul la informații de interes public."
-  },
 
-  "bugetare_participativa": {
-    "title": "💰 Bugetare participativă",
-    "description": "Bugetarea participativă permite locuitorilor să propună și să voteze proiecte pentru dezvoltarea comunității.",
-    "steps_title": "Etape:",
-    "steps": [
-      "1. Depunerea propunerilor",
-      "2. Analiza proiectelor",
-      "3. Votul cetățenilor",
-      "4. Implementarea proiectelor câștigătoare"
-    ],
-    "note": "Această inițiativă susține implicarea directă a comunității în procesul decizional local."
-  },
+    "cetateni_onoare": {
+      "id": "cetateni_onoare",
+      "title": "Cetățeni de Onoare",
+      "icon": "fa-medal",
+      "description": "Titlul de „Cetățean de onoare” este acordat persoanelor care au contribuit semnificativ la dezvoltarea sau promovarea comunei Coșeiu.",
+      "items": [
+        "🏆 Personalități locale remarcabile",
+        "🏆 Contribuții în educație, cultură sau administrație",
+        "🏆 Sprijin pentru dezvoltarea comunității"
+      ],
+      "note": "Lista cetățenilor de onoare este actualizată periodic prin hotărâri ale consiliului local."
+    },
 
-  "proceduri_online": {
-    "title": "🧾 Servicii online",
-    "description": "Primăria Coșeiu oferă multiple servicii administrative care pot fi realizate online pentru a reduce timpul de așteptare.",
-    "items": [
-      "📄 Depunere cereri",
-      "💳 Plata taxelor și impozitelor",
-      "📅 Programări pentru audiențe",
-      "📬 Solicitări de informații publice"
-    ],
-    "note": "Digitalizarea serviciilor publice este o prioritate a administrației locale."
-  },
+    "sugestii_reclamatii": {
+      "id": "sugestii_reclamatii",
+      "title": "Sugestii și Reclamații",
+      "icon": "fa-comment-dots",
+      "description": "Locuitorii pot transmite sugestii, observații sau reclamații privind activitatea administrației locale.",
+      "placeholders": {
+        "name": "Nume",
+        "email": "Email",
+        "message": "Mesajul dumneavoastră"
+      },
+      "button": "Trimite",
+      "note": "Toate solicitările sunt analizate conform legislației privind transparența decizională și accesul la informații de interes public."
+    },
 
-  "live_webcam": {
-    "title": "📷 Cameră live",
-    "description": "Camera live oferă imagini în timp real din punctele centrale ale comunei Coșeiu.",
-    "card_title": "📍 Imagine live",
-    "card_description": "Transmisie în timp real (dacă infrastructura video este disponibilă).",
-    "note": "Transmisie din centrul localității (cameră IP)."
-  },
+    "bugetare_participativa": {
+      "id": "bugetare_participativa",
+      "title": "Bugetare Participativă",
+      "icon": "fa-coins",
+      "description": "Bugetarea participativă permite locuitorilor să propună și să voteze proiecte pentru dezvoltarea comunității.",
+      "steps_title": "Etape:",
+      "steps": [
+        "1. Depunerea propunerilor",
+        "2. Analiza proiectelor",
+        "3. Votul cetățenilor",
+        "4. Implementarea proiectelor câștigătoare"
+      ],
+      "note": "Această inițiativă susține implicarea directă a comunității în procesul decizional local."
+    },
 
+    "proceduri_online": {
+      "id": "proceduri_online",
+      "title": "Servicii Online",
+      "icon": "fa-laptop",
+      "description": "Primăria Coșeiu oferă multiple servicii administrative care pot fi realizate online pentru a reduce timpul de așteptare.",
+      "items": [
+        "📄 Depunere cereri",
+        "💳 Plata taxelor și impozitelor",
+        "📅 Programări pentru audiențe",
+        "📬 Solicitări de informații publice"
+      ],
+      "note": "Digitalizarea serviciilor publice este o prioritate a administrației locale."
+    },
+
+    "live_webcam": {
+      "id": "live_webcam",
+      "title": "Cameră Live",
+      "icon": "fa-video",
+      "description": "Camera live oferă imagini în timp real din punctele centrale ale comunei Coșeiu.",
+      "card_title": "Imagine live",
+      "card_description": "Transmisie în timp real (dacă infrastructura video este disponibilă).",
+      "note": "Transmisie din centrul localității (cameră IP)."
+    }
+  },
   "educatie": {
-    "title": "🎓 Educație",
+    "id": "educatie",
+    "title": "Educație",
+    "icon": "fa-graduation-cap",
     "description": "Comuna Coșeiu dispune de școli primare și gimnaziale și grădinițe.",
-    "transport_title": "🚌 Transport",
-    "transport_text": "Elevii beneficiază de transport organizat către unitățile de învățământ.",
-    "autobuze_title": "🚍 Autobuze",
-    "autobuze_text": "Transportul public asigură legătura cu localitățile învecinate."
+    "transport": {
+      "id": "transport",
+      "title": "Transport",
+      "icon": "fa-bus",
+      "text": "Elevii beneficiază de transport organizat către unitățile de învățământ."
+    },
+    "autobuze": {
+      "id": "autobuze",
+      "title": "Autobuze",
+      "icon": "fa-bus-simple",
+      "text": "Transportul public asigură legătura cu localitățile învecinate."
+    },
+    "legislatie_educatie": {
+      "id": "legislatie_educatie",
+      "title": "Legislatie Educatie",
+      "icon": "fa-gavel",
+      "text": "Legea educației și reglementările privind activitatea școlară."
+    },
+    "crese": {
+      "id": "crese",
+      "title": "Creșe",
+      "icon": "fa-baby",
+      "text": "În prezent, nu există creșe în comună, dar se oferă sprijin pentru părinți în găsirea de soluții de îngrijire a copiilor mici."
+    },
+    "gradinite": {
+      "id": "gradinite",
+      "title": "Grădinițe",
+      "icon": "fa-baby",
+      "text": "În prezent, nu există grădinițe în fiecare sat din comună, dar se oferă sprijin pentru părinți în găsirea de soluții de îngrijire a copiilor mici."
+    },
+    "scoli": {
+      "id": "scoli",
+      "title": "Școli",
+      "icon": "fa-baby",
+      "text": "Școlile din comună oferă educație primară și gimnazială pentru copiii din zonă."
+    }
   },
 
   "cultura": {
-    "title": "🎭 Cultură și tradiții",
+    "id": "cultura",
+    "title": "Cultură și Tradiții",
+    "icon": "fa-masks-theater",
     "description": "Tradiții locale: Paște, colinde de Crăciun, Zilele Coșeiu",
     "biblioteci": {
-      "title": "📖 Biblioteci",
+      "id": "biblioteci",
+      "title": "Biblioteci",
+      "icon": "fa-book",
       "text": "Biblioteca comunală oferă acces la cărți și resurse educaționale pentru toate vârstele."
     },
-    "finantari": {
-      "title": "🎨 Finanțări culturale",
+    "finantari_cultura": {
+      "id": "finantari_cultura",
+      "title": "Finanțări Cultură",
+      "icon": "fa-palette",
       "text": "Primăria sprijină activitățile culturale din bugetul local.",
       "items": [
         "Sprijin pentru proiecte culturale locale",
@@ -120,139 +184,219 @@
         "Parteneriate cu instituții culturale"
       ]
     },
-    "personalitati": {
-      "title": "⭐ Personalități locale",
+    "personalitati_locale": {
+      "id": "personalitati_locale",
+      "title": "Personalități Locale",
+      "icon": "fa-star",
       "text": "Comuna Coșeiu a dat numeroase personalități importante."
     },
-    "evenimente": {
-      "title": "🎭 Evenimente culturale",
+    "evenimente_culturale": {
+      "id": "evenimente_culturale",
+      "title": "Evenimente Culturale",
+      "icon": "fa-calendar-days",
       "text": "Sunt organizate periodic evenimente culturale locale."
     }
   },
 
   "sport": {
-    "title": "⚽ Sport",
-    "structuri": {
-      "title": "🏟️ Infrastructură sportivă",
+    "id": "sport",
+    "title": "Sport",
+    "icon": "fa-futbol",
+    "structuri_sportive": {
+      "id": "structuri_sportive",
+      "title": "Structuri Sportive",
+      "icon": "fa-building",
       "text": "Activitățile sportive se desfășoară pe baza infrastructurii locale."
     },
-    "finantari": {
-      "title": "💸 Finanțare sport",
+    "finantari_sportive": {
+      "id": "finantari_sportive",
+      "title": "Finanțări Sportive",
+      "icon": "fa-money-bill",
       "text": "Activitățile sportive sunt susținute din bugetul local."
     },
-    "baze": {
-      "title": "⚽ Terenuri sportive",
+    "baze_sportive": {
+      "id": "baze_sportive",
+      "title": "Terenuri Sportive",
+      "icon": "fa-futbol",
       "text": "Terenurile sunt utilizate pentru activități recreative și competiționale."
     },
-    "sala": {
-      "title": "🏋️ Sală de sport",
+    "sala_sport": {
+      "id": "sala_sport",
+      "title": "Sală de Sport",
+      "icon": "fa-dumbbell",
       "text": "Sala de sport este folosită pentru activități educaționale și recreative."
+    },
+    "cluburi_sportive": {
+      "id": "cluburi_sportive",
+      "title": "Cluburi Sportive",
+      "icon": "fa-people-group",
+      "text": "Există cluburi sportive locale care promovează activități pentru toate vârstele."
     }
   },
 
   "sanatate": {
-    "title": "🏥 Sănătate",
-    "cabinete": {
-      "title": "🏥 Cabinete medicale",
+    "id": "sanatate",
+    "title": "Sănătate",
+    "icon": "fa-hospital",
+    "cabinete_medicale": {
+      "id": "cabinete_medicale",
+      "title": "Cabinete Medicale",
+      "icon": "fa-user-doctor",
       "text": "Serviciile medicale sunt disponibile limitat în comună."
     },
-    "finantari": {
-      "title": "💊 Finanțare sănătate",
+    "finantari_sanatate": {
+      "id": "finantari_sanatate",
+      "title": "Finanțare Sănătate",
+      "icon": "fa-money-bill",
       "text": "Serviciile medicale sunt susținute prin programe naționale."
     },
     "farmacii": {
-      "title": "💊 Farmacii",
+      "id": "farmacii",
+      "title": "Farmacii",
+      "icon": "fa-pills",
       "text": "Farmaciile din apropiere asigură accesul la medicamente."
     },
-    "urgenta": {
-      "title": "🚑 Urgențe",
+    "urgente": {
+      "id": "urgente",
+      "title": "Urgențe",
+      "icon": "fa-truck-medical",
       "text": "În caz de urgență apelați 112."
     }
   },
 
   "social": {
-    "title": "🤝 Social",
+    "id": "social",
+    "title": "Social",
+    "icon": "fa-hand-holding-heart",
     "varstnici": {
-      "title": "👵 Vârstnici",
+      "id": "varstnici",
+      "title": "Vârstnici",
+      "icon": "fa-person-cane",
       "text": "Sprijin pentru persoanele în vârstă prin servicii sociale."
     },
     "adapost": {
-      "title": "🏠 Adăpost",
+      "id": "adapost",
+      "title": "Adăpost",
+      "icon": "fa-house",
       "text": "Persoanele fără locuință pot beneficia de sprijin."
     },
-    "ajutor": {
-      "title": "🤲 Ajutor social",
+    "ajutor_social": {
+      "id": "ajutor_social",
+      "title": "Ajutor Social",
+      "icon": "fa-hands-holding",
       "text": "Persoanele eligibile pot beneficia de sprijin financiar."
     },
-    "tichete": {
-      "title": "🎟️ Tichete sociale",
+    "tichete_sociale": {
+      "id": "tichete_sociale",
+      "title": "Tichete Sociale",
+      "icon": "fa-ticket",
       "text": "Programe de sprijin pentru persoanele vulnerabile."
     },
     "stomatologie": {
-      "title": "🦷 Stomatologie",
+      "id": "stomatologie",
+      "title": "Stomatologie",
+      "icon": "fa-tooth",
       "text": "Serviciile stomatologice sunt disponibile pe bază de programare."
     }
   },
 
   "animale": {
-    "title": "🐾 Protecția animalelor",
+    "id": "animale",
+    "title": "Protecția Animalelor",
+    "icon": "fa-paw",
     "sterilizare": {
-      "title": "🐕 Sterilizare",
+      "id": "sterilizare",
+      "title": "Sterilizare",
+      "icon": "fa-scissors",
       "text": "Campanii pentru reducerea numărului de animale fără stăpân."
     },
     "adoptii": {
-      "title": "❤️ Adopții",
+      "id": "adoptii",
+      "title": "Adopții",
+      "icon": "fa-heart",
       "text": "Adopția animalelor este încurajată."
     },
-    "apa": {
-      "title": "💧 Apă",
+    "boluri_apa": {
+      "id": "boluri_apa",
+      "title": "Apă",
+      "icon": "fa-water",
       "text": "Vara sunt amplasate recipiente cu apă pentru animale."
     },
     "adaposturi": {
-      "title": "🏠 Adăposturi",
+      "id": "adaposturi",
+      "title": "Adăposturi",
+      "icon": "fa-house",
       "text": "Animalele sunt gestionate în colaborare cu adăposturi."
     },
-    "registru": {
-      "title": "📋 Registru animale",
+    "registru_animale": {
+      "id": "registru_animale",
+      "title": "Registru Animale",
+      "icon": "fa-clipboard-list",
       "text": "Înregistrarea animalelor este obligatorie."
     }
   },
 
   "turism": {
-    "title": "🧭 Turism",
-    "centru": {
-      "title": "ℹ️ Centru de informare turistică",
+    "id": "turism",
+    "title": "Turism",
+    "icon": "fa-map",
+    "centru_info": {
+      "id": "centru_info",
+      "title": "Centru de informare turistică",
+      "icon": "fa-circle-info",
       "text": "Oferă informații despre obiectivele locale."
     },
+    "harta_turistica": {
+      "id": "harta_turistica",
+      "title": "Hartă Turistică",
+      "icon": "fa-map-marked-alt",
+      "text": "Oferă o vizualizare a obiectivelor turistice."
+    },
     "cazare": {
-      "title": "🏨 Cazare",
+      "id": "cazare",
+      "title": "Cazare",
+      "icon": "fa-bed",
       "text": "Există opțiuni de cazare în zonă."
     },
-    "visit": {
-      "title": "💘 Visit Coșeiu",
+    "visit_coseiu": {
+      "id": "visit_coseiu",
+      "title": "Visit Coșeiu",
+      "icon": "fa-heart",
       "text": "Un loc liniștit ideal pentru relaxare."
     },
-    "monumente": {
-      "title": "🏛️ Monumente istorice"
+    "monumente_istorice": {
+      "id": "monumente_istorice",
+      "title": "Monumente Istorice",
+      "icon": "fa-landmark"
     }
   },
 
   "evenimente": {
-    "title": "🎉 Evenimente",
-    "zile": {
-      "title": "🎊 Zilele Coșeiu",
+    "id": "evenimente",
+    "title": "Evenimente",
+    "icon": "fa-calendar-days",
+    "zilele_coseiului": {
+      "id": "zilele_coseiului",
+      "title": "Zilele Coșeiu",
+      "icon": "fa-calendar-check",
       "text": "Eveniment anual al comunității."
     },
-    "craciun": {
-      "title": "🎄 Târg de Crăciun",
+    "targ_craciun": {
+      "id": "targ_craciun",
+      "title": "Târg de Crăciun",
+      "icon": "fa-tree",
       "text": "Evenimente festive de iarnă."
     },
-    "piata": {
-      "title": "🛍️ Piață locală",
+    "piata_locala": {
+      "id": "piata_locala",
+      "title": "Piață Locală",
+      "icon": "fa-shop",
       "text": "Produse locale proaspete."
     },
     "festival": {
-      "title": "🎉 Festivaluri",
+      "id": "festivaluri",
+      "title": "Festivaluri",
+      "icon": "fa-music",
       "text": "Evenimente tradiționale."
     }
   }
