@@ -841,7 +841,7 @@ function renderSimpleSection(section) {
       .map(
         (e) => `
       <div>
-        <h4>${e.title}</h4>
+        <h4><i class="fa-solid ${e.icon}"></i> ${e.title}</h4>
         ${e.text ? `<p>${e.text}</p>` : ""}
         ${e.items ? renderList(e.items) : ""}
       </div>
