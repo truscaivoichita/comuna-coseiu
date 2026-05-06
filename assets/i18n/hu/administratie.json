@@ -1,7 +1,9 @@
 {
   "administratie": {
+    "id": "administratie",
     "title": "Adminisztráció",
     "icon": "fa-building",
+    "description": "Információk a helyi közigazgatás felépítéséről, vezetéséről és közszolgáltatásairól.",
 
     "labels": {
       "contact": {
@@ -22,8 +24,13 @@
         "title": "Tanácsosok"
       }
     },
+
     "primarie": {
+      "id": "primarie",
       "title": "Polgármesteri Hivatal",
+      "icon": "fa-landmark",
+      "description": "A helyi közigazgatás végrehajtó vezetése.",
+
       "primar": {
         "id": "primar",
         "functie": "Polgármester",
@@ -31,16 +38,20 @@
         "nume": "Vulpe Lucian-Andrei",
         "imagine": "assets/images/primar.jpg",
         "alt": "Vulpe Lucian-Andrei polgármester",
+
         "contact": {
           "email": "primariacoseiu@yahoo.com",
           "telefon": "+40 260 653 021",
           "program": ["Hétfő: 10:00 - 12:00", "Csütörtök: 10:00 - 12:00"]
         },
+
         "declaratii": {
           "avere": "assets/data/declaratii/Vulpe-G.Lucian-Andrei-declaratie-de-avere.pdf",
           "interese": "assets/data/declaratii/Vulpe-G.Lucian-Andrei-declaratie-de-interese.pdf"
         },
+
         "descriere": "A polgármester a helyi végrehajtó hatóság, amely felel a helyi tanács döntéseinek végrehajtásáért és a helyi közigazgatás működéséért.",
+
         "atributii": {
           "title": "Atribútumok",
           "items": [
@@ -55,6 +66,7 @@
           ]
         }
       },
+
       "viceprimar": {
         "id": "viceprimar",
         "functie": "Alpolgármester",
@@ -62,25 +74,31 @@
         "nume": "Somogyi Janos-Miklos",
         "imagine": "assets/images/logo1.png",
         "alt": "Somogyi Janos-Miklos alpolgármester",
+
         "contact": {
           "email": "somogyijanos-miklos@gmail.com",
           "telefon": "+40 260 653 021",
           "program": ["Szerda: 10:00 - 12:00"]
         },
+
         "declaratii": {
           "avere": "assets/data/declaratii/Somogyi-C.Janos-Miklos-declaratie-de-avere.pdf",
           "interese": "assets/data/declaratii/Somogyi-C.Janos-Miklos-declaratie-de-interese.pdf"
         },
+
         "descriere": "Az alpolgármester a helyi közigazgatás másodlagos végrehajtó tisztségviselője, aki szükség esetén helyettesíti a polgármestert.",
+
         "atributii": {
           "title": "Atribútumok",
           "items": [
             "A polgármester helyettesítése távollét esetén",
             "A polgármester által delegált feladatok ellátása",
-            "A helyi közigazgatás működésének támogatása"
+            "A helyi közigazgatás működésének támogatása",
+            "Hozzájárul a helyi közigazgatás vezetéséhez"
           ]
         }
       },
+
       "secretar": {
         "id": "secretar",
         "functie": "Jegyző",
@@ -88,16 +106,20 @@
         "nume": "Pop Mădălina-Maria",
         "imagine": "assets/images/logo1.png",
         "alt": "Pop Mădălina-Maria jegyző",
+
         "contact": {
           "email": "popmadalinaaa@gmail.com",
           "telefon": "+40 260 653 021",
           "program": ["Kedd: 10:00 - 12:00"]
         },
+
         "declaratii": {
           "avere": "assets/data/declaratii/Pop-V.Madalina-Maria-declaratie-de-avere.pdf",
           "interese": "assets/data/declaratii/Pop-V.Madalina-Maria-declaratie-de-interese.pdf"
         },
+
         "descriere": "A közigazgatási egység jegyzője biztosítja a közigazgatási aktusok jogszerűségét és a helyi adminisztráció megfelelő működését.",
+
         "atributii": {
           "title": "Atribútumok",
           "items": [
@@ -112,11 +134,15 @@
         }
       }
     },
+
     "organigrama": {
+      "id": "organigrama",
       "title": "Szervezeti felépítés",
       "icon": "fa-sitemap",
+      "description": "Az önkormányzat szervezeti felépítése.",
 
       "conducere": {
+        "id": "conducere",
         "icon": "fa-users",
         "title": "Vezetés",
         "items": [
@@ -154,12 +180,14 @@
       },
 
       "compartimente": {
+        "id": "compartimente",
         "title": "Osztályok és szolgáltatások",
         "icon": "fa-building-columns",
 
         "items": [
           {
             "servicii_sociale": {
+              "id": "servicii_sociale",
               "title": "Szociális szolgáltatások",
               "icon": "fa-hand-holding-heart",
               "items": [
@@ -171,6 +199,7 @@
 
           {
             "stare_civila": {
+              "id": "stare_civila",
               "title": "Állapot",
               "icon": "fa-ring",
               "items": [
@@ -190,6 +219,7 @@
 
           {
             "buget_finante": {
+              "id": "buget_finante",
               "title": "Költségvetés és pénzügyek",
               "icon": "fa-coins",
               "items": [
@@ -219,6 +249,7 @@
 
           {
             "registru_agricol": {
+              "id": "registru_agricol",
               "icon": "fa-tractor",
               "title": "Mezőgazdasági regiszter",
               "items": ["Betöltetlen állás - Kezdő felügyelő"]
@@ -227,6 +258,7 @@
 
           {
             "administrativ": {
+              "id": "administrativ",
               "icon": "fa-screwdriver-wrench",
               "title": "Adminisztratív szolgáltatások",
               "items": [
@@ -252,6 +284,7 @@
 
           {
             "biblioteca": {
+              "id": "biblioteca",
               "icon": "fa-book",
               "title": "Könyvtár",
               "items": ["Marton-Gergely Edit-Estera - Könyvtáros"]
@@ -260,6 +293,7 @@
 
           {
             "proiecte": {
+              "id": "proiecte",
               "icon": "fa-diagram-project",
               "title": "Projektek",
               "items": ["Betöltetlen állás - Iskolai tanácsadó"]
@@ -270,6 +304,7 @@
     },
 
     "regulament": {
+      "id": "regulament",
       "title": "Szabályzat",
       "icon": "fa-file-contract",
       "link": "assets/data/pdfs/regulament-organizare-functionare.pdf",
@@ -277,6 +312,7 @@
     },
 
     "sediu": {
+      "id": "sediu",
       "title": "A Coșeiu Polgármesteri Hivatal székhelye",
       "icon": "fa-map-marker-alt",
       "adresa": "Coșeiu község, 222. szám, Szilágy megye",
@@ -288,6 +324,7 @@
     },
 
     "consiliu_local": {
+      "id": "consiliu_local",
       "title": "Helyi Tanács",
       "icon": "fa-landmark",
       "descriere": "A helyi tanács a község irányító szerve, amely a lakosok által megválasztott tanácsosokból áll.",
@@ -335,6 +372,7 @@
       },
 
       "hotarari": {
+        "id": "hotarari",
         "title": "Tanácsi határozatok",
         "icon": "fa-scroll",
         "descriere": "A Helyi Tanács határozatai normatív vagy egyedi jellegű közigazgatási aktusok, amelyeket a döntéshozatal átláthatósága érdekében közzétesznek.",
@@ -356,6 +394,7 @@
     },
 
     "evidenta_persoanelor": {
+      "id": "evidenta_persoanelor",
       "title": "Személynyilvántartás",
       "icon": "fa-id-card",
       "descriere": [
@@ -403,17 +442,18 @@
     },
 
     "politia_locala": {
+      "id": "politia_locala",
       "title": "Helyi Rendőrség",
       "icon": "fa-shield",
       "descriere": [
-        "A Coșeiu-i Helyi Rendőrség biztosítja a törvény betartását és a közrend fenntartását a község területén."
+        "A Kusaly Helyi Rendőrség biztosítja a törvény betartását és a közrend fenntartását a község területén."
       ],
       "servicii": [
         {
           "id": "informatii_politie",
           "title": "Rendőrségi információk",
           "icon": "fa-info-circle",
-          "descriere": "A Coșeiu-i Helyi Rendőrség biztosítja a törvény betartását és a közrend fenntartását a község területén."
+          "descriere": "A Kusaly Helyi Rendőrség biztosítja a törvény betartását és a közrend fenntartását a község területén."
         },
         {
           "id": "atributii",
@@ -536,9 +576,11 @@
     },
 
     "altele": {
+      "id": "altele",
       "title": "Egyéb",
       "icon": "fa-circle-question",
       "descriere": [],
+
       "servicii": [
         {
           "id": "transformare_digitala",

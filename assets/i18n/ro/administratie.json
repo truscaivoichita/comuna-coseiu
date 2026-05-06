@@ -1,7 +1,9 @@
 {
   "administratie": {
+    "id": "administratie",
     "title": "Administrație",
     "icon": "fa-building",
+    "description": "Informații despre structura administrației locale, conducere și servicii publice.",
 
     "labels": {
       "contact": {
@@ -24,8 +26,10 @@
     },
 
     "primarie": {
+      "id": "primarie",
       "title": "Primărie",
       "icon": "fa-landmark",
+      "description": "Conducerea executivă a administrației publice locale.",
 
       "primar": {
         "id": "primar",
@@ -132,10 +136,13 @@
     },
 
     "organigrama": {
+      "id": "organigrama",
       "title": "Organigramă",
       "icon": "fa-sitemap",
+      "description": "Structura organizatorică a primăriei.",
 
       "conducere": {
+        "id": "conducere",
         "title": "Conducerea administrației",
         "icon": "fa-users",
         "items": [
@@ -171,13 +178,16 @@
           }
         ]
       },
+
       "compartimente": {
+        "id": "compartimente",
         "title": "Compartimente și servicii",
         "icon": "fa-building-columns",
 
         "items": [
           {
             "servicii_sociale": {
+              "id": "servicii_sociale",
               "title": "Servicii sociale",
               "icon": "fa-hand-holding-heart",
               "items": [
@@ -189,6 +199,7 @@
 
           {
             "stare_civila": {
+              "id": "stare_civila",
               "title": "Stare civilă",
               "icon": "fa-ring",
               "items": [
@@ -208,6 +219,7 @@
 
           {
             "buget_finante": {
+              "id": "buget_finante",
               "title": "Buget și finanțe",
               "icon": "fa-coins",
               "items": [
@@ -237,6 +249,7 @@
 
           {
             "registru_agricol": {
+              "id": "registru_agricol",
               "title": "Registru agricol",
               "icon": "fa-tractor",
               "items": ["Post vacant - Inspector debutant"]
@@ -245,6 +258,7 @@
 
           {
             "administrativ": {
+              "id": "administrativ",
               "title": "Administrativ",
               "icon": "fa-screwdriver-wrench",
               "items": [
@@ -270,6 +284,7 @@
 
           {
             "biblioteca": {
+              "id": "biblioteca",
               "title": "Bibliotecă",
               "icon": "fa-book",
               "items": ["Marton-Gergely Edit-Estera - Bibliotecar"]
@@ -278,6 +293,7 @@
 
           {
             "proiecte": {
+              "id": "proiecte",
               "title": "Proiecte",
               "icon": "fa-diagram-project",
               "items": ["Post vacant - Consilier școlar"]
@@ -288,6 +304,7 @@
     },
 
     "regulament": {
+      "id": "regulament",
       "title": "Regulament",
       "icon": "fa-file-contract",
       "link": "assets/data/pdfs/regulament-organizare-functionare.pdf",
@@ -295,6 +312,7 @@
     },
 
     "sediu": {
+      "id": "sediu",
       "title": "Sediul Primăriei Coșeiu",
       "icon": "fa-map-marker-alt",
       "adresa": "Localitatea Coșeiu, Nr.222, Jud.Sălaj",
@@ -306,9 +324,11 @@
     },
 
     "consiliu_local": {
+      "id": "consiliu_local",
       "title": "Consiliul Local",
       "icon": "fa-landmark",
       "descriere": "Consiliul local este organul de conducere al comunei, compus din consilieri aleși de către cetățenii din aceasta.",
+
       "comisii": {
         "id": "comisii",
         "title": "Comisii",
@@ -328,6 +348,7 @@
         "icon": "fa-calendar",
         "descriere1": "Ședințele Consiliului Local sunt publice și se desfășoară în condițiile prevăzute de Codul administrativ, fiind aduse la cunoștința cetățenilor.",
         "descriere2": "Ședințele Consiliului Local Coșeiu sunt anunțate în prealabil și sunt deschise publicului.",
+
         "urmatoare": {
           "title": "Următoarea ședință",
           "icon": "fa-calendar-check",
@@ -338,6 +359,7 @@
           "locatie": "Sala de ședințe a Primăriei",
           "locatie_label": "Locația"
         },
+
         "ordine_de_zi": {
           "title": "Ordinea de zi",
           "icon": "fa-list",
@@ -350,6 +372,7 @@
       },
 
       "hotarari": {
+        "id": "hotarari",
         "title": "Hotărâri Consiliu",
         "icon": "fa-scroll",
         "descriere": "Hotărârile Consiliului Local sunt acte administrative cu caracter normativ sau individual și se publică pentru asigurarea transparenței decizionale.",
@@ -371,6 +394,7 @@
     },
 
     "evidenta_persoanelor": {
+      "id": "evidenta_persoanelor",
       "title": "Evidența Persoanelor",
       "icon": "fa-id-card",
       "descriere": [
@@ -418,6 +442,7 @@
     },
 
     "politia_locala": {
+      "id": "politia_locala",
       "title": "Poliția Locală",
       "icon": "fa-shield",
       "descriere": [
@@ -551,6 +576,7 @@
     },
 
     "altele": {
+      "id": "altele",
       "title": "Altele",
       "icon": "fa-circle-question",
       "descriere": [],

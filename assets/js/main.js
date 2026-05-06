@@ -304,7 +304,7 @@ function renderHome() {
   const data = homeDict.home;
   const container = document.getElementById("home-container");
   if (!container) return;
-  container.innerHTML = `<section id="home" class="hero"><div class="hero-content"><i class="fa-solid ${data.icon}"></i><h1>${data.title}</h1><p>${data.subtitle}</p><div class="hero-buttons">${Object.values(
+  container.innerHTML = `<section id="home" class="hero"><div class="hero-content"><h1><i class="fa-solid ${data.icon}"></i> ${data.title}</h1><p>${data.subtitle}</p><div class="hero-buttons">${Object.values(
     data.buttons,
   )
     .map(
@@ -318,14 +318,14 @@ function renderHome() {
   )
     .map(
       (card) =>
-        `<div class="quick-card"><i class="fa-solid ${card.icon}"></i><h3>${card.title}</h3><p>${card.description}${card.links.map((l) => `<div><a href="${l.href}" class="btn-link btn-section">${l.label}</a></div>`).join(" ")}</p></div>`,
+        `<div class="quick-card"><h3><i class="fa-solid ${card.icon}"></i> ${card.title}</h3><p>${card.description}${card.links.map((l) => `<div><a href="${l.href}" class="btn-link btn-section">${l.label}</a></div>`).join(" ")}</p></div>`,
     )
     .join(
       "",
-    )}</section><section class="news"><i class="fa-solid ${data.news.icon}"></i><h2>${data.news.title}</h2><div class="news-list">${data.news.items.map((n) => `<article class="news-item"><h4><i class="fa-solid ${n.icon}"></i> ${n.title}</h4><p>${n.description}</p></article>`).join("")}</div></section></section>`;
+    )}</section><section class="news"><h2><i class="fa-solid ${data.news.icon}"></i> ${data.news.title}</h2><div class="news-list">${data.news.items.map((n) => `<article class="news-item"><h4><i class="fa-solid ${n.icon}"></i> ${n.title}</h4><p>${n.description}</p></article>`).join("")}</div></section></section>`;
 }
-function renderAdministratie(data) {
-  const a = data.administratie;
+function renderAdministratie(a) {
+  // const a = data.administratie;
   // console.log("Administratie data:", data);
   loadConsilieri();
   return `
@@ -408,10 +408,10 @@ function renderOrganigramaFull(o, labels = {}) {
   const buttons = labels?.buttons ?? {};
   const contact = labels?.contact ?? {};
   return `
-<div id="organigrama" class="card profile-card">
+<div id="${o.id}" class="card profile-card">
   <h4>🧭 ${o.title}</h4>
   <!-- Conducere -->
-  <div class="card">
+  <div class="card" id="${o.conducere.id}">
     <h5>
       <i class="fa-solid fa-users"></i> 
       ${o.conducere.title || "Conducerea administrației"}
@@ -444,7 +444,7 @@ function renderOrganigramaFull(o, labels = {}) {
   </div>
 
   <!-- Compartimente -->
-  <div class="card">
+  <div class="card" id="${o.compartimente.id}">
     <h5>
       <i class="fa-solid ${o.compartimente.icon || "fa-building"}"></i>
       ${o.compartimente.title.toUpperCase()}
@@ -500,7 +500,7 @@ function renderOrganigramaFull(o, labels = {}) {
 }
 function renderRegulament(r) {
   return `
-<div id="regulament" class="card profile-card">
+<div id="${r.id}" class="card profile-card">
   <h4><i class="fa-solid fa-user"></i> ${r.title}</h4>
   <p>
     <a href="${r.link}" class="btn btn-section">
@@ -512,7 +512,7 @@ function renderRegulament(r) {
 }
 function renderSediuFull(s) {
   return `
-<div id="sediu">
+<div id="${s.id}">
   <h3><i class="fa ${s.icon}"></i> ${s.title}</h3>
   <ul>
     <li><i class="fa ${s.adresa_icon}"></i> ${s.adresa}</li>
@@ -564,10 +564,10 @@ function renderConsilieri(consilieri, labels = {}) {
 }
 function renderConsiliuFull(c) {
   return `
-<div id="consiliu">
+<div id="${c.id}">
   <h3>🗳️ ${c.title}</h3>
   <p>${c.descriere}</p>
-  <div id="consilieri">
+  <div id="${c.consilieri.id}">
       <h4 data-i18n="consiliu.consilieri.title">
         <i class="fa-solid fa-landmark"></i>
          ${administratieDict?.labels?.consilieri?.title || "Consilieri"}
@@ -597,7 +597,7 @@ function renderConsiliuFull(c) {
       ${c.sedinte.ordine_de_zi.items.map((item) => `<li>${item}</li>`).join("")}
     </ul>
   </div>
-  <div id="hotarari_consiliu" class="card cards grid">
+  <div id="${c.hotarari.id}" class="card cards grid">
   <h4><i class="fa-solid fa-scroll"></i> ${c.hotarari.title}</h4>
     <p>${c.hotarari.descriere}</p>
   <ul>
@@ -615,7 +615,7 @@ function renderConsiliuFull(c) {
 }
 function renderEvidentaFull(e) {
   return `
-<div id="evidenta_persoanelor" class="cards grid">
+<div id="${e.id}" class="cards grid">
   <h3>
     <i class="fa-solid ${e.icon}"></i> ${e.title}
   </h3>
@@ -640,12 +640,12 @@ function renderEvidentaFull(e) {
 }
 function renderPolitiaFull(p) {
   return `
-    <div id="politia_locala" class="cards grid">
+    <div id="${p.id}" class="cards grid">
       <h3>
         <i class="fa-solid ${p.icon}"></i> ${p.title}
       </h3>
       <!-- Descriere -->
-      <div id="informatii_politie">
+      <div>
         <h4>
           <i class="fa-solid fa-info-circle"></i> ${p.title}
         </h4>
@@ -714,7 +714,7 @@ function renderAlteleFull(a) {
     return "<p>Data not available</p>";
   }
   return `
-    <div id="altele" class="cards grid">
+    <div id="${a.id}" class="cards grid">
       <h3>
         <i class="fa-solid ${a.icon}"></i> ${a.title}
       </h3>
