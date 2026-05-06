@@ -6,6 +6,7 @@ let communitateDict = {};
 let locuireDict = {};
 let administratieDict = {};
 let mediuDict = {};
+let mobilitateDict = {};
 let nav, toggle;
 let allSections = [];
 let searchInput;
@@ -33,6 +34,12 @@ const loaders = {
     containerId: "mediu-container",
     dictSetter: (data) => (mediuDict = data.mediu || data),
     render: (data) => renderMediu(data.mediu || data),
+  },
+  mobilitate: {
+    file: "mobilitate.json",
+    containerId: "mobilitate-container",
+    dictSetter: (data) => (mobilitateDict = data.mobilitate || data),
+    render: renderMobilitate,
   },
 };
 function cacheDOM() {
@@ -965,6 +972,45 @@ function renderMediu(m) {
 </section>
   `;
 }
+function renderMobilitate(data) {
+  if (!data?.mobilitate) return "";
+  const m = data.mobilitate;
+  const card = (item) => `
+    <div id="${item.id}" class="card">
+      <h4><i class="fa-solid ${item.icon}"></i> ${item.title}</h4>
+      <p>${item.description || ""}</p>
+      ${
+        item.items
+          ? `<ul>${item.items.map((i) => `<li>${i}</li>`).join("")}</ul>`
+          : ""
+      }
+      ${
+        item.images
+          ? `
+        <div class="images">
+          ${item.images
+            .map(
+              (img) => `<img src="${img}" alt="${item.title}" loading="lazy"/>`,
+            )
+            .join("")}
+        </div>
+      `
+          : ""
+      }
+    </div>
+  `;
+  return `
+<section id="${m.id}">
+  <h2><i class="fa-solid ${m.icon}"></i> ${m.title}</h2>
+  <p>${m.description || ""}</p>
+  ${card(m.plan_mobilitate)}
+  ${card(m.parcari)}
+  ${card(m.transport_public)}
+  ${card(m.biciclete)}
+  ${card(m.siguranta_circulatiei)}
+</section>
+  `;
+}
 async function loadAdministratieLang(lang) {
   try {
     const res = await fetch(`assets/i18n/${lang}/administratie.json`);
@@ -1077,6 +1123,7 @@ async function loadAllLanguages(lang) {
     loadLang("comunitate", lang),
     loadLang("locuire", lang),
     loadLang("mediu", lang),
+    loadLang("mobilitate", lang),
   ]);
   updateSections();
 }
@@ -1182,10 +1229,10 @@ async function loadAllComponents() {
     //   "assets/components/sections/locuire.html",
     // ),
     // loadComponent("mediu-container", "assets/components/sections/mediu.html"),
-    loadComponent(
-      "mobilitate-container",
-      "assets/components/sections/mobilitate.html",
-    ),
+    // loadComponent(
+    //   "mobilitate-container",
+    //   "assets/components/sections/mobilitate.html",
+    // ),
     loadComponent(
       "economie-container",
       "assets/components/sections/economie.html",

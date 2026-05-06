@@ -1,0 +1,57 @@
+{
+  "mobilitate": {
+    "id": "mobilitate",
+    "title": "Mobilitate",
+    "icon": "fa-car",
+    "description": "Politici și infrastructură pentru mobilitatea locală, transport și siguranța circulației.",
+
+    "plan_mobilitate": {
+      "id": "plan_mobilitate",
+      "title": "Plan mobilitate",
+      "icon": "fa-map-pin",
+      "description": "Planul de mobilitate vizează îmbunătățirea infrastructurii rutiere și a siguranței circulației."
+    },
+
+    "parcari": {
+      "id": "parcari",
+      "title": "Parcări",
+      "icon": "fa-parking",
+      "description": "Parcarea este permisă în zonele special amenajate, cu respectarea regulilor de circulație."
+    },
+
+    "transport_public": {
+      "id": "transport_public",
+      "title": "Transport Public",
+      "icon": "fa-bus",
+      "description": "Transportul public asigură legătura între comuna Coșeiu și localitățile din apropiere.",
+      "items": [
+        "Program de luni până vineri către Zalău",
+        "Program adaptat pentru elevi și navetiști",
+        "Preț aproximativ 14 lei din Chilioara"
+      ],
+      "images": [
+        "assets/images/transportCZ.png",
+        "assets/images/transportZC.png"
+      ]
+    },
+
+    "biciclete": {
+      "id": "biciclete",
+      "title": "Biciclete",
+      "icon": "fa-bicycle",
+      "description": "Comuna oferă condiții favorabile pentru deplasarea cu bicicleta în zonele cu trafic redus."
+    },
+
+    "siguranta_circulatiei": {
+      "id": "siguranta_circulatiei",
+      "title": "Siguranța Circulației",
+      "icon": "fa-traffic-light",
+      "description": "Siguranța circulației este o prioritate pentru administrația locală.",
+      "items": [
+        "Semnalizare rutieră corespunzătoare",
+        "Limitarea vitezei în zonele rezidențiale",
+        "Siguranța pietonilor"
+      ]
+    }
+  }
+}

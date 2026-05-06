@@ -1,0 +1,57 @@
+{
+  "mobilitate": {
+    "id": "mobilitate",
+    "title": "Mobilitás",
+    "icon": "fa-car",
+    "description": "Helyi mobilitási, közlekedési és közlekedésbiztonsági politikák és infrastruktúra.",
+
+    "plan_mobilitate": {
+      "id": "plan_mobilitate",
+      "title": "Mobilitási terv",
+      "icon": "fa-map-pin",
+      "description": "A mobilitási terv a közúti infrastruktúra és a közlekedésbiztonság fejlesztését célozza."
+    },
+
+    "parcari": {
+      "id": "parcari",
+      "title": "Parkolás",
+      "icon": "fa-parking",
+      "description": "A parkolás a kijelölt területeken engedélyezett, a közlekedési szabályok betartásával."
+    },
+
+    "transport_public": {
+      "id": "transport_public",
+      "title": "Tömegközlekedés",
+      "icon": "fa-bus",
+      "description": "A tömegközlekedés biztosítja a kapcsolatot Coșeiu község és a közeli települések között.",
+      "items": [
+        "Hétfőtől péntekig közlekedés Zilah felé",
+        "Diákok és ingázók számára igazított menetrend",
+        "Körülbelül 14 lej Chilioara felől"
+      ],
+      "images": [
+        "assets/images/transportCZ.png",
+        "assets/images/transportZC.png"
+      ]
+    },
+
+    "biciclete": {
+      "id": "biciclete",
+      "title": "Kerékpárok",
+      "icon": "fa-bicycle",
+      "description": "A község kedvező feltételeket biztosít a kerékpáros közlekedéshez az alacsony forgalmú területeken."
+    },
+
+    "siguranta_circulatiei": {
+      "id": "siguranta_circulatiei",
+      "title": "Közlekedésbiztonság",
+      "icon": "fa-traffic-light",
+      "description": "A közlekedésbiztonság a helyi önkormányzat kiemelt prioritása.",
+      "items": [
+        "Megfelelő útjelzések",
+        "Sebességkorlátozás a lakóövezetekben",
+        "Gyalogosok biztonsága"
+      ]
+    }
+  }
+}
