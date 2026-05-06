@@ -1,0 +1,102 @@
+{
+  "economie": {
+    "id": "economie",
+    "title": "Gazdaság",
+    "icon": "fa-money-bill-wave",
+    "description": "Információk az adókról, költségvetésről, beruházásokról és a helyi gazdasági fejlődésről.",
+
+    "taxe_impozite": {
+      "id": "taxe_impozite",
+      "title": "Adók és illetékek",
+      "icon": "fa-coins",
+      "description": "A helyi adókat és illetékeket évente a helyi tanács határozata állapítja meg.",
+      "items": [
+        "Épület- és telekadó",
+        "Járműadó",
+        "Helyi határozatokkal megállapított különleges illetékek"
+      ],
+      "termene_plata": {
+        "title": "Fizetési határidők",
+        "id": "termene_plata-list",
+        "items": [
+          "március 31. - első részlet",
+          "szeptember 30. - második részlet"
+        ]
+      }
+    },
+
+    "plati_online": {
+      "id": "plati_online",
+      "title": "Online fizetések",
+      "icon": "fa-credit-card",
+      "description": "A helyi adók és illetékek online is befizethetők biztonságos platformokon keresztül.",
+      "items": [
+        "Helyi adók és illetékek",
+        "Szabálysértési bírságok",
+        "Egyéb adminisztratív díjak"
+      ],
+      "link": "https://www.ghiseul.ro"
+    },
+
+    "buget": {
+      "id": "buget",
+      "title": "Költségvetés",
+      "icon": "fa-balance-scale",
+      "description": "A helyi költségvetés a helyi közigazgatás bevételeit és kiadásait tükrözi.",
+      "items": [
+        "Adókból és illetékekből származó bevételek",
+        "Európai uniós források",
+        "Állami költségvetési támogatások"
+      ],
+      "documente": ["2026-os költségvetés", "2025-ös költségvetési végrehajtás"]
+    },
+
+    "achizitii": {
+      "id": "achizitii",
+      "title": "Közbeszerzések",
+      "icon": "fa-shopping-cart",
+      "description": "A közbeszerzések átlátható módon, a hatályos jogszabályoknak megfelelően történnek.",
+      "items": [
+        "Infrastrukturális munkálatok",
+        "Közszolgáltatások",
+        "Árubeszerzések"
+      ]
+    },
+
+    "proiecte_ue": {
+      "id": "proiecte_ue",
+      "title": "EU-s projektek",
+      "icon": "fa-globe-europe",
+      "description": "Európai uniós és kormányzati forrásokból finanszírozott projektek a helyi fejlesztés érdekében.",
+      "items": [
+        "Energiahatékonyság középületek esetében",
+        "Oktatási infrastruktúra korszerűsítése",
+        "Helyi infrastruktúrába történő beruházások"
+      ]
+    },
+
+    "investitori": {
+      "id": "investitori",
+      "title": "Befektetők",
+      "icon": "fa-industry",
+      "description": "Gazdasági szereplők, akik hozzájárulnak a helyi gazdaság fejlődéséhez.",
+      "items": [
+        "TERMO PAL JAN SRL",
+        "ZOOFARM SRL",
+        "TIBO PROD COM SRL",
+        "VETERN SRL",
+        "LIVMATCOM IULIA SRL",
+        "SAFETY CONSULT JRO SRL",
+        "NEV TRANS SRL",
+        "CHISIU IOAN CONSTRUCT SRL",
+        "FERERN IMPEX SRL",
+        "BIAIRISREM SRL",
+        "PLUS HOME CLEANING SRL",
+        "EDINA & MEDEEA SRL",
+        "ASTUCES CONCEPT SRL",
+        "LANLAC AGPT SRL",
+        "KING BAKERY SRL"
+      ]
+    }
+  }
+}

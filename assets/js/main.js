@@ -7,6 +7,7 @@ let locuireDict = {};
 let administratieDict = {};
 let mediuDict = {};
 let mobilitateDict = {};
+let economieDict = {};
 let nav, toggle;
 let allSections = [];
 let searchInput;
@@ -40,6 +41,12 @@ const loaders = {
     containerId: "mobilitate-container",
     dictSetter: (data) => (mobilitateDict = data.mobilitate || data),
     render: renderMobilitate,
+  },
+  economie: {
+    file: "economie.json",
+    containerId: "economie-container",
+    dictSetter: (data) => (economieDict = data.economie || data),
+    render: renderEconomie,
   },
 };
 function cacheDOM() {
@@ -1011,6 +1018,65 @@ function renderMobilitate(data) {
 </section>
   `;
 }
+function renderEconomieCard(section, isTaxe = false) {
+  if (!section) return "";
+  return `
+  <div id="${section.id}" class="cards grid">
+    <h3><i class="fa-solid ${section.icon}"></i> ${section.title}</h3>
+    <p>${section.description || ""}</p>
+    ${section.items ? `<ul>${section.items.map((i) => `<li>${i}</li>`).join("")}</ul>` : ""}
+    ${
+      isTaxe && section.termene_plata
+        ? `
+      <p>${section.termene_plata.title || "Termene de plată"}</p>
+      <ul>
+        ${section.termene_plata.items?.map((t) => `<li>${t}</li>`).join("")}
+      </ul>
+    `
+        : ""
+    }
+    ${
+      section.documente
+        ? `
+      <h4><i class="fa-solid fa-file-alt"></i> Documente</h4>
+      <ul>
+        ${section.documente
+          .map(
+            (d) => `<li><a href="#" class="btn-link btn-section">${d}</a></li>`,
+          )
+          .join("")}
+      </ul>
+    `
+        : ""
+    }
+
+    ${
+      section.link
+        ? `
+      <a href="${section.link}" target="_blank" class="btn-link btn-section">
+        Ghișeul.ro
+      </a>
+    `
+        : ""
+    }
+  </div>
+  `;
+}
+function renderEconomie(data) {
+  const e = data.economie || data;
+  return `
+<section id="${e.id}" class="cards grid">
+  <h2><i class="fa-solid ${e.icon}"></i> ${e.title}</h2>
+  <p>${e.description || ""}</p>
+  ${renderEconomieCard(e.taxe_impozite, true)}
+  ${renderEconomieCard(e.plati_online)}
+  ${renderEconomieCard(e.buget)}
+  ${renderEconomieCard(e.achizitii)}
+  ${renderEconomieCard(e.proiecte_ue)}
+  ${renderEconomieCard(e.investitori)}
+</section>
+  `;
+}
 async function loadAdministratieLang(lang) {
   try {
     const res = await fetch(`assets/i18n/${lang}/administratie.json`);
@@ -1020,7 +1086,6 @@ async function loadAdministratieLang(lang) {
     if (container) {
       container.innerHTML = renderAdministratie(data);
     }
-    // loadConsilieri();
   } catch (err) {
     console.error("Failed to load administratie.json:", err);
   }
@@ -1124,6 +1189,7 @@ async function loadAllLanguages(lang) {
     loadLang("locuire", lang),
     loadLang("mediu", lang),
     loadLang("mobilitate", lang),
+    loadLang("economie", lang),
   ]);
   updateSections();
 }

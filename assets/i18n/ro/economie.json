@@ -1,0 +1,99 @@
+{
+  "economie": {
+    "id": "economie",
+    "title": "Economie",
+    "icon": "fa-money-bill-wave",
+    "description": "Informații despre taxe, buget, investiții și dezvoltarea economică locală.",
+
+    "taxe_impozite": {
+      "id": "taxe_impozite",
+      "title": "Taxe și Impozite",
+      "icon": "fa-coins",
+      "description": "Taxele și impozitele locale sunt stabilite anual prin hotărâre a Consiliului Local.",
+      "items": [
+        "Impozit pe clădiri și terenuri",
+        "Taxa pentru mijloace de transport",
+        "Taxe speciale stabilite prin hotărâri locale"
+      ],
+      "termene_plata": {
+        "title": "Termene de plată",
+        "id": "termene_plata-list",
+        "items": ["31 martie - prima tranșă", "30 septembrie - a doua tranșă"]
+      }
+    },
+
+    "plati_online": {
+      "id": "plati_online",
+      "title": "Plăți Online",
+      "icon": "fa-credit-card",
+      "description": "Plata taxelor și impozitelor locale se poate realiza online prin platforme securizate.",
+      "items": [
+        "Impozite și taxe locale",
+        "Amenzi contravenționale",
+        "Alte taxe administrative"
+      ],
+      "link": "https://www.ghiseul.ro"
+    },
+
+    "buget": {
+      "id": "buget",
+      "title": "Buget",
+      "icon": "fa-balance-scale",
+      "description": "Bugetul local reflectă veniturile și cheltuielile administrației publice locale.",
+      "items": [
+        "Venituri din taxe și impozite",
+        "Fonduri europene",
+        "Alocări de la bugetul de stat"
+      ],
+      "documente": ["Buget 2026", "Execuție bugetară 2025"]
+    },
+
+    "achizitii": {
+      "id": "achizitii",
+      "title": "Achiziții Publice",
+      "icon": "fa-shopping-cart",
+      "description": "Achizițiile publice sunt realizate transparent, conform legislației în vigoare.",
+      "items": [
+        "Lucrări de infrastructură",
+        "Servicii publice",
+        "Achiziții de bunuri"
+      ]
+    },
+
+    "proiecte_ue": {
+      "id": "proiecte_ue",
+      "title": "Proiecte UE",
+      "icon": "fa-globe-europe",
+      "description": "Proiecte finanțate din fonduri europene și guvernamentale pentru dezvoltare locală.",
+      "items": [
+        "Eficiență energetică pentru clădiri publice",
+        "Modernizarea infrastructurii educaționale",
+        "Investiții în infrastructura locală"
+      ]
+    },
+
+    "investitori": {
+      "id": "investitori",
+      "title": "Investitori",
+      "icon": "fa-industry",
+      "description": "Operatori economici care contribuie la dezvoltarea economică locală.",
+      "items": [
+        "TERMO PAL JAN SRL",
+        "ZOOFARM SRL",
+        "TIBO PROD COM SRL",
+        "VETERN SRL",
+        "LIVMATCOM IULIA SRL",
+        "SAFETY CONSULT JRO SRL",
+        "NEV TRANS SRL",
+        "CHISIU IOAN CONSTRUCT SRL",
+        "FERERN IMPEX SRL",
+        "BIAIRISREM SRL",
+        "PLUS HOME CLEANING SRL",
+        "EDINA & MEDEEA SRL",
+        "ASTUCES CONCEPT SRL",
+        "LANLAC AGPT SRL",
+        "KING BAKERY SRL"
+      ]
+    }
+  }
+}
