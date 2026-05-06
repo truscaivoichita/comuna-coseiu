@@ -1,0 +1,129 @@
+{
+  "mediu": {
+    "id": "mediu",
+    "title": "Környezet",
+    "icon": "fa-leaf",
+    "description": "Környezetvédelmi szolgáltatások, hulladékgazdálkodás, zöldterületek és zöldenergia kezelése.",
+
+    "salubritate": {
+      "id": "salubritate",
+      "title": "Hulladékgazdálkodás",
+      "icon": "fa-trash-alt",
+
+      "colectare_selectiva": {
+        "id": "colectare_selectiva",
+        "title": "Szelektív hulladékgyűjtés",
+        "icon": "fa-recycle",
+        "description": "Coșeiu községben a háztartási hulladék szelektív gyűjtése történik.",
+        "items": ["Papír és karton", "Műanyag és fém", "Üveg"]
+      },
+      "salubritate_menajera": {
+        "id": "salubritate_menajera",
+        "title": "Háztartási hulladékgazdálkodás",
+        "icon": "fa-trash",
+        "description": "A hulladékgazdálkodási szolgáltatás a közműszolgáltatásokra vonatkozó 51/2006. számú törvénynek megfelelően működik."
+      },
+      "salubritate_stradala": {
+        "id": "salubritate_stradala",
+        "title": "Közterület-tisztítás",
+        "icon": "fa-road",
+        "description": "Az utcai takarítási tevékenységek rendszeresen történnek a tiszta és egészséges környezet fenntartása érdekében."
+      },
+      "dezapezire": {
+        "id": "dezapezire",
+        "title": "Hóeltakarítás",
+        "icon": "fa-snowflake",
+        "description": "A téli időszakban az önkormányzat gondoskodik az utak hóeltakarításáról és a közlekedés fenntartásáról."
+      }
+    },
+
+    "curatenie": {
+      "id": "curatenie",
+      "title": "Tisztaság",
+      "icon": "fa-broom",
+
+      "cereri_specifice": {
+        "id": "cereri-specifice",
+        "title": "Speciális kérelmek",
+        "icon": "fa-file-alt",
+        "description": "A lakosok kérelmeket nyújthatnak be a hulladékgazdálkodással és tisztasággal kapcsolatban a polgármesteri hivatalnál."
+      },
+
+      "curatenie_primavara": {
+        "id": "curatenie-primavara",
+        "title": "Tavaszi nagytakarítás",
+        "icon": "fa-seedling",
+        "description": "Az önkormányzat évente tavaszi takarítási kampányokat szervez, amelyeken minden lakos részt vehet."
+      },
+
+      "deratizare": {
+        "id": "deratizare",
+        "title": "Rágcsáló- és rovarirtás",
+        "icon": "fa-bug",
+        "description": "A kártevők elleni időszakos intézkedéseket szakosodott cégekkel együttműködve végzik."
+      }
+    },
+
+    "spatii_verzi": {
+      "id": "spatii_verzi",
+      "title": "Zöldterületek",
+      "icon": "fa-tree",
+      "description": "A zöldterületek fenntartása az önkormányzat kiemelt prioritása.",
+
+      "adopta_spatiu": {
+        "id": "adopta_spatiu",
+        "title": "Zöldterület örökbefogadása",
+        "icon": "fa-leaf",
+        "description": "A lakosok hozzájárulhatnak a zöldterületek fenntartásához az „örökbefogadok egy zöldterületet” program keretében."
+      },
+
+      "ambrozie": {
+        "id": "ambrozie",
+        "title": "Parlagfű",
+        "icon": "fa-leaf",
+        "description": "A parlagfű irtása kötelező a jogszabályok szerint az egészség védelme érdekében."
+      }
+    },
+
+    "energie": {
+      "id": "energie",
+      "title": "Energia",
+      "icon": "fa-bolt",
+      "description": "A megújuló energia és az energiahatékonyság előmozdítása.",
+
+      "panouri_fotovoltaice": {
+        "id": "panouri_fotovoltaice",
+        "title": "Napelemek",
+        "icon": "fa-sun",
+        "description": "A napelemek telepítése az energiahatékonyság érdekében ösztönzött."
+      },
+
+      "finantare": {
+        "id": "finantare",
+        "title": "Finanszírozás",
+        "icon": "fa-money-bill-wave",
+        "description": "A zöldenergia projektek állami és európai uniós támogatásokban részesülhetnek."
+      }
+    },
+
+    "altele_mediu": {
+      "id": "altele_mediu",
+      "title": "Egyéb környezet",
+      "icon": "fa-question-circle",
+
+      "calitatea_aerului": {
+        "id": "calitatea_aerului",
+        "title": "Levegőminőség",
+        "icon": "fa-wind",
+        "description": "A levegőminőség védelme a nemzeti környezetvédelmi jogszabályoknak megfelelően történik."
+      },
+
+      "harta_zgomot": {
+        "id": "harta_zgomot",
+        "title": "Zajtérkép",
+        "icon": "fa-volume-up",
+        "description": "A zajszint alacsony, egy csendes vidéki területre jellemző, kivéve a főutcát."
+      }
+    }
+  }
+}

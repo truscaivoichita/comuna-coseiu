@@ -1,0 +1,129 @@
+{
+  "mediu": {
+    "id": "mediu",
+    "title": "Mediu",
+    "icon": "fa-leaf",
+    "description": "Gestionarea serviciilor de mediu, salubritate, spații verzi și energie verde.",
+
+    "salubritate": {
+      "id": "salubritate",
+      "title": "Salubritate",
+      "icon": "fa-trash-alt",
+
+      "colectare_selectiva": {
+        "id": "colectare_selectiva",
+        "title": "Colectare selectivă",
+        "icon": "fa-recycle",
+        "description": "În comuna Coșeiu se realizează colectarea separată a deșeurilor menajere.",
+        "items": ["Hârtie și carton", "Plastic și metal", "Sticlă"]
+      },
+      "salubritate_menajera": {
+        "id": "salubritate_menajera",
+        "title": "Salubritate Menajeră",
+        "icon": "fa-trash",
+        "description": "Serviciul de salubrizare este organizat și funcționează în conformitate cu Legea serviciilor comunitare de utilități publice nr. 51/2006."
+      },
+      "salubritate_stradala": {
+        "id": "salubritate_stradala",
+        "title": "Salubritate Stradală",
+        "icon": "fa-road",
+        "description": "Activitățile de curățenie stradală sunt realizate periodic pentru menținerea unui mediu curat și sănătos."
+      },
+      "dezapezire": {
+        "id": "dezapezire",
+        "title": "Dezăpezire",
+        "icon": "fa-snowflake",
+        "description": "În sezonul rece, primăria intervine pentru deszăpezirea drumurilor și menținerea circulației."
+      }
+    },
+
+    "curatenie": {
+      "id": "curatenie",
+      "title": "Curățenie",
+      "icon": "fa-broom",
+
+      "cereri_specifice": {
+        "id": "cereri-specifice",
+        "title": "Cereri specifice",
+        "icon": "fa-file-alt",
+        "description": "Cetățenii pot depune solicitări privind salubritatea și curățenia în cadrul primăriei."
+      },
+
+      "curatenie_primavara": {
+        "id": "curatenie-primavara",
+        "title": "Curățenie primăvară",
+        "icon": "fa-seedling",
+        "description": "Primăria organizează anual campanii de curățenie la care sunt invitați să participe toți cetățenii."
+      },
+
+      "deratizare": {
+        "id": "deratizare",
+        "title": "Deratizare și dezinsecție",
+        "icon": "fa-bug",
+        "description": "Acțiuni periodice pentru combaterea dăunătorilor sunt realizate în colaborare cu firme specializate."
+      }
+    },
+
+    "spatii_verzi": {
+      "id": "spatii_verzi",
+      "title": "Spații verzi",
+      "icon": "fa-tree",
+      "description": "Întreținerea spațiilor verzi este o prioritate pentru administrația locală.",
+
+      "adopta_spatiu": {
+        "id": "adopta_spatiu",
+        "title": "Adoptă Spațiu verde",
+        "icon": "fa-leaf",
+        "description": "Cetățenii pot contribui la întreținerea spațiilor verzi prin programe de tip „adoptă un spațiu verde”."
+      },
+
+      "ambrozie": {
+        "id": "ambrozie",
+        "title": "Ambrozie",
+        "icon": "fa-leaf",
+        "description": "Combaterea ambroziei este obligatorie conform legislației, pentru protejarea sănătății populației."
+      }
+    },
+
+    "energie": {
+      "id": "energie",
+      "title": "Energie",
+      "icon": "fa-bolt",
+      "description": "Promovarea energiei regenerabile și a eficienței energetice.",
+
+      "panouri_fotovoltaice": {
+        "id": "panouri_fotovoltaice",
+        "title": "Panouri fotovoltaice",
+        "icon": "fa-sun",
+        "description": "Se încurajează instalarea de panouri fotovoltaice pentru eficiență energetică."
+      },
+
+      "finantare": {
+        "id": "finantare",
+        "title": "Finanțare",
+        "icon": "fa-money-bill-wave",
+        "description": "Proiectele de energie verde pot beneficia de finanțări guvernamentale și europene."
+      }
+    },
+
+    "altele_mediu": {
+      "id": "altele_mediu",
+      "title": "Altele mediu",
+      "icon": "fa-question-circle",
+
+      "calitatea_aerului": {
+        "id": "calitatea_aerului",
+        "title": "Calitatea aerului",
+        "icon": "fa-wind",
+        "description": "Protecția calității aerului se realizează în conformitate cu legislația națională privind protecția mediului."
+      },
+
+      "harta_zgomot": {
+        "id": "harta_zgomot",
+        "title": "Harta zgomot",
+        "icon": "fa-volume-up",
+        "description": "Nivelul de zgomot este redus, specific unei zone rurale liniștite, excepție făcând strada principală."
+      }
+    }
+  }
+}

@@ -5,6 +5,7 @@ let homeDict = {};
 let communityDict = {};
 let locuireDict = {};
 let adminDict = {};
+let mediuDict = {};
 let nav, toggle;
 let allSections = [];
 let searchInput;
@@ -951,6 +952,56 @@ async function loadCommunityLang(lang) {
     console.error("Failed to load comunitate.json:", err);
   }
 }
+function renderMediu(m) {
+  if (!m) return "";
+  const renderCard = (item) => `
+    <div id="${item.id}" class="cards grid">
+      <h4><i class="fa-solid ${item.icon}"></i> ${item.title}</h4>
+      ${item.description ? `<p>${item.description}</p>` : ""}
+      ${item.items ? `<ul>${item.items.map((i) => `<li>${i}</li>`).join("")}</ul>` : ""}
+    </div>
+  `;
+  const renderGroup = (group) => {
+    if (!group) return "";
+    return `
+      <div id="${group.id}" class="cards grid">
+        <h3><i class="fa-solid ${group.icon}"></i> ${group.title}</h3>
+        ${group.description ? `<p>${group.description}</p>` : ""}
+        ${Object.values(group)
+          .filter((v) => v && typeof v === "object" && v.id && v.title)
+          .map(renderCard)
+          .join("")}
+      </div>
+    `;
+  };
+  return `
+<section id="${m.id}" class="cards grid">
+  <h2><i class="fa-solid ${m.icon}"></i> ${m.title}</h2>
+  ${m.description ? `<p>${m.description}</p>` : ""}
+  ${renderGroup(m.salubritate)}
+  ${renderGroup(m.curatenie)}
+  ${renderGroup(m.spatii_verzi)}
+  ${renderGroup(m.energie)}
+  ${renderGroup(m.altele_mediu)}
+</section>
+  `;
+}
+async function loadMediuLang(lang) {
+  try {
+    const res = await fetch(`assets/i18n/${lang}/mediu.json`);
+    if (!res.ok) throw new Error(`HTTP error: ${res.status}`);
+    const data = await res.json();
+    mediuDict = data.mediu || data;
+    const container = document.getElementById("mediu-container");
+    if (!container) {
+      console.error("Missing mediu-container");
+      return;
+    }
+    container.innerHTML = renderMediu(mediuDict);
+  } catch (err) {
+    console.error("Failed to load mediu.json:", err);
+  }
+}
 function initLanguageToggle() {
   const btn = document.getElementById("lang-toggle");
   if (!btn) return;
@@ -965,6 +1016,7 @@ function initLanguageToggle() {
     await loadHomeLang(currentLang);
     await loadCommunityLang(currentLang);
     await loadAdministratieLang(currentLang);
+    await loadMediuLang(currentLang);
     updateSections();
   });
 }
@@ -1066,11 +1118,11 @@ async function loadAllComponents() {
     //   "locuire-container",
     //   "assets/components/sections/locuire.html",
     // ),
-    loadComponent("mediu-container", "assets/components/sections/mediu.html"),
-    loadComponent(
-      "mobilitate-container",
-      "assets/components/sections/mobilitate.html",
-    ),
+    // loadComponent("mediu-container", "assets/components/sections/mediu.html"),
+    // loadComponent(
+    //   "mobilitate-container",
+    //   "assets/components/sections/mobilitate.html",
+    // ),
     loadComponent(
       "economie-container",
       "assets/components/sections/economie.html",
@@ -1094,6 +1146,7 @@ async function initApp() {
   await loadCommunityLang(currentLang);
   await loadLocuireLang(currentLang);
   await loadAdministratieLang(currentLang);
+  await loadMediuLang(currentLang);
   updateSections();
   initSearch();
   initThemeToggle();
