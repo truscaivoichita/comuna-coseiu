@@ -357,9 +357,7 @@ nav .dropdown-menu.split-menu {
   z-index: 1;
   pointer-events: auto;
 }
-.menu-right:not(.active) {
-  pointer-events: none;
-}
+
 .menu-right .menu-content {
   display: none;
   flex-direction: column;

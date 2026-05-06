@@ -12,27 +12,33 @@ function cacheDOM() {
   toggle = document.querySelector(".menu-toggle");
   searchInput = document.getElementById("search-input");
 }
+function clearActiveMenuItems(container) {
+  container
+    .querySelectorAll(".menu-left li.active")
+    .forEach((li) => li.classList.remove("active"));
+}
 function initMenuDelegation() {
   document.addEventListener("click", (e) => {
-    const item = e.target.closest(".menu-left li");
+    const item = e.target.closest("li[data-target]");
     if (item) {
+      e.stopPropagation();
       if (window.innerWidth <= 900) {
         handleMobileMenu(item);
       } else {
         handleDesktopMenu(item);
       }
+      return;
     }
     if (!e.target.closest("nav") && !e.target.closest(".menu-toggle")) {
-      if (nav) {
-        nav.classList.remove("active");
-        document.body.classList.remove("nav-open");
-      }
+      nav?.classList.remove("active");
+      document.body.classList.remove("nav-open");
       document
-        .querySelectorAll(".dropdown")
+        .querySelectorAll(".dropdown.active")
         .forEach((d) => d.classList.remove("active"));
       document
-        .querySelectorAll(".menu-right")
+        .querySelectorAll(".menu-right.active")
         .forEach((r) => r.classList.remove("active"));
+      clearActiveMenuItems(nav);
     }
   });
 }
@@ -42,9 +48,11 @@ function handleMobileMenu(item) {
   if (!menu) return;
   const rightSide = menu.querySelector(".menu-right");
   if (!rightSide) return;
+  clearActiveMenuItems(menu);
   rightSide
     .querySelectorAll(".menu-content")
     .forEach((c) => c.classList.remove("active"));
+  item.classList.add("active");
   const active = rightSide.querySelector(`#${targetId}`);
   if (active) active.classList.add("active");
   rightSide.classList.add("active");
@@ -66,9 +74,7 @@ function handleDesktopMenu(item) {
   const rightSide = menu.querySelector(".menu-right");
   if (!rightSide) return;
   const targetId = item.dataset.target;
-  menu
-    .querySelectorAll(".menu-left li")
-    .forEach((i) => i.classList.remove("active"));
+  clearActiveMenuItems(menu);
   rightSide
     .querySelectorAll(".menu-content")
     .forEach((c) => c.classList.remove("active"));
@@ -145,7 +151,12 @@ function initBackToTop() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 }
+let menuInitialized = false;
+
 function initMenuSystem() {
+  if (menuInitialized) return;
+  menuInitialized = true;
+
   cacheDOM();
   initMenuDelegation();
   initNavToggle();
@@ -186,9 +197,13 @@ function applyNavLang() {
 }
 function applySubmenuLang() {
   document.querySelectorAll(".menu-left li").forEach((el) => {
-    const target = el.dataset.target;
-    if (!target) return;
-    const splitMenu = el.closest(".split-menu");
+    const item = el; // FIXED
+    const target = item.dataset.target;
+    if (!target) {
+      console.warn("Missing data-target:", item);
+      return;
+    }
+    const splitMenu = item.closest(".split-menu");
     const dropdown = splitMenu?.closest(".dropdown");
     if (!dropdown) return;
     const category = [...dropdown.classList].find(
@@ -201,18 +216,10 @@ function applySubmenuLang() {
     let icon = submenuObj.icon
       ? `<i class="fa-solid ${submenuObj.icon}"></i>`
       : "";
-    el.dataset.icon = icon;
     if (!icon) {
-      icon = el.querySelector("i")?.outerHTML || "";
-      el.dataset.icon = icon;
+      icon = item.querySelector("i")?.outerHTML || "";
     }
-    if (submenuObj?.title) {
-      if (!icon) {
-        icon = el.querySelector("i")?.outerHTML || "";
-        el.dataset.icon = icon;
-      }
-      el.innerHTML = `${icon} ${submenuObj.title}`;
-    }
+    item.innerHTML = `${icon} ${submenuObj.title || ""}`;
   });
   document.querySelectorAll(".menu-content").forEach((menu) => {
     const id = menu.id.replace("menu-", "");
@@ -712,9 +719,9 @@ async function loadAdministratieLang(lang) {
 function renderList(items = []) {
   return `<ul>${items.map((i) => `<li>${i}</li>`).join("")}</ul>`;
 }
-function renderCard(title, text, icon) {
+function renderCard(title, text, icon, id) {
   return `
-    <div class="card">
+    <div id="${id}" class="card">
       <h4><i class="fa-solid ${icon || ""}"></i> ${title}</h4>
       ${text ? `<p>${text}</p>` : ""}
     </div>
@@ -774,7 +781,7 @@ function renderCetateniOnoare(c) {
   <div id="${c.id}">
       <h4><i class="fa-solid ${c.icon}"></i> ${c.title}</h4>
       <p>${c.description}</p>
-      <ul id="onoare-list"> ${renderList(c.items)}</ul>
+     ${renderList(c.items)}
       <p>${c.note}</p>
     </div>
   `;
@@ -800,7 +807,7 @@ function renderBugetare(b) {
       <h4><i class="fa-solid ${b.icon}"></i> ${b.title}</h4>
       <p>${b.description}</p>
       <h5>${b.steps_title}</h5>
-      <ul id="${b.steps_title}">${renderList(b.steps)}</ul>
+    ${renderList(b.steps)}
       <p>${b.note}</p>
     </div>
   `;
@@ -810,7 +817,7 @@ function renderProceduri(p) {
     <div id="${p.id}">
       <h4><i class="fa-solid ${p.icon}"></i> ${p.title}</h4>
       <p>${p.description}</p>
-      <ul id="${p.id}-list">${renderList(p.items)}</ul>
+      ${renderList(p.items)}
       <p>${p.note}</p>
     </div>
   `;
@@ -840,7 +847,7 @@ function renderSimpleSection(section) {
     ${entries
       .map(
         (e) => `
-      <div>
+      <div id="${e.id}" class="card">
         <h4><i class="fa-solid ${e.icon}"></i> ${e.title}</h4>
         ${e.text ? `<p>${e.text}</p>` : ""}
         ${e.items ? renderList(e.items) : ""}
@@ -878,47 +885,15 @@ async function loadCommunityLang(lang) {
       console.error("Missing comunitate-container");
       return;
     }
+    if (!communityDict || !communityDict.id) {
+      console.error("Invalid comunitate JSON");
+      return;
+    }
     container.innerHTML = renderCommunity(communityDict);
     updateSections();
   } catch (err) {
     console.error("Failed to load comunitate.json:", err);
   }
-}
-function applyCommunityLang() {
-  if (!communityDict) return;
-  document.querySelectorAll("[data-i18n]").forEach((el) => {
-    const key = el.getAttribute("data-i18n");
-    const value = key.split(".").reduce((o, i) => o?.[i], communityDict);
-    if (typeof value === "string") {
-      if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
-        el.placeholder = value;
-      } else {
-        el.textContent = value;
-      }
-    }
-  });
-  const mapList = (id, data) => {
-    const el = document.getElementById(id);
-    if (el && data) {
-      el.innerHTML = data.map((i) => `<li>${i}</li>`).join("");
-    }
-  };
-  mapList(
-    "newsletter-list",
-    communityDict.dezbateri_publice?.newsletter?.items,
-  );
-  mapList(
-    "onoare-list",
-    communityDict.dezbateri_publice?.cetateni_onoare?.items,
-  );
-  mapList(
-    "bugetare_participativa-list",
-    communityDict.dezbateri_publice?.bugetare_participativa?.steps,
-  );
-  mapList(
-    "proceduri_online-list",
-    communityDict.dezbateri_publice?.proceduri_online?.items,
-  );
 }
 function initLanguageToggle() {
   const btn = document.getElementById("lang-toggle");
@@ -1023,10 +998,10 @@ async function loadComponent(id, path) {
 async function loadAllComponents() {
   await Promise.all([
     loadComponent("header-container", "assets/components/partials/header.html"),
-    // loadComponent(
-    //   "comunitate-container",
-    //   "assets/components/sections/comunitate.html",
-    // ),
+    loadComponent(
+      "comunitate-container",
+      "assets/components/sections/comunitate.html",
+    ),
     loadComponent(
       "administratie-container",
       "assets/components/sections/administratie.html",
@@ -1053,9 +1028,9 @@ async function loadAllComponents() {
 }
 async function initApp() {
   await loadAllComponents();
-  await new Promise((r) =>
-    requestAnimationFrame(() => requestAnimationFrame(r)),
-  );
+  while (!document.querySelector("nav")) {
+    await new Promise((r) => setTimeout(r, 50));
+  }
   cacheDOM();
   initMenuSystem();
   await loadNavLang(currentLang);

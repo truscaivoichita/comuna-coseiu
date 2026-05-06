@@ -1,5 +1,335 @@
 <section id="comunitate">
-  <h2 data-i18n="title"></h2>
+  <div class="container">
+    <h2 data-i18n="title">Comunitate</h2>
+
+    <!-- ================= CETATENI ================= -->
+    <div id="cetateni" class="cards grid">
+      <h3 data-i18n="cetateni.title"></h3>
+      <p data-i18n="cetateni.description"></p>
+
+      <div class="componenta">
+        <div class="etnic">
+          <h4 data-i18n="cetateni.etnic.title"></h4>
+          <ul id="etnic-list"></ul>
+        </div>
+
+        <div class="religie">
+          <h4 data-i18n="cetateni.religie.title"></h4>
+          <ul id="religie-list"></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= DEZBATERI ================= -->
+    <div id="dezbateri_publice" class="cards grid">
+      <h3>Dezbateri Publice</h3>
+    </div>
+
+    <!-- ================= NEWSLETTER ================= -->
+    <div id="newsletter" class="cards grid">
+      <h4 data-i18n="newsletter.title"></h4>
+      <p data-i18n="newsletter.description"></p>
+
+      <form>
+        <input type="email" required />
+        <button type="submit" data-i18n="newsletter.button"></button>
+      </form>
+    </div>
+
+    <!-- ================= CETATENI ONOARE ================= -->
+    <div id="cetateni_onoare" class="cards grid">
+      <h4 data-i18n="cetateni_onoare.title"></h4>
+      <ul id="onoare-list"></ul>
+    </div>
+
+    <!-- ================= SUGESTII ================= -->
+    <div id="sugestii_reclamatii" class="cards grid">
+      <h4 data-i18n="sugestii_reclamatii.title"></h4>
+
+      <form>
+        <input type="text" required />
+        <input type="email" required />
+        <textarea rows="5" required></textarea>
+        <button type="submit"></button>
+      </form>
+    </div>
+
+    <!-- ================= BUGETARE ================= -->
+    <div id="bugetare_participativa" class="cards grid">
+      <h4 data-i18n="bugetare_participativa.title"></h4>
+      <ul id="bugetare_participativa-list"></ul>
+    </div>
+
+    <!-- ================= PROCEDURI ================= -->
+    <div id="proceduri_online" class="cards grid">
+      <h4 data-i18n="proceduri_online.title"></h4>
+      <ul id="proceduri_online-list"></ul>
+    </div>
+
+    <!-- ================= WEBCAM ================= -->
+    <div id="live_webcam" class="cards grid">
+      <h4 data-i18n="live_webcam.title"></h4>
+
+      <div class="card">
+        <img src="http://IP-UL-TAU:PORT/video.cgi" alt="webcam" />
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= EDUCATIE ================= -->
+  <div id="educatie" class="cards grid">
+    <h3 data-i18n="educatie.title"></h3>
+    <p data-i18n="educatie.description"></p>
+
+    <ul id="educatie-list"></ul>
+  </div>
+
+  <div id="transport" class="cards grid">
+    <h4 data-i18n="transport.title"></h4>
+    <ul id="transport-list"></ul>
+  </div>
+
+  <div id="autobuze" class="cards grid">
+    <h4 data-i18n="autobuze.title"></h4>
+    <ul id="autobuze-list"></ul>
+  </div>
+
+  <div id="legislatie_educatie" class="cards grid">
+    <h4 data-i18n="legislatie_educatie.title"></h4>
+    <ul id="legislatie_educatie-list"></ul>
+  </div>
+
+  <div id="crese" class="cards grid">
+    <h4 data-i18n="crese.title"></h4>
+    <ul id="crese-list"></ul>
+  </div>
+
+  <div id="gradinite" class="cards grid">
+    <h4 data-i18n="gradinite.title"></h4>
+    <ul id="gradinite-list"></ul>
+  </div>
+
+  <div id="scoli" class="cards grid">
+    <h4 data-i18n="scoli.title"></h4>
+    <ul id="scoli-list"></ul>
+  </div>
+
+  <!-- ================= CULTURA ================= -->
+  <div id="cultura" class="cards grid">
+    <h3 data-i18n="cultura.title"></h3>
+    <p data-i18n="cultura.description"></p>
+
+    <ul id="cultura-list"></ul>
+  </div>
+
+  <div id="biblioteci" class="cards grid">
+    <h4 data-i18n="biblioteci.title"></h4>
+    <ul id="biblioteci-list"></ul>
+  </div>
+
+  <div id="finantari_cultura" class="cards grid">
+    <h4 data-i18n="finantari_cultura.title"></h4>
+    <ul id="finantari_cultura-list"></ul>
+  </div>
+
+  <div id="personalitati_locale" class="cards grid">
+    <h4 data-i18n="personalitati_locale.title"></h4>
+    <ul id="personalitati_locale-list"></ul>
+  </div>
+
+  <div id="evenimente_culturale" class="cards grid">
+    <h4 data-i18n="evenimente_culturale.title"></h4>
+    <ul id="evenimente_culturale-list"></ul>
+  </div>
+
+  <!-- ================= SPORT ================= -->
+  <div id="sport" class="cards grid">
+    <h3 data-i18n="sport.title"></h3>
+    <p data-i18n="sport.description"></p>
+
+    <ul id="sport-list"></ul>
+  </div>
+
+  <div id="structuri_sportive" class="cards grid">
+    <h4 data-i18n="structuri_sportive.title"></h4>
+    <ul id="structuri_sportive-list"></ul>
+  </div>
+
+  <div id="finantari_sportive" class="cards grid">
+    <h4 data-i18n="finantari_sportive.title"></h4>
+    <ul id="finantari_sportive-list"></ul>
+  </div>
+
+  <div id="baze_sportive" class="cards grid">
+    <h4 data-i18n="baze_sportive.title"></h4>
+    <ul id="baze_sportive-list"></ul>
+  </div>
+
+  <div id="sala_sport" class="cards grid">
+    <h4 data-i18n="sala_sport.title"></h4>
+    <ul id="sala_sport-list"></ul>
+  </div>
+
+  <div id="cluburi_sportive" class="cards grid">
+    <h4 data-i18n="cluburi_sportive.title"></h4>
+    <ul id="cluburi_sportive-list"></ul>
+  </div>
+
+  <!-- ================= SANATATE ================= -->
+  <div id="sanatate" class="cards grid">
+    <h3 data-i18n="sanatate.title"></h3>
+    <p data-i18n="sanatate.description"></p>
+
+    <ul id="sanatate-list"></ul>
+  </div>
+
+  <div id="cabinete_medicale" class="cards grid">
+    <h4 data-i18n="cabinete_medicale.title"></h4>
+    <ul id="cabinete_medicale-list"></ul>
+  </div>
+
+  <div id="finantari_sanatate" class="cards grid">
+    <h4 data-i18n="finantari_sanatate.title"></h4>
+    <ul id="finantari_sanatate-list"></ul>
+  </div>
+
+  <div id="farmacii" class="cards grid">
+    <h4 data-i18n="farmacii.title"></h4>
+    <ul id="farmacii-list"></ul>
+  </div>
+
+  <div id="urgente" class="cards grid">
+    <h4 data-i18n="urgente.title"></h4>
+    <ul id="urgente-list"></ul>
+  </div>
+
+  <!-- ================= SOCIAL ================= -->
+  <div id="social" class="cards grid">
+    <h3 data-i18n="social.title"></h3>
+    <p data-i18n="social.description"></p>
+
+    <ul id="social-list"></ul>
+  </div>
+
+  <div id="varstnici" class="cards grid">
+    <h4 data-i18n="varstnici.title"></h4>
+    <ul id="varstnici-list"></ul>
+  </div>
+
+  <div id="adapost" class="cards grid">
+    <h4 data-i18n="adapost.title"></h4>
+    <ul id="adapost-list"></ul>
+  </div>
+
+  <div id="ajutor_social" class="cards grid">
+    <h4 data-i18n="ajutor_social.title"></h4>
+    <ul id="ajutor_social-list"></ul>
+  </div>
+
+  <div id="tichete_sociale" class="cards grid">
+    <h4 data-i18n="tichete_sociale.title"></h4>
+    <ul id="tichete_sociale-list"></ul>
+  </div>
+
+  <div id="stomatologie" class="cards grid">
+    <h4 data-i18n="stomatologie.title"></h4>
+    <ul id="stomatologie-list"></ul>
+  </div>
+
+  <!-- ================= ANIMALE ================= -->
+  <div id="animale" class="cards grid">
+    <h3 data-i18n="animale.title"></h3>
+    <p data-i18n="animale.description"></p>
+
+    <ul id="animale-list"></ul>
+  </div>
+
+  <div id="sterilizare" class="cards grid">
+    <h4 data-i18n="sterilizare.title"></h4>
+    <ul id="sterilizare-list"></ul>
+  </div>
+
+  <div id="adoptii" class="cards grid">
+    <h4 data-i18n="adoptii.title"></h4>
+    <ul id="adoptii-list"></ul>
+  </div>
+
+  <div id="boluri_apa" class="cards grid">
+    <h4 data-i18n="boluri_apa.title"></h4>
+    <ul id="boluri_apa-list"></ul>
+  </div>
+
+  <div id="adaposturi" class="cards grid">
+    <h4 data-i18n="adaposturi.title"></h4>
+    <ul id="adaposturi-list"></ul>
+  </div>
+
+  <div id="registru_animale" class="cards grid">
+    <h4 data-i18n="registru_animale.title"></h4>
+    <ul id="registru_animale-list"></ul>
+  </div>
+
+  <!-- ================= TURISM ================= -->
+  <div id="turism" class="cards grid">
+    <h3 data-i18n="turism.title"></h3>
+    <p data-i18n="turism.description"></p>
+
+    <ul id="turism-list"></ul>
+  </div>
+
+  <div id="centru_info" class="cards grid">
+    <h4 data-i18n="centru_info.title"></h4>
+    <ul id="centru_info-list"></ul>
+  </div>
+
+  <div id="harta" class="cards grid">
+    <h4 data-i18n="harta.title"></h4>
+    <div id="map-container"></div>
+  </div>
+
+  <div id="cazare" class="cards grid">
+    <h4 data-i18n="cazare.title"></h4>
+    <ul id="cazare-list"></ul>
+  </div>
+
+  <div id="visit_coseiu" class="cards grid">
+    <h4 data-i18n="visit_coseiu.title"></h4>
+    <p data-i18n="visit_coseiu.description"></p>
+  </div>
+
+  <div id="monumente_istorice" class="cards grid">
+    <h4 data-i18n="monumente_istorice.title"></h4>
+    <ul id="monumente_istorice-list"></ul>
+  </div>
+
+  <!-- ================= EVENIMENTE ================= -->
+  <div id="evenimente" class="cards grid">
+    <h3 data-i18n="evenimente.title"></h3>
+    <p data-i18n="evenimente.description"></p>
+
+    <ul id="evenimente-list"></ul>
+  </div>
+
+  <div id="zilele_coseiului" class="cards grid">
+    <h4 data-i18n="zilele_coseiului.title"></h4>
+    <ul id="zilele_coseiului-list"></ul>
+  </div>
+
+  <div id="targ_craciun" class="cards grid">
+    <h4 data-i18n="targ_craciun.title"></h4>
+    <ul id="targ_craciun-list"></ul>
+  </div>
+
+  <div id="piata_locala" class="cards grid">
+    <h4 data-i18n="piata_locala.title"></h4>
+    <ul id="piata_locala-list"></ul>
+  </div>
+
+  <div id="festivaluri" class="cards grid">
+    <h4 data-i18n="festivaluri.title"></h4>
+    <ul id="festivaluri-list"></ul>
+  </div>
+  <!-- <h2 data-i18n="title"></h2>
 
   <div id="cetateni" class="cards grid">
     <h3 data-i18n="cetateni.title"></h3>
@@ -95,12 +425,17 @@
 
       <p data-i18n="live_webcam.note"></p>
     </div>
-  </div>
-  <!-- EDUCATIE -->
+  </div> -->
+  <!-- EDUCATIE
   <div id="educatie" class="cards grid">
     <h3 data-i18n="educatie.title"></h3>
     <p data-i18n="educatie.description"></p>
-
+    <div id="transport"></div>
+    <div id="autobuze"></div>
+    <div id="legislatie_educatie"></div>
+    <div id="crese"></div>
+    <div id="gradinite"></div>
+    <div id="scoli"></div>
     <div>
       <h4 data-i18n="educatie.transport_title"></h4>
       <p data-i18n="educatie.transport_text"></p>
@@ -112,7 +447,7 @@
     </div>
   </div>
 
-  <!-- CULTURA -->
+  CULTURA
   <div id="cultura" class="cards grid">
     <h3 data-i18n="cultura.title"></h3>
     <p data-i18n="cultura.description"></p>
@@ -139,7 +474,7 @@
     </div>
   </div>
 
-  <!-- SPORT -->
+  SPORT
   <div id="sport" class="cards grid">
     <h3 data-i18n="sport.title"></h3>
 
@@ -164,7 +499,7 @@
     </div>
   </div>
 
-  <!-- SANATATE -->
+  SANATATE
   <div id="sanatate" class="cards grid">
     <h3 data-i18n="sanatate.title"></h3>
 
@@ -189,7 +524,7 @@
     </div>
   </div>
 
-  <!-- SOCIAL -->
+  SOCIAL
   <div id="social" class="cards grid">
     <h3 data-i18n="social.title"></h3>
 
@@ -219,7 +554,7 @@
     </div>
   </div>
 
-  <!-- ANIMALE -->
+  ANIMALE
   <div id="animale" class="cards grid">
     <h3 data-i18n="animale.title"></h3>
 
@@ -249,7 +584,7 @@
     </div>
   </div>
 
-  <!-- TURISM -->
+  TURISM
   <div id="turism" class="cards grid">
     <h3 data-i18n="turism.title"></h3>
 
@@ -273,7 +608,7 @@
     </div>
   </div>
 
-  <!-- EVENIMENTE -->
+  EVENIMENTE
   <div id="evenimente" class="cards grid">
     <h3 data-i18n="evenimente.title"></h3>
 
@@ -296,5 +631,5 @@
       <h4 data-i18n="evenimente.festival.title"></h4>
       <p data-i18n="evenimente.festival.text"></p>
     </div>
-  </div>
+  </div> -->
 </section>
