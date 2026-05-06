@@ -2,13 +2,39 @@ console.log("Menu working ✅");
 let currentLang = localStorage.getItem("lang") || "ro";
 let navDict = {};
 let homeDict = {};
-let communityDict = {};
+let communitateDict = {};
 let locuireDict = {};
-let adminDict = {};
+let administratieDict = {};
 let mediuDict = {};
 let nav, toggle;
 let allSections = [];
 let searchInput;
+const loaders = {
+  administratie: {
+    file: "administratie.json",
+    containerId: "administratie-container",
+    dictSetter: (data) => (administratieDict = data.administratie || {}),
+    render: renderAdministratie,
+  },
+  comunitate: {
+    file: "comunitate.json",
+    containerId: "comunitate-container",
+    dictSetter: (data) => (communitateDict = data),
+    render: renderCommunitate,
+  },
+  locuire: {
+    file: "locuire.json",
+    containerId: "locuire-container",
+    dictSetter: (data) => (locuireDict = data),
+    render: renderLocuire,
+  },
+  mediu: {
+    file: "mediu.json",
+    containerId: "mediu-container",
+    dictSetter: (data) => (mediuDict = data.mediu || data),
+    render: (data) => renderMediu(data.mediu || data),
+  },
+};
 function cacheDOM() {
   nav = document.querySelector("nav");
   toggle = document.querySelector(".menu-toggle");
@@ -280,6 +306,7 @@ function renderHome() {
 function renderAdministratie(data) {
   const a = data.administratie;
   console.log("Administratie data:", data);
+  loadConsilieri();
   return `
 <section id="administratie">
   <h2>
@@ -522,7 +549,7 @@ function renderConsiliuFull(c) {
   <div id="consilieri">
       <h4 data-i18n="consiliu.consilieri.title">
         <i class="fa-solid fa-landmark"></i>
-         ${adminDict?.labels?.consilieri?.title || "Consilieri"}
+         ${administratieDict?.labels?.consilieri?.title || "Consilieri"}
       </h4>
       <div class="consilieri-row" id="consilieri-container"></div>
     </div>
@@ -704,20 +731,6 @@ function renderAlteleFull(a) {
     </div>
   `;
 }
-async function loadAdministratieLang(lang) {
-  try {
-    const res = await fetch(`assets/i18n/${lang}/administratie.json`);
-    const data = await res.json();
-    adminDict = data.administratie || {};
-    const container = document.getElementById("administratie-container");
-    if (container) {
-      container.innerHTML = renderAdministratie(data);
-    }
-    loadConsilieri();
-  } catch (err) {
-    console.error("Failed to load administratie.json:", err);
-  }
-}
 function renderList(items = []) {
   return `<ul>${items.map((i) => `<li>${i}</li>`).join("")}</ul>`;
 }
@@ -860,7 +873,7 @@ function renderSimpleSection(section) {
   </div>
   `;
 }
-function renderCommunity(data) {
+function renderCommunitate(data) {
   return `
   <section id="${data.id}">
     <h2><i class="fa-solid ${data.icon}"></i> ${data.title}</h2>
@@ -917,42 +930,8 @@ function renderLocuire(data) {
   </section>
   `;
 }
-async function loadLocuireLang(lang) {
-  try {
-    const res = await fetch(`assets/i18n/${lang}/locuire.json`);
-    if (!res.ok) throw new Error(`HTTP error: ${res.status}`);
-    locuireDict = await res.json();
-    const container = document.getElementById("locuire-container");
-    if (!container) {
-      console.error("Missing locuire-container");
-      return;
-    }
-    container.innerHTML = renderLocuire(locuireDict);
-  } catch (err) {
-    console.error("Failed to load locuire.json:", err);
-  }
-}
-async function loadCommunityLang(lang) {
-  try {
-    const res = await fetch(`assets/i18n/${lang}/comunitate.json`);
-    if (!res.ok) throw new Error(`HTTP error: ${res.status}`);
-    communityDict = await res.json();
-    const container = document.getElementById("comunitate-container");
-    if (!container) {
-      console.error("Missing comunitate-container");
-      return;
-    }
-    if (!communityDict || !communityDict.id) {
-      console.error("Invalid comunitate JSON");
-      return;
-    }
-    container.innerHTML = renderCommunity(communityDict);
-    updateSections();
-  } catch (err) {
-    console.error("Failed to load comunitate.json:", err);
-  }
-}
 function renderMediu(m) {
+  // console.log("RENDER MEDIU INPUT:", m);
   if (!m) return "";
   const renderCard = (item) => `
     <div id="${item.id}" class="cards grid">
@@ -986,9 +965,59 @@ function renderMediu(m) {
 </section>
   `;
 }
+async function loadAdministratieLang(lang) {
+  try {
+    const res = await fetch(`assets/i18n/${lang}/administratie.json`);
+    const data = await res.json();
+    administratieDict = data.administratie || {};
+    const container = document.getElementById("administratie-container");
+    if (container) {
+      container.innerHTML = renderAdministratie(data);
+    }
+    // loadConsilieri();
+  } catch (err) {
+    console.error("Failed to load administratie.json:", err);
+  }
+}
+async function loadCommunityLang(lang) {
+  try {
+    const res = await fetch(`assets/i18n/${lang}/comunitate.json`);
+    if (!res.ok) throw new Error(`HTTP error: ${res.status}`);
+    communitateDict = await res.json();
+    const container = document.getElementById("comunitate-container");
+    if (!container) {
+      console.error("Missing comunitate-container");
+      return;
+    }
+    if (!communitateDict || !communitateDict.id) {
+      console.error("Invalid comunitate JSON");
+      return;
+    }
+    container.innerHTML = renderCommunitate(communitateDict);
+    updateSections();
+  } catch (err) {
+    console.error("Failed to load comunitate.json:", err);
+  }
+}
+async function loadLocuireLang(lang) {
+  try {
+    const res = await fetch(`assets/i18n/${lang}/locuire.json`);
+    if (!res.ok) throw new Error(`HTTP error: ${res.status}`);
+    locuireDict = await res.json();
+    const container = document.getElementById("locuire-container");
+    if (!container) {
+      console.error("Missing locuire-container");
+      return;
+    }
+    container.innerHTML = renderLocuire(locuireDict);
+  } catch (err) {
+    console.error("Failed to load locuire.json:", err);
+  }
+}
 async function loadMediuLang(lang) {
   try {
     const res = await fetch(`assets/i18n/${lang}/mediu.json`);
+    console.log("MEDIU JSON:", data);
     if (!res.ok) throw new Error(`HTTP error: ${res.status}`);
     const data = await res.json();
     mediuDict = data.mediu || data;
@@ -1002,6 +1031,30 @@ async function loadMediuLang(lang) {
     console.error("Failed to load mediu.json:", err);
   }
 }
+async function loadLang(section, lang) {
+  const cfg = loaders[section];
+  if (!cfg) {
+    console.error(`Unknown section: ${section}`);
+    return;
+  }
+  try {
+    const res = await fetch(`assets/i18n/${lang}/${cfg.file}`);
+    if (!res.ok) {
+      throw new Error(`HTTP error: ${res.status}`);
+    }
+    const data = await res.json();
+    // store dict (different per module)
+    if (cfg.dictSetter) cfg.dictSetter(data);
+    const container = document.getElementById(cfg.containerId);
+    if (!container) {
+      console.error(`Missing ${cfg.containerId}`);
+      return;
+    }
+    container.innerHTML = cfg.render(data);
+  } catch (err) {
+    console.error(`Failed to load ${section}.json:`, err);
+  }
+}
 function initLanguageToggle() {
   const btn = document.getElementById("lang-toggle");
   if (!btn) return;
@@ -1012,13 +1065,20 @@ function initLanguageToggle() {
     currentLang = languages[(index + 1) % languages.length];
     localStorage.setItem("lang", currentLang);
     btn.textContent = currentLang.toUpperCase();
-    await loadNavLang(currentLang);
-    await loadHomeLang(currentLang);
-    await loadCommunityLang(currentLang);
-    await loadAdministratieLang(currentLang);
-    await loadMediuLang(currentLang);
-    updateSections();
+    await loadAllLanguages(currentLang);
   });
+}
+async function loadAllLanguages(lang) {
+  currentLang = lang;
+  await loadNavLang(lang);
+  await loadHomeLang(lang);
+  await Promise.all([
+    loadLang("administratie", lang),
+    loadLang("comunitate", lang),
+    loadLang("locuire", lang),
+    loadLang("mediu", lang),
+  ]);
+  updateSections();
 }
 function updateSections() {
   allSections = document.querySelectorAll("section");
@@ -1068,7 +1128,10 @@ async function loadConsilieri() {
     const consilieri = await res.json();
     const container = document.getElementById("consilieri-container");
     if (!container) return;
-    container.innerHTML = renderConsilieri(consilieri, adminDict.labels);
+    container.innerHTML = renderConsilieri(
+      consilieri,
+      administratieDict.labels,
+    );
   } catch (err) {
     console.error("Error loading consilieri:", err);
   }
@@ -1119,10 +1182,10 @@ async function loadAllComponents() {
     //   "assets/components/sections/locuire.html",
     // ),
     // loadComponent("mediu-container", "assets/components/sections/mediu.html"),
-    // loadComponent(
-    //   "mobilitate-container",
-    //   "assets/components/sections/mobilitate.html",
-    // ),
+    loadComponent(
+      "mobilitate-container",
+      "assets/components/sections/mobilitate.html",
+    ),
     loadComponent(
       "economie-container",
       "assets/components/sections/economie.html",
@@ -1139,15 +1202,9 @@ async function initApp() {
   while (!document.querySelector("nav")) {
     await new Promise((r) => setTimeout(r, 50));
   }
-  cacheDOM();
   initMenuSystem();
-  await loadNavLang(currentLang);
-  await loadHomeLang(currentLang);
-  await loadCommunityLang(currentLang);
-  await loadLocuireLang(currentLang);
-  await loadAdministratieLang(currentLang);
-  await loadMediuLang(currentLang);
-  updateSections();
+  cacheDOM();
+  await loadAllLanguages(currentLang);
   initSearch();
   initThemeToggle();
   initLanguageToggle();
