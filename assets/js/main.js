@@ -1,9 +1,10 @@
 console.log("Menu working ✅");
 let currentLang = localStorage.getItem("lang") || "ro";
-let communityDict = {};
-let adminDict = {};
 let navDict = {};
 let homeDict = {};
+let communityDict = {};
+let locuireDict = {};
+let adminDict = {};
 let nav, toggle;
 let allSections = [];
 let searchInput;
@@ -875,6 +876,61 @@ function renderCommunity(data) {
   </section>
   `;
 }
+function renderLocuire(data) {
+  if (!data?.locuire) return "";
+  const l = data.locuire;
+  return `
+  <section id="${l.id}">
+    <h2><i class="fa-solid ${l.icon}"></i> ${l.title}</h2>
+    <p>${l.description}</p>
+    <div class="cards">
+      <div class="card" id="${l.strategii_urbane.id}">
+        <h3><i class="fa-solid ${l.strategii_urbane.icon}"></i> ${l.strategii_urbane.title}</h3>
+        <p>${l.strategii_urbane.description}</p>
+      </div>
+      <div class="card" id="${l.urbanism.id}">
+        <h3><i class="fa-solid ${l.urbanism.icon}"></i> ${l.urbanism.title}</h3>
+        <p>${l.urbanism.description}</p>
+        <ul>
+          ${(l.urbanism.items || []).map((i) => `<li>${i}</li>`).join("")}
+        </ul>
+        <p>${l.urbanism.note || ""}</p>
+      </div>
+      <div class="card" id="${l.autorizatii_constructie.id}">
+        <h3><i class="fa-solid ${l.autorizatii_constructie.icon}"></i> ${l.autorizatii_constructie.title}</h3>
+        <p>${l.autorizatii_constructie.description}</p>
+      </div>
+      <div class="card" id="${l.strazi.id}">
+        <h3><i class="fa-solid ${l.strazi.icon}"></i> ${l.strazi.title}</h3>
+        <p>${l.strazi.description}</p>
+      </div>
+      <div class="card" id="${l.locuinte.id}">
+        <h3><i class="fa-solid ${l.locuinte.icon}"></i> ${l.locuinte.title}</h3>
+        <p>${l.locuinte.description}</p>
+      </div>
+      <div class="card" id="${l.gis.id}">
+        <h3><i class="fa-solid ${l.gis.icon}"></i> ${l.gis.title}</h3>
+        <p>${l.gis.description}</p>
+      </div>
+    </div>
+  </section>
+  `;
+}
+async function loadLocuireLang(lang) {
+  try {
+    const res = await fetch(`assets/i18n/${lang}/locuire.json`);
+    if (!res.ok) throw new Error(`HTTP error: ${res.status}`);
+    locuireDict = await res.json();
+    const container = document.getElementById("locuire-container");
+    if (!container) {
+      console.error("Missing locuire-container");
+      return;
+    }
+    container.innerHTML = renderLocuire(locuireDict);
+  } catch (err) {
+    console.error("Failed to load locuire.json:", err);
+  }
+}
 async function loadCommunityLang(lang) {
   try {
     const res = await fetch(`assets/i18n/${lang}/comunitate.json`);
@@ -998,18 +1054,18 @@ async function loadComponent(id, path) {
 async function loadAllComponents() {
   await Promise.all([
     loadComponent("header-container", "assets/components/partials/header.html"),
-    loadComponent(
-      "comunitate-container",
-      "assets/components/sections/comunitate.html",
-    ),
-    loadComponent(
-      "administratie-container",
-      "assets/components/sections/administratie.html",
-    ),
-    loadComponent(
-      "locuire-container",
-      "assets/components/sections/locuire.html",
-    ),
+    // loadComponent(
+    //   "comunitate-container",
+    //   "assets/components/sections/comunitate.html",
+    // ),
+    // loadComponent(
+    //   "administratie-container",
+    //   "assets/components/sections/administratie.html",
+    // ),
+    // loadComponent(
+    //   "locuire-container",
+    //   "assets/components/sections/locuire.html",
+    // ),
     loadComponent("mediu-container", "assets/components/sections/mediu.html"),
     loadComponent(
       "mobilitate-container",
@@ -1036,6 +1092,7 @@ async function initApp() {
   await loadNavLang(currentLang);
   await loadHomeLang(currentLang);
   await loadCommunityLang(currentLang);
+  await loadLocuireLang(currentLang);
   await loadAdministratieLang(currentLang);
   updateSections();
   initSearch();

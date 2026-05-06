@@ -1,0 +1,56 @@
+{
+  "locuire": {
+    "id": "locuire",
+    "title": "Locuire",
+    "icon": "fa-home",
+    "description": "Strategii urbane, urbanism și locuințe (în curs de actualizare).",
+
+    "strategii_urbane": {
+      "id": "strategii_urbane",
+      "title": "Strategii Dezvoltare Urbane",
+      "icon": "fa-city",
+      "description": "Dezvoltarea comunei Coșeiu se realizează pe baza unor strategii locale care vizează infrastructura, locuințele și serviciile publice."
+    },
+
+    "urbanism": {
+      "id": "urbanism",
+      "title": "Urbanism",
+      "icon": "fa-drafting-compass",
+      "description": "Compartimentul de urbanism oferă informații privind dezvoltarea localității și autorizarea construcțiilor.",
+      "items": [
+        "Eliberare certificate de urbanism",
+        "Autorizații de construire și desființare",
+        "Lucrări de cadastru general pe sectoare"
+      ],
+      "note": "În prezent, în comuna Coșeiu se desfășoară lucrări de înregistrare sistematică în cadastru."
+    },
+
+    "autorizatii_constructie": {
+      "id": "autorizatii_constructie",
+      "title": "Autorizații Construcție",
+      "icon": "fa-file-contract",
+      "description": "Eliberarea autorizațiilor de construire se face conform legislației în vigoare, pe baza documentației depuse."
+    },
+
+    "strazi": {
+      "id": "strazi",
+      "title": "Străzi",
+      "icon": "fa-road",
+      "description": "Administrarea și întreținerea drumurilor comunale se realizează de către autoritatea publică locală, în condițiile legii."
+    },
+
+    "locuinte": {
+      "id": "locuinte",
+      "title": "Locuințe",
+      "icon": "fa-home",
+      "description": "Fondul locativ include locuințe individuale și gospodării tradiționale specifice zonei."
+    },
+
+    "gis": {
+      "id": "gis",
+      "title": "GIS",
+      "icon": "fa-globe",
+      "description": "Sistemul GIS permite gestionarea digitală a terenurilor și a infrastructurii din comună."
+    }
+  }
+}

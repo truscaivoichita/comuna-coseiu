@@ -1,0 +1,56 @@
+{
+  "locuire": {
+    "id": "locuire",
+    "title": "Lakhatás",
+    "icon": "fa-home",
+    "description": "Városfejlesztési stratégiák, településrendezés és lakhatás (folyamatban lévő frissítés).",
+
+    "strategii_urbane": {
+      "id": "strategii_urbane",
+      "title": "Városfejlesztési stratégiák",
+      "icon": "fa-city",
+      "description": "Coșeiu község fejlesztése helyi stratégiák alapján történik, amelyek az infrastruktúrát, a lakhatást és a közszolgáltatásokat célozzák."
+    },
+
+    "urbanism": {
+      "id": "urbanism",
+      "title": "Településrendezés",
+      "icon": "fa-drafting-compass",
+      "description": "A településrendezési részleg információkat nyújt a település fejlesztéséről és az építési engedélyek kiadásáról.",
+      "items": [
+        "Településrendezési igazolások kiadása",
+        "Építési és bontási engedélyek",
+        "Általános kataszteri munkálatok szektoronként"
+      ],
+      "note": "Jelenleg Coșeiu községben szisztematikus kataszteri felmérési munkálatok zajlanak."
+    },
+
+    "autorizatii_constructie": {
+      "id": "autorizatii_constructie",
+      "title": "Építési engedélyek",
+      "icon": "fa-file-contract",
+      "description": "Az építési engedélyek kiadása a hatályos jogszabályoknak megfelelően, a benyújtott dokumentáció alapján történik."
+    },
+
+    "strazi": {
+      "id": "strazi",
+      "title": "Utcák",
+      "icon": "fa-road",
+      "description": "A községi utak kezelése és karbantartása a helyi közigazgatási hatóság feladata, a törvényeknek megfelelően."
+    },
+
+    "locuinte": {
+      "id": "locuinte",
+      "title": "Lakások",
+      "icon": "fa-home",
+      "description": "A lakásállomány egyéni lakóházakat és a térségre jellemző hagyományos háztartásokat foglal magában."
+    },
+
+    "gis": {
+      "id": "gis",
+      "title": "GIS",
+      "icon": "fa-globe",
+      "description": "A GIS rendszer lehetővé teszi a földterületek és az infrastruktúra digitális kezelését a községben."
+    }
+  }
+}
