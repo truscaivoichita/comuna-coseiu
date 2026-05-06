@@ -1,0 +1,61 @@
+{
+  "monitor": {
+    "id": "monitor",
+    "title": "Monitor Oficial Local",
+    "icon": "fa-file-alt",
+    "description": "Acces la documentele oficiale și actele administrative adoptate la nivel local.",
+
+    "statut": {
+      "id": "statut",
+      "title": "Statut",
+      "icon": "fa-file",
+      "description": "Statutul comunei stabilește organizarea, funcționarea și atribuțiile autorităților administrației publice locale."
+    },
+
+    "regulamente": {
+      "id": "regulamente",
+      "title": "Regulamente",
+      "icon": "fa-book",
+      "description": "Regulamentele locale stabilesc modul de organizare și funcționare a serviciilor publice și a activităților din cadrul comunei."
+    },
+
+    "hotarari": {
+      "id": "hotarari",
+      "title": "Hotărâri ale Consiliului Local",
+      "icon": "fa-file-lines",
+      "description": "Monitorul Oficial Local conține toate actele administrative adoptate la nivelul comunei.",
+      "items": [
+        "Hotărâri privind bugetul local",
+        "Hotărâri privind taxele și impozitele locale",
+        "Hotărâri privind investițiile și proiectele locale"
+      ]
+    },
+
+    "dispozitii": {
+      "id": "dispozitii",
+      "title": "Dispoziții",
+      "icon": "fa-file-alt",
+      "subtitle": "Dispoziții ale Primarului",
+      "items": [
+        "Dispoziții administrative",
+        "Numiri și organizare internă",
+        "Măsuri privind situații de urgență"
+      ],
+      "description": "Documentele sunt disponibile pentru consultare publică în format electronic."
+    },
+
+    "documente_financiare": {
+      "id": "documente_financiare",
+      "title": "Documente Financiare",
+      "icon": "fa-coins",
+      "description": "Documentele financiare includ bugetul local, execuția bugetară și alte rapoarte privind utilizarea fondurilor publice."
+    },
+
+    "alte_documente": {
+      "id": "alte_documente",
+      "title": "Alte Documente",
+      "icon": "fa-folder",
+      "description": "Această secțiune include diverse documente administrative de interes public."
+    }
+  }
+}

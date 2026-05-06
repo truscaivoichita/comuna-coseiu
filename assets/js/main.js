@@ -8,6 +8,7 @@ let administratieDict = {};
 let mediuDict = {};
 let mobilitateDict = {};
 let economieDict = {};
+let monitorDict = {};
 let nav, toggle;
 let allSections = [];
 let searchInput;
@@ -47,6 +48,12 @@ const loaders = {
     containerId: "economie-container",
     dictSetter: (data) => (economieDict = data.economie || data),
     render: renderEconomie,
+  },
+  monitor: {
+    file: "monitor.json",
+    containerId: "monitor-container",
+    dictSetter: (data) => (monitorDict = data.monitor || data),
+    render: renderMonitor,
   },
 };
 function cacheDOM() {
@@ -319,7 +326,7 @@ function renderHome() {
 }
 function renderAdministratie(data) {
   const a = data.administratie;
-  console.log("Administratie data:", data);
+  // console.log("Administratie data:", data);
   loadConsilieri();
   return `
 <section id="administratie">
@@ -1077,6 +1084,37 @@ function renderEconomie(data) {
 </section>
   `;
 }
+function renderMonitor(data) {
+  const m = data.monitor || data;
+  // console.log("Monitor working ✅", m);
+  const card = (item) => `
+    <div id="${item.id}" class="card">
+      <h4><i class="fa-solid ${item.icon}"></i> ${item.title}</h4>
+      ${item.subtitle ? `<h5>${item.subtitle}</h5>` : ""}
+      ${item.description ? `<p>${item.description}</p>` : ""}
+      ${
+        item.items
+          ? `<ul>${item.items.map((i) => `<li>${i}</li>`).join("")}</ul>`
+          : ""
+      }
+    </div>
+  `;
+
+  return `
+  <section id="${m.id}">
+    <h2><i class="fa-solid ${m.icon}"></i> ${m.title}</h2>
+    <p>${m.description || ""}</p>
+    <div class="cards grid">
+      ${card(m.statut)}
+      ${card(m.regulamente)}
+      ${card(m.hotarari)}
+      ${card(m.dispozitii)}
+      ${card(m.documente_financiare)}
+      ${card(m.alte_documente)}
+    </div>
+  </section>
+  `;
+}
 async function loadAdministratieLang(lang) {
   try {
     const res = await fetch(`assets/i18n/${lang}/administratie.json`);
@@ -1190,6 +1228,7 @@ async function loadAllLanguages(lang) {
     loadLang("mediu", lang),
     loadLang("mobilitate", lang),
     loadLang("economie", lang),
+    loadLang("monitor", lang),
   ]);
   updateSections();
 }
@@ -1282,23 +1321,23 @@ async function loadComponent(id, path) {
 async function loadAllComponents() {
   await Promise.all([
     loadComponent("header-container", "assets/components/partials/header.html"),
-    // loadComponent(
-    //   "comunitate-container",
-    //   "assets/components/sections/comunitate.html",
-    // ),
-    // loadComponent(
-    //   "administratie-container",
-    //   "assets/components/sections/administratie.html",
-    // ),
-    // loadComponent(
-    //   "locuire-container",
-    //   "assets/components/sections/locuire.html",
-    // ),
-    // loadComponent("mediu-container", "assets/components/sections/mediu.html"),
-    // loadComponent(
-    //   "mobilitate-container",
-    //   "assets/components/sections/mobilitate.html",
-    // ),
+    loadComponent(
+      "comunitate-container",
+      "assets/components/sections/comunitate.html",
+    ),
+    loadComponent(
+      "administratie-container",
+      "assets/components/sections/administratie.html",
+    ),
+    loadComponent(
+      "locuire-container",
+      "assets/components/sections/locuire.html",
+    ),
+    loadComponent("mediu-container", "assets/components/sections/mediu.html"),
+    loadComponent(
+      "mobilitate-container",
+      "assets/components/sections/mobilitate.html",
+    ),
     loadComponent(
       "economie-container",
       "assets/components/sections/economie.html",

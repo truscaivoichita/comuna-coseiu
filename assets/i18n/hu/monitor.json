@@ -1,0 +1,61 @@
+{
+  "monitor": {
+    "id": "monitor",
+    "title": "Helyi Hivatalos Közlöny",
+    "icon": "fa-file-alt",
+    "description": "Hozzáférés a helyi szinten elfogadott hivatalos dokumentumokhoz és közigazgatási aktusokhoz.",
+
+    "statut": {
+      "id": "statut",
+      "title": "Statútum",
+      "icon": "fa-file",
+      "description": "A község statútuma meghatározza a helyi közigazgatási hatóságok szervezetét, működését és hatásköreit."
+    },
+
+    "regulamente": {
+      "id": "regulamente",
+      "title": "Szabályzatok",
+      "icon": "fa-book",
+      "description": "A helyi szabályzatok meghatározzák a közszolgáltatások és a települési tevékenységek szervezésének és működésének módját."
+    },
+
+    "hotarari": {
+      "id": "hotarari",
+      "title": "Helyi Tanács Határozatai",
+      "icon": "fa-file-lines",
+      "description": "A Helyi Hivatalos Közlöny tartalmazza a település szintjén elfogadott összes közigazgatási aktust.",
+      "items": [
+        "Határozatok a helyi költségvetésről",
+        "Határozatok az adókról és illetékekről",
+        "Határozatok a beruházásokról és helyi projektekről"
+      ]
+    },
+
+    "dispozitii": {
+      "id": "dispozitii",
+      "title": "Rendelkezések",
+      "icon": "fa-file-alt",
+      "subtitle": "Polgármesteri rendelkezések",
+      "items": [
+        "Közigazgatási rendelkezések",
+        "Kinevezések és belső szervezés",
+        "Intézkedések vészhelyzetek esetén"
+      ],
+      "description": "A dokumentumok elektronikus formában nyilvánosan hozzáférhetők."
+    },
+
+    "documente_financiare": {
+      "id": "documente_financiare",
+      "title": "Pénzügyi Dokumentumok",
+      "icon": "fa-coins",
+      "description": "A pénzügyi dokumentumok tartalmazzák a helyi költségvetést, a költségvetési végrehajtást és egyéb jelentéseket a közpénzek felhasználásáról."
+    },
+
+    "alte_documente": {
+      "id": "alte_documente",
+      "title": "Egyéb Dokumentumok",
+      "icon": "fa-folder",
+      "description": "Ez a szekció különböző, közérdekű közigazgatási dokumentumokat tartalmaz."
+    }
+  }
+}
