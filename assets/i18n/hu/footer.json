@@ -1,0 +1,181 @@
+{
+  "footer": {
+    "id": "footer",
+    "class": "modern-footer",
+
+    "emergency_bar": {
+      "id": "emergency_bar",
+      "title": "Sürgősség",
+      "icon": "fa-triangle-exclamation",
+      "description": "Hasznos telefonszámok sürgősségi helyzetekre és gyors kapcsolatfelvételhez.",
+      "items": [
+        {
+          "label": "Sürgősségi hívás",
+          "value": "112"
+        },
+        {
+          "label": "Helyi Rendőrség",
+          "value": "+40 XXX XXX XXX"
+        }
+      ]
+    },
+
+    "about": {
+      "id": "about",
+      "title": "Kusaly Községháza",
+      "icon": "fa-building-columns",
+      "description": "Kusaly község hivatalos weboldala. Közszolgáltatások, átláthatóság és hasznos információk a lakosok számára.",
+
+      "socials": [
+        {
+          "platform": "Facebook",
+          "icon": "fa-facebook",
+          "url": "#"
+        },
+        {
+          "platform": "YouTube",
+          "icon": "fa-youtube",
+          "url": "#"
+        }
+      ]
+    },
+
+    "contact": {
+      "id": "contact",
+      "title": "Kapcsolat",
+      "icon": "fa-address-book",
+      "description": "Kapcsolattartási adatok és a helyi önkormányzat ügyfélfogadási programja.",
+
+      "items": [
+        {
+          "type": "address",
+          "icon": "fa-location-dot",
+          "value": "Fő utca, Kusaly"
+        },
+        {
+          "type": "phone",
+          "icon": "fa-phone",
+          "value": "+40 XXX XXX XXX"
+        },
+        {
+          "type": "email",
+          "icon": "fa-envelope",
+          "value": "primariacoseiu@yahoo.com"
+        },
+        {
+          "type": "schedule",
+          "icon": "fa-clock",
+          "value": "Hétfő - Péntek: 08:00 - 16:00"
+        }
+      ]
+    },
+
+    "quick_links": {
+      "id": "quick_links",
+      "title": "Gyorslinkek",
+      "icon": "fa-link",
+      "description": "Gyors hozzáférés a leggyakrabban használt szolgáltatásokhoz és oldalakhoz.",
+
+      "items": [
+        {
+          "title": "Online fizetések",
+          "icon": "fa-credit-card",
+          "href": "#plati_online"
+        },
+        {
+          "title": "Dokumentumok",
+          "icon": "fa-file-lines",
+          "href": "#documente"
+        },
+        {
+          "title": "Közbeszerzések",
+          "icon": "fa-landmark",
+          "href": "#licitatii"
+        },
+        {
+          "title": "Határozatok",
+          "icon": "fa-scroll",
+          "href": "#hotarari"
+        },
+        {
+          "title": "Fogadóórák",
+          "icon": "fa-comments",
+          "href": "#audiente"
+        }
+      ]
+    },
+
+    "legal": {
+      "id": "legal",
+      "title": "Jogi információk",
+      "icon": "fa-scale-balanced",
+      "description": "A platform jogi dokumentumai és szabályzatai.",
+
+      "items": [
+        {
+          "title": "Felhasználási feltételek",
+          "icon": "fa-file-contract",
+          "href": "assets/components/legal/terms.html",
+          "target": "_blank"
+        },
+        {
+          "title": "GDPR",
+          "icon": "fa-user-shield",
+          "href": "assets/components/legal/gdpr.html",
+          "target": "_blank"
+        },
+        {
+          "title": "Cookie-k",
+          "icon": "fa-cookie-bite",
+          "href": "assets/components/legal/cookies.html",
+          "target": "_blank"
+        },
+        {
+          "title": "Akadálymentesség",
+          "icon": "fa-universal-access",
+          "href": "assets/components/legal/accessibility.html",
+          "target": "_blank"
+        }
+      ]
+    },
+
+    "newsletter": {
+      "id": "newsletter",
+      "title": "Hírlevél",
+      "icon": "fa-envelope-open-text",
+      "description": "Kapjon híreket és újdonságokat a községből.",
+
+      "form": {
+        "input_type": "email",
+        "placeholder": "Email...",
+        "button_text": "Feliratkozás"
+      }
+    },
+
+    "map": {
+      "id": "map",
+      "title": "Térkép",
+      "icon": "fa-map-location-dot",
+      "description": "Kusaly község elhelyezkedése a térképen.",
+
+      "iframe": {
+        "src": "https://maps.google.com/maps?q=Coseiu%20Salaj&t=&z=13&ie=UTF8&iwloc=&output=embed",
+        "loading": "lazy",
+        "allowfullscreen": true
+      }
+    },
+
+    "bottom": {
+      "id": "bottom",
+      "title": "Lábléc",
+      "description": "Szerzői jogi információk és a platform fejlesztője.",
+
+      "copyright": "© 2026 Kusaly Község",
+
+      "developer": {
+        "name": "kit@",
+        "url": "#"
+      }
+    }
+  }
+}

@@ -9,6 +9,7 @@ let mediuDict = {};
 let mobilitateDict = {};
 let economieDict = {};
 let monitorDict = {};
+let footerDict = {};
 let nav, toggle;
 let allSections = [];
 let searchInput;
@@ -54,6 +55,12 @@ const loaders = {
     containerId: "monitor-container",
     dictSetter: (data) => (monitorDict = data.monitor || data),
     render: renderMonitor,
+  },
+  footer: {
+    file: "footer.json",
+    containerId: "footer-container",
+    dictSetter: (data) => (footerDict = data.footer || data),
+    render: (data) => renderFooter(data.footer || data),
   },
 };
 function cacheDOM() {
@@ -1124,6 +1131,148 @@ function renderMonitor(data) {
   </section>
   `;
 }
+function renderFooter(f) {
+  // console.log("Footer working ✅", f);
+  if (!f) return "";
+  return `
+<footer id="${f.id}" class="${f.class}">
+  <!-- EMERGENCY BAR -->
+  <div class="emergency-bar">
+    <i class="fa-solid ${f.emergency_bar.icon}"></i>
+    <strong>${f.emergency_bar.title}:</strong>
+    ${f.emergency_bar.items
+      .map(
+        (item) => `
+        <span>
+          ${item.label}: <strong>${item.value}</strong>
+        </span>
+      `,
+      )
+      .join(" | ")}
+  </div>
+  <div class="footer-container cards grid">
+    <!-- ABOUT -->
+    <div class="footer-col">
+      <h3>
+        <i class="fa-solid ${f.about.icon}"></i>
+        ${f.about.title}
+      </h3>
+      <p>${f.about.description}</p>
+      <div class="socials">
+        ${f.about.socials
+          .map(
+            (social) => `
+            <a href="${social.url}" target="_blank" rel="noopener">
+              <i class="fab ${social.icon}"></i>
+            </a>
+          `,
+          )
+          .join("")}
+      </div>
+    </div>
+    <!-- CONTACT -->
+    <div class="footer-col cards grid">
+      <h3>
+        <i class="fa-solid ${f.contact.icon}"></i>
+        ${f.contact.title}
+      </h3>
+      ${f.contact.items
+        .map(
+          (item) => `
+          <p>
+            <i class="fa-solid ${item.icon}"></i>
+            ${item.value}
+          </p>
+        `,
+        )
+        .join("")}
+    </div>
+    <!-- QUICK LINKS -->
+    <div class="footer-col cards grid">
+      <h3>
+        <i class="fa-solid ${f.quick_links.icon}"></i>
+        ${f.quick_links.title}
+      </h3>
+      <ul>
+        ${f.quick_links.items
+          .map(
+            (item) => `
+            <li>
+              <a href="${item.href}">
+                <i class="fa-solid ${item.icon}"></i>
+                ${item.title}
+              </a>
+            </li>
+          `,
+          )
+          .join("")}
+      </ul>
+    </div>
+    <!-- LEGAL -->
+    <div class="footer-col cards grid">
+      <h3>
+        <i class="fa-solid ${f.legal.icon}"></i>
+        ${f.legal.title}
+      </h3>
+      <ul>
+        ${f.legal.items
+          .map(
+            (item) => `
+            <li>
+              <a 
+                href="${item.href}" 
+                target="${item.target || "_self"}"
+                rel="noopener"
+              >
+                <i class="fa-solid ${item.icon}"></i>
+                ${item.title}
+              </a>
+            </li>
+          `,
+          )
+          .join("")}
+      </ul>
+    </div>
+    <!-- NEWSLETTER -->
+    <div class="footer-col newsletter cards grid">
+      <h3>
+        <i class="fa-solid ${f.newsletter.icon}"></i>
+        ${f.newsletter.title}
+      </h3>
+      <p>${f.newsletter.description}</p>
+      <form>
+        <input 
+          type="${f.newsletter.form.input_type}" 
+          placeholder="${f.newsletter.form.placeholder}" 
+          required
+        />
+        <button type="submit">
+          ${f.newsletter.form.button_text}
+        </button>
+      </form>
+    </div>
+  </div>
+  <!-- MAP -->
+  <div class="footer-map cards grid">
+    <iframe
+      src="${f.map.iframe.src}"
+      loading="${f.map.iframe.loading}"
+      ${f.map.iframe.allowfullscreen ? "allowfullscreen" : ""}
+    ></iframe>
+  </div>
+  <!-- BOTTOM -->
+  <div class="footer-bottom">
+    <p>${f.bottom.copyright}</p>
+    <p>
+      Dezvoltat de
+      <a href="${f.bottom.developer.url}">
+        ${f.bottom.developer.name}
+      </a>
+    </p>
+  </div>
+</footer>
+  `;
+}
 async function loadLang(section, lang) {
   const cfg = loaders[section];
   if (!cfg) {
@@ -1173,6 +1322,7 @@ async function loadAllLanguages(lang) {
     loadLang("mobilitate", lang),
     loadLang("economie", lang),
     loadLang("monitor", lang),
+    loadLang("footer", lang),
   ]);
   updateSections();
 }
@@ -1251,11 +1401,6 @@ async function loadComponent(id, path) {
 async function loadAllComponents() {
   await Promise.all([
     loadComponent("header-container", "assets/components/partials/header.html"),
-    loadComponent(
-      "comunitate-container",
-      "assets/components/sections/comunitate.html",
-    ),
-    loadComponent("footer-container", "assets/components/partials/footer.html"),
   ]);
 }
 async function initApp() {

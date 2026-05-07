@@ -1,0 +1,181 @@
+{
+  "footer": {
+    "id": "footer",
+    "class": "modern-footer",
+
+    "emergency_bar": {
+      "id": "emergency_bar",
+      "title": "Urgențe",
+      "icon": "fa-triangle-exclamation",
+      "description": "Numere utile pentru situații de urgență și contact rapid.",
+      "items": [
+        {
+          "label": "Urgențe",
+          "value": "112"
+        },
+        {
+          "label": "Poliție Locală",
+          "value": "+40 XXX XXX XXX"
+        }
+      ]
+    },
+
+    "about": {
+      "id": "about",
+      "title": "Primăria Coșeiu",
+      "icon": "fa-building-columns",
+      "description": "Site oficial al Comunei Coșeiu. Servicii publice, transparență și informații utile pentru cetățeni.",
+
+      "socials": [
+        {
+          "platform": "Facebook",
+          "icon": "fa-facebook",
+          "url": "#"
+        },
+        {
+          "platform": "YouTube",
+          "icon": "fa-youtube",
+          "url": "#"
+        }
+      ]
+    },
+
+    "contact": {
+      "id": "contact",
+      "title": "Contact",
+      "icon": "fa-address-book",
+      "description": "Date de contact și programul administrației locale.",
+
+      "items": [
+        {
+          "type": "address",
+          "icon": "fa-location-dot",
+          "value": "Strada Principală, Coșeiu"
+        },
+        {
+          "type": "phone",
+          "icon": "fa-phone",
+          "value": "+40 XXX XXX XXX"
+        },
+        {
+          "type": "email",
+          "icon": "fa-envelope",
+          "value": "primariacoseiu@yahoo.com"
+        },
+        {
+          "type": "schedule",
+          "icon": "fa-clock",
+          "value": "Luni - Vineri: 08:00 - 16:00"
+        }
+      ]
+    },
+
+    "quick_links": {
+      "id": "quick_links",
+      "title": "Linkuri rapide",
+      "icon": "fa-link",
+      "description": "Acces rapid către cele mai utilizate servicii și secțiuni.",
+
+      "items": [
+        {
+          "title": "Plăți online",
+          "icon": "fa-credit-card",
+          "href": "#plati_online"
+        },
+        {
+          "title": "Documente",
+          "icon": "fa-file-lines",
+          "href": "#documente"
+        },
+        {
+          "title": "Licitații",
+          "icon": "fa-landmark",
+          "href": "#licitatii"
+        },
+        {
+          "title": "Hotărâri",
+          "icon": "fa-scroll",
+          "href": "#hotarari"
+        },
+        {
+          "title": "Audiențe",
+          "icon": "fa-comments",
+          "href": "#audiente"
+        }
+      ]
+    },
+
+    "legal": {
+      "id": "legal",
+      "title": "Legal",
+      "icon": "fa-scale-balanced",
+      "description": "Documente și politici legale ale platformei.",
+
+      "items": [
+        {
+          "title": "Termeni",
+          "icon": "fa-file-contract",
+          "href": "assets/components/legal/terms.html",
+          "target": "_blank"
+        },
+        {
+          "title": "GDPR",
+          "icon": "fa-user-shield",
+          "href": "assets/components/legal/gdpr.html",
+          "target": "_blank"
+        },
+        {
+          "title": "Cookies",
+          "icon": "fa-cookie-bite",
+          "href": "assets/components/legal/cookies.html",
+          "target": "_blank"
+        },
+        {
+          "title": "Accesibilitate",
+          "icon": "fa-universal-access",
+          "href": "assets/components/legal/accessibility.html",
+          "target": "_blank"
+        }
+      ]
+    },
+
+    "newsletter": {
+      "id": "newsletter",
+      "title": "Newsletter",
+      "icon": "fa-envelope-open-text",
+      "description": "Primește noutăți din comună.",
+
+      "form": {
+        "input_type": "email",
+        "placeholder": "Email...",
+        "button_text": "Abonează-te"
+      }
+    },
+
+    "map": {
+      "id": "map",
+      "title": "Hartă",
+      "icon": "fa-map-location-dot",
+      "description": "Localizarea Comunei Coșeiu pe hartă.",
+
+      "iframe": {
+        "src": "https://maps.google.com/maps?q=Coseiu%20Salaj&t=&z=13&ie=UTF8&iwloc=&output=embed",
+        "loading": "lazy",
+        "allowfullscreen": true
+      }
+    },
+
+    "bottom": {
+      "id": "bottom",
+      "title": "Footer Bottom",
+      "description": "Informații privind drepturile și dezvoltatorul platformei.",
+
+      "copyright": "© 2026 Comuna Coșeiu",
+
+      "developer": {
+        "name": "kit@",
+        "url": "#"
+      }
+    }
+  }
+}
