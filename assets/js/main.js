@@ -2,7 +2,7 @@ console.log("Menu working ✅");
 let currentLang = localStorage.getItem("lang") || "ro";
 let navDict = {};
 let homeDict = {};
-let communitateDict = {};
+let comunitateDict = {};
 let locuireDict = {};
 let administratieDict = {};
 let mediuDict = {};
@@ -17,12 +17,12 @@ const loaders = {
     file: "administratie.json",
     containerId: "administratie-container",
     dictSetter: (data) => (administratieDict = data.administratie || {}),
-    render: renderAdministratie,
+    render: (data) => renderAdministratie(data.administratie || data),
   },
   comunitate: {
     file: "comunitate.json",
     containerId: "comunitate-container",
-    dictSetter: (data) => (communitateDict = data),
+    dictSetter: (data) => (comunitateDict = data),
     render: renderCommunitate,
   },
   locuire: {
@@ -201,11 +201,9 @@ function initBackToTop() {
   });
 }
 let menuInitialized = false;
-
 function initMenuSystem() {
   if (menuInitialized) return;
   menuInitialized = true;
-
   cacheDOM();
   initMenuDelegation();
   initNavToggle();
@@ -327,13 +325,9 @@ function renderHome() {
 function renderAdministratie(a) {
   // const a = data.administratie;
   // console.log("Administratie data:", data);
-  loadConsilieri();
   return `
-<section id="administratie">
-  <h2>
-    <i class="fa-solid ${a.icon}"></i>
-    <span>${a.title}</span>
-  </h2>
+<section id="${a.id}">
+  <h2><i class="fa-solid ${a.icon}"></i> ${a.title}</h2>
   <div>
     <h3>🏢 ${a.primarie.title}</h3>
     ${renderPersonFull(a.primarie.primar, a.labels)}
@@ -343,7 +337,7 @@ function renderAdministratie(a) {
     ${renderRegulament(a.regulament)}
     ${renderSediuFull(a.sediu)}
   </div>
-  ${renderConsiliuFull(a.consiliu_local)}
+ ${renderConsiliuFull(a.consiliu_local, a.labels)}
   ${renderEvidentaFull(a.evidenta_persoanelor)}
   ${renderPolitiaFull(a.politia_locala)}
   ${renderInformatiiFull(a.informatii_publice)}
@@ -562,18 +556,21 @@ function renderConsilieri(consilieri, labels = {}) {
     </div>
   `;
 }
-function renderConsiliuFull(c) {
+function renderConsiliuFull(c, labels = {}) {
   return `
 <div id="${c.id}">
   <h3>🗳️ ${c.title}</h3>
   <p>${c.descriere}</p>
+
   <div id="${c.consilieri.id}">
-      <h4 data-i18n="consiliu.consilieri.title">
-        <i class="fa-solid fa-landmark"></i>
-         ${administratieDict?.labels?.consilieri?.title || "Consilieri"}
-      </h4>
-      <div class="consilieri-row" id="consilieri-container"></div>
-    </div>
+    <h4>
+      <i class="fa-solid fa-landmark"></i>
+      ${labels?.consilieri?.title || "Consilieri"}
+    </h4>
+
+    ${renderConsilieri(c.consilieri.items || [], labels)}
+  </div>
+
   <div id="${c.comisii.id}" class="card cards grid">
     <h4>${c.comisii.title}</h4>
     <p>${c.comisii.comisii_descriere1}</p>
@@ -582,34 +579,47 @@ function renderConsiliuFull(c) {
     </ul>
     <p>${c.comisii.comisii_descriere2}</p>
   </div>
+
   <div id="${c.sedinte.id}" class="card cards grid">
     <h4><i class="fa fa-calendar"></i> ${c.sedinte.title}</h4>
     <p>${c.sedinte.descriere1}</p>
     <p>${c.sedinte.descriere2}</p>
-    <h5><i class="fa ${c.sedinte.urmatoare.icon}"></i> ${c.sedinte.urmatoare.title}</h5>
+
+    <h5>
+      <i class="fa ${c.sedinte.urmatoare.icon}"></i>
+      ${c.sedinte.urmatoare.title}
+    </h5>
+
     <ul>
       <li>${c.sedinte.urmatoare.data_label}: ${c.sedinte.urmatoare.data}</li>
       <li>${c.sedinte.urmatoare.ora_label}: ${c.sedinte.urmatoare.ora}</li>
       <li>${c.sedinte.urmatoare.locatie_label}: ${c.sedinte.urmatoare.locatie}</li>
     </ul>
-    <h5><i class="fa ${c.sedinte.ordine_de_zi.icon}"></i> ${c.sedinte.ordine_de_zi.title}</h5>
+
+    <h5>
+      <i class="fa ${c.sedinte.ordine_de_zi.icon}"></i>
+      ${c.sedinte.ordine_de_zi.title}
+    </h5>
+
     <ul>
       ${c.sedinte.ordine_de_zi.items.map((item) => `<li>${item}</li>`).join("")}
     </ul>
   </div>
+
   <div id="${c.hotarari.id}" class="card cards grid">
-  <h4><i class="fa-solid fa-scroll"></i> ${c.hotarari.title}</h4>
+    <h4><i class="fa-solid fa-scroll"></i> ${c.hotarari.title}</h4>
     <p>${c.hotarari.descriere}</p>
-  <ul>
-    ${c.hotarari.items
-      .map(
-        (item) => `
-      <li><a href="${item.link}">${item.titlu}</a></li>
-    `,
-      )
-      .join("")}
-  </ul>
-</div>
+
+    <ul>
+      ${c.hotarari.items
+        .map(
+          (item) => `
+        <li><a href="${item.link}">${item.titlu}</a></li>
+      `,
+        )
+        .join("")}
+    </ul>
+  </div>
 </div>
   `;
 }
@@ -1099,7 +1109,6 @@ function renderMonitor(data) {
       }
     </div>
   `;
-
   return `
   <section id="${m.id}">
     <h2><i class="fa-solid ${m.icon}"></i> ${m.title}</h2>
@@ -1114,71 +1123,6 @@ function renderMonitor(data) {
     </div>
   </section>
   `;
-}
-async function loadAdministratieLang(lang) {
-  try {
-    const res = await fetch(`assets/i18n/${lang}/administratie.json`);
-    const data = await res.json();
-    administratieDict = data.administratie || {};
-    const container = document.getElementById("administratie-container");
-    if (container) {
-      container.innerHTML = renderAdministratie(data);
-    }
-  } catch (err) {
-    console.error("Failed to load administratie.json:", err);
-  }
-}
-async function loadCommunityLang(lang) {
-  try {
-    const res = await fetch(`assets/i18n/${lang}/comunitate.json`);
-    if (!res.ok) throw new Error(`HTTP error: ${res.status}`);
-    communitateDict = await res.json();
-    const container = document.getElementById("comunitate-container");
-    if (!container) {
-      console.error("Missing comunitate-container");
-      return;
-    }
-    if (!communitateDict || !communitateDict.id) {
-      console.error("Invalid comunitate JSON");
-      return;
-    }
-    container.innerHTML = renderCommunitate(communitateDict);
-    updateSections();
-  } catch (err) {
-    console.error("Failed to load comunitate.json:", err);
-  }
-}
-async function loadLocuireLang(lang) {
-  try {
-    const res = await fetch(`assets/i18n/${lang}/locuire.json`);
-    if (!res.ok) throw new Error(`HTTP error: ${res.status}`);
-    locuireDict = await res.json();
-    const container = document.getElementById("locuire-container");
-    if (!container) {
-      console.error("Missing locuire-container");
-      return;
-    }
-    container.innerHTML = renderLocuire(locuireDict);
-  } catch (err) {
-    console.error("Failed to load locuire.json:", err);
-  }
-}
-async function loadMediuLang(lang) {
-  try {
-    const res = await fetch(`assets/i18n/${lang}/mediu.json`);
-    console.log("MEDIU JSON:", data);
-    if (!res.ok) throw new Error(`HTTP error: ${res.status}`);
-    const data = await res.json();
-    mediuDict = data.mediu || data;
-    const container = document.getElementById("mediu-container");
-    if (!container) {
-      console.error("Missing mediu-container");
-      return;
-    }
-    container.innerHTML = renderMediu(mediuDict);
-  } catch (err) {
-    console.error("Failed to load mediu.json:", err);
-  }
 }
 async function loadLang(section, lang) {
   const cfg = loaders[section];
@@ -1274,20 +1218,6 @@ function removeHighlights(element) {
     parent.normalize();
   });
 }
-async function loadConsilieri() {
-  try {
-    const res = await fetch(`assets/i18n/${currentLang}/consilieri.json`);
-    const consilieri = await res.json();
-    const container = document.getElementById("consilieri-container");
-    if (!container) return;
-    container.innerHTML = renderConsilieri(
-      consilieri,
-      administratieDict.labels,
-    );
-  } catch (err) {
-    console.error("Error loading consilieri:", err);
-  }
-}
 function initThemeToggle() {
   const btn = document.getElementById("theme-toggle");
   if (!btn) return;
@@ -1324,27 +1254,6 @@ async function loadAllComponents() {
     loadComponent(
       "comunitate-container",
       "assets/components/sections/comunitate.html",
-    ),
-    loadComponent(
-      "administratie-container",
-      "assets/components/sections/administratie.html",
-    ),
-    loadComponent(
-      "locuire-container",
-      "assets/components/sections/locuire.html",
-    ),
-    loadComponent("mediu-container", "assets/components/sections/mediu.html"),
-    loadComponent(
-      "mobilitate-container",
-      "assets/components/sections/mobilitate.html",
-    ),
-    loadComponent(
-      "economie-container",
-      "assets/components/sections/economie.html",
-    ),
-    loadComponent(
-      "monitor-container",
-      "assets/components/sections/monitor.html",
     ),
     loadComponent("footer-container", "assets/components/partials/footer.html"),
   ]);

@@ -1,5 +1,6 @@
 {
   "home": {
+    "id": "home",
     "title": "Comuna Coșeiu",
     "icon": "fa-house",
     "subtitle": "Bine ați venit pe site-ul oficial al comunei Coșeiu, județul Sălaj.",
@@ -54,7 +55,7 @@
           "icon": "fa-landmark"
         },
         {
-          "title": "Proiect buget local",
+          "title": "Proiect Buget Local",
           "description": "Consultare publică deschisă pentru cetățeni.",
           "icon": "fa-coins"
         }
