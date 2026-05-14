@@ -1,0 +1,307 @@
+[
+  {
+    "title": "KÖZÖSSÉG",
+    "icon": "fa-users",
+    "id": "comunitate",
+    "sections": [
+      {
+        "title": "Állampolgárok",
+        "icon": "fa-users",
+        "links": [
+          ["Nyilvános Viták", "#dezbateri_publice", "fa-comments"],
+          ["Hírlevél", "#newsletter", "fa-envelope"],
+          ["Díszpolgárok", "#cetateni_onoare", "fa-medal"],
+          ["Javaslatok és Panaszok", "#sugestii_reclamatii", "fa-pen"],
+          ["Részvételi Költségvetés", "#bugetare_participativa", "fa-coins"],
+          ["Online Ügyintézés", "#proceduri_online", "fa-desktop"],
+          ["Élő Webkamera", "#live_webcam", "fa-satellite-dish"]
+        ]
+      },
+      {
+        "title": "Oktatás",
+        "icon": "fa-graduation-cap",
+        "links": [
+          ["Közlekedés", "#transport", "fa-bus"],
+          ["Buszok", "#autobuze", "fa-bus-simple"],
+          ["Oktatási Jogszabályok", "#legislatie_educatie", "fa-book"],
+          ["Bölcsődék", "#crese", "fa-school"],
+          ["Óvodák", "#gradinite", "fa-baby"],
+          ["Iskolák", "#scoli", "fa-school"]
+        ]
+      },
+      {
+        "title": "Kultúra",
+        "icon": "fa-masks-theater",
+        "links": [
+          ["Könyvtárak", "#biblioteci", "fa-book-open"],
+          ["Kulturális Támogatások", "#finantari_cultura", "fa-palette"],
+          ["Helyi Személyiségek", "#personalitati_locale", "fa-star"],
+          ["Kulturális Események", "#evenimente_culturale", "fa-masks-theater"]
+        ]
+      },
+      {
+        "title": "Sport",
+        "icon": "fa-futbol",
+        "links": [
+          ["Sportlétesítmények", "#structuri_sportive", "fa-building"],
+          ["Sporttámogatások", "#finantari_sportive", "fa-money-bill-wave"],
+          ["Sportbázisok", "#baze_sportive", "fa-futbol"],
+          ["Sportcsarnok", "#sala_sport", "fa-dumbbell"],
+          ["Sportklubok", "#cluburi_sportive", "fa-trophy"]
+        ]
+      },
+      {
+        "title": "Egészségügy",
+        "icon": "fa-hospital",
+        "links": [
+          ["Orvosi Rendelők", "#cabinete_medicale", "fa-stethoscope"],
+          ["Egészségügyi Támogatások", "#finantari_sanatate", "fa-pills"],
+          ["Gyógyszertárak", "#farmacii", "fa-pills"],
+          ["Sürgősségi Esetek", "#urgente", "fa-truck-medical"]
+        ]
+      },
+      {
+        "title": "Szociális",
+        "icon": "fa-handshake",
+        "links": [
+          ["Idősek", "#varstnici", "fa-person-cane"],
+          ["Menedékhely", "#adapost", "fa-house"],
+          ["Szociális Segítség", "#ajutor_social", "fa-hands-holding"],
+          ["Szociális Utalványok", "#tichete_sociale", "fa-ticket"],
+          ["Fogászat", "#stomatologie", "fa-tooth"]
+        ]
+      },
+      {
+        "title": "Állatok",
+        "icon": "fa-paw",
+        "links": [
+          ["Ivartalanítás", "#sterilizare", "fa-dog"],
+          ["Örökbefogadás", "#adoptii", "fa-heart"],
+          ["Víztálak", "#boluri_apa", "fa-droplet"],
+          ["Menhelyek", "#adaposturi", "fa-house-chimney"],
+          ["Állatnyilvántartás", "#registru_animale", "fa-clipboard-list"]
+        ]
+      },
+      {
+        "title": "Turizmus",
+        "icon": "fa-compass",
+        "links": [
+          ["Információs Központ", "#centru_info", "fa-circle-info"],
+          ["Térkép", "#harta", "fa-map"],
+          ["Szállás", "#cazare", "fa-hotel"],
+          ["Visit Coșeiu", "#visit_coseiu", "fa-location-pin"],
+          ["Történelmi Műemlékek", "#monumente_istorice", "fa-location-dot"]
+        ]
+      },
+      {
+        "title": "Események",
+        "icon": "fa-calendar-check",
+        "links": [
+          ["Coșeiu Napjai", "#zilele_coseiului", "fa-calendar-check"],
+          ["Karácsonyi Vásár", "#targ_craciun", "fa-tree"],
+          ["Helyi Piac", "#piata_locala", "fa-bag-shopping"],
+          ["Fesztiválok", "#festivaluri", "fa-tents"]
+        ]
+      }
+    ]
+  },
+  {
+    "title": "LAKHATÁS",
+    "icon": "fa-house",
+    "id": "locuire",
+    "sections": [
+      {
+        "title": "Várostervezés és Stratégia",
+        "icon": "fa-building",
+        "links": [
+          ["Városi Stratégiák", "#strategii_urbane", "fa-chart-line"],
+          ["Várostervezés", "#urbanism", "fa-building"],
+          ["Építési Engedélyek", "#autorizatii_constructie", "fa-file"],
+          ["Utcák", "#strazi", "fa-road"],
+          ["Lakások", "#locuinte", "fa-city"],
+          ["GIS", "#gis", "fa-satellite"]
+        ]
+      }
+    ]
+  },
+  {
+    "title": "KÖZIGAZGATÁS",
+    "icon": "fa-building-columns",
+    "id": "administratie",
+    "sections": [
+      {
+        "title": "Polgármesteri Hivatal",
+        "icon": "fa-building",
+        "links": [
+          ["Polgármester", "#primar", "fa-user"],
+          ["Alpolgármester", "#viceprimar", "fa-user"],
+          ["Jegyző", "#secretar", "fa-file-lines"],
+          ["Szervezeti Ábra", "#organigrama", "fa-compass"],
+          ["Szabályzat", "#regulament", "fa-scroll"],
+          ["Székhely", "#sediu", "fa-location-dot"]
+        ]
+      },
+      {
+        "title": "Helyi Tanács",
+        "icon": "fa-users",
+        "links": [
+          ["Tanácsosok", "#consilieri", "fa-users"],
+          ["Bizottságok", "#comisii", "fa-location-pin"],
+          ["Ülések", "#sedinte", "fa-calendar-days"],
+          ["Tanácsi Határozatok", "#hotarari_consiliu", "fa-scroll"]
+        ]
+      },
+      {
+        "title": "Személyi Nyilvántartás",
+        "icon": "fa-file-lines",
+        "links": [
+          ["Születések", "#nasteri", "fa-baby"],
+          ["Okmányok", "#acte", "fa-file"],
+          ["Házasságok", "#casatorii", "fa-ring"],
+          ["Válások", "#divorturi", "fa-scale-balanced"],
+          ["Halálesetek", "#decese", "fa-cross"],
+          ["Útlevelek", "#pasapoarte", "fa-earth-europe"]
+        ]
+      },
+      {
+        "title": "Helyi Rendőrség",
+        "icon": "fa-car-side",
+        "links": [
+          ["Rendőrségi Információk", "#informatii_politie", "fa-car"],
+          ["Hatáskörök", "#atributii", "fa-clipboard-list"],
+          ["Bírságok", "#amenzi", "fa-coins"],
+          ["Járműelszállítás", "#ridicari_auto", "fa-car-side"]
+        ]
+      },
+      {
+        "title": "Közérdekű Információk",
+        "icon": "fa-bullhorn",
+        "links": [
+          ["Hirdetmények", "#anunturi", "fa-bullhorn"],
+          ["Versenyvizsgák", "#concursuri", "fa-trophy"],
+          ["Kérelmek", "#cereri", "fa-pen"],
+          ["Fogadóórák", "#audiente", "fa-comments"],
+          ["Szerződések", "#contracte", "fa-file-lines"],
+          ["Fizetések", "#plati_online", "fa-credit-card"],
+          ["Közbeszerzések", "#licitatii", "fa-building-columns"],
+          ["Dokumentumok", "#documente", "fa-folder"]
+        ]
+      },
+      {
+        "title": "Egyéb Információk",
+        "icon": "fa-gear",
+        "links": [
+          ["Digitális Átalakulás", "#transformare_digitala", "fa-laptop"],
+          ["Online Szolgáltatások", "#servicii_online", "fa-laptop"],
+          ["Átláthatóság", "#transparenta", "fa-eye"]
+        ]
+      }
+    ]
+  },
+  {
+    "title": "KÖRNYEZET",
+    "icon": "fa-leaf",
+    "id": "mediu",
+    "sections": [
+      {
+        "title": "Hulladékgazdálkodás",
+        "icon": "fa-trash",
+        "links": [
+          ["Szelektív Gyűjtés", "#colectare_selectiva", "fa-recycle"],
+          ["Háztartási Hulladék", "#salubritate_menajera", "fa-trash"],
+          ["Utcai Tisztítás", "#salubritate_stradala", "fa-broom"],
+          ["Hóeltakarítás", "#dezapezire", "fa-snowflake"]
+        ]
+      },
+      {
+        "title": "Tisztaság",
+        "icon": "fa-broom",
+        "links": [
+          ["Speciális Kérések", "#cereri_specifice", "fa-pen"],
+          ["Tavaszi Takarítás", "#curatenie_primavara", "fa-seedling"],
+          ["Rágcsálóirtás", "#deratizare", "fa-bug"]
+        ]
+      },
+      {
+        "title": "Zöldterületek",
+        "icon": "fa-tree",
+        "links": [
+          ["Fogadj Örökbe Egy Területet", "#adopta_spatiu", "fa-leaf"],
+          ["Parlagfű", "#ambrozie", "fa-wheat-awn"]
+        ]
+      },
+      {
+        "title": "Energia",
+        "icon": "fa-bolt",
+        "links": [
+          ["Napelemek", "#panouri_fotovoltaice", "fa-sun"],
+          ["Finanszírozás", "#finantare", "fa-coins"]
+        ]
+      },
+      {
+        "title": "Egyéb Környezetvédelmi Információk",
+        "icon": "fa-earth-europe",
+        "links": [
+          ["Levegőminőség", "#calitatea_aerului", "fa-smog"],
+          ["Zajtérkép", "#harta_zgomot", "fa-volume-high"]
+        ]
+      }
+    ]
+  },
+  {
+    "title": "MOBILITÁS",
+    "icon": "fa-car",
+    "id": "mobilitate",
+    "sections": [
+      {
+        "title": "Városi Mobilitás",
+        "icon": "fa-location-dot",
+        "links": [
+          ["Mobilitási Terv", "#plan_mobilitate", "fa-location-dot"],
+          ["Parkolók", "#parcari", "fa-square-parking"],
+          ["Tömegközlekedés", "#transport_public", "fa-bus"],
+          ["Kerékpárok", "#biciclete", "fa-bicycle"],
+          ["Közlekedésbiztonság", "#siguranta_circulatiei", "fa-traffic-light"]
+        ]
+      }
+    ]
+  },
+  {
+    "title": "GAZDASÁG",
+    "icon": "fa-coins",
+    "id": "economie",
+    "sections": [
+      {
+        "title": "Pénzügy",
+        "icon": "fa-chart-line",
+        "links": [
+          ["Adók és Illetékek", "#taxe_impozite", "fa-chart-line"],
+          ["Online Fizetések", "#plati_online", "fa-credit-card"],
+          ["Költségvetés", "#buget", "fa-book"],
+          ["Beszerzések", "#achizitii", "fa-building-columns"],
+          ["EU Projektek", "#proiecte_ue", "fa-flag"],
+          ["Befektetők", "#investitori", "fa-industry"]
+        ]
+      }
+    ]
+  },
+  {
+    "title": "MONITOR",
+    "icon": "fa-file-lines",
+    "id": "monitor",
+    "sections": [
+      {
+        "title": "Nyilvános Dokumentumok",
+        "icon": "fa-scroll",
+        "links": [
+          ["Státusz", "#statut", "fa-scroll"],
+          ["Szabályzatok", "#regulamente", "fa-book"],
+          ["Határozatok", "#hotarari", "fa-file-lines"],
+          ["Rendelkezések", "#dispozitii", "fa-clipboard"],
+          ["Pénzügyi Dokumentumok", "#documente_financiare", "fa-coins"],
+          ["Egyéb Dokumentumok", "#alte_documente", "fa-folder"]
+        ]
+      }
+    ]
+  }
+]

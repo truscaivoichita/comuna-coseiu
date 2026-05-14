@@ -10,6 +10,7 @@ let mobilitateDict = {};
 let economieDict = {};
 let monitorDict = {};
 let footerDict = {};
+let menuData = [];
 let nav, toggle;
 let allSections = [];
 let searchInput;
@@ -73,6 +74,20 @@ function clearActiveMenuItems(container) {
     .querySelectorAll(".menu-left li.active")
     .forEach((li) => li.classList.remove("active"));
 }
+function resetAllMenus() {
+  document
+    .querySelectorAll(".menu-right.active")
+    .forEach((m) => m.classList.remove("active"));
+  document
+    .querySelectorAll(".menu-content.active")
+    .forEach((m) => m.classList.remove("active"));
+  document
+    .querySelectorAll(".dropdown.active")
+    .forEach((d) => d.classList.remove("active"));
+  document
+    .querySelectorAll(".menu-left li.active")
+    .forEach((li) => li.classList.remove("active"));
+}
 function initMenuDelegation() {
   document.addEventListener("click", (e) => {
     const item = e.target.closest("li[data-target]");
@@ -104,13 +119,19 @@ function handleMobileMenu(item) {
   if (!menu) return;
   const rightSide = menu.querySelector(".menu-right");
   if (!rightSide) return;
-  clearActiveMenuItems(menu);
+  // ONLY reset inside current menu
+  menu.querySelectorAll(".menu-left li.active").forEach((li) => {
+    li.classList.remove("active");
+  });
   rightSide
-    .querySelectorAll(".menu-content")
+    .querySelectorAll(".menu-content.active")
     .forEach((c) => c.classList.remove("active"));
+  // activate clicked item
   item.classList.add("active");
   const active = rightSide.querySelector(`#${targetId}`);
-  if (active) active.classList.add("active");
+  if (active) {
+    active.classList.add("active");
+  }
   rightSide.classList.add("active");
   addBackButton(rightSide);
 }
@@ -186,14 +207,12 @@ function preventCloseOnInternalLinks() {
   });
 }
 function initResizeFix() {
-  let lastWidth = window.innerWidth;
   window.addEventListener("resize", () => {
-    const currentWidth = window.innerWidth;
-    if (currentWidth > 900 && nav) {
+    if (window.innerWidth >= 900 && nav) {
       nav.classList.remove("active");
       document.body.classList.remove("nav-open");
     }
-    lastWidth = currentWidth;
+    resetAllMenus();
   });
 }
 function initBackToTop() {
@@ -295,6 +314,22 @@ function applySubmenuLang() {
     });
   });
 }
+async function loadHeader(lang) {
+  try {
+    const res = await fetch(`assets/i18n/${lang}/header.json`);
+    if (!res.ok) {
+      throw new Error(`HTTP error: ${res.status}`);
+    }
+    const data = await res.json();
+    console.log("Header JSON ✅", data);
+    menuData = Array.isArray(data) ? data : data.menu || [];
+    renderMenu();
+    applyNavLang();
+    return data;
+  } catch (err) {
+    console.error("Failed to load header.json:", err);
+  }
+}
 async function loadHomeLang(lang) {
   try {
     const res = await fetch(`assets/i18n/${lang}/home.json`);
@@ -303,6 +338,62 @@ async function loadHomeLang(lang) {
   } catch (err) {
     console.error("Failed to load home.json:", err);
   }
+}
+function renderMenu() {
+  const menu = document.getElementById("main-menu");
+  if (!menu || !menuData.length) return;
+  menu.innerHTML = menuData
+    .map(
+      (item) => `
+    <li class="dropdown ${item.id}">
+      <a href="#${item.id}">
+        <i class="fa-solid ${item.icon}"></i>
+        ${item.title}
+      </a>
+      <div class="dropdown-menu split-menu">
+      <div class="menu-left">
+        <ul>
+          ${item.sections
+            .map(
+              (section, i) => `
+              <li data-target="menu-${item.id}-${i}"
+                  class="${i === 0 ? "active" : ""}">
+                <i class="fa-solid ${section.icon}"></i>
+                ${section.title}
+              </li>
+          `,
+            )
+            .join("")}
+        </ul>
+      </div>
+        <div class="menu-right">
+          ${item.sections
+            .map(
+              (section, i) => `
+              <div class="menu-content ${i === 0 ? "active" : ""}"
+                  id="menu-${item.id}-${i}">
+                ${section.links
+                  .map(
+                    ([text, href, icon]) => `
+                    <a href="${href}">
+                      <i class="fa-solid ${icon}"></i>
+                      ${text}
+                    </a>
+                  `,
+                  )
+                  .join("")}
+
+              </div>
+          `,
+            )
+            .join("")}
+        </div>
+
+      </div>
+    </li>
+  `,
+    )
+    .join("");
 }
 function renderHome() {
   if (!homeDict?.home) return;
@@ -1313,6 +1404,8 @@ function initLanguageToggle() {
 async function loadAllLanguages(lang) {
   currentLang = lang;
   await loadNavLang(lang);
+  await loadHeader(lang);
+  renderMenu();
   await loadHomeLang(lang);
   await Promise.all([
     loadLang("administratie", lang),

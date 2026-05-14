@@ -1,0 +1,311 @@
+[
+  {
+    "title": "COMUNITATE",
+    "icon": "fa-users",
+    "id": "comunitate",
+    "sections": [
+      {
+        "title": "Cetățeni",
+        "icon": "fa-users",
+        "links": [
+          ["Dezbateri Publice", "#dezbateri_publice", "fa-comments"],
+          ["Newsletter", "#newsletter", "fa-envelope"],
+          ["Cetățeni Onoare", "#cetateni_onoare", "fa-medal"],
+          ["Sugestii Reclamații", "#sugestii_reclamatii", "fa-pen"],
+          ["Bugetare Participativă", "#bugetare_participativa", "fa-coins"],
+          ["Proceduri Online", "#proceduri_online", "fa-desktop"],
+          ["Live Webcam", "#live_webcam", "fa-satellite-dish"]
+        ]
+      },
+      {
+        "title": "Educație",
+        "icon": "fa-graduation-cap",
+        "links": [
+          ["Transport", "#transport", "fa-bus"],
+          ["Autobuze", "#autobuze", "fa-bus-simple"],
+          ["Legislație Educație", "#legislatie_educatie", "fa-book"],
+          ["Creșe", "#crese", "fa-school"],
+          ["Grădinițe", "#gradinite", "fa-baby"],
+          ["Școli", "#scoli", "fa-school"]
+        ]
+      },
+      {
+        "title": "Cultură",
+        "icon": "fa-masks-theater",
+        "links": [
+          ["Biblioteci", "#biblioteci", "fa-book-open"],
+          ["Finanțări Cultură", "#finantari_cultura", "fa-palette"],
+          ["Personalități locale", "#personalitati_locale", "fa-star"],
+          ["Evenimente Culturale", "#evenimente_culturale", "fa-masks-theater"]
+        ]
+      },
+      {
+        "title": "Sport",
+        "icon": "fa-futbol",
+        "links": [
+          ["Structuri Sportive", "#structuri_sportive", "fa-building"],
+          ["Finanțări Sportive", "#finantari_sportive", "fa-money-bill-wave"],
+          ["Baze Sportive", "#baze_sportive", "fa-futbol"],
+          ["Sală Sport", "#sala_sport", "fa-dumbbell"],
+          ["Cluburi Sportive", "#cluburi_sportive", "fa-trophy"]
+        ]
+      },
+      {
+        "title": "Sănătate",
+        "icon": "fa-hospital",
+        "links": [
+          ["Cabinete Medicale", "#cabinete_medicale", "fa-stethoscope"],
+          ["Finanțări Sănătate", "#finantari_sanatate", "fa-pills"],
+          ["Farmacii", "#farmacii", "fa-pills"],
+          ["Urgențe", "#urgente", "fa-truck-medical"]
+        ]
+      },
+      {
+        "title": "Social",
+        "icon": "fa-handshake",
+        "links": [
+          ["Vârstnici", "#varstnici", "fa-person-cane"],
+          ["Adăpost", "#adapost", "fa-house"],
+          ["Ajutor Social", "#ajutor_social", "fa-hands-holding"],
+          ["Tichete sociale", "#tichete_sociale", "fa-ticket"],
+          ["Stomatologie", "#stomatologie", "fa-tooth"]
+        ]
+      },
+      {
+        "title": "Animale",
+        "icon": "fa-paw",
+        "links": [
+          ["Sterilizare", "#sterilizare", "fa-dog"],
+          ["Adopții", "#adoptii", "fa-heart"],
+          ["Boluri Apă", "#boluri_apa", "fa-droplet"],
+          ["Adăposturi", "#adaposturi", "fa-house-chimney"],
+          ["Registru Animale", "#registru_animale", "fa-clipboard-list"]
+        ]
+      },
+      {
+        "title": "Turism",
+        "icon": "fa-compass",
+        "links": [
+          ["Centru Info", "#centru_info", "fa-circle-info"],
+          ["Hartă", "#harta", "fa-map"],
+          ["Cazare", "#cazare", "fa-hotel"],
+          ["Visit Coșeiu", "#visit_coseiu", "fa-location-pin"],
+          ["Monumente Istorice", "#monumente_istorice", "fa-location-dot"]
+        ]
+      },
+      {
+        "title": "Evenimente",
+        "icon": "fa-calendar-check",
+        "links": [
+          ["Zilele Coșeiului", "#zilele_coseiului", "fa-calendar-check"],
+          ["Târg Crăciun", "#targ_craciun", "fa-tree"],
+          ["Piața Locală", "#piata_locala", "fa-bag-shopping"],
+          ["Festivaluri", "#festivaluri", "fa-tents"]
+        ]
+      }
+    ]
+  },
+  {
+    "title": "LOCUIRE",
+    "icon": "fa-house",
+    "id": "locuire",
+    "sections": [
+      {
+        "title": "Urbanism și Strategie",
+        "icon": "fa-building",
+        "links": [
+          ["Strategii Urbane", "#strategii_urbane", "fa-chart-line"],
+          ["Urbanism", "#urbanism", "fa-building"],
+          ["Autorizații Construcție", "#autorizatii_constructie", "fa-file"],
+          ["Străzi", "#strazi", "fa-road"],
+          ["Locuințe", "#locuinte", "fa-city"],
+          ["GIS", "#gis", "fa-satellite"]
+        ]
+      }
+    ]
+  },
+  {
+    "title": "ADMINISTRAȚIE",
+    "icon": "fa-building-columns",
+    "id": "administratie",
+    "sections": [
+      {
+        "title": "Primărie",
+        "icon": "fa-building",
+        "links": [
+          ["Primar", "#primar", "fa-user"],
+          ["Viceprimar", "#viceprimar", "fa-user"],
+          ["Secretar", "#secretar", "fa-file-lines"],
+          ["Organigramă", "#organigrama", "fa-compass"],
+          ["Regulament", "#regulament", "fa-scroll"],
+          ["Sediu", "#sediu", "fa-location-dot"]
+        ]
+      },
+      {
+        "title": "Consiliu Local",
+        "icon": "fa-users",
+        "links": [
+          ["Consilieri", "#consilieri", "fa-users"],
+          ["Comisii", "#comisii", "fa-location-pin"],
+          ["Ședințe", "#sedinte", "fa-calendar-days"],
+          ["Hotărâri consiliu", "#hotarari_consiliu", "fa-scroll"]
+        ]
+      },
+      {
+        "title": "Evidență Persoane",
+        "icon": "fa-file-lines",
+        "links": [
+          ["Nașteri", "#nasteri", "fa-baby"],
+          ["Acte", "#acte", "fa-file"],
+          ["Căsătorii", "#casatorii", "fa-ring"],
+          ["Divorțuri", "#divorturi", "fa-scale-balanced"],
+          ["Decese", "#decese", "fa-cross"],
+          ["Pașapoarte", "#pasapoarte", "fa-earth-europe"]
+        ]
+      },
+      {
+        "title": "Poliția Locală",
+        "icon": "fa-car-side",
+        "links": [
+          ["Informații Poliție", "#informatii_politie", "fa-car"],
+          ["Atribuții", "#atributii", "fa-clipboard-list"],
+          ["Amenzi", "#amenzi", "fa-coins"],
+          ["Ridicări Auto", "#ridicari_auto", "fa-car-side"]
+        ]
+      },
+      {
+        "title": "Informații Publice",
+        "icon": "fa-bullhorn",
+        "links": [
+          ["Anunțuri", "#anunturi", "fa-bullhorn"],
+          ["Concursuri", "#concursuri", "fa-trophy"],
+          ["Cereri", "#cereri", "fa-pen"],
+          ["Audiențe", "#audiente", "fa-comments"],
+          ["Contracte", "#contracte", "fa-file-lines"],
+          ["Plăți", "#plati_online", "fa-credit-card"],
+          ["Licitații", "#licitatii", "fa-building-columns"],
+          ["Documente", "#documente", "fa-folder"]
+        ]
+      },
+      {
+        "title": "Alte Informații",
+        "icon": "fa-gear",
+        "links": [
+          ["Transformare Digitală", "#transformare_digitala", "fa-laptop"],
+          ["Servicii Online", "#servicii_online", "fa-laptop"],
+          ["Transparență", "#transparenta", "fa-eye"]
+        ]
+      }
+    ]
+  },
+  {
+    "title": "MEDIU",
+    "icon": "fa-leaf",
+    "id": "mediu",
+    "sections": [
+      {
+        "title": "Salubritate",
+        "icon": "fa-trash",
+        "links": [
+          ["Colectare Selectivă", "#colectare_selectiva", "fa-recycle"],
+          ["Salubritate Menajeră", "#salubritate_menajera", "fa-trash"],
+          ["Salubritate Stradală", "#salubritate_stradala", "fa-broom"],
+          ["Dezăpezire", "#dezapezire", "fa-snowflake"]
+        ]
+      },
+      {
+        "title": "Curățenie",
+        "icon": "fa-broom",
+        "links": [
+          ["Cereri Specifice", "#cereri_specifice", "fa-pen"],
+          ["Curățenie Primăvară", "#curatenie_primavara", "fa-seedling"],
+          ["Deratizare", "#deratizare", "fa-rat"]
+        ]
+      },
+      {
+        "title": "Spații Verzi",
+        "icon": "fa-tree",
+        "links": [
+          ["Adoptă Spațiu", "#adopta_spatiu", "fa-leaf"],
+          ["Ambrozie", "#ambrozie", "fa-wheat-awn"]
+        ]
+      },
+      {
+        "title": "Energie",
+        "icon": "fa-bolt",
+        "links": [
+          ["Panouri Fotovoltaice", "#panouri_fotovoltaice", "fa-sun"],
+          ["Finanțare", "#finantare", "fa-coins"]
+        ]
+      },
+      {
+        "title": "Altele Mediu",
+        "icon": "fa-earth-europe",
+        "links": [
+          ["Calitatea Aerului", "#calitatea_aerului", "fa-smog"],
+          ["Harta Zgomot", "#harta_zgomot", "fa-volume-high"]
+        ]
+      }
+    ]
+  },
+  {
+    "title": "MOBILITATE",
+    "icon": "fa-car",
+    "id": "mobilitate",
+    "sections": [
+      {
+        "title": "Mobilitate Urbană",
+        "icon": "fa-location-dot",
+        "links": [
+          ["Plan Mobilitate", "#plan_mobilitate", "fa-location-dot"],
+          ["Parcări", "#parcari", "fa-square-parking"],
+          ["Transport Public", "#transport_public", "fa-bus"],
+          ["Biciclete", "#biciclete", "fa-bicycle"],
+          [
+            "Siguranța Circulației",
+            "#siguranta_circulatiei",
+            "fa-traffic-light"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "title": "ECONOMIE",
+    "icon": "fa-coins",
+    "id": "economie",
+    "sections": [
+      {
+        "title": "Financiar",
+        "icon": "fa-chart-line",
+        "links": [
+          ["Taxe Impozite", "#taxe_impozite", "fa-chart-line"],
+          ["Plăți Online", "#plati_online", "fa-credit-card"],
+          ["Buget", "#buget", "fa-book"],
+          ["Achiziții", "#achizitii", "fa-building-columns"],
+          ["Proiecte UE", "#proiecte_ue", "fa-flag"],
+          ["Investitori", "#investitori", "fa-industry"]
+        ]
+      }
+    ]
+  },
+  {
+    "title": "MONITOR",
+    "icon": "fa-file-lines",
+    "id": "monitor",
+    "sections": [
+      {
+        "title": "Documente Publice",
+        "icon": "fa-scroll",
+        "links": [
+          ["Statut", "#statut", "fa-scroll"],
+          ["Regulamente", "#regulamente", "fa-book"],
+          ["Hotărâri", "#hotarari", "fa-file-lines"],
+          ["Dispoziții", "#dispozitii", "fa-clipboard"],
+          ["Documente Financiare", "#documente_financiare", "fa-coins"],
+          ["Alte Documente", "#alte_documente", "fa-folder"]
+        ]
+      }
+    ]
+  }
+]
