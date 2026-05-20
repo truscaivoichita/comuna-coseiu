@@ -356,7 +356,9 @@
       "id": "cazare",
       "title": "Cazare",
       "icon": "fa-bed",
-      "text": "Există opțiuni de cazare în zonă."
+      "text": "Există opțiuni de cazare în zonă.",
+      "link": "https://www.facebook.com/casacoseiu",
+      "link_text": "Vezi cazare"
     },
     "visit_coseiu": {
       "id": "visit_coseiu",

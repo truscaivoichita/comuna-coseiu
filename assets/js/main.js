@@ -994,6 +994,15 @@ function renderSimpleSection(section) {
       <div id="${e.id}" class="card">
         <h4><i class="fa-solid ${e.icon}"></i> ${e.title}</h4>
         ${e.text ? `<p>${e.text}</p>` : ""}
+        ${
+          e.link
+            ? `
+          <a href="${e.link}" target="_blank" class="btn-link">
+            ${e.link_text || "Detalii"}
+          </a>
+        `
+            : ""
+        }
         ${e.items ? renderList(e.items) : ""}
       </div>
     `,
